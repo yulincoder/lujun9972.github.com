@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>进程环境 - 浩劫残阳</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="author" content="DarkSun" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css">
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css">
+  <script type="text/javascript"
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+  </script>
+  <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+  </script>
+</head>
+
+  <body><div class="container">
+<div>
+  <header class="masthead">
+    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">浩劫残阳</a></h1>
+    <p>=============&gt;随便写写</p>
+    <nav class="site-nav">
+      <div class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
+          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
+          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
+        </svg>
+      </div>
+      <ul class="trigger">
+        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://github.com/lujun9972">Github</a></li>
+        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+      </ul>
+    </nav>
+    <form method="get" id="searchform" action="http://www.google.com/search">
+      <input type="text" class="field" name="q" id="s" placeholder="Search">
+      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+    </form>
+  </header>
+</div>
+
+<div>
+<div class="post">
+<h1 class="title">进程环境</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 进程的中止</a>
+<ul>
+<li><a href="#sec-1-1">1.1. 中止的方式</a></li>
+<li><a href="#sec-1-2">1.2. exit函数</a></li>
+<li><a href="#sec-1-3">1.3. atexit函数</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. 环境变量表</a>
+<ul>
+<li><a href="#sec-2-1">2.1. 获取环境变量值</a></li>
+<li><a href="#sec-2-2">2.2. 修改函数变量值</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. 存储器分配</a></li>
+<li><a href="#sec-4">4. setjmp和longjump</a></li>
+<li><a href="#sec-5">5. 资源限制</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 进程的中止</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 中止的方式</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+有5种方式正常终止
+</p>
+<ul class="org-ul">
+<li>从main返回
+</li>
+<li>调用exit
+</li>
+<li>调用_exit或_Exit
+</li>
+<li>最后一个线程从其启动历程返回, <b>但是该线程的返回值不会用作进程的返回值,改进程以终止状态0返回</b>
+</li>
+<li>最后一个线程调用pthread_exit, <b>这时,进程的终止状态也为0,而以pthread_exit的参数无关</b>
+</li>
+</ul>
+
+<p>
+有3种方式异常终止
+</p>
+<ul class="org-ul">
+<li>调用abort
+</li>
+<li>接到一个线号终止
+</li>
+<li>最后一个线程对取消请求做出响应
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> exit函数</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdlib.h&gt;</span>
+
+<span style="color: #228b22;">void</span> <span style="color: #0000ff;">exit</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">status</span>);
+
+<span style="color: #228b22;">void</span> <span style="color: #0000ff;">_Exit</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">status</span>);
+
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;unistd.h&gt;</span>
+
+<span style="color: #228b22;">void</span> <span style="color: #0000ff;">_exit</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">status</span>);
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>exit函数会先执行清理动作(调用执行各终止处理程序,关闭标准IO流),然后进入内核
+</li>
+<li>_exit和_Exit则会立即进入内核
+</li>
+<li>当进程从main函数返回时,会立刻调用exit函数. 
+<div class="org-src-container">
+
+<pre class="src src-C">exit(main(argc,argv));
+</pre>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> atexit函数</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+进程退出时,可以注册至少32个函数由exit函数自动调用,这些函数被称为终止处理函数. 
+</p>
+
+<p>
+需要使用atexit函数来注册这些函数
+</p>
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdlib.h&gt;</span>
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">atexit</span>(<span style="color: #228b22;">void</span> (*<span style="color: #a0522d;">func</span>)(<span style="color: #228b22;">void</span>));
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>exit调用这些函数的顺序与它们注册时的顺序相反.
+</li>
+<li>同一函数若登录多次,则也会被调用多次.
+</li>
+<li>进程退出时,先调用注册的终止处理函数,然后再执行清理动作,最后进入内核
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 环境变量表</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+每个进程都有一个字符指针数组,指向一张存储了环境变量的列表. 
+</p>
+
+<p>
+<b>可以通过全局变量environ引用到该字符指针数组</b>:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #a020f0;">extern</span> <span style="color: #228b22;">char</span> **<span style="color: #a0522d;">environ</span>;
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>一般来说,环境变量字符串的格式为`name=value'
+</li>
+<li>我们通常不直接使用environ变量,而是使用getenv和putenv函数来访问/设置指定的环境变量
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 获取环境变量值</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdlib.h&gt;</span>
+
+<span style="color: #228b22;">char</span>* <span style="color: #0000ff;">getenv</span>(<span style="color: #a020f0;">const</span> <span style="color: #228b22;">char</span>* <span style="color: #a0522d;">name</span>);
+</pre>
+</div>
+<ul class="org-ul">
+<li>getenv函数返回一个指针,该指针指向`name = value'字符串中的value
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 修改函数变量值</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdlib.h&gt;</span>
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">putenv</span>(<span style="color: #228b22;">char</span>* <span style="color: #a0522d;">str</span>);
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">setenv</span>(<span style="color: #a020f0;">const</span> <span style="color: #228b22;">char</span>* <span style="color: #a0522d;">name</span>,<span style="color: #a020f0;">const</span> <span style="color: #228b22;">char</span>* <span style="color: #a0522d;">value</span>,<span style="color: #228b22;">int</span> <span style="color: #a0522d;">rewrite</span>);
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">unsetenv</span>(<span style="color: #a020f0;">const</span> <span style="color: #228b22;">char</span>* <span style="color: #a0522d;">name</span>);
+</pre>
+</div>
+<ul class="org-ul">
+<li>putenv中的参数str需为格式`name = value'的字符串. 它添加环境变量,若环境变量已存在,则会覆盖之
+</li>
+<li>有些实现中,putenv直接将str的值放入环境表中,因此,若str存放于函数栈中,则可能会发生错误.
+</li>
+<li>setenv将name设置为value,参数rewrite表示当name已存在时,是否覆盖原值(非0表示覆盖,0表示不覆盖)
+</li>
+<li>unsetenv删除name的定义. 即使不存在这种定义也不出错.
+</li>
+<li>当向环境变量表中增加一个环境变量时,会调用malloc为新的环境变量表分配空间,并将原来的环境变量表复制到新分配空间中. 例如:
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdio.h&gt;</span>
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdlib.h&gt;</span>
+
+<span style="color: #a020f0;">extern</span> <span style="color: #228b22;">char</span>** <span style="color: #a0522d;">environ</span>;
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">main</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">argc</span>, <span style="color: #228b22;">char</span> *<span style="color: #a0522d;">argv</span>[])
+{
+        printf(<span style="color: #8b2252;">"before set env:%x\n"</span>,environ);
+        setenv(<span style="color: #8b2252;">"Hello"</span>,<span style="color: #8b2252;">"World"</span>,1);
+        printf(<span style="color: #8b2252;">"after set env:%x\n"</span>,environ);
+        <span style="color: #a020f0;">return</span> 0;
+}
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">before</td>
+<td class="left">set</td>
+<td class="left">env:20010100</td>
+</tr>
+
+<tr>
+<td class="left">after</td>
+<td class="left">set</td>
+<td class="left">env:20020258</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 存储器分配</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+有三个用于存储空间动态分配的函数
+</p>
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdlib.h&gt;</span>
+
+<span style="color: #228b22;">void</span>* <span style="color: #0000ff;">malloc</span>(<span style="color: #228b22;">size_t</span> <span style="color: #a0522d;">size</span>);
+<span style="color: #228b22;">void</span>* <span style="color: #0000ff;">calloc</span>(<span style="color: #228b22;">size_t</span> <span style="color: #a0522d;">nobj</span>,<span style="color: #228b22;">size_t</span> <span style="color: #a0522d;">size_of_obj</span>);
+<span style="color: #228b22;">void</span>* <span style="color: #0000ff;">realloc</span>(<span style="color: #228b22;">void</span>* <span style="color: #a0522d;">ptr</span>,<span style="color: #228b22;">size_t</span> <span style="color: #a0522d;">newsize</span>);
+<span style="color: #228b22;">char</span>* <span style="color: #0000ff;">alloca</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">size</span>);
+
+<span style="color: #228b22;">void</span> <span style="color: #0000ff;">free</span>(<span style="color: #228b22;">void</span>* <span style="color: #a0522d;">ptr</span>);
+</pre>
+</div>
+<ul class="org-ul">
+<li>calloc为指定数量的指定长度的对象分配存储空间,其与malloc的不同之处在于该空间的每一位都初始化为0
+</li>
+<li>这三个分配函数所返回的指针一定是适当对齐的,使其可用于任何数据对象
+</li>
+<li>注意不要释放已经释放了的块
+</li>
+<li>alloca与malloc的不同在于,它在当前函数的栈上分配存储空间,而不是在堆中. 其优点在于当函数返回时,会自动释放它所使用的栈空间.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> setjmp和longjump</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+C中的goto是不能跨越函数的,要跨越函数的跳转只能通过`setjmp'和`longjmp'来实现.
+</p>
+
+<p>
+这两个函数常用于处理发生在深层嵌套函数的出错情况.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;setjmp.h&gt;</span>
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">setjmp</span>(<span style="color: #228b22;">jmp_buf</span> <span style="color: #a0522d;">env</span>);
+
+<span style="color: #228b22;">void</span> <span style="color: #0000ff;">longjmp</span>(<span style="color: #228b22;">jmp_buf</span> <span style="color: #a0522d;">env</span>,<span style="color: #228b22;">int</span> <span style="color: #a0522d;">val</span>);
+</pre>
+</div>
+<ul class="org-ul">
+<li>setjmp中的参数env和longjmp中的参数env需要是同一个对象,因此比较常用的处理方式是将 <b>env变量设置为全局变量</b>
+</li>
+<li>longjmp函数跳转回setjmp函数处时, <b>并不确定是否回滚自动变量(auto int)和寄存器变量(register int)的值</b>. 但 *带有volatile的变量,全局变量和静态变量(static int)并不回滚原来的值.
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdio.h&gt;</span>
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdlib.h&gt;</span>
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;setjmp.h&gt;</span>
+
+<span style="color: #a020f0;">static</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">f1</span>(<span style="color: #228b22;">int</span>,<span style="color: #228b22;">int</span>,<span style="color: #228b22;">int</span>,<span style="color: #228b22;">int</span>);
+<span style="color: #a020f0;">static</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">f2</span>();
+
+<span style="color: #a020f0;">static</span> <span style="color: #228b22;">jmp_buf</span> <span style="color: #a0522d;">jmpbuffer</span>;
+<span style="color: #a020f0;">static</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">globval</span> = 1;
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">main</span>()
+{
+        <span style="color: #228b22;">int</span> <span style="color: #a0522d;">autoval</span> = 2;
+        <span style="color: #a020f0;">register</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">regival</span> = 3;
+        <span style="color: #a020f0;">volatile</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">volaval</span> = 4;
+        <span style="color: #a020f0;">static</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">statval</span> = 5;
+
+        <span style="color: #a020f0;">if</span>(setjmp(jmpbuffer) != 0)
+        {
+                printf(<span style="color: #8b2252;">"after_longjmp:\n"</span>);
+                printf(<span style="color: #8b2252;">"globval=%d,autoval=%d,regival=%d,volaval=%d,statval=%d\n"</span>,globval,autoval,regival,volaval,statval);
+                exit(0);
+        }
+
+        globval = 95;
+        autoval = 96;
+        regival = 97;
+        volaval = 98;
+        statval = 99;
+        f1(autoval,regival,volaval,statval);
+        exit(0);
+}
+
+<span style="color: #a020f0;">static</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">f1</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">i</span> ,<span style="color: #228b22;">int</span> <span style="color: #a0522d;">j</span>,<span style="color: #228b22;">int</span> <span style="color: #a0522d;">k</span>,<span style="color: #228b22;">int</span> <span style="color: #a0522d;">l</span>)
+{
+        printf(<span style="color: #8b2252;">"in_f1():\n"</span>);
+        printf(<span style="color: #8b2252;">"globval=%d,autoval=%d,regival=%d,volaval=%d,statval=%d\n"</span>,globval,i,j,k,l);
+        f2();
+}
+
+<span style="color: #a020f0;">static</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">f2</span>()
+{
+        longjmp(jmpbuffer,1);
+}
+
+<span style="color: #b22222;">/* </span><span style="color: #b22222;">&#36755;&#20986;&#32467;&#26524;&#20026; </span><span style="color: #b22222;">*/</span>
+<span style="color: #b22222;">/* </span><span style="color: #b22222;">in f1(): </span><span style="color: #b22222;">*/</span>
+<span style="color: #b22222;">/* </span><span style="color: #b22222;">globval = 95,autoval = 96,regival = 97,volaval = 98,statval = 99 </span><span style="color: #b22222;">*/</span>
+<span style="color: #b22222;">/* </span><span style="color: #b22222;">after longjmp: </span><span style="color: #b22222;">*/</span>
+<span style="color: #b22222;">/* </span><span style="color: #b22222;">globval = 95,autoval = 2,regival = 3,volaval = 98,statval = 99 </span><span style="color: #b22222;">*/</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">in_f1():</td>
+</tr>
+
+<tr>
+<td class="left">globval=95,autoval=96,regival=97,volaval=98,statval=99</td>
+</tr>
+
+<tr>
+<td class="left">after_longjmp:</td>
+</tr>
+
+<tr>
+<td class="left">globval=95,autoval=96,regival=3,volaval=98,statval=99</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>有些系统的设计原则是:存放在内存中的变量不会回滚longjmp前的值,而存放在CPU和浮点寄存器中的变量则恢复为调用setjmp时的值.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> 资源限制</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+每个进程都有一组资源限制,其中一些可以使用getrlimit和setrlimit函数来查询或更改
+</p>
+<div class="org-src-container">
+
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;sys/resource.h&gt;</span>
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">getrlimit</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">resouce</span>,<span style="color: #a020f0;">struct</span> <span style="color: #228b22;">rlimit</span>* <span style="color: #a0522d;">rlptr</span>);
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">setrlimit</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">resource</span>,<span style="color: #a020f0;">const</span> <span style="color: #a020f0;">struct</span> <span style="color: #228b22;">rlimit</span>*<span style="color: #a0522d;">rlptr</span>);
+
+<span style="color: #a020f0;">struct</span> <span style="color: #228b22;">rlimit</span>{
+  <span style="color: #228b22;">rlim_t</span> <span style="color: #a0522d;">rlim_cur</span>;              <span style="color: #b22222;">/* </span><span style="color: #b22222;">&#36719;&#38480;&#21046; </span><span style="color: #b22222;">*/</span>
+  <span style="color: #228b22;">rlim_t</span> <span style="color: #a0522d;">rlim_max</span>;              <span style="color: #b22222;">/* </span><span style="color: #b22222;">&#30828;&#38480;&#21046; </span><span style="color: #b22222;">*/</span>
+}
+</pre>
+</div>
+<ul class="org-ul">
+<li>任何进程都可以将一个软限制值更改为小于或等于其硬限制值
+</li>
+<li>任何一个进程都可以降低其硬限制值,但它必须大于或等于其软限制值. 且 <b>这种降低是不可逆的</b>
+</li>
+<li>只有超级用户进程可以提高硬限制值.
+</li>
+<li>常量RLTM_INFINITY表示unlimited
+</li>
+<li>资源限制影响到调用进程,并由其子进程继承
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+  <div class="post-meta">
+    <span title="post date" class="post-info">2015-05-18</span>
+    <span title="last modification date" class="post-info">2016-01-23</span>
+    <span title="tags" class="post-info">:N/A:</span>
+    <span title="author" class="post-info"><a href="mailto:Administrator@PC-201510071640">DarkSun</a></span>
+  </div>
+  <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+  <section>
+    <h1>Comments</h1>
+    <div id="comment-wrap">
+      <a class="disqus_label">使用 Disqus 评论</a>
+      <a class="ds-label">使用多说评论</a>
+    </ul>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+     //var disqus_developer = 1;
+     var preempt_signal=false;
+     var disqus_identifier = "/blog/2015/05/18/进程环境/";
+     var disqus_url = "http://lujun9972.github.io/blog/2015/05/18/进程环境/";
+     var disqus_shortname = 'lujun9972';
+     /* * * DON'T EDIT BELOW THIS LINE * * */
+     (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+       $('#disqus_thread').css('display','none');
+     })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <div class="ds-thread"></div>
+    <script type="text/javascript">
+     var duoshuoQuery = {short_name:'lujun9972'};
+     (function() {
+       var ds = document.createElement('script');
+       ds.type = 'text/javascript';ds.async = true;
+       ds.src = 'http://static.duoshuo.com/embed.js';
+       ds.charset = 'UTF-8';
+       (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+       $('.ds-thread').css('display','block');
+     })();
+    </script>
+  </section>
+  <script src="http://lujun9972.github.io/media/js/main.js"></script>
+  <div class="footer">
+    <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+    <p>
+      Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:Administrator@PC-201510071640">DarkSun</a>
+      &nbsp;&nbsp;-&nbsp;&nbsp;
+      Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+      <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+    </p>
+  </div>
+    </div>
+
+  </div></body>
+</html>

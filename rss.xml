@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>浩劫残阳</title>
+    <link>http://lujun9972.github.io</link>
+    <description>=============&gt;随便写写</description>
+    <pubDate>星期六, 23 一月 2016 21:34:08 CST</pubDate>
+    <lastBuildDate>星期六, 23 一月 2016 21:34:08 CST</lastBuildDate>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>网络IPC</title>
+<link>http://lujun9972.github.io/blog/2015/06/08/网络ipc/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/06/08/网络ipc/</guid>
+</item>
+<item>
+<title>守护进程</title>
+<link>http://lujun9972.github.io/blog/2015/06/02/守护进程/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/06/02/守护进程/</guid>
+</item>
+<item>
+<title>数据库函数库</title>
+<link>http://lujun9972.github.io/blog/2015/06/24/数据库函数库/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/06/24/数据库函数库/</guid>
+</item>
+<item>
+<title>文件IO</title>
+<link>http://lujun9972.github.io/blog/2015/05/13/文件io/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/05/13/文件io/</guid>
+</item>
+<item>
+<title>文件和目录</title>
+<link>http://lujun9972.github.io/blog/2015/05/14/文件和目录/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/05/14/文件和目录/</guid>
+</item>
+<item>
+<title>进程控制</title>
+<link>http://lujun9972.github.io/blog/2015/05/18/进程控制/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/05/18/进程控制/</guid>
+</item>
+<item>
+<title>进程环境</title>
+<link>http://lujun9972.github.io/blog/2015/05/18/进程环境/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/05/18/进程环境/</guid>
+</item>
+<item>
+<title>进程关系</title>
+<link>http://lujun9972.github.io/blog/2015/05/20/进程关系/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/05/20/进程关系/</guid>
+</item>
+<item>
+<title>信号</title>
+<link>http://lujun9972.github.io/blog/2015/05/22/信号/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/05/22/信号/</guid>
+</item>
+<item>
+<title>标准IO库</title>
+<link>http://lujun9972.github.io/blog/2015/05/15/标准io库/</link>
+<description>No Description</description>
+<pubDate>2016-01-23</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/05/15/标准io库/</guid>
+</item>
+</channel>
+</rss>
