@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>装Arch记 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+<div>
+  <header class="masthead">
+    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <p>=============&gt;随便谢谢</p>
+    <nav class="site-nav">
+      <div class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
+          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
+          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
+        </svg>
+      </div>
+      <ul class="trigger">
+        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+      </ul>
+    </nav>
+    <form method="get" id="searchform" action="http://www.google.com/search">
+      <input type="text" class="field" name="q" id="s" placeholder="Search">
+      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+    </form>
+  </header>
+</div>
+
+<div>
+<div class="post">
+<h1 class="title">装Arch记</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline1">1. 安装arch</a></li>
+<li><a href="#orgheadline2">2. 配置网络</a></li>
+<li><a href="#orgheadline3">3. 配置中文输入法</a></li>
+<li><a href="#orgheadline4">4. Git</a></li>
+<li><a href="#orgheadline5">5. openssh</a></li>
+<li><a href="#orgheadline6">6. Emacs</a></li>
+<li><a href="#orgheadline8">7. Socketsock</a>
+<ul>
+<li><a href="#orgheadline7">7.1. 安装</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline9">8. 窗口管理器</a></li>
+<li><a href="#orgheadline10">9. 声音配置</a></li>
+<li><a href="#orgheadline11">10. mpg123</a></li>
+<li><a href="#orgheadline12">11. 恢复配置</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> 安装arch</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+安装arch很简单，基本上按照arch wiki上写的一步步来就行了。
+</p>
+
+<p>
+不过在过程中还是遇到了一个小坑：
+</p>
+
+<p>
+按照Wiki的说法, <code>arch-chroot</code> 之后需要再次设置网络，但是我用wifi-menu重设了一次无线网络后，结果提示
+</p>
+<pre class="example">
+Interface 'wlp4s2' is controlled by netctl-auto
+</pre>
+
+<p>
+然后尝试ping外网发现网络是断的。推出chroot后用 <code>ip link</code> 发现wlp4s2接口被down掉了.
+</p>
+
+<p>
+在up该接口后,回复互联网的访问. 然后重新进入 <code>arch-chroot</code> 继续后面的操作.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">ip link set wlp4s2 up
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> 配置网络</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li><p>
+用 <code>wifi-menu</code> 配置好wifi
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">wifi-menu -o
+</pre>
+</div></li>
+
+<li><p>
+安装自动连接wifi的软件包
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman --noconfirm -S --needed wpa_actiond ifplugd wpa_supplicant
+</pre>
+</div>
+<p>
+其中:
+</p>
+<dl class="org-dl">
+<dt>wpa_actiond</dt><dd>用于自动连接无线网络（Wireless Roaming/autoconnect ）</dd>
+<dt>ifplugd</dt><dd>用于自动连接以太网（Wired link detection ）。</dd>
+<dt>wpa_supplicant</dt><dd>用于无线网络认证</dd>
+</dl></li>
+
+<li><p>
+关闭netctl服务,启动netctl-auto服务
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">systemctl disable netctl
+systemctl enable netctl-auto@wlp4s2
+</pre>
+</div>
+
+<p>
+<b>不能同时启动netctl与netctl-auto</b>,两者冲突
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">3</span> 配置中文输入法</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li><p>
+安装fictx
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman --noconfirm -S fcitx-im fcitx-configtool fcitx-sunpinyin
+</pre>
+</div></li>
+
+<li><p>
+在.xinitrc中添加:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-conf"><span style="color: #7590db;">export GTK_IM_MODULE</span>=fcitx
+<span style="color: #7590db;">export QT_IM_MODULE</span>=fcitx
+<span style="color: #7590db;">export XMODIFIERS</span>=<span style="color: #2d9574;">"@im=fcitx"</span>
+fcitx &amp;
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4"><span class="section-number-2">4</span> Git</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li><p>
+安装git
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman --noconfirm -S git
+</pre>
+</div></li>
+
+<li><p>
+配置git
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">git config --global --global user.email <span style="color: #2d9574;">"lujun9972@gmail.com"</span>
+git config --global --global user.name <span style="color: #2d9574;">"darksun"</span>
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-2">
+<h2 id="orgheadline5"><span class="section-number-2">5</span> openssh</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li><p>
+安装openssh
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman --noconfirm -S git
+</pre>
+</div></li>
+
+<li><p>
+生成公钥
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">ssh-keygen -y
+cat .ssh/id_rsa.pub
+</pre>
+</div></li>
+
+<li>将公钥内容放到 <a href="https://www.github.com">github</a> 中</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-2">
+<h2 id="orgheadline6"><span class="section-number-2">6</span> Emacs</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li><p>
+安装Emacs
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman --noconfirm -S emacs
+</pre>
+</div></li>
+<li><p>
+安装配置
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">git clone git@github.com:lujun9972/MyLisp.git ~/MyLisp
+git clone git@github.com:lujun9972/.spacemacs.d.git ~/.spacemacs.d
+mv ~/.emacs.d ~/emacs.d
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8"><span class="section-number-2">7</span> Socketsock</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><span class="section-number-3">7.1</span> 安装</h3>
+<div class="outline-text-3" id="text-7-1">
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman --noconfirm -S shadowsocks
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9"><span class="section-number-2">8</span> 窗口管理器</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li><p>
+安装awesomeWm
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman --noconfirm -S awesome
+</pre>
+</div></li>
+
+<li><p>
+在.xinitrc中添加:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-conf">exec awesome
+</pre>
+</div></li>
+
+<li>配置
+从 <a href="https://github.com/lujun9972/dotfile/blob/master/dotfile.org">https://github.com/lujun9972/dotfile/blob/master/dotfile.org</a> 中tangle出awesomeWm的配置文件.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10"><span class="section-number-2">9</span> 声音配置</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Arch Linux默认开启了声音支持，默认静音。用户可通过 alsamixer（所属包：alsa-utils） 取消静音：
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman --noconfirm -S alsa-utils
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>方向键 选中 Master 和 PCM</li>
+<li>[M] 取消静音</li>
+<li>上下键调整音量</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><span class="section-number-2">10</span> mpg123</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+
+<pre class="src src-sh">pacman --noconfirm -S mpg123
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><span class="section-number-2">11</span> 恢复配置</h2>
+<div class="outline-text-2" id="text-11">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">require</span> '<span style="color: #a45bad;">url-handlers</span><span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">let</span> <span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span>tmpfile <span style="color: #67b11d;">(</span>make-temp-name <span style="color: #2d9574;">"/tmp/dotfile"</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>url-copy-file  <span style="color: #2d9574;">"https://raw.githubusercontent.com/lujun9972/dotfile/master/dotfile.org"</span> tmpfile<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>find-file tmpfile<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>org-mode<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>call-interactively #'org-babel-tangle<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>delete-file tmpfile<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2016-10-20</span>
+            <span title="last modification date" class="post-info">2016-10-23</span>
+            <span title="tags" class="post-info">:N/A:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">lujun9972</a></span>
+        </div>
+    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+                    <a class="ds-label">使用多说评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2016/10/20/装arch记/";
+         var disqus_url = "http://lujun9972.github.io/blog/2016/10/20/装arch记/";
+         var disqus_shortname = '暗日';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="ds-thread"></div>
+        <script type="text/javascript">
+         var duoshuoQuery = {short_name:'暗日'};
+         (function() {
+             var ds = document.createElement('script');
+             ds.type = 'text/javascript';ds.async = true;
+             ds.src = 'http://static.duoshuo.com/embed.js';
+             ds.charset = 'UTF-8';
+             (document.getElementsByTagName('head')[0]
+           || document.getElementsByTagName('body')[0]).appendChild(ds);
+             $('.ds-thread').css('display','block');
+         })();
+        </script>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>

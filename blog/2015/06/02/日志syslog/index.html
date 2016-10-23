@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>日志syslog - 浩劫残阳</title>
+  <title>日志syslog - 暗无天日</title>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <meta name="author" content="DarkSun" />
   <style>
    #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
@@ -13,21 +13,15 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css">
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css">
-  <script type="text/javascript"
-          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
-  </script>
-  <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
-  </script>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">浩劫残阳</a></h1>
-    <p>=============&gt;随便写写</p>
+    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <p>=============&gt;随便谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
         <svg viewBox="0 0 18 15">
@@ -41,7 +35,7 @@
         <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
         <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
         <li><a href="http://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972">Github</a></li>
+        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
         <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
@@ -59,36 +53,33 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. 产生日志消息的方法</a></li>
-<li><a href="#sec-2">2. 日志消息存放地址</a></li>
-<li><a href="#sec-3">3. syslog相关函数</a>
+<li><a href="#orgheadline1">1. 产生日志消息的方法</a></li>
+<li><a href="#orgheadline2">2. 日志消息存放地址</a></li>
+<li><a href="#orgheadline7">3. syslog相关函数</a>
 <ul>
-<li><a href="#sec-3-1">3.1. openlog说明</a></li>
-<li><a href="#sec-3-2">3.2. syslog函数豁免</a></li>
-<li><a href="#sec-3-3">3.3. closelog说明</a></li>
-<li><a href="#sec-3-4">3.4. setlogmask</a></li>
+<li><a href="#orgheadline3">3.1. openlog说明</a></li>
+<li><a href="#orgheadline4">3.2. syslog函数豁免</a></li>
+<li><a href="#orgheadline5">3.3. closelog说明</a></li>
+<li><a href="#orgheadline6">3.4. setlogmask</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> 产生日志消息的方法</h2>
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> 产生日志消息的方法</h2>
 <div class="outline-text-2" id="text-1">
 <ol class="org-ol">
-<li>内核程序可以调用log函数记日志. 任何用户进程可以打开并读取/dev/klog设备读取这些消息
-</li>
-<li>大多数用户进程,调用syslog函数产生日志消息. 这使得消息发送到UNIX域数据报套接字/dev/log
-</li>
-<li>用户进程发送日志消息到UDP端口514
-</li>
+<li>内核程序可以调用log函数记日志. 任何用户进程可以打开并读取/dev/klog设备读取这些消息</li>
+<li>大多数用户进程,调用syslog函数产生日志消息. 这使得消息发送到UNIX域数据报套接字/dev/log</li>
+<li>用户进程发送日志消息到UDP端口514</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> 日志消息存放地址</h2>
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> 日志消息存放地址</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 通常syslogd守护进程会读取一个配置文件(/etc/syslog.conf)来决定不同类型的消息应该送到何处.
@@ -96,84 +87,85 @@
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> syslog相关函数</h2>
+<div id="outline-container-orgheadline7" class="outline-2">
+<h2 id="orgheadline7"><span class="section-number-2">3</span> syslog相关函数</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 
-<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;syslog.h&gt;</span>
+<pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">syslog.h</span><span style="color: #4f97d7;">&gt;</span>
 
-<span style="color: #228b22;">void</span> <span style="color: #0000ff;">openlog</span>(<span style="color: #a020f0;">const</span> <span style="color: #228b22;">char</span>* <span style="color: #a0522d;">ident</span>,<span style="color: #228b22;">int</span> <span style="color: #a0522d;">option</span>,<span style="color: #228b22;">int</span> <span style="color: #a0522d;">facility</span>);
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">openlog</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">ident</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">option</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">facility</span><span style="color: #4f97d7;">)</span>;
 
-<span style="color: #228b22;">void</span> <span style="color: #0000ff;">syslog</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">priority</span>,<span style="color: #a020f0;">const</span> <span style="color: #228b22;">char</span>* <span style="color: #a0522d;">format</span>,...);
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">syslog</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">priority</span>,<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">format</span>,...<span style="color: #4f97d7;">)</span>;
 
-<span style="color: #228b22;">void</span> <span style="color: #0000ff;">vsyslog</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">priority</span>,<span style="color: #a020f0;">const</span> <span style="color: #228b22;">char</span>* <span style="color: #a0522d;">format</span>,<span style="color: #228b22;">va_list</span> <span style="color: #a0522d;">arg</span>);
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">vsyslog</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">priority</span>,<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">format</span>,<span style="color: #ce537a; font-weight: bold;">va_list</span> <span style="color: #7590db;">arg</span><span style="color: #4f97d7;">)</span>;
 
-<span style="color: #228b22;">void</span> <span style="color: #0000ff;">closelog</span>();
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">closelog</span><span style="color: #4f97d7;">()</span>;
 
-<span style="color: #b22222;">/* </span><span style="color: #b22222;">&#36820;&#22238;&#26087;&#30340;&#26085;&#24535;&#20248;&#20808;&#32423;&#23631;&#34109;&#20540; </span><span style="color: #b22222;">*/</span>
-<span style="color: #228b22;">int</span> <span style="color: #0000ff;">setlogmask</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">maskpriority</span>);
+<span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#36820;&#22238;&#26087;&#30340;&#26085;&#24535;&#20248;&#20808;&#32423;&#23631;&#34109;&#20540; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">setlogmask</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">maskpriority</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 </div>
 
-<div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> openlog说明</h3>
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3"><span class="section-number-3">3.1</span> openlog说明</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
-<li>调用openlog是可选择的,若不调用openlog则第一次调用syslog时自动调用syslog
-</li>
-<li>参数ident一般为程序名称.可以用来表示是哪个进程发送的消息日志,openlog会将它加到每则日志消息中
-</li>
-<li>option参数是指定许多选项的位屏蔽
+<li>调用openlog是可选择的,若不调用openlog则第一次调用syslog时自动调用syslog</li>
+<li>参数ident一般为程序名称.可以用来表示是哪个进程发送的消息日志,openlog会将它加到每则日志消息中</li>
+<li><p>
+option参数是指定许多选项的位屏蔽
+</p>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 
-<col  class="left" />
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="left">options</th>
-<th scope="col" class="left">说明</th>
+<th scope="col" class="org-left">options</th>
+<th scope="col" class="org-left">说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="left">LOG_CONS</td>
-<td class="left">若无法将信息发送到syslogd,则直接输出到控制台</td>
+<td class="org-left">LOG_CONS</td>
+<td class="org-left">若无法将信息发送到syslogd,则直接输出到控制台</td>
 </tr>
 
 <tr>
-<td class="left">LOG_NDELAY</td>
-<td class="left">立即打开与syslogd的连接,默认为第一次写日志时才建立连接</td>
+<td class="org-left">LOG_NDELAY</td>
+<td class="org-left">立即打开与syslogd的连接,默认为第一次写日志时才建立连接</td>
 </tr>
 
 <tr>
-<td class="left">LOG_ODELAY</td>
-<td class="left">在就第一条消息时才建立与syslogd的连接</td>
+<td class="org-left">LOG_ODELAY</td>
+<td class="org-left">在就第一条消息时才建立与syslogd的连接</td>
 </tr>
 
 <tr>
-<td class="left">LOG_PERROR</td>
-<td class="left">输出到stderr中</td>
+<td class="org-left">LOG_PERROR</td>
+<td class="org-left">输出到stderr中</td>
 </tr>
 
 <tr>
-<td class="left">LOG_NOWAIT</td>
-<td class="left">syslog记录日志时可能会fork子进程,该选项表示不wait子进程退出</td>
+<td class="org-left">LOG_NOWAIT</td>
+<td class="org-left">syslog记录日志时可能会fork子进程,该选项表示不wait子进程退出</td>
 </tr>
 
 <tr>
-<td class="left">LOG_PID</td>
-<td class="left">每条消息都记录下进程ID</td>
+<td class="org-left">LOG_PID</td>
+<td class="org-left">每条消息都记录下进程ID</td>
 </tr>
 </tbody>
-</table>
-</li>
-<li>参数facility说明
+</table></li>
+<li><p>
+参数facility说明
+</p>
 
 <p>
 参数facility指明了默认的消息种类. 消息种类会根据syslogd的配置文件来分发到不同位置
@@ -182,85 +174,84 @@
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 
-<col  class="left" />
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="left">facility</th>
-<th scope="col" class="left">说明</th>
+<th scope="col" class="org-left">facility</th>
+<th scope="col" class="org-left">说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="left">LOG_AUTH</td>
-<td class="left">认证相关的信息,入login,su,getty产生的信息</td>
+<td class="org-left">LOG_AUTH</td>
+<td class="org-left">认证相关的信息,入login,su,getty产生的信息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_CRON</td>
-<td class="left">由cron或at产生的信息</td>
+<td class="org-left">LOG_CRON</td>
+<td class="org-left">由cron或at产生的信息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_DAEMON</td>
-<td class="left">系统守护进程产生的消息</td>
+<td class="org-left">LOG_DAEMON</td>
+<td class="org-left">系统守护进程产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_FTP</td>
-<td class="left">FTP守护进程产生的消息</td>
+<td class="org-left">LOG_FTP</td>
+<td class="org-left">FTP守护进程产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_KERN</td>
-<td class="left">内核产生的消息</td>
+<td class="org-left">LOG_KERN</td>
+<td class="org-left">内核产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_LOCAL0 &#x2013; LOG_LOCAL7</td>
-<td class="left">保留本地使用</td>
+<td class="org-left">LOG_LOCAL0 &#x2013; LOG_LOCAL7</td>
+<td class="org-left">保留本地使用</td>
 </tr>
 
 <tr>
-<td class="left">LOG_LPR</td>
-<td class="left">行打印系统产生的消息</td>
+<td class="org-left">LOG_LPR</td>
+<td class="org-left">行打印系统产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_MAIL</td>
-<td class="left">邮件系统产生的消息</td>
+<td class="org-left">LOG_MAIL</td>
+<td class="org-left">邮件系统产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_NEWS</td>
-<td class="left">Usenet网络新闻系统产生的消息</td>
+<td class="org-left">LOG_NEWS</td>
+<td class="org-left">Usenet网络新闻系统产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_SYSLOG</td>
-<td class="left">syslogd本身产生的消息</td>
+<td class="org-left">LOG_SYSLOG</td>
+<td class="org-left">syslogd本身产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_USER</td>
-<td class="left">来自其他用户进程的消息(默认)</td>
+<td class="org-left">LOG_USER</td>
+<td class="org-left">来自其他用户进程的消息(默认)</td>
 </tr>
 
 <tr>
-<td class="left">LOG_UUCP</td>
-<td class="left">UUCP系统产生的消息</td>
+<td class="org-left">LOG_UUCP</td>
+<td class="org-left">UUCP系统产生的消息</td>
 </tr>
 </tbody>
-</table>
-</li>
+</table></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> syslog函数豁免</h3>
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">3.2</span> syslog函数豁免</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 参数priority可以用来指明消息的 <b>种类</b> 和 <b>等级</b>
@@ -273,128 +264,128 @@
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 
-<col  class="left" />
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="left">facility</th>
-<th scope="col" class="left">说明</th>
+<th scope="col" class="org-left">facility</th>
+<th scope="col" class="org-left">说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="left">LOG_AUTH</td>
-<td class="left">认证相关的信息,入login,su,getty产生的信息</td>
+<td class="org-left">LOG_AUTH</td>
+<td class="org-left">认证相关的信息,入login,su,getty产生的信息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_CRON</td>
-<td class="left">由cron或at产生的信息</td>
+<td class="org-left">LOG_CRON</td>
+<td class="org-left">由cron或at产生的信息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_DAEMON</td>
-<td class="left">系统守护进程产生的消息</td>
+<td class="org-left">LOG_DAEMON</td>
+<td class="org-left">系统守护进程产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_FTP</td>
-<td class="left">FTP守护进程产生的消息</td>
+<td class="org-left">LOG_FTP</td>
+<td class="org-left">FTP守护进程产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_KERN</td>
-<td class="left">内核产生的消息</td>
+<td class="org-left">LOG_KERN</td>
+<td class="org-left">内核产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_LOCAL0 &#x2013; LOG_LOCAL7</td>
-<td class="left">保留本地使用</td>
+<td class="org-left">LOG_LOCAL0 &#x2013; LOG_LOCAL7</td>
+<td class="org-left">保留本地使用</td>
 </tr>
 
 <tr>
-<td class="left">LOG_LPR</td>
-<td class="left">行打印系统产生的消息</td>
+<td class="org-left">LOG_LPR</td>
+<td class="org-left">行打印系统产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_MAIL</td>
-<td class="left">邮件系统产生的消息</td>
+<td class="org-left">LOG_MAIL</td>
+<td class="org-left">邮件系统产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_NEWS</td>
-<td class="left">Usenet网络新闻系统产生的消息</td>
+<td class="org-left">LOG_NEWS</td>
+<td class="org-left">Usenet网络新闻系统产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_SYSLOG</td>
-<td class="left">syslogd本身产生的消息</td>
+<td class="org-left">LOG_SYSLOG</td>
+<td class="org-left">syslogd本身产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_USER</td>
-<td class="left">来自其他用户进程的消息(默认)</td>
+<td class="org-left">LOG_USER</td>
+<td class="org-left">来自其他用户进程的消息(默认)</td>
 </tr>
 
 <tr>
-<td class="left">LOG_UUCP</td>
-<td class="left">UUCP系统产生的消息</td>
+<td class="org-left">LOG_UUCP</td>
+<td class="org-left">UUCP系统产生的消息</td>
 </tr>
 
 <tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="left">LOG_EMERG</td>
-<td class="left">紧急状态(系统不可用)</td>
+<td class="org-left">LOG_EMERG</td>
+<td class="org-left">紧急状态(系统不可用)</td>
 </tr>
 
 <tr>
-<td class="left">LOG_ALTERT</td>
-<td class="left">必须立即修复的状态</td>
+<td class="org-left">LOG_ALTERT</td>
+<td class="org-left">必须立即修复的状态</td>
 </tr>
 
 <tr>
-<td class="left">LOG_CRIT</td>
-<td class="left">严重状态(例如硬件故障)</td>
+<td class="org-left">LOG_CRIT</td>
+<td class="org-left">严重状态(例如硬件故障)</td>
 </tr>
 
 <tr>
-<td class="left">LOG_ERR</td>
-<td class="left">出错信息</td>
+<td class="org-left">LOG_ERR</td>
+<td class="org-left">出错信息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_WARNING</td>
-<td class="left">警告信息</td>
+<td class="org-left">LOG_WARNING</td>
+<td class="org-left">警告信息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_NOTICE</td>
-<td class="left">正常,但重要的消息</td>
+<td class="org-left">LOG_NOTICE</td>
+<td class="org-left">正常,但重要的消息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_INFO</td>
-<td class="left">消息性质的信息</td>
+<td class="org-left">LOG_INFO</td>
+<td class="org-left">消息性质的信息</td>
 </tr>
 
 <tr>
-<td class="left">LOG_DEBUG</td>
-<td class="left">调试信息</td>
+<td class="org-left">LOG_DEBUG</td>
+<td class="org-left">调试信息</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 
-<div id="outline-container-sec-3-3" class="outline-3">
-<h3 id="sec-3-3"><span class="section-number-3">3.3</span> closelog说明</h3>
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">3.3</span> closelog说明</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 closelog也是可选的,只有在调用openlog后才需要调用. 它用于关闭曾被用于与syslogd守护进程通信的描述符
@@ -402,8 +393,8 @@ closelog也是可选的,只有在调用openlog后才需要调用. 它用于关�
 </div>
 </div>
 
-<div id="outline-container-sec-3-4" class="outline-3">
-<h3 id="sec-3-4"><span class="section-number-3">3.4</span> setlogmask</h3>
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6"><span class="section-number-3">3.4</span> setlogmask</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 setlogmask函数用于设置进程的日志优先级屏蔽字.
@@ -423,62 +414,82 @@ setlogmask函数用于设置进程的日志优先级屏蔽字.
 </div>
 </div>
 <div>
-  <div class="post-meta">
-    <span title="post date" class="post-info">2015-06-02</span>
-    <span title="last modification date" class="post-info">2016-01-23</span>
-    <span title="tags" class="post-info">:N/A:</span>
-    <span title="author" class="post-info"><a href="mailto:Administrator@PC-201510071640">DarkSun</a></span>
-  </div>
-  <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
-  <section>
-    <h1>Comments</h1>
-    <div id="comment-wrap">
-      <a class="disqus_label">使用 Disqus 评论</a>
-      <a class="ds-label">使用多说评论</a>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2015-06-02</span>
+            <span title="last modification date" class="post-info">2016-01-23</span>
+            <span title="tags" class="post-info">:N/A:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a></span>
+        </div>
+    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+                    <a class="ds-label">使用多说评论</a>
     </ul>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-     //var disqus_developer = 1;
-     var preempt_signal=false;
-     var disqus_identifier = "/blog/2015/06/02/日志syslog/";
-     var disqus_url = "http://lujun9972.github.io/blog/2015/06/02/日志syslog/";
-     var disqus_shortname = 'lujun9972';
-     /* * * DON'T EDIT BELOW THIS LINE * * */
-     (function() {
-       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-       dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-       $('#disqus_thread').css('display','none');
-     })();
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2015/06/02/日志syslog/";
+         var disqus_url = "http://lujun9972.github.io/blog/2015/06/02/日志syslog/";
+         var disqus_shortname = '暗日';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="ds-thread"></div>
+        <script type="text/javascript">
+         var duoshuoQuery = {short_name:'暗日'};
+         (function() {
+             var ds = document.createElement('script');
+             ds.type = 'text/javascript';ds.async = true;
+             ds.src = 'http://static.duoshuo.com/embed.js';
+             ds.charset = 'UTF-8';
+             (document.getElementsByTagName('head')[0]
+           || document.getElementsByTagName('body')[0]).appendChild(ds);
+             $('.ds-thread').css('display','block');
+         })();
+        </script>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    <div class="ds-thread"></div>
-    <script type="text/javascript">
-     var duoshuoQuery = {short_name:'lujun9972'};
-     (function() {
-       var ds = document.createElement('script');
-       ds.type = 'text/javascript';ds.async = true;
-       ds.src = 'http://static.duoshuo.com/embed.js';
-       ds.charset = 'UTF-8';
-       (document.getElementsByTagName('head')[0]
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-       $('.ds-thread').css('display','block');
-     })();
-    </script>
-  </section>
-  <script src="http://lujun9972.github.io/media/js/main.js"></script>
-  <div class="footer">
-    <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
-    <p>
-      Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:Administrator@PC-201510071640">DarkSun</a>
-      &nbsp;&nbsp;-&nbsp;&nbsp;
-      Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
-      <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
-      <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
-    </p>
-  </div>
+        </section>
+    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
     </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
 
   </div></body>
 </html>

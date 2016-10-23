@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>进程关系 - 浩劫残阳</title>
+  <title>进程关系 - 暗无天日</title>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="author" content="Administrator" />
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="DarkSun" />
   <style>
    #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
    #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css">
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css">
-  <script type="text/javascript"
-          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
-  </script>
-  <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
-  </script>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">浩劫残阳</a></h1>
-    <p>=============&gt;随便写写</p>
+    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <p>=============&gt;随便谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
         <svg viewBox="0 0 18 15">
@@ -41,7 +35,7 @@
         <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
         <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
         <li><a href="http://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972">Github</a></li>
+        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
         <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
@@ -59,93 +53,80 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. 终端登录过程</a></li>
-<li><a href="#sec-2">2. 网络登录过程</a></li>
-<li><a href="#sec-3">3. 进程组</a>
+<li><a href="#orgheadline1">1. 终端登录过程</a></li>
+<li><a href="#orgheadline2">2. 网络登录过程</a></li>
+<li><a href="#orgheadline5">3. 进程组</a>
 <ul>
-<li><a href="#sec-3-1">3.1. 获取进程的所属进程组</a></li>
-<li><a href="#sec-3-2">3.2. 加入现有的/创建新进程组</a></li>
+<li><a href="#orgheadline3">3.1. 获取进程的所属进程组</a></li>
+<li><a href="#orgheadline4">3.2. 加入现有的/创建新进程组</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4. 会话</a>
+<li><a href="#orgheadline8">4. 会话</a>
 <ul>
-<li><a href="#sec-4-1">4.1. setsid创建新会话</a></li>
-<li><a href="#sec-4-2">4.2. getsid获取会话ID</a></li>
+<li><a href="#orgheadline6">4.1. setsid创建新会话</a></li>
+<li><a href="#orgheadline7">4.2. getsid获取会话ID</a></li>
 </ul>
 </li>
-<li><a href="#sec-5">5. 前后台进程组</a>
+<li><a href="#orgheadline11">5. 前后台进程组</a>
 <ul>
-<li><a href="#sec-5-1">5.1. 设置/获取前台进程组</a></li>
-<li><a href="#sec-5-2">5.2. 后台作业的IO处理</a></li>
+<li><a href="#orgheadline9">5.1. 设置/获取前台进程组</a></li>
+<li><a href="#orgheadline10">5.2. 后台作业的IO处理</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> 终端登录过程</h2>
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> 终端登录过程</h2>
 <div class="outline-text-2" id="text-1">
 <ol class="org-ol">
 <li>init进程针对每个tty frok并exec一个getty子进程
 
 <ul class="org-ul">
-<li>init进程会读取/etc/rc中的脚本来启动基本服务
-</li>
-</ul>
-</li>
+<li>init进程会读取/etc/rc中的脚本来启动基本服务</li>
+</ul></li>
 
-<li>getty程序在每个tty设备上打开stdin,stdout,stderr套接字
-</li>
+<li>getty程序在每个tty设备上打开stdin,stdout,stderr套接字</li>
 
-<li>getty输出"login:"等待用户输入用户名,密码
-</li>
+<li>getty输出"login:"等待用户输入用户名,密码</li>
 
-<li>getty exec login程序,并传递用户名,密码到login程序
+<li><p>
+getty exec login程序,并传递用户名,密码到login程序
+</p>
 <div class="org-src-container">
 
-<pre class="src src-C">execle(<span style="color: #8b2252;">"/bin/login"</span>,<span style="color: #8b2252;">"login"</span>,<span style="color: #8b2252;">"-p"</span>,username,(<span style="color: #228b22;">char</span>*)0,envp);
+<pre class="src src-C">execle<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"/bin/login"</span>,<span style="color: #2d9574;">"login"</span>,<span style="color: #2d9574;">"-p"</span>,username,<span style="color: #bc6ec5;">(</span><span style="color: #ce537a; font-weight: bold;">char</span>*<span style="color: #bc6ec5;">)</span><span style="color: #a45bad;">0</span>,envp<span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 <ul class="org-ul">
-<li>由于exec并不更改进程ID,因此getty,login的进程ID一样,且父进程为都为init,该init进程的PID为`1'
-</li>
-<li>若用户输入几次用户名,密码错误,则login程序调用`exit 1',父进程init收到login退出后会接着创建子进程getty,并重复上面过程.
-</li>
-</ul>
-</li>
+<li>由于exec并不更改进程ID,因此getty,login的进程ID一样,且父进程为都为init,该init进程的PID为`1'</li>
+<li>若用户输入几次用户名,密码错误,则login程序调用`exit 1',父进程init收到login退出后会接着创建子进程getty,并重复上面过程.</li>
+</ul></li>
 
-<li>login将当前工作目录更改为该用户的起始目录
-</li>
+<li>login将当前工作目录更改为该用户的起始目录</li>
 
-<li>login调用chown改变终端所有权为登录用户
-</li>
+<li>login调用chown改变终端所有权为登录用户</li>
 
-<li>login将对该终端设备的访问权限改为用户可读写
-</li>
+<li>login将对该终端设备的访问权限改为用户可读写</li>
 
-<li>login调用setgid和initgroups设置进程的组ID
-</li>
+<li>login调用setgid和initgroups设置进程的组ID</li>
 
-<li>login用login所得到的信息初始化环境变量:起始目录(HOME),shell(SHELL),用户名(USER,LOGNAME),系统默认路径(PATH)
-</li>
+<li>login用login所得到的信息初始化环境变量:起始目录(HOME),shell(SHELL),用户名(USER,LOGNAME),系统默认路径(PATH)</li>
 
 <li>login进程设置自己的三个用户id为登录用户id,并exec该用户的登录shell
 
 <ul class="org-ul">
-<li>shell退出后,init会得到通知,重复上述fork并exec getty的过程.
-</li>
-</ul>
-</li>
+<li>shell退出后,init会得到通知,重复上述fork并exec getty的过程.</li>
+</ul></li>
 
-<li>登录shell读取其配置文件
-</li>
+<li>登录shell读取其配置文件</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> 网络登录过程</h2>
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> 网络登录过程</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 网络登录过程与终端登录过程不同点在于网络登录过程不过是一种网络服务.
@@ -161,8 +142,8 @@
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> 进程组</h2>
+<div id="outline-container-orgheadline5" class="outline-2">
+<h2 id="orgheadline5"><span class="section-number-2">3</span> 进程组</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 每个进程除了有一个进程ID外,还属于一个进程组.
@@ -201,48 +182,44 @@
 </p>
 </div>
 
-<div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> 获取进程的所属进程组</h3>
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3"><span class="section-number-3">3.1</span> 获取进程的所属进程组</h3>
 <div class="outline-text-3" id="text-3-1">
 <div class="org-src-container">
 
-<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;unistd.h&gt;</span>
+<pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
 
-<span style="color: #228b22;">pid_t</span> <span style="color: #0000ff;">getpgrp</span>();
+<span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #bc6ec5; font-weight: bold;">getpgrp</span><span style="color: #4f97d7;">()</span>;
 
-<span style="color: #b22222;">/* </span><span style="color: #b22222;">&#33509;pid == 0,&#21017;&#36820;&#22238;&#35843;&#29992;&#36827;&#31243;&#30340;&#36827;&#31243;&#32452;ID </span><span style="color: #b22222;">*/</span>
-<span style="color: #228b22;">pid_t</span> <span style="color: #0000ff;">getpgid</span>(<span style="color: #228b22;">pid_t</span> <span style="color: #a0522d;">pid</span>);
+<span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#33509;pid == 0,&#21017;&#36820;&#22238;&#35843;&#29992;&#36827;&#31243;&#30340;&#36827;&#31243;&#32452;ID </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+<span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #bc6ec5; font-weight: bold;">getpgid</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #7590db;">pid</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> 加入现有的/创建新进程组</h3>
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">3.2</span> 加入现有的/创建新进程组</h3>
 <div class="outline-text-3" id="text-3-2">
 <div class="org-src-container">
 
-<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;unistd.h&gt;</span>
+<pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
 
-<span style="color: #228b22;">int</span> <span style="color: #0000ff;">setpgid</span>(<span style="color: #228b22;">pid_t</span> <span style="color: #a0522d;">pid</span>,<span style="color: #228b22;">pid_t</span> <span style="color: #a0522d;">pgid</span>);
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">setpgid</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #7590db;">pid</span>,<span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #7590db;">pgid</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 <ul class="org-ul">
-<li>若pid为0,表示使用调用者的进程ID
-</li>
-<li>pgid为0,表示使用参数pid的值
-</li>
-<li>一个进程只能为它自己或它的子进程设置进程组ID. 且 <b>在其子进程调用exec函数后,就不能再更改该子进程的进程组ID了</b>
-</li>
-<li>一般的操作是,在fork后,父,子进程都调用setpgid函数设置子进程的进程组ID, <b>这样做是为了保证无论父子进程哪个优先运行,都正确地设置了进程组</b>
-</li>
+<li>若pid为0,表示使用调用者的进程ID</li>
+<li>pgid为0,表示使用参数pid的值</li>
+<li>一个进程只能为它自己或它的子进程设置进程组ID. 且 <b>在其子进程调用exec函数后,就不能再更改该子进程的进程组ID了</b></li>
+<li>一般的操作是,在fork后,父,子进程都调用setpgid函数设置子进程的进程组ID, <b>这样做是为了保证无论父子进程哪个优先运行,都正确地设置了进程组</b></li>
 </ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> 会话</h2>
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8"><span class="section-number-2">4</span> 会话</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 会话是一个或多个进程组的集合. 这些进程组可以分成一个前台进程组和多个后台进程组.
@@ -273,17 +250,17 @@
 </p>
 </div>
 
-<div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3">4.1</span> setsid创建新会话</h3>
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6"><span class="section-number-3">4.1</span> setsid创建新会话</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 进程调用setsid函数建立一个新会话和新进程组
 </p>
 <div class="org-src-container">
 
-<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;unistd.h&gt;</span>
+<pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
 
-<span style="color: #228b22;">pid_t</span> <span style="color: #0000ff;">setsid</span>();                 <span style="color: #b22222;">/* </span><span style="color: #b22222;">&#25104;&#21151;&#21017;&#36820;&#22238;&#36827;&#31243;&#32452;ID,&#21542;&#21017;&#36820;&#22238;-1 </span><span style="color: #b22222;">*/</span>
+<span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #bc6ec5; font-weight: bold;">setsid</span><span style="color: #4f97d7;">()</span>;                 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#25104;&#21151;&#21017;&#36820;&#22238;&#36827;&#31243;&#32452;ID,&#21542;&#21017;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 </pre>
 </div>
 
@@ -295,43 +272,42 @@
 该函数创建一个 <b>新会话和新进程组</b>,其结果是发生三件事
 </p>
 <ol class="org-ol">
-<li>改进程变成新会话的首进程. 此时该进程是新会话中唯一的进程.
-</li>
-<li>该进程称为一个新进程组的组长进程,新进程组ID是该调用进程的进程ID
-</li>
-<li>该进程没有控制终端.(即使调用setsid之前该进程有控制终端,此时这种联系也会中断)
-</li>
+<li>改进程变成新会话的首进程. 此时该进程是新会话中唯一的进程.</li>
+<li>该进程称为一个新进程组的组长进程,新进程组ID是该调用进程的进程ID</li>
+<li>该进程没有控制终端.(即使调用setsid之前该进程有控制终端,此时这种联系也会中断)</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> getsid获取会话ID</h3>
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><span class="section-number-3">4.2</span> getsid获取会话ID</h3>
 <div class="outline-text-3" id="text-4-2">
 <div class="org-src-container">
 
-<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;unistd.h&gt;</span>
+<pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
 
-<span style="color: #228b22;">pid_t</span> <span style="color: #0000ff;">getsid</span>(<span style="color: #228b22;">pid_t</span> <span style="color: #a0522d;">pid</span>);        <span style="color: #b22222;">/* </span><span style="color: #b22222;">&#33509;&#25104;&#21151;&#36820;&#22238;&#20250;&#35805;ID,&#21542;&#21017;&#36820;&#22238;-1 </span><span style="color: #b22222;">*/</span>
+<span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #bc6ec5; font-weight: bold;">getsid</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #7590db;">pid</span><span style="color: #4f97d7;">)</span>;        <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#33509;&#25104;&#21151;&#36820;&#22238;&#20250;&#35805;ID,&#21542;&#21017;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 
-<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;termios.h&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">termios.h</span><span style="color: #4f97d7;">&gt;</span>
 
-<span style="color: #b22222;">/* </span><span style="color: #b22222;">&#36820;&#22238;tty_filedes&#30456;&#20851;&#32456;&#31471;&#23545;&#24212;&#30340;&#20250;&#35805;ID,&#20986;&#38169;&#36820;&#22238;-1 </span><span style="color: #b22222;">*/</span>
-<span style="color: #228b22;">pid_t</span> <span style="color: #0000ff;">tcgetsid</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">tty_filedes</span>);
+<span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#36820;&#22238;tty_filedes&#30456;&#20851;&#32456;&#31471;&#23545;&#24212;&#30340;&#20250;&#35805;ID,&#20986;&#38169;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+<span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #bc6ec5; font-weight: bold;">tcgetsid</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">tty_filedes</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 <ul class="org-ul">
-<li>处于安全考虑,若参数pid并不属于调用者所在的会话ID,则会出错.
+<li><p>
+处于安全考虑,若参数pid并不属于调用者所在的会话ID,则会出错.
+</p>
 <div class="org-src-container">
 
-<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;unistd.h&gt;</span>
-<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdio.h&gt;</span>
+<pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
-<span style="color: #228b22;">int</span> <span style="color: #0000ff;">main</span>()
-{
-  printf(<span style="color: #8b2252;">"&#26412;&#36827;&#31243;&#25152;&#23646;&#20250;&#35805;ID&#20026;%d\n"</span>,getsid(getpid()));
-  printf(<span style="color: #8b2252;">"&#36827;&#31243;1&#25152;&#23646;&#20250;&#35805;ID&#20026;%d\n"</span>,getsid(1));
-  <span style="color: #a020f0;">return</span> 0;
-}
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+  printf<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"&#26412;&#36827;&#31243;&#25152;&#23646;&#20250;&#35805;ID&#20026;%d\n"</span>,getsid<span style="color: #2d9574;">(</span>getpid<span style="color: #67b11d;">()</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  printf<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"&#36827;&#31243;1&#25152;&#23646;&#20250;&#35805;ID&#20026;%d\n"</span>,getsid<span style="color: #2d9574;">(</span><span style="color: #a45bad;">1</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
@@ -339,47 +315,46 @@
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 </colgroup>
 <tbody>
 <tr>
-<td class="left">本进程所属会话ID为5992</td>
+<td class="org-left">本进程所属会话ID为5992</td>
 </tr>
 
 <tr>
-<td class="left">进程1所属会话ID为-1</td>
+<td class="org-left">进程1所属会话ID为-1</td>
 </tr>
 </tbody>
-</table>
-</li>
+</table></li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> 前后台进程组</h2>
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><span class="section-number-2">5</span> 前后台进程组</h2>
 <div class="outline-text-2" id="text-5">
-</div><div id="outline-container-sec-5-1" class="outline-3">
-<h3 id="sec-5-1"><span class="section-number-3">5.1</span> 设置/获取前台进程组</h3>
+</div><div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">5.1</span> 设置/获取前台进程组</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 需要有一种方法来通知内核哪一个进程组是前台进程组,这样终端设备驱动程序就能了解将终端输入和终端产生的信号送到何处
 </p>
 <div class="org-src-container">
 
-<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;unistd.h&gt;</span>
+<pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
 
-<span style="color: #b22222;">/* </span><span style="color: #b22222;">&#36820;&#22238;&#19982;tty_filedes&#30456;&#20851;&#32852;&#30340;&#32456;&#31471;&#30340;&#21069;&#21488;&#36827;&#31243;&#32452;ID,&#22833;&#36133;&#21017;&#36820;&#22238;-1 </span><span style="color: #b22222;">*/</span>
-<span style="color: #228b22;">pid_t</span> <span style="color: #0000ff;">tcgetpgrp</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">tty_filedes</span>);
+<span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#36820;&#22238;&#19982;tty_filedes&#30456;&#20851;&#32852;&#30340;&#32456;&#31471;&#30340;&#21069;&#21488;&#36827;&#31243;&#32452;ID,&#22833;&#36133;&#21017;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+<span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #bc6ec5; font-weight: bold;">tcgetpgrp</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">tty_filedes</span><span style="color: #4f97d7;">)</span>;
 
-<span style="color: #b22222;">/* </span><span style="color: #b22222;">&#35774;&#32622;&#19982;tty_filedes&#30456;&#20851;&#32852;&#30340;&#32456;&#31471;&#30340;&#21069;&#21488;&#36827;&#31243;&#32452;,&#25104;&#21151;&#36820;&#22238;0,&#22833;&#36133;&#36820;&#22238;-1 </span><span style="color: #b22222;">*/</span>
-<span style="color: #228b22;">int</span> <span style="color: #0000ff;">tcsetpgrp</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">tty_filedes</span>,<span style="color: #228b22;">pid_t</span> <span style="color: #a0522d;">pgrpid</span>);
+<span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#35774;&#32622;&#19982;tty_filedes&#30456;&#20851;&#32852;&#30340;&#32456;&#31471;&#30340;&#21069;&#21488;&#36827;&#31243;&#32452;,&#25104;&#21151;&#36820;&#22238;0,&#22833;&#36133;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">tcsetpgrp</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">tty_filedes</span>,<span style="color: #ce537a; font-weight: bold;">pid_t</span> <span style="color: #7590db;">pgrpid</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-5-2" class="outline-3">
-<h3 id="sec-5-2"><span class="section-number-3">5.2</span> 后台作业的IO处理</h3>
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10"><span class="section-number-3">5.2</span> 后台作业的IO处理</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 若后台作业试图读取终端,则终端驱动程序将检测到这种情况,并且向后台作业发送一个特定信号SIGTTIN. 该信号通常会暂停此后台作业,而shell向有关用户发出作业被暂停的通知.
@@ -395,62 +370,82 @@
 </div>
 </div>
 <div>
-  <div class="post-meta">
-    <span title="post date" class="post-info">2015-05-20</span>
-    <span title="last modification date" class="post-info">2016-01-23</span>
-    <span title="tags" class="post-info">:N/A:</span>
-    <span title="author" class="post-info"><a href="mailto:Administrator@PC-201510071640">Administrator</a></span>
-  </div>
-  <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
-  <section>
-    <h1>Comments</h1>
-    <div id="comment-wrap">
-      <a class="disqus_label">使用 Disqus 评论</a>
-      <a class="ds-label">使用多说评论</a>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2015-05-20</span>
+            <span title="last modification date" class="post-info">2016-02-04</span>
+            <span title="tags" class="post-info">:N/A:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a></span>
+        </div>
+    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+                    <a class="ds-label">使用多说评论</a>
     </ul>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-     //var disqus_developer = 1;
-     var preempt_signal=false;
-     var disqus_identifier = "/blog/2015/05/20/进程关系/";
-     var disqus_url = "http://lujun9972.github.io/blog/2015/05/20/进程关系/";
-     var disqus_shortname = 'lujun9972';
-     /* * * DON'T EDIT BELOW THIS LINE * * */
-     (function() {
-       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-       dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-       $('#disqus_thread').css('display','none');
-     })();
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2015/05/20/进程关系/";
+         var disqus_url = "http://lujun9972.github.io/blog/2015/05/20/进程关系/";
+         var disqus_shortname = '暗日';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="ds-thread"></div>
+        <script type="text/javascript">
+         var duoshuoQuery = {short_name:'暗日'};
+         (function() {
+             var ds = document.createElement('script');
+             ds.type = 'text/javascript';ds.async = true;
+             ds.src = 'http://static.duoshuo.com/embed.js';
+             ds.charset = 'UTF-8';
+             (document.getElementsByTagName('head')[0]
+           || document.getElementsByTagName('body')[0]).appendChild(ds);
+             $('.ds-thread').css('display','block');
+         })();
+        </script>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    <div class="ds-thread"></div>
-    <script type="text/javascript">
-     var duoshuoQuery = {short_name:'lujun9972'};
-     (function() {
-       var ds = document.createElement('script');
-       ds.type = 'text/javascript';ds.async = true;
-       ds.src = 'http://static.duoshuo.com/embed.js';
-       ds.charset = 'UTF-8';
-       (document.getElementsByTagName('head')[0]
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-       $('.ds-thread').css('display','block');
-     })();
-    </script>
-  </section>
-  <script src="http://lujun9972.github.io/media/js/main.js"></script>
-  <div class="footer">
-    <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
-    <p>
-      Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:Administrator@PC-201510071640">Administrator</a>
-      &nbsp;&nbsp;-&nbsp;&nbsp;
-      Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
-      <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
-      <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
-    </p>
-  </div>
+        </section>
+    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
     </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
 
   </div></body>
 </html>
