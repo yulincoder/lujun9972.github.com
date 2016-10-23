@@ -80,6 +80,15 @@
 </p>
 
 <p>
+我主要参考了两个链接：
+<a href="http://bbs.archlinuxcn.org/viewtopic.php?id=1037">Arch Linux 安装指南</a>
+</p>
+
+<p>
+<a href="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">Arch wiki 安装指南</a>
+</p>
+
+<p>
 不过在过程中还是遇到了一个小坑：
 </p>
 
@@ -336,6 +345,17 @@ Arch Linux默认开启了声音支持，默认静音。用户可通过 alsamixer
 <div id="outline-container-orgheadline12" class="outline-2">
 <h2 id="orgheadline12"><span class="section-number-2">11</span> 恢复配置</h2>
 <div class="outline-text-2" id="text-11">
+<p>
+我用Emacs的org-mode来管理dotfile. 
+</p>
+
+<p>
+所有的dotfile基本都以src block的形式存在<a href="https://github.com/lujun9972/dotfile/blob/master/dotfile.org">https://github.com/lujun9972/dotfile/blob/master/dotfile.org</a> 中了
+</p>
+
+<p>
+只需要执行下面这段emacs-lisp代码就能恢复配置了
+</p>
 <div class="org-src-container">
 
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">require</span> '<span style="color: #a45bad;">url-handlers</span><span style="color: #4f97d7;">)</span>
