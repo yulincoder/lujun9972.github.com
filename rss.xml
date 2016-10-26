@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>三, 26 10月 2016 20:35:53 CST</pubDate>
-    <lastBuildDate>三, 26 10月 2016 20:35:53 CST</lastBuildDate>
+    <pubDate>三, 26 10月 2016 21:11:30 CST</pubDate>
+    <lastBuildDate>三, 26 10月 2016 21:11:30 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>Bash退出码的意义</title>
+<link>http://lujun9972.github.io/blog/2016/03/02/bash退出码的意义/ Or /blog/bash退出码的意义/</link>
+<description>Bash退出码的意义</description>
+<pubDate>2016-10-26</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/03/02/bash退出码的意义/ Or /blog/bash退出码的意义/</guid>
+</item>
 <item>
 <title>epipe的实现原理是什么?</title>
 <link>http://lujun9972.github.io/编程之旅/2016/10/26/epipe的实现原理是什么-/ Or /编程之旅/epipe的实现原理是什么-/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-10-24</pubDate>
 <guid>http://lujun9972.github.io/blog/2015/05/18/进程环境/</guid>
-</item>
-<item>
-<title>进程关系</title>
-<link>http://lujun9972.github.io/blog/2015/05/20/进程关系/</link>
-<description>No Description</description>
-<pubDate>2016-10-24</pubDate>
-<guid>http://lujun9972.github.io/blog/2015/05/20/进程关系/</guid>
 </item>
 </channel>
 </rss>
