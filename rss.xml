@@ -4,8 +4,8 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>一, 31 10月 2016 22:28:17 CST</pubDate>
-    <lastBuildDate>一, 31 10月 2016 22:28:17 CST</lastBuildDate>
+    <pubDate>一, 31 10月 2016 22:30:47 CST</pubDate>
+    <lastBuildDate>一, 31 10月 2016 22:30:47 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
@@ -14,13 +14,6 @@
 <description>使用Emacs ediff作为git diff工具</description>
 <pubDate>2016-10-31</pubDate>
 <guid>http://lujun9972.github.io/Emacs之怒/2016/10/31/使用emacs-ediff作为git-merge工具/ Or /Emacs之怒/使用emacs-ediff作为git-merge工具/</guid>
-</item>
-<item>
-<title>装Arch记</title>
-<link>http://lujun9972.github.io/blog/2016/10/20/装arch记/</link>
-<description>No Description</description>
-<pubDate>2016-10-31</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/10/20/装arch记/</guid>
 </item>
 <item>
 <title>使用Emacs ediff作为git diff工具</title>
@@ -77,6 +70,13 @@
 <description>No Description</description>
 <pubDate>2016-10-24</pubDate>
 <guid>http://lujun9972.github.io/blog/2015/05/13/文件io/</guid>
+</item>
+<item>
+<title>文件和目录</title>
+<link>http://lujun9972.github.io/blog/2015/05/14/文件和目录/</link>
+<description>No Description</description>
+<pubDate>2016-10-24</pubDate>
+<guid>http://lujun9972.github.io/blog/2015/05/14/文件和目录/</guid>
 </item>
 </channel>
 </rss>
