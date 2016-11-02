@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 01 11月 2016 07:33:20 CST</pubDate>
-    <lastBuildDate>二, 01 11月 2016 07:33:20 CST</lastBuildDate>
+    <pubDate>四, 03 11月 2016 07:30:18 CST</pubDate>
+    <lastBuildDate>四, 03 11月 2016 07:30:18 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>吐槽一下CSDN的OpenAPI</title>
+<link>http://lujun9972.github.io/无主之地/2016/11/03/吐槽一下csdn的openapi/ Or /无主之地/吐槽一下csdn的openapi/</link>
+<description>&lt;Add description here&gt;</description>
+<pubDate>2016-11-03</pubDate>
+<guid>http://lujun9972.github.io/无主之地/2016/11/03/吐槽一下csdn的openapi/ Or /无主之地/吐槽一下csdn的openapi/</guid>
+</item>
 <item>
 <title>提交github后自动完成habitica habit</title>
 <link>http://lujun9972.github.io/时间管理/2016/11/01/提交github后自动完成habitica-habit/ Or /时间管理/提交github后自动完成habitica-habit/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-10-24</pubDate>
 <guid>http://lujun9972.github.io/blog/2015/06/24/数据库函数库/</guid>
-</item>
-<item>
-<title>文件IO</title>
-<link>http://lujun9972.github.io/blog/2015/05/13/文件io/</link>
-<description>No Description</description>
-<pubDate>2016-10-24</pubDate>
-<guid>http://lujun9972.github.io/blog/2015/05/13/文件io/</guid>
 </item>
 </channel>
 </rss>
