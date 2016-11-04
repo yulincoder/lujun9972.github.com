@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 03 11月 2016 07:30:18 CST</pubDate>
-    <lastBuildDate>四, 03 11月 2016 07:30:18 CST</lastBuildDate>
+    <pubDate>五, 04 11月 2016 21:07:45 CST</pubDate>
+    <lastBuildDate>五, 04 11月 2016 21:07:45 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>判断Emacs是否在图形环境中的正确方法</title>
+<link>http://lujun9972.github.io/Emacs之怒/2016/11/04/判断emacs是否在图形环境中的正确方法/ Or /Emacs之怒/判断emacs是否在图形环境中的正确方法/</link>
+<description>&lt;Add description here&gt;</description>
+<pubDate>2016-11-04</pubDate>
+<guid>http://lujun9972.github.io/Emacs之怒/2016/11/04/判断emacs是否在图形环境中的正确方法/ Or /Emacs之怒/判断emacs是否在图形环境中的正确方法/</guid>
+</item>
 <item>
 <title>吐槽一下CSDN的OpenAPI</title>
 <link>http://lujun9972.github.io/无主之地/2016/11/03/吐槽一下csdn的openapi/ Or /无主之地/吐槽一下csdn的openapi/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-10-24</pubDate>
 <guid>http://lujun9972.github.io/blog/2015/06/02/守护进程/</guid>
-</item>
-<item>
-<title>数据库函数库</title>
-<link>http://lujun9972.github.io/blog/2015/06/24/数据库函数库/</link>
-<description>No Description</description>
-<pubDate>2016-10-24</pubDate>
-<guid>http://lujun9972.github.io/blog/2015/06/24/数据库函数库/</guid>
 </item>
 </channel>
 </rss>
