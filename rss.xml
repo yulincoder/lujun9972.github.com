@@ -4,10 +4,24 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>六, 05 11月 2016 07:37:47 CST</pubDate>
-    <lastBuildDate>六, 05 11月 2016 07:37:47 CST</lastBuildDate>
+    <pubDate>二, 08 11月 2016 21:29:50 CST</pubDate>
+    <lastBuildDate>二, 08 11月 2016 21:29:50 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>Emacs作为图片浏览器</title>
+<link>http://lujun9972.github.io/blog/2016/11/08/emacs作为图片浏览器/</link>
+<description>No Description</description>
+<pubDate>2016-11-08</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/11/08/emacs作为图片浏览器/</guid>
+</item>
+<item>
+<title>使用Emacs ediff作为git diff工具</title>
+<link>http://lujun9972.github.io/Emacs之怒/2016/10/27/使用emacs-ediff作为git-diff工具/ Or /Emacs之怒/使用emacs-ediff作为git-diff工具/</link>
+<description>使用Emacs ediff作为git diff工具</description>
+<pubDate>2016-11-07</pubDate>
+<guid>http://lujun9972.github.io/Emacs之怒/2016/10/27/使用emacs-ediff作为git-diff工具/ Or /Emacs之怒/使用emacs-ediff作为git-diff工具/</guid>
+</item>
 <item>
 <title>mpg123播放歌曲自动快进的解决方法</title>
 <link>http://lujun9972.github.io/blog/2016/11/05/mpg123播放歌曲自动快进的解决方法/</link>
@@ -51,13 +65,6 @@
 <guid>http://lujun9972.github.io/Emacs之怒/2016/10/31/使用emacs-ediff作为git-merge工具/ Or /Emacs之怒/使用emacs-ediff作为git-merge工具/</guid>
 </item>
 <item>
-<title>使用Emacs ediff作为git diff工具</title>
-<link>http://lujun9972.github.io/Emacs之怒/2016/10/27/使用emacs-ediff作为git-diff工具/ Or /Emacs之怒/使用emacs-ediff作为git-diff工具/</link>
-<description>使用Emacs ediff作为git diff工具</description>
-<pubDate>2016-10-27</pubDate>
-<guid>http://lujun9972.github.io/Emacs之怒/2016/10/27/使用emacs-ediff作为git-diff工具/ Or /Emacs之怒/使用emacs-ediff作为git-diff工具/</guid>
-</item>
-<item>
 <title>Bash退出码的意义</title>
 <link>http://lujun9972.github.io/blog/2016/03/02/bash退出码的意义/ Or /blog/bash退出码的意义/</link>
 <description>Bash退出码的意义</description>
@@ -70,13 +77,6 @@
 <description>&lt;Add description here&gt;</description>
 <pubDate>2016-10-26</pubDate>
 <guid>http://lujun9972.github.io/编程之旅/2016/10/26/epipe的实现原理是什么-/ Or /编程之旅/epipe的实现原理是什么-/</guid>
-</item>
-<item>
-<title>用mpg123播放https协议的URL MP3</title>
-<link>http://lujun9972.github.io/linux和它的小伙伴/2016/10/24/用mpg123播放https协议的url-mp3/ Or /linux和它的小伙伴/用mpg123播放https协议的url-mp3/</link>
-<description>No Description</description>
-<pubDate>2016-10-24</pubDate>
-<guid>http://lujun9972.github.io/linux和它的小伙伴/2016/10/24/用mpg123播放https协议的url-mp3/ Or /linux和它的小伙伴/用mpg123播放https协议的url-mp3/</guid>
 </item>
 </channel>
 </rss>
