@@ -213,9 +213,9 @@ image-dired的相关操作基本都是在 <code>*image-dired*</code> buffer中�
 </p>
 
 <ol class="org-ol">
-<li>当开启了evil插件后,会发现有些 <code>image-mode</code> 与 <code>*image-dired*</code> buffer中的快捷键会被evil覆盖掉,不太好用.</li>
+<li>当目录中的图片太多时, <code>image-dired</code> 消耗大量的时间来生成缩略图,而这期间会造成Emacs卡死. 所以我这里用 <code>emacs</code> 新启动一个进程.</li>
 
-<li>当目录中的图片太多时, <code>image-dired</code> 消耗大量的时间来生成缩略图,而这期间会造成Emacs卡死.</li>
+<li>当开启了evil插件后,会发现有些 <code>image-mode</code> 与 <code>*image-dired*</code> buffer中的快捷键会被evil覆盖掉,不太好用. 所以我这里用 <code>-q</code> 选项来阻止emacs读取配置文件.</li>
 </ol>
 </div>
 </div>
