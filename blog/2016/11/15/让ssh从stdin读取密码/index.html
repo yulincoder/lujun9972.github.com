@@ -55,7 +55,15 @@
 </p>
 
 <p>
-万幸的是,python自带一个名为 pty 的modual,它有一个 spawn 函数,manual中对它的描述是:
+查了一下网上一般的解决方案是借助 <code>paramiko</code> 或 <code>pexpect</code> 这两个第三方库来解决的.
+</p>
+
+<p>
+但安装第三方库对于不能随意访问互联网的环境来说是很麻烦的一件事情.
+</p>
+
+<p>
+其实就这个应用场景来说,完全没必要用到第三方库. python自带一个名为 pty 的modual,它有一个 spawn 函数,manual中对它的描述是:
 </p>
 
 <blockquote>
