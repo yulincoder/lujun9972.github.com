@@ -64,22 +64,22 @@ chmod +x /tmp/echox
 <span style="color: #7590db;">x</span>=Hi
 <span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">"x&#19981;&#26159;&#29615;&#22659;&#21464;&#37327;&#30340;&#24773;&#20917;&#19979;"</span>
 /tmp/echox
-<span style="color: #4f97d7;">echo</span> 
 <span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">"x&#26159;&#29615;&#22659;&#21464;&#37327;&#30340;&#24773;&#20917;&#19979;"</span>
 <span style="color: #4f97d7;">export</span> x
 /tmp/echox
 </pre>
 </div>
 
-<div class="org-src-container">
-
-<pre class="src src-org">x&#19981;&#26159;&#29615;&#22659;&#21464;&#37327;&#30340;&#24773;&#20917;&#19979;
+<p>
+x不是环境变量的情况下
 x=
-
-x&#26159;&#29615;&#22659;&#21464;&#37327;&#30340;&#24773;&#20917;&#19979;
+x是环境变量的情况下
 x=Hi
-</pre>
-</div>
+x不是环境变量的情况下
+x=
+x是环境变量的情况下
+x=Hi
+</p>
 
 <p>
 还有一种不太常见的方法是在一个shell脚本执行的命令行前直接赋值
@@ -121,13 +121,12 @@ fortune
 <div class="org-src-container">
 
 <pre class="src src-org">&#20320;&#21487;&#20197;&#19981;&#25913;&#21464;PATH&#21464;&#37327;&#30340;&#20540;,&#30452;&#25509;&#29992;game&#33050;&#26412;&#26469;&#36816;&#34892;&#19968;&#20010;&#28216;&#25103;
-You will have good luck and overcome many hardships.
+Things past redress and now with me past care.
+    -- William Shakespeare, "Richard II"
 PATH&#30340;&#20540;&#20026;:/usr/bin:/usr/sbin:/bin:/sbin
 &#20320;&#20063;&#21487;&#20197;&#29992; <span style="color: #4f97d7;">=. game=</span> &#26469;&#27704;&#20037;&#24615;&#22320;PATH&#21464;&#37327;&#30340;&#20540;,&#28982;&#21518;&#23601;&#21487;&#20197;&#36816;&#34892;&#28216;&#25103;&#20102;
 PATH&#30340;&#20540;&#20026;:/usr/bin:/usr/sbin:/bin:/sbin:/usr/games
-Whenever you find that you are on the side of the majority, it is time
-to reform.
-    -- Mark Twain
+You have an unusual equipment for success.  Be sure to use it properly.
 </pre>
 </div>
 
