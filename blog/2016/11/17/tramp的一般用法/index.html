@@ -77,8 +77,12 @@ tramp的用法很简单,只要你在 <code>C-x C-f</code> 选择文件时使用�
 </p>
 
 <p>
-tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-file</code>. 
+tramp标示文件的语法为: 
 </p>
+
+<pre class="example">
+/[protocol]:[user@]hostname[#port]:path-to-file
+</pre>
 
 <p>
 例如 <code>/ssh:cnaps2@10.8.6.10:~/tmp/t.log</code> 会通过ssh协议,以cnaps2用户登录10.8.6.10这台机,并访问上面的~/tmp/t.log文件.
