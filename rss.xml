@@ -4,8 +4,8 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 17 11月 2016 19:01:24 CST</pubDate>
-    <lastBuildDate>四, 17 11月 2016 19:01:24 CST</lastBuildDate>
+    <pubDate>四, 17 11月 2016 22:55:44 CST</pubDate>
+    <lastBuildDate>四, 17 11月 2016 22:55:44 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
@@ -14,6 +14,13 @@
 <description>No Description</description>
 <pubDate>2016-11-17</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/11/17/tramp的一般用法/</guid>
+</item>
+<item>
+<title>为子shell设置变量值的两种方法</title>
+<link>http://lujun9972.github.io/blog/2016/11/17/为子shell设置变量值的两种方法/</link>
+<description>No Description</description>
+<pubDate>2016-11-17</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/11/17/为子shell设置变量值的两种方法/</guid>
 </item>
 <item>
 <title>让ssh从stdin读取密码</title>
@@ -70,13 +77,6 @@
 <description>&lt;Add description here&gt;</description>
 <pubDate>2016-11-03</pubDate>
 <guid>http://lujun9972.github.io/无主之地/2016/11/03/吐槽一下csdn的openapi/ Or /无主之地/吐槽一下csdn的openapi/</guid>
-</item>
-<item>
-<title>提交github后自动完成habitica habit</title>
-<link>http://lujun9972.github.io/时间管理/2016/11/01/提交github后自动完成habitica-habit/ Or /时间管理/提交github后自动完成habitica-habit/</link>
-<description>提交github后自动完成habitica habit</description>
-<pubDate>2016-11-01</pubDate>
-<guid>http://lujun9972.github.io/时间管理/2016/11/01/提交github后自动完成habitica-habit/ Or /时间管理/提交github后自动完成habitica-habit/</guid>
 </item>
 </channel>
 </rss>
