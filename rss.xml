@@ -4,15 +4,22 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 17 11月 2016 23:06:48 CST</pubDate>
-    <lastBuildDate>四, 17 11月 2016 23:06:48 CST</lastBuildDate>
+    <pubDate>日, 20 11月 2016 23:00:24 CST</pubDate>
+    <lastBuildDate>日, 20 11月 2016 23:00:24 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>Emacs中那些不常用的行操作命令</title>
+<link>http://lujun9972.github.io/blog/2016/11/18/emacs中那些不常用的行操作命令/</link>
+<description>No Description</description>
+<pubDate>2016-11-20</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/11/18/emacs中那些不常用的行操作命令/</guid>
+</item>
 <item>
 <title>tramp的一般用法</title>
 <link>http://lujun9972.github.io/blog/2016/11/17/tramp的一般用法/</link>
 <description>No Description</description>
-<pubDate>2016-11-17</pubDate>
+<pubDate>2016-11-20</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/11/17/tramp的一般用法/</guid>
 </item>
 <item>
@@ -70,13 +77,6 @@
 <description>&lt;Add description here&gt;</description>
 <pubDate>2016-11-04</pubDate>
 <guid>http://lujun9972.github.io/Emacs之怒/2016/11/04/判断emacs是否在图形环境中的正确方法/ Or /Emacs之怒/判断emacs是否在图形环境中的正确方法/</guid>
-</item>
-<item>
-<title>吐槽一下CSDN的OpenAPI</title>
-<link>http://lujun9972.github.io/无主之地/2016/11/03/吐槽一下csdn的openapi/ Or /无主之地/吐槽一下csdn的openapi/</link>
-<description>&lt;Add description here&gt;</description>
-<pubDate>2016-11-03</pubDate>
-<guid>http://lujun9972.github.io/无主之地/2016/11/03/吐槽一下csdn的openapi/ Or /无主之地/吐槽一下csdn的openapi/</guid>
 </item>
 </channel>
 </rss>
