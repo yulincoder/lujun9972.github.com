@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>使用notify-send发送桌面通知 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+<div>
+  <header class="masthead">
+    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <p>=============&gt;随便,谢谢</p>
+    <nav class="site-nav">
+      <div class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
+          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
+          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
+        </svg>
+      </div>
+      <ul class="trigger">
+        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+      </ul>
+    </nav>
+    <form method="get" id="searchform" action="http://www.google.com/search">
+      <input type="text" class="field" name="q" id="s" placeholder="Search">
+      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+    </form>
+  </header>
+</div>
+
+<div>
+<div class="post">
+<h1 class="title">使用notify-send发送桌面通知</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline15">1. 常用的选项</a>
+<ul>
+<li><a href="#orgheadline1">1.1. -t &#x2013;expire-time=TIME</a></li>
+<li><a href="#orgheadline2">1.2. -u &#x2013;urgency=LEVEL</a></li>
+<li><a href="#orgheadline14">1.3. -i &#x2013;icon=ICON[,ICON&#x2026;]</a>
+<ul>
+<li><a href="#orgheadline3">1.3.1. Standard Action Icons</a></li>
+<li><a href="#orgheadline4">1.3.2. Standard Animation Icons</a></li>
+<li><a href="#orgheadline5">1.3.3. Standard Application Icons</a></li>
+<li><a href="#orgheadline6">1.3.4. Standard Category Icons</a></li>
+<li><a href="#orgheadline7">1.3.5. Standard Device Icons</a></li>
+<li><a href="#orgheadline8">1.3.6. Standard Emblem Icons</a></li>
+<li><a href="#orgheadline9">1.3.7. Standard Emotion Icons</a></li>
+<li><a href="#orgheadline10">1.3.8. Standard International Icons</a></li>
+<li><a href="#orgheadline11">1.3.9. Standard MIME Type Icons</a></li>
+<li><a href="#orgheadline12">1.3.10. Standard Place Icons</a></li>
+<li><a href="#orgheadline13">1.3.11. Standard Status Icons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline18">2. 不常用的选项</a>
+<ul>
+<li><a href="#orgheadline16">2.1. -c &#x2013;category=TYPE[,TYPE&#x2026;]</a></li>
+<li><a href="#orgheadline17">2.2. -h &#x2013;hint=TYPE:NAME:VALUE</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+通过notify-send是一个可以让你发送桌面通知的命令. 它的语法非常简单:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">notify-send <span style="color: #4f97d7;">[</span>&#20854;&#20182;&#36873;&#39033;...<span style="color: #4f97d7;">]</span> &#26631;&#39064; <span style="color: #4f97d7;">[</span>&#20869;&#23481;<span style="color: #4f97d7;">]</span>
+</pre>
+</div>
+
+<p>
+其中"标题"一般为单行不超过40个字符的文本. 
+而"内容"则可以是多行的文本,且某些notification server还支持简单的标记语法:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">标记</th>
+<th scope="col" class="org-left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&lt;b&gt; &#x2026; &lt;/b&gt;</td>
+<td class="org-left">粗体</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;i&gt; &#x2026; &lt;/i&gt;</td>
+<td class="org-left">斜体</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;u&gt; &#x2026; &lt;/u&gt;</td>
+<td class="org-left">下划线</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;a href="&#x2026;"&gt; &#x2026; &lt;/a&gt;</td>
+<td class="org-left">超链接</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;img src="&#x2026;" alt="&#x2026;"/&gt;</td>
+<td class="org-left">图片</td>
+</tr>
+</tbody>
+</table>
+
+<div id="outline-container-orgheadline15" class="outline-2">
+<h2 id="orgheadline15"><span class="section-number-2">1</span> 常用的选项</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+notify-send的常用的几个选项有这么几个:
+</p>
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-3">
+<h3 id="orgheadline1"><span class="section-number-3">1.1</span> -t &#x2013;expire-time=TIME</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+指定通知显示多长时间后消失,单位是毫秒. (Ubuntu的Notify OSD以及GNOME Shell会忽略该参数)
+</p>
+
+<p>
+若参数为-1表示使用notification server上配置的超时时间.
+</p>
+
+<p>
+若参数为0则表示永不自动消失.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2"><span class="section-number-3">1.2</span> -u &#x2013;urgency=LEVEL</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+指定通知的级别,只能是 <code>low</code>, <code>normal</code>, <code>critical</code> 这三个值中的一个.
+</p>
+
+<p>
+当有多个通知待显示时,一般会优先选择优先级高的那个通知显示. 但具体不同的 <code>notification server</code> 有不同的处理方法.
+</p>
+
+<p>
+例如在我的机器上运行
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">!/bin/</span><span style="color: #4f97d7; font-weight: bold;">bash</span>
+
+notify-send ignore
+<span style="color: #4f97d7; font-weight: bold;">for</span> level<span style="color: #4f97d7; font-weight: bold;"> in</span> low normal critical
+<span style="color: #4f97d7; font-weight: bold;">do</span>
+    notify-send -u $<span style="color: #7590db;">level</span> $<span style="color: #7590db;">level</span>
+<span style="color: #4f97d7; font-weight: bold;">done</span>
+</pre>
+</div>
+<p>
+会先显示ignore,再显示critical,再是low,最后才是normal
+</p>
+
+<p>
+另外,根据标准,Critical级别的通知是应该一直显示直到用户手工关闭的,然而实际情况还是依具体的notification server而定.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14"><span class="section-number-3">1.3</span> -i &#x2013;icon=ICON[,ICON&#x2026;]</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+指定显示通知的图标. 其中ICON既可以是一个指向图标文件的路径,也可以是标准图标的名称.
+</p>
+
+<p>
+其中标准图标名称一般包括以下这些:
+</p>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-4">
+<h4 id="orgheadline3"><span class="section-number-4">1.3.1</span> Standard Action Icons</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-4">
+<h4 id="orgheadline4"><span class="section-number-4">1.3.2</span> Standard Animation Icons</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-4">
+<h4 id="orgheadline5"><span class="section-number-4">1.3.3</span> Standard Application Icons</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6"><span class="section-number-4">1.3.4</span> Standard Category Icons</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7"><span class="section-number-4">1.3.5</span> Standard Device Icons</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-4">
+<h4 id="orgheadline8"><span class="section-number-4">1.3.6</span> Standard Emblem Icons</h4>
+<div class="outline-text-4" id="text-1-3-6">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9"><span class="section-number-4">1.3.7</span> Standard Emotion Icons</h4>
+<div class="outline-text-4" id="text-1-3-7">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10"><span class="section-number-4">1.3.8</span> Standard International Icons</h4>
+<div class="outline-text-4" id="text-1-3-8">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;Name&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-4">
+<h4 id="orgheadline11"><span class="section-number-4">1.3.9</span> Standard MIME Type Icons</h4>
+<div class="outline-text-4" id="text-1-3-9">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-4">
+<h4 id="orgheadline12"><span class="section-number-4">1.3.10</span> Standard Place Icons</h4>
+<div class="outline-text-4" id="text-1-3-10">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-4">
+<h4 id="orgheadline13"><span class="section-number-4">1.3.11</span> Standard Status Icons</h4>
+<div class="outline-text-4" id="text-1-3-11">
+<!-- This HTML table template is generated by emacs 26.0.50.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline18" class="outline-2">
+<h2 id="orgheadline18"><span class="section-number-2">2</span> 不常用的选项</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-orgheadline16" class="outline-3">
+<h3 id="orgheadline16"><span class="section-number-3">2.1</span> -c &#x2013;category=TYPE[,TYPE&#x2026;]</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+指定通知的类别. 
+</p>
+
+<p>
+该选项并不作为client与server的强制实现. 但有些notificatioin server会以不同的方式来显示不同类别的通知.
+</p>
+
+<p>
+notification标准定义了如下几种类别:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">类别</th>
+<th scope="col" class="org-left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">"device"</td>
+<td class="org-left">A generic device-related notification that doesn't fit into any other category.</td>
+</tr>
+
+<tr>
+<td class="org-left">"device.added"</td>
+<td class="org-left">A device, such as a USB device, was added to the system.</td>
+</tr>
+
+<tr>
+<td class="org-left">"device.error"</td>
+<td class="org-left">A device had some kind of error.</td>
+</tr>
+
+<tr>
+<td class="org-left">"device.removed"</td>
+<td class="org-left">A device, such as a USB device, was removed from the system.</td>
+</tr>
+
+<tr>
+<td class="org-left">"email"</td>
+<td class="org-left">A generic e-mail-related notification that doesn't fit into any other category.</td>
+</tr>
+
+<tr>
+<td class="org-left">"email.arrived"</td>
+<td class="org-left">A new e-mail notification.</td>
+</tr>
+
+<tr>
+<td class="org-left">"email.bounced"</td>
+<td class="org-left">A notification stating that an e-mail has bounced.</td>
+</tr>
+
+<tr>
+<td class="org-left">"im"</td>
+<td class="org-left">A generic instant message-related notification that doesn't fit into any other category.</td>
+</tr>
+
+<tr>
+<td class="org-left">"im.error"</td>
+<td class="org-left">An instant message error notification.</td>
+</tr>
+
+<tr>
+<td class="org-left">"im.received"</td>
+<td class="org-left">A received instant message notification.</td>
+</tr>
+
+<tr>
+<td class="org-left">"network"</td>
+<td class="org-left">A generic network notification that doesn't fit into any other category.</td>
+</tr>
+
+<tr>
+<td class="org-left">"network.connected"</td>
+<td class="org-left">A network connection notification, such as successful sign-on to a network service. This should not be confused with device.added for new network devices.</td>
+</tr>
+
+<tr>
+<td class="org-left">"network.disconnected"</td>
+<td class="org-left">A network disconnected notification. This should not be confused with device.removed for disconnected network devices.</td>
+</tr>
+
+<tr>
+<td class="org-left">"network.error"</td>
+<td class="org-left">A network-related or connection-related error.</td>
+</tr>
+
+<tr>
+<td class="org-left">"presence"</td>
+<td class="org-left">A generic presence change notification that doesn't fit into any other category, such as going away or idle.</td>
+</tr>
+
+<tr>
+<td class="org-left">"presence.offline"</td>
+<td class="org-left">An offline presence change notification.</td>
+</tr>
+
+<tr>
+<td class="org-left">"presence.online"</td>
+<td class="org-left">An online presence change notification.</td>
+</tr>
+
+<tr>
+<td class="org-left">"transfer"</td>
+<td class="org-left">A generic file transfer or download notification that doesn't fit into any other category.</td>
+</tr>
+
+<tr>
+<td class="org-left">"transfer.complete"</td>
+<td class="org-left">A file transfer or download complete notification.</td>
+</tr>
+
+<tr>
+<td class="org-left">"transfer.error"</td>
+<td class="org-left">A file transfer or download error.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgheadline17" class="outline-3">
+<h3 id="orgheadline17"><span class="section-number-3">2.2</span> -h &#x2013;hint=TYPE:NAME:VALUE</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+指定传递给notification server的额外数据,其中TYPE只能是int,double,string以及byte中的一个.
+</p>
+
+<p>
+该选项也不作为client与server的强制实现.
+</p>
+
+<p>
+notification标准定义了如下几种hint:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Name</th>
+<th scope="col" class="org-left">Value Type</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">"urgency"</td>
+<td class="org-left">byte</td>
+<td class="org-left">The urgency level.</td>
+</tr>
+
+<tr>
+<td class="org-left">"category"</td>
+<td class="org-left">string</td>
+<td class="org-left">The type of notification this is.</td>
+</tr>
+
+<tr>
+<td class="org-left">"image_data"</td>
+<td class="org-left">byte</td>
+<td class="org-left">This is a raw data image format which describes the width, height, rowstride, has alpha, bits per sample, channels and image data respectively. We use this value if the icon field is left blank.</td>
+</tr>
+
+<tr>
+<td class="org-left">"sound-file"</td>
+<td class="org-left">string</td>
+<td class="org-left">The path to a sound file to play when the notification pops up.</td>
+</tr>
+
+<tr>
+<td class="org-left">"x"</td>
+<td class="org-left">int</td>
+<td class="org-left">Specifies the X location on the screen that the notification should point to. The "y" hint must also be specified.</td>
+</tr>
+
+<tr>
+<td class="org-left">"y"</td>
+<td class="org-left">int</td>
+<td class="org-left">Specifies the Y location on the screen that the notification should point to. The "x" hint must also be specified.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2016-11-22</span>
+            <span title="last modification date" class="post-info">2016-11-22</span>
+            <span title="tags" class="post-info">:<a href="http://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">lujun9972</a></span>
+        </div>
+    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+                    <a class="ds-label">使用多说评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2016/11/22/使用notify-send发送桌面通知/";
+         var disqus_url = "http://lujun9972.github.io/blog/2016/11/22/使用notify-send发送桌面通知/";
+         var disqus_shortname = '暗日';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="ds-thread"></div>
+        <script type="text/javascript">
+         var duoshuoQuery = {short_name:'暗日'};
+         (function() {
+             var ds = document.createElement('script');
+             ds.type = 'text/javascript';ds.async = true;
+             ds.src = 'http://static.duoshuo.com/embed.js';
+             ds.charset = 'UTF-8';
+             (document.getElementsByTagName('head')[0]
+           || document.getElementsByTagName('body')[0]).appendChild(ds);
+             $('.ds-thread').css('display','block');
+         })();
+        </script>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>
