@@ -58,9 +58,13 @@
 <div class="org-src-container">
 
 <pre class="src src-sh">date; who |wc
+</pre>
+</div>
 
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2016&#24180; 11&#26376; 14&#26085; &#26143;&#26399;&#19968; 22:18:38 CST</span>
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">1       5      45</span>
+<div class="org-src-container">
+
+<pre class="src src-org">2016&#24180; 11&#26376; 22&#26085; &#26143;&#26399;&#20108; 22:29:34 CST
+      1       5      45
 </pre>
 </div>
 
@@ -75,8 +79,12 @@
 <div class="org-src-container">
 
 <pre class="src src-sh"><span style="color: #4f97d7;">(</span>date;who<span style="color: #4f97d7;">)</span> |wc
+</pre>
+</div>
 
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2      11      88</span>
+<div class="org-src-container">
+
+<pre class="src src-org">2      11      88
 </pre>
 </div>
 
@@ -96,10 +104,14 @@ date与who的结果都送到了wc命令
 <pre class="src src-sh">date
 sleep <span style="color: #a45bad;">5</span>;date &amp;
 date
+</pre>
+</div>
 
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2016&#24180; 11&#26376; 14&#26085; &#26143;&#26399;&#19968; 07:57:12 CST</span>
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2016&#24180; 11&#26376; 14&#26085; &#26143;&#26399;&#19968; 07:57:17 CST</span>
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2016&#24180; 11&#26376; 14&#26085; &#26143;&#26399;&#19968; 07:57:17 CST</span>
+<div class="org-src-container">
+
+<pre class="src src-org">2016&#24180; 11&#26376; 22&#26085; &#26143;&#26399;&#20108; 22:29:34 CST
+2016&#24180; 11&#26376; 22&#26085; &#26143;&#26399;&#20108; 22:29:39 CST
+2016&#24180; 11&#26376; 22&#26085; &#26143;&#26399;&#20108; 22:29:39 CST
 </pre>
 </div>
 
@@ -112,10 +124,14 @@ date
 <pre class="src src-sh">date
 <span style="color: #4f97d7;">(</span>sleep <span style="color: #a45bad;">5</span>;date<span style="color: #4f97d7;">)</span>&amp;
 date
+</pre>
+</div>
 
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2016&#24180; 11&#26376; 14&#26085; &#26143;&#26399;&#19968; 07:56:59 CST</span>
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2016&#24180; 11&#26376; 14&#26085; &#26143;&#26399;&#19968; 07:56:59 CST</span>
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2016&#24180; 11&#26376; 14&#26085; &#26143;&#26399;&#19968; 07:57:04 CST</span>
+<div class="org-src-container">
+
+<pre class="src src-org">2016&#24180; 11&#26376; 22&#26085; &#26143;&#26399;&#20108; 22:29:39 CST
+2016&#24180; 11&#26376; 22&#26085; &#26143;&#26399;&#20108; 22:29:39 CST
+2016&#24180; 11&#26376; 22&#26085; &#26143;&#26399;&#20108; 22:29:44 CST
 </pre>
 </div>
 
@@ -135,10 +151,14 @@ date
 <pre class="src src-sh">date
 who |wc &amp;
 date
+</pre>
+</div>
 
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2016&#24180; 11&#26376; 14&#26085; &#26143;&#26399;&#19968; 21:50:29 CST</span>
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">2016&#24180; 11&#26376; 14&#26085; &#26143;&#26399;&#19968; 21:50:29 CST</span>
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">1       5      45</span>
+<div class="org-src-container">
+
+<pre class="src src-org">2016&#24180; 11&#26376; 22&#26085; &#26143;&#26399;&#20108; 22:29:44 CST
+      1       5      45
+2016&#24180; 11&#26376; 22&#26085; &#26143;&#26399;&#20108; 22:29:44 CST
 </pre>
 </div></li>
 </ul>
@@ -148,7 +168,7 @@ date
 <div>
         <div class="post-meta">
             <span title="post date" class="post-info">2016-11-14</span>
-            <span title="last modification date" class="post-info">2016-11-14</span>
+            <span title="last modification date" class="post-info">2016-11-22</span>
             <span title="tags" class="post-info">:<a href="http://lujun9972.github.io/tags/编程之旅">编程之旅</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">lujun9972</a></span>
         </div>
