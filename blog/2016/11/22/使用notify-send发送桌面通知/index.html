@@ -51,34 +51,34 @@
 <div class="post">
 <h1 class="title">使用notify-send发送桌面通知</h1>
 <div id="table-of-contents">
-<h2>Table of Contents</h2>
+<h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline15">1. 常用的选项</a>
+<li><a href="#orgheadline1">常用的选项</a>
 <ul>
-<li><a href="#orgheadline1">1.1. -t &#x2013;expire-time=TIME</a></li>
-<li><a href="#orgheadline2">1.2. -u &#x2013;urgency=LEVEL</a></li>
-<li><a href="#orgheadline14">1.3. -i &#x2013;icon=ICON[,ICON&#x2026;]</a>
+<li><a href="#orgheadline2">-t --expire-time=TIME</a></li>
+<li><a href="#orgheadline3">-u --urgency=LEVEL</a></li>
+<li><a href="#orgheadline4">-i --icon=ICON[,ICON...]</a>
 <ul>
-<li><a href="#orgheadline3">1.3.1. Standard Action Icons</a></li>
-<li><a href="#orgheadline4">1.3.2. Standard Animation Icons</a></li>
-<li><a href="#orgheadline5">1.3.3. Standard Application Icons</a></li>
-<li><a href="#orgheadline6">1.3.4. Standard Category Icons</a></li>
-<li><a href="#orgheadline7">1.3.5. Standard Device Icons</a></li>
-<li><a href="#orgheadline8">1.3.6. Standard Emblem Icons</a></li>
-<li><a href="#orgheadline9">1.3.7. Standard Emotion Icons</a></li>
-<li><a href="#orgheadline10">1.3.8. Standard International Icons</a></li>
-<li><a href="#orgheadline11">1.3.9. Standard MIME Type Icons</a></li>
-<li><a href="#orgheadline12">1.3.10. Standard Place Icons</a></li>
-<li><a href="#orgheadline13">1.3.11. Standard Status Icons</a></li>
+<li><a href="#orgheadline5">Standard Action Icons</a></li>
+<li><a href="#orgheadline6">Standard Animation Icons</a></li>
+<li><a href="#orgheadline7">Standard Application Icons</a></li>
+<li><a href="#orgheadline8">Standard Category Icons</a></li>
+<li><a href="#orgheadline9">Standard Device Icons</a></li>
+<li><a href="#orgheadline10">Standard Emblem Icons</a></li>
+<li><a href="#orgheadline11">Standard Emotion Icons</a></li>
+<li><a href="#orgheadline12">Standard International Icons</a></li>
+<li><a href="#orgheadline13">Standard MIME Type Icons</a></li>
+<li><a href="#orgheadline14">Standard Place Icons</a></li>
+<li><a href="#orgheadline15">Standard Status Icons</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline18">2. 不常用的选项</a>
+<li><a href="#orgheadline18">不常用的选项</a>
 <ul>
-<li><a href="#orgheadline16">2.1. -c &#x2013;category=TYPE[,TYPE&#x2026;]</a></li>
-<li><a href="#orgheadline17">2.2. -h &#x2013;hint=TYPE:NAME:VALUE</a></li>
+<li><a href="#orgheadline16">-c --category=TYPE[,TYPE...]</a></li>
+<li><a href="#orgheadline17">-h --hint=TYPE:NAME:VALUE</a></li>
 </ul>
 </li>
 </ul>
@@ -113,43 +113,43 @@
 </thead>
 <tbody>
 <tr>
-<td class="org-left">&lt;b&gt; &#x2026; &lt;/b&gt;</td>
+<td class="org-left">&lt;b&gt; ... &lt;/b&gt;</td>
 <td class="org-left">粗体</td>
 </tr>
 
 <tr>
-<td class="org-left">&lt;i&gt; &#x2026; &lt;/i&gt;</td>
+<td class="org-left">&lt;i&gt; ... &lt;/i&gt;</td>
 <td class="org-left">斜体</td>
 </tr>
 
 <tr>
-<td class="org-left">&lt;u&gt; &#x2026; &lt;/u&gt;</td>
+<td class="org-left">&lt;u&gt; ... &lt;/u&gt;</td>
 <td class="org-left">下划线</td>
 </tr>
 
 <tr>
-<td class="org-left">&lt;a href="&#x2026;"&gt; &#x2026; &lt;/a&gt;</td>
+<td class="org-left">&lt;a href="..."&gt; ... &lt;/a&gt;</td>
 <td class="org-left">超链接</td>
 </tr>
 
 <tr>
-<td class="org-left">&lt;img src="&#x2026;" alt="&#x2026;"/&gt;</td>
+<td class="org-left">&lt;img src="..." alt="..."/&gt;</td>
 <td class="org-left">图片</td>
 </tr>
 </tbody>
 </table>
 
-<div id="outline-container-orgheadline15" class="outline-2">
-<h2 id="orgheadline15"><span class="section-number-2">1</span> 常用的选项</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">常用的选项</h2>
+<div class="outline-text-2" id="text-orgheadline1">
 <p>
 notify-send的常用的几个选项有这么几个:
 </p>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-3">
-<h3 id="orgheadline1"><span class="section-number-3">1.1</span> -t &#x2013;expire-time=TIME</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2">-t --expire-time=TIME</h3>
+<div class="outline-text-3" id="text-orgheadline2">
 <p>
 指定通知显示多长时间后消失,单位是毫秒. (Ubuntu的Notify OSD以及GNOME Shell会忽略该参数)
 </p>
@@ -164,9 +164,9 @@ notify-send的常用的几个选项有这么几个:
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-3">
-<h3 id="orgheadline2"><span class="section-number-3">1.2</span> -u &#x2013;urgency=LEVEL</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3">-u --urgency=LEVEL</h3>
+<div class="outline-text-3" id="text-orgheadline3">
 <p>
 指定通知的级别,只能是 <code>low</code>, <code>normal</code>, <code>critical</code> 这三个值中的一个.
 </p>
@@ -199,9 +199,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-3">
-<h3 id="orgheadline14"><span class="section-number-3">1.3</span> -i &#x2013;icon=ICON[,ICON&#x2026;]</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4">-i --icon=ICON[,ICON...]</h3>
+<div class="outline-text-3" id="text-orgheadline4">
 <p>
 指定显示通知的图标. 其中ICON既可以是一个指向图标文件的路径,也可以是标准图标的名称.
 </p>
@@ -211,9 +211,9 @@ notify-send ignore
 </p>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-4">
-<h4 id="orgheadline3"><span class="section-number-4">1.3.1</span> Standard Action Icons</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<div id="outline-container-orgheadline5" class="outline-4">
+<h4 id="orgheadline5">Standard Action Icons</h4>
+<div class="outline-text-4" id="text-orgheadline5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -661,7 +661,7 @@ notify-send ignore
 
 <tr>
 <td class="org-left">system-run</td>
-<td class="org-left">The icon used for the “Run Application&#x2026;” item in the desktop's panel application.</td>
+<td class="org-left">The icon used for the “Run Application...” item in the desktop's panel application.</td>
 </tr>
 
 <tr>
@@ -744,9 +744,9 @@ notify-send ignore
 </div>
 
 
-<div id="outline-container-orgheadline4" class="outline-4">
-<h4 id="orgheadline4"><span class="section-number-4">1.3.2</span> Standard Animation Icons</h4>
-<div class="outline-text-4" id="text-1-3-2">
+<div id="outline-container-orgheadline6" class="outline-4">
+<h4 id="orgheadline6">Standard Animation Icons</h4>
+<div class="outline-text-4" id="text-orgheadline6">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -771,9 +771,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-4">
-<h4 id="orgheadline5"><span class="section-number-4">1.3.3</span> Standard Application Icons</h4>
-<div class="outline-text-4" id="text-1-3-3">
+<div id="outline-container-orgheadline7" class="outline-4">
+<h4 id="orgheadline7">Standard Application Icons</h4>
+<div class="outline-text-4" id="text-orgheadline7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -888,9 +888,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-4">
-<h4 id="orgheadline6"><span class="section-number-4">1.3.4</span> Standard Category Icons</h4>
-<div class="outline-text-4" id="text-1-3-4">
+<div id="outline-container-orgheadline8" class="outline-4">
+<h4 id="orgheadline8">Standard Category Icons</h4>
+<div class="outline-text-4" id="text-orgheadline8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1005,9 +1005,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-4">
-<h4 id="orgheadline7"><span class="section-number-4">1.3.5</span> Standard Device Icons</h4>
-<div class="outline-text-4" id="text-1-3-5">
+<div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9">Standard Device Icons</h4>
+<div class="outline-text-4" id="text-orgheadline9">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1162,9 +1162,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-4">
-<h4 id="orgheadline8"><span class="section-number-4">1.3.6</span> Standard Emblem Icons</h4>
-<div class="outline-text-4" id="text-1-3-6">
+<div id="outline-container-orgheadline10" class="outline-4">
+<h4 id="orgheadline10">Standard Emblem Icons</h4>
+<div class="outline-text-4" id="text-orgheadline10">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1249,9 +1249,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-4">
-<h4 id="orgheadline9"><span class="section-number-4">1.3.7</span> Standard Emotion Icons</h4>
-<div class="outline-text-4" id="text-1-3-7">
+<div id="outline-container-orgheadline11" class="outline-4">
+<h4 id="orgheadline11">Standard Emotion Icons</h4>
+<div class="outline-text-4" id="text-orgheadline11">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1376,9 +1376,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-4">
-<h4 id="orgheadline10"><span class="section-number-4">1.3.8</span> Standard International Icons</h4>
-<div class="outline-text-4" id="text-1-3-8">
+<div id="outline-container-orgheadline12" class="outline-4">
+<h4 id="orgheadline12">Standard International Icons</h4>
+<div class="outline-text-4" id="text-orgheadline12">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1403,9 +1403,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-4">
-<h4 id="orgheadline11"><span class="section-number-4">1.3.9</span> Standard MIME Type Icons</h4>
-<div class="outline-text-4" id="text-1-3-9">
+<div id="outline-container-orgheadline13" class="outline-4">
+<h4 id="orgheadline13">Standard MIME Type Icons</h4>
+<div class="outline-text-4" id="text-orgheadline13">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1500,9 +1500,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-4">
-<h4 id="orgheadline12"><span class="section-number-4">1.3.10</span> Standard Place Icons</h4>
-<div class="outline-text-4" id="text-1-3-10">
+<div id="outline-container-orgheadline14" class="outline-4">
+<h4 id="orgheadline14">Standard Place Icons</h4>
+<div class="outline-text-4" id="text-orgheadline14">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1567,9 +1567,9 @@ notify-send ignore
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-4">
-<h4 id="orgheadline13"><span class="section-number-4">1.3.11</span> Standard Status Icons</h4>
-<div class="outline-text-4" id="text-1-3-11">
+<div id="outline-container-orgheadline15" class="outline-4">
+<h4 id="orgheadline15">Standard Status Icons</h4>
+<div class="outline-text-4" id="text-orgheadline15">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1887,11 +1887,11 @@ notify-send ignore
 </div>
 
 <div id="outline-container-orgheadline18" class="outline-2">
-<h2 id="orgheadline18"><span class="section-number-2">2</span> 不常用的选项</h2>
-<div class="outline-text-2" id="text-2">
+<h2 id="orgheadline18">不常用的选项</h2>
+<div class="outline-text-2" id="text-orgheadline18">
 </div><div id="outline-container-orgheadline16" class="outline-3">
-<h3 id="orgheadline16"><span class="section-number-3">2.1</span> -c &#x2013;category=TYPE[,TYPE&#x2026;]</h3>
-<div class="outline-text-3" id="text-2-1">
+<h3 id="orgheadline16">-c --category=TYPE[,TYPE...]</h3>
+<div class="outline-text-3" id="text-orgheadline16">
 <p>
 指定通知的类别. 
 </p>
@@ -2023,8 +2023,8 @@ notification标准定义了如下几种类别:
 </div>
 </div>
 <div id="outline-container-orgheadline17" class="outline-3">
-<h3 id="orgheadline17"><span class="section-number-3">2.2</span> -h &#x2013;hint=TYPE:NAME:VALUE</h3>
-<div class="outline-text-3" id="text-2-2">
+<h3 id="orgheadline17">-h --hint=TYPE:NAME:VALUE</h3>
+<div class="outline-text-3" id="text-orgheadline17">
 <p>
 指定传递给notification server的额外数据,其中TYPE只能是int,double,string以及byte中的一个.
 </p>
