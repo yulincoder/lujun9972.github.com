@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 01 12月 2016 21:38:43 CST</pubDate>
-    <lastBuildDate>四, 01 12月 2016 21:38:43 CST</lastBuildDate>
+    <pubDate>二, 06 12月 2016 20:25:22 CST</pubDate>
+    <lastBuildDate>二, 06 12月 2016 20:25:22 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>图形环境下的shell编程</title>
+<link>http://lujun9972.github.io/blog/2016/12/01/图形环境下的shell编程/</link>
+<description>No Description</description>
+<pubDate>2016-12-06</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/12/01/图形环境下的shell编程/</guid>
+</item>
 <item>
 <title>使用tput创建屏幕输出</title>
 <link>http://lujun9972.github.io/blog/2016/11/30/使用tput创建屏幕输出/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-11-20</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/11/17/tramp的一般用法/</guid>
-</item>
-<item>
-<title>让ssh从stdin读取密码</title>
-<link>http://lujun9972.github.io/blog/2016/11/15/让ssh从stdin读取密码/</link>
-<description>No Description</description>
-<pubDate>2016-11-15</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/11/15/让ssh从stdin读取密码/</guid>
 </item>
 </channel>
 </rss>
