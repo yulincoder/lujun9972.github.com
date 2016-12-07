@@ -4,10 +4,24 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 06 12月 2016 20:25:22 CST</pubDate>
-    <lastBuildDate>二, 06 12月 2016 20:25:22 CST</lastBuildDate>
+    <pubDate>三, 07 12月 2016 21:54:54 CST</pubDate>
+    <lastBuildDate>三, 07 12月 2016 21:54:54 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>dired的常用操作</title>
+<link>http://lujun9972.github.io/blog/2016/11/29/dired的常用操作/</link>
+<description>No Description</description>
+<pubDate>2016-12-07</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/11/29/dired的常用操作/</guid>
+</item>
+<item>
+<title>升级到Org9.0后的问题及解决方法</title>
+<link>http://lujun9972.github.io/blog/2016/12/07/升级到org9.0后的问题及解决方法/</link>
+<description>No Description</description>
+<pubDate>2016-12-07</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/12/07/升级到org9.0后的问题及解决方法/</guid>
+</item>
 <item>
 <title>图形环境下的shell编程</title>
 <link>http://lujun9972.github.io/blog/2016/12/01/图形环境下的shell编程/</link>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-11-22</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/11/17/为子shell设置变量值的两种方法/</guid>
-</item>
-<item>
-<title>Emacs中那些不常用的行操作命令</title>
-<link>http://lujun9972.github.io/blog/2016/11/18/emacs中那些不常用的行操作命令/</link>
-<description>No Description</description>
-<pubDate>2016-11-20</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/11/18/emacs中那些不常用的行操作命令/</guid>
-</item>
-<item>
-<title>tramp的一般用法</title>
-<link>http://lujun9972.github.io/blog/2016/11/17/tramp的一般用法/</link>
-<description>No Description</description>
-<pubDate>2016-11-20</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/11/17/tramp的一般用法/</guid>
 </item>
 </channel>
 </rss>
