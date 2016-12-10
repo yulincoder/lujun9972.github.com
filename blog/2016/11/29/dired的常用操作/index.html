@@ -53,38 +53,38 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge656b90">1. 进入Dired</a></li>
-<li><a href="#orgf0c0e59">2. 常用操作</a>
+<li><a href="#orgdf11d86">1. 进入Dired</a></li>
+<li><a href="#orgb375eda">2. 常用操作</a>
 <ul>
-<li><a href="#orgd6b7095">2.1. 导航操作</a></li>
-<li><a href="#orga9501b4">2.2. 选择文件</a></li>
-<li><a href="#orge14040d">2.3. 操作文件/目录</a></li>
+<li><a href="#org58aef9f">2.1. 导航操作</a></li>
+<li><a href="#org31f101b">2.2. 选择文件</a></li>
+<li><a href="#org1f91c96">2.3. 操作文件/目录</a></li>
 </ul>
 </li>
-<li><a href="#orgf288fff">3. 书签</a></li>
-<li><a href="#org9be62aa">4. 访问打包文件</a></li>
-<li><a href="#org553e485">5. 批量改名与wired</a>
+<li><a href="#org7052471">3. 书签</a></li>
+<li><a href="#orgef0f60e">4. 访问打包文件</a></li>
+<li><a href="#orga6d8948">5. 批量改名与wired</a>
 <ul>
-<li><a href="#org0edaa99">5.1. wdired</a></li>
+<li><a href="#org1b89297">5.1. wdired</a></li>
 </ul>
 </li>
-<li><a href="#org80058d8">6. 文件夹的比较</a></li>
-<li><a href="#org12d3a5a">7. 打开文件</a></li>
-<li><a href="#orgfd7261d">8. dired-x插件</a></li>
-<li><a href="#orgb9fc6d6">9. 其他高级用法</a>
+<li><a href="#orgebbe716">6. 文件夹的比较</a></li>
+<li><a href="#org1417649">7. 打开文件</a></li>
+<li><a href="#org7cbd67e">8. dired-x插件</a></li>
+<li><a href="#org8b6f791">9. 其他高级用法</a>
 <ul>
-<li><a href="#org535b932">9.1. 排序</a></li>
-<li><a href="#org047f9da">9.2. 过滤</a></li>
-<li><a href="#orgbb9dec1">9.3. 分色</a></li>
-<li><a href="#org3b097e1">9.4. 跨目录操作</a></li>
+<li><a href="#org445c836">9.1. 排序</a></li>
+<li><a href="#orgcf9f7ae">9.2. 过滤</a></li>
+<li><a href="#orge75371b">9.3. 分色</a></li>
+<li><a href="#orgc6a07ec">9.4. 跨目录操作</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge656b90" class="outline-2">
-<h2 id="orge656b90"><span class="section-number-2">1</span> 进入Dired</h2>
+<div id="outline-container-orgdf11d86" class="outline-2">
+<h2 id="orgdf11d86"><a id="6vzd1ad1vfh0"></a><span class="section-number-2">1</span> 进入Dired</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 有几种方式都能够进入Dired:
@@ -119,14 +119,25 @@ dired允许进入远程服务器上的目录,只要输入的路径符合tramp规
 
 <li>若使用了 <code>ido</code>,或者 <code>helm</code> 这样的插件,那么在用 <code>C-x C-f</code> 打开文件时按下 <code>C-d</code> 就会进入所在的目录了.</li>
 </ul>
+
+
+<p>
+一个dired buffer看起来是这样的:
+</p>
+
+
+<div class="figure">
+<p><img src="http://lujun9972.github.io/assets/blog/2016/11/29/dired的常用操作/screenshot-20161210-204904.png" alt="screenshot-20161210-204904.png" />
+</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-orgf0c0e59" class="outline-2">
-<h2 id="orgf0c0e59"><span class="section-number-2">2</span> 常用操作</h2>
+<div id="outline-container-orgb375eda" class="outline-2">
+<h2 id="orgb375eda"><span class="section-number-2">2</span> 常用操作</h2>
 <div class="outline-text-2" id="text-2">
-</div><div id="outline-container-orgd6b7095" class="outline-3">
-<h3 id="orgd6b7095"><span class="section-number-3">2.1</span> 导航操作</h3>
+</div><div id="outline-container-org58aef9f" class="outline-3">
+<h3 id="org58aef9f"><span class="section-number-3">2.1</span> 导航操作</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 在dired buffer中可以用 <code>n</code>, <code>p</code>, <code>C-n</code>, <code>C-p</code>, <code>&lt;down&gt;</code>, <code>&lt;up&gt;</code> 将光标在各文件/目录间跳转.
@@ -150,8 +161,8 @@ dired允许进入远程服务器上的目录,只要输入的路径符合tramp规
 </div>
 </div>
 
-<div id="outline-container-orga9501b4" class="outline-3">
-<h3 id="orga9501b4"><span class="section-number-3">2.2</span> 选择文件</h3>
+<div id="outline-container-org31f101b" class="outline-3">
+<h3 id="org31f101b"><span class="section-number-3">2.2</span> 选择文件</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 在dired中,若你需要一次性操作操作文件或者目录,那么你往往需要先mark那些文件/目录,然后再按下对应的操作快捷键对这些文件进行操作.
@@ -179,8 +190,8 @@ dired允许进入远程服务器上的目录,只要输入的路径符合tramp规
 </div>
 </div>
 
-<div id="outline-container-orge14040d" class="outline-3">
-<h3 id="orge14040d"><span class="section-number-3">2.3</span> 操作文件/目录</h3>
+<div id="outline-container-org1f91c96" class="outline-3">
+<h3 id="org1f91c96"><span class="section-number-3">2.3</span> 操作文件/目录</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 <b>由于在dired中的操作并不严格区分文件和目录,因此下面统一用文件代替</b>
@@ -266,8 +277,8 @@ dired还允许你调用外部命令来操作文件,这提供了莫大的灵活�
 </div>
 
 
-<div id="outline-container-orgf288fff" class="outline-2">
-<h2 id="orgf288fff"><span class="section-number-2">3</span> 书签</h2>
+<div id="outline-container-org7052471" class="outline-2">
+<h2 id="org7052471"><span class="section-number-2">3</span> 书签</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Emacs还允许你将常用的目录加入书签中,这样你可以很方便的跳回这些目录中.
@@ -290,13 +301,13 @@ Emacs还允许你将常用的目录加入书签中,这样你可以很方便的�
 </p>
 
 <p>
-Emacs的书签当然不仅仅这么简单,要了解更多Emacs书签推荐阅读aborn同学的"Emacs的书签功能介绍"
+Emacs的书签当然不仅仅这么简单,要了解更多Emacs书签推荐阅读aborn同学的"<a href="https://github.com/emacs-china/emacsist/blob/master/articles/2016-10-31Emacs%E7%9A%84%E4%B9%A6%E7%AD%BE%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.org">Emacs的书签功能介绍</a>"
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9be62aa" class="outline-2">
-<h2 id="org9be62aa"><span class="section-number-2">4</span> 访问打包文件</h2>
+<div id="outline-container-orgef0f60e" class="outline-2">
+<h2 id="orgef0f60e"><span class="section-number-2">4</span> 访问打包文件</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 需要说明的是,dired插件本身并不对tar包或者zip包这类打包文件进行特殊处理. 
@@ -304,22 +315,33 @@ Emacs的书签当然不仅仅这么简单,要了解更多Emacs书签推荐阅读
 
 <p>
 当Emacs打开tar文件时,会进入tar-mode,该mode将整个tar包模拟成了一个目录,并提供了类似dired的操作方式. 
+</p>
+
+<p>
+对这个tar包进行修改后可以保存这个Tar buffer,更新原来的tar文件.
+</p>
+
+<p>
 值得说明的是,Emacs原生支持tar文件,它无需额外的tar程序支持.
 </p>
 
 <p>
 类似的,Emacs打开zip,jar,arc,lzh,zoo这类文件时,会进入archive-mode,它将压缩包模拟成一个目录,并提供类似dired的操作方式.
+</p>
+
+<p>
 不过这类文件需要调用外部解压程序来进行解压和操纵压缩包里面的文件.
 </p>
 
 <p>
-关于这两个命令,推荐看看这篇文件 &lt;Emacs直接编辑压缩打包文件&gt;
+关于这两个命令,推荐看看这篇文件 &lt;<a href="http://aifreedom.com/pluskid/EmacsFileArchives.html">Emacs直接编辑压缩打包文件</a>&gt;
 </p>
 </div>
 </div>
 
-<div id="outline-container-org553e485" class="outline-2">
-<h2 id="org553e485"><span class="section-number-2">5</span> 批量改名与wired</h2>
+
+<div id="outline-container-orga6d8948" class="outline-2">
+<h2 id="orga6d8948"><span class="section-number-2">5</span> 批量改名与wired</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 如果只是进行文件名的大小写转换,那么dired提供了两个命令专门来实现这一行为:
@@ -360,8 +382,8 @@ Emacs的书签当然不仅仅这么简单,要了解更多Emacs书签推荐阅读
 </p>
 </div>
 
-<div id="outline-container-org0edaa99" class="outline-3">
-<h3 id="org0edaa99"><span class="section-number-3">5.1</span> wdired</h3>
+<div id="outline-container-org1b89297" class="outline-3">
+<h3 id="org1b89297"><span class="section-number-3">5.1</span> wdired</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 wdierd允许你通过编辑dired buffer的方式来操作文件.
@@ -385,8 +407,8 @@ wdierd允许你通过编辑dired buffer的方式来操作文件.
 </div>
 </div>
 </div>
-<div id="outline-container-org80058d8" class="outline-2">
-<h2 id="org80058d8"><span class="section-number-2">6</span> 文件夹的比较</h2>
+<div id="outline-container-orgebbe716" class="outline-2">
+<h2 id="orgebbe716"><span class="section-number-2">6</span> 文件夹的比较</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 使用命令 <code>M-x dired-compare-directories</code> 可以将当前目录与其他目录进行比较并标记出目录间不同的那些文件.
@@ -403,8 +425,8 @@ wdierd允许你通过编辑dired buffer的方式来操作文件.
 </div>
 </div>
 
-<div id="outline-container-org12d3a5a" class="outline-2">
-<h2 id="org12d3a5a"><span class="section-number-2">7</span> 打开文件</h2>
+<div id="outline-container-org1417649" class="outline-2">
+<h2 id="org1417649"><span class="section-number-2">7</span> 打开文件</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 dired提供了多种方式打开文件:
@@ -434,8 +456,8 @@ Xah大神专门针对用外部程序打开文件写过一篇博文,有兴趣的�
 </div>
 </div>
 
-<div id="outline-container-orgfd7261d" class="outline-2">
-<h2 id="orgfd7261d"><span class="section-number-2">8</span> dired-x插件</h2>
+<div id="outline-container-org7cbd67e" class="outline-2">
+<h2 id="org7cbd67e"><span class="section-number-2">8</span> dired-x插件</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 dired-x为dired增加了很多方便的功能,比较常用的有:
@@ -460,11 +482,11 @@ dired-x为dired增加了很多方便的功能,比较常用的有:
 </p>
 </div>
 </div>
-<div id="outline-container-orgb9fc6d6" class="outline-2">
-<h2 id="orgb9fc6d6"><span class="section-number-2">9</span> 其他高级用法</h2>
+<div id="outline-container-org8b6f791" class="outline-2">
+<h2 id="org8b6f791"><span class="section-number-2">9</span> 其他高级用法</h2>
 <div class="outline-text-2" id="text-9">
-</div><div id="outline-container-org535b932" class="outline-3">
-<h3 id="org535b932"><span class="section-number-3">9.1</span> 排序</h3>
+</div><div id="outline-container-org445c836" class="outline-3">
+<h3 id="org445c836"><span class="section-number-3">9.1</span> 排序</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
 细心的同学应该会注意到dired buffer中的内容其实就是 <code>ls -l</code> 产生的结果.
@@ -488,8 +510,8 @@ dired-x为dired增加了很多方便的功能,比较常用的有:
 </div>
 </div>
 
-<div id="outline-container-org047f9da" class="outline-3">
-<h3 id="org047f9da"><span class="section-number-3">9.2</span> 过滤</h3>
+<div id="outline-container-orgcf9f7ae" class="outline-3">
+<h3 id="orgcf9f7ae"><span class="section-number-3">9.2</span> 过滤</h3>
 <div class="outline-text-3" id="text-9-2">
 <p>
 若需要过滤掉一些不关心的文件(比如.svn,.git文件夹等),可以先mark那些要隐藏的文件(可以使用正则表达式一次mark一批文件),然后按下 <code>k</code> 隐藏掉这些文件.
@@ -513,8 +535,8 @@ dired-x为dired增加了很多方便的功能,比较常用的有:
 </div>
 </div>
 
-<div id="outline-container-orgbb9dec1" class="outline-3">
-<h3 id="orgbb9dec1"><span class="section-number-3">9.3</span> 分色</h3>
+<div id="outline-container-orge75371b" class="outline-3">
+<h3 id="orge75371b"><a id="1h8ayed1vfh0"></a><span class="section-number-3">9.3</span> 分色</h3>
 <div class="outline-text-3" id="text-9-3">
 <p>
 分色是指让不同类型的文件用不同颜色标注出来. 
@@ -546,18 +568,23 @@ dired-x为dired增加了很多方便的功能,比较常用的有:
 <p>
 这样一来,每次进入dired,都会自动将org文件标注为黄色.
 </p>
-</div>
-</div>
 
-<div id="outline-container-org3b097e1" class="outline-3">
-<h3 id="org3b097e1"><span class="section-number-3">9.4</span> 跨目录操作</h3>
+
+<div class="figure">
+<p><img src="http://lujun9972.github.io/assets/blog/2016/11/29/dired的常用操作/screenshot-20161210-205044.png" alt="screenshot-20161210-205044.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc6a07ec" class="outline-3">
+<h3 id="orgc6a07ec"><span class="section-number-3">9.4</span> 跨目录操作</h3>
 <div class="outline-text-3" id="text-9-4">
 <p>
 若同时想对多个目录下的文件进行操作该怎么办呢?
 </p>
 
 <p>
-在目录上按下 <code>i</code> 快捷键就能将该子目录的内容插入到当前同一个dired buffer中.
+在目录上按下 <code>I</code> 快捷键就能将该子目录的内容插入到当前同一个dired buffer中.
 </p>
 
 <p>
