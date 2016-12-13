@@ -4,10 +4,24 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>六, 10 12月 2016 22:04:53 CST</pubDate>
-    <lastBuildDate>六, 10 12月 2016 22:04:53 CST</lastBuildDate>
+    <pubDate>二, 13 12月 2016 11:39:37 CST</pubDate>
+    <lastBuildDate>二, 13 12月 2016 11:39:37 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>使用fbi在终端查看图片</title>
+<link>http://lujun9972.github.io/blog/2016/12/13/使用fbi在终端查看图片/</link>
+<description>No Description</description>
+<pubDate>2016-12-13</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/12/13/使用fbi在终端查看图片/</guid>
+</item>
+<item>
+<title>w3m常用操作</title>
+<link>http://lujun9972.github.io/blog/2016/12/11/w3m常用操作/</link>
+<description>No Description</description>
+<pubDate>2016-12-12</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/12/11/w3m常用操作/</guid>
+</item>
 <item>
 <title>Emacs文件管理神器--dired常用操作说明</title>
 <link>http://lujun9972.github.io/blog/2016/12/10/emacs文件管理神器--dired常用操作说明/</link>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-11-22</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/11/22/使用notify-send发送桌面通知/</guid>
-</item>
-<item>
-<title>shell中| ; &amp;的优先级</title>
-<link>http://lujun9972.github.io/blog/2016/11/14/shell中|-;-&amp;的优先级/</link>
-<description>No Description</description>
-<pubDate>2016-11-22</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/11/14/shell中|-;-&amp;的优先级/</guid>
-</item>
-<item>
-<title>为子shell设置变量值的两种方法</title>
-<link>http://lujun9972.github.io/blog/2016/11/17/为子shell设置变量值的两种方法/</link>
-<description>No Description</description>
-<pubDate>2016-11-22</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/11/17/为子shell设置变量值的两种方法/</guid>
 </item>
 </channel>
 </rss>
