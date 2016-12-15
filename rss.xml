@@ -4,17 +4,10 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 15 12月 2016 16:58:25 CST</pubDate>
-    <lastBuildDate>四, 15 12月 2016 16:58:25 CST</lastBuildDate>
+    <pubDate>四, 15 12月 2016 21:49:23 CST</pubDate>
+    <lastBuildDate>四, 15 12月 2016 21:49:23 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
-<item>
-<title>.#xterm使用简介</title>
-<link>http://lujun9972.github.io/blog/2016/12/15/.-xterm使用简介/</link>
-<description>No Description</description>
-<pubDate>2016-12-15</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/12/15/.-xterm使用简介/</guid>
-</item>
 <item>
 <title>xterm使用简介</title>
 <link>http://lujun9972.github.io/blog/2016/11/16/xterm使用简介/</link>
@@ -23,11 +16,25 @@
 <guid>http://lujun9972.github.io/blog/2016/11/16/xterm使用简介/</guid>
 </item>
 <item>
+<title>如何修改新版gnome-terminal的标题</title>
+<link>http://lujun9972.github.io/blog/2016/12/15/如何修改新版gnome-terminal的标题/</link>
+<description>No Description</description>
+<pubDate>2016-12-15</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/12/15/如何修改新版gnome-terminal的标题/</guid>
+</item>
+<item>
 <title>使用fbi在终端查看图片</title>
 <link>http://lujun9972.github.io/blog/2016/12/13/使用fbi在终端查看图片/</link>
 <description>No Description</description>
 <pubDate>2016-12-13</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/12/13/使用fbi在终端查看图片/</guid>
+</item>
+<item>
+<title>装Arch记</title>
+<link>http://lujun9972.github.io/blog/2016/10/20/装arch记/</link>
+<description>No Description</description>
+<pubDate>2016-12-12</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/10/20/装arch记/</guid>
 </item>
 <item>
 <title>w3m常用操作</title>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-12-01</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/11/30/使用tput创建屏幕输出/</guid>
-</item>
-<item>
-<title>如何编写EmacsScript</title>
-<link>http://lujun9972.github.io/blog/2016/11/28/如何编写emacsscript/</link>
-<description>No Description</description>
-<pubDate>2016-11-28</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/11/28/如何编写emacsscript/</guid>
 </item>
 </channel>
 </rss>
