@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 15 12月 2016 22:31:00 CST</pubDate>
-    <lastBuildDate>四, 15 12月 2016 22:31:00 CST</lastBuildDate>
+    <pubDate>三, 21 12月 2016 23:00:44 CST</pubDate>
+    <lastBuildDate>三, 21 12月 2016 23:00:44 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>使用tar代替cp进行拷贝</title>
+<link>http://lujun9972.github.io/blog/2016/12/21/使用tar代替cp进行拷贝/</link>
+<description>No Description</description>
+<pubDate>2016-12-21</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/12/21/使用tar代替cp进行拷贝/</guid>
+</item>
 <item>
 <title>xterm使用简介</title>
 <link>http://lujun9972.github.io/blog/2016/11/16/xterm使用简介/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-12-01</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/11/30/使用tput创建屏幕输出/</guid>
-</item>
-<item>
-<title>如何编写EmacsScript</title>
-<link>http://lujun9972.github.io/blog/2016/11/28/如何编写emacsscript/</link>
-<description>No Description</description>
-<pubDate>2016-11-28</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/11/28/如何编写emacsscript/</guid>
 </item>
 </channel>
 </rss>
