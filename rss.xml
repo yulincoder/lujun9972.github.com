@@ -4,10 +4,24 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>Fri, 30 Dec 2016 21:36:07 CST</pubDate>
-    <lastBuildDate>Fri, 30 Dec 2016 21:36:07 CST</lastBuildDate>
+    <pubDate>日, 01 1月 2017 21:42:23 CST</pubDate>
+    <lastBuildDate>日, 01 1月 2017 21:42:23 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>使用Rmail收取邮件</title>
+<link>http://lujun9972.github.io/blog/2016/12/30/使用rmail收取邮件/</link>
+<description>No Description</description>
+<pubDate>2017-01-01</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/12/30/使用rmail收取邮件/</guid>
+</item>
+<item>
+<title>如何正确地对$@进行赋值</title>
+<link>http://lujun9972.github.io/blog/2017/01/01/如何正确地对$@进行赋值/</link>
+<description>No Description</description>
+<pubDate>2017-01-01</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/01/01/如何正确地对$@进行赋值/</guid>
+</item>
 <item>
 <title>使用Emacs发送电子邮件</title>
 <link>http://lujun9972.github.io/blog/2016/12/29/使用emacs发送电子邮件/</link>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-12-10</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/12/10/emacs文件管理神器--dired常用操作说明/</guid>
-</item>
-<item>
-<title>Emacs查看日志常用命令</title>
-<link>http://lujun9972.github.io/blog/2016/11/20/emacs查看日志常用命令/</link>
-<description>No Description</description>
-<pubDate>2016-12-10</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/11/20/emacs查看日志常用命令/</guid>
-</item>
-<item>
-<title>升级到Org9.0后的问题及解决方法</title>
-<link>http://lujun9972.github.io/blog/2016/12/07/升级到org9.0后的问题及解决方法/</link>
-<description>No Description</description>
-<pubDate>2016-12-07</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/12/07/升级到org9.0后的问题及解决方法/</guid>
 </item>
 </channel>
 </rss>
