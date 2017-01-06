@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>日, 01 1月 2017 21:42:23 CST</pubDate>
-    <lastBuildDate>日, 01 1月 2017 21:42:23 CST</lastBuildDate>
+    <pubDate>五, 06 1月 2017 22:47:12 CST</pubDate>
+    <lastBuildDate>五, 06 1月 2017 22:47:12 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>创建Emacs版的notify-sender</title>
+<link>http://lujun9972.github.io/blog/2016/12/16/创建emacs版的notify-sender/</link>
+<description>No Description</description>
+<pubDate>2017-01-06</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/12/16/创建emacs版的notify-sender/</guid>
+</item>
 <item>
 <title>使用Rmail收取邮件</title>
 <link>http://lujun9972.github.io/blog/2016/12/30/使用rmail收取邮件/</link>
@@ -35,13 +42,6 @@
 <description>No Description</description>
 <pubDate>2016-12-21</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/12/21/使用tar代替cp进行拷贝/</guid>
-</item>
-<item>
-<title>创建Emacs版的notify-sender</title>
-<link>http://lujun9972.github.io/blog/2016/12/16/创建emacs版的notify-sender/</link>
-<description>No Description</description>
-<pubDate>2016-12-16</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/12/16/创建emacs版的notify-sender/</guid>
 </item>
 <item>
 <title>xterm使用简介</title>
