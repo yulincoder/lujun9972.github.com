@@ -4,16 +4,23 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>五, 06 1月 2017 22:47:12 CST</pubDate>
-    <lastBuildDate>五, 06 1月 2017 22:47:12 CST</lastBuildDate>
+    <pubDate>一, 09 1月 2017 11:17:40 CST</pubDate>
+    <lastBuildDate>一, 09 1月 2017 11:17:40 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
 <title>创建Emacs版的notify-sender</title>
 <link>http://lujun9972.github.io/blog/2016/12/16/创建emacs版的notify-sender/</link>
 <description>No Description</description>
-<pubDate>2017-01-06</pubDate>
+<pubDate>2017-01-09</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/12/16/创建emacs版的notify-sender/</guid>
+</item>
+<item>
+<title>如何编写EmacsScript</title>
+<link>http://lujun9972.github.io/blog/2016/11/28/如何编写emacsscript/</link>
+<description>No Description</description>
+<pubDate>2017-01-09</pubDate>
+<guid>http://lujun9972.github.io/blog/2016/11/28/如何编写emacsscript/</guid>
 </item>
 <item>
 <title>使用Rmail收取邮件</title>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-12-12</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/12/11/w3m常用操作/</guid>
-</item>
-<item>
-<title>Emacs文件管理神器--dired常用操作说明</title>
-<link>http://lujun9972.github.io/blog/2016/12/10/emacs文件管理神器--dired常用操作说明/</link>
-<description>No Description</description>
-<pubDate>2016-12-10</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/12/10/emacs文件管理神器--dired常用操作说明/</guid>
 </item>
 </channel>
 </rss>
