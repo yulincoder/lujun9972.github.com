@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>五, 10 2月 2017 20:38:40 CST</pubDate>
-    <lastBuildDate>五, 10 2月 2017 20:38:40 CST</lastBuildDate>
+    <pubDate>日, 19 2月 2017 21:57:59 CST</pubDate>
+    <lastBuildDate>日, 19 2月 2017 21:57:59 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>强制ssh使用密码认证登陆服务器</title>
+<link>http://lujun9972.github.io/blog/2017/02/19/强制ssh使用密码认证登陆服务器/</link>
+<description>No Description</description>
+<pubDate>2017-02-19</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/02/19/强制ssh使用密码认证登陆服务器/</guid>
+</item>
 <item>
 <title>在archlinux上挂载virtualbox磁盘镜像文件</title>
 <link>http://lujun9972.github.io/blog/2017/02/10/在archlinux上挂载virtualbox磁盘镜像文件/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2016-12-15</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/12/15/如何修改新版gnome-terminal的标题/</guid>
-</item>
-<item>
-<title>使用fbi在终端查看图片</title>
-<link>http://lujun9972.github.io/blog/2016/12/13/使用fbi在终端查看图片/</link>
-<description>No Description</description>
-<pubDate>2016-12-13</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/12/13/使用fbi在终端查看图片/</guid>
 </item>
 </channel>
 </rss>
