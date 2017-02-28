@@ -54,11 +54,11 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9222e30">使用方法</a></li>
-<li><a href="#orgb9e160e">实现</a>
+<li><a href="#org191eae5">使用方法</a></li>
+<li><a href="#org57d7152">实现</a>
 <ul>
-<li><a href="#orge6c3d60">数据来源</a></li>
-<li><a href="#org24935db">fortune文件格式</a></li>
+<li><a href="#org13f491a">数据来源</a></li>
+<li><a href="#org42f00ce">fortune文件格式</a></li>
 </ul>
 </li>
 </ul>
@@ -72,9 +72,9 @@
 fortune文件可以从这里下载:<a href="https://raw.githubusercontent.com/lujun9972/proverb-fortune/master/proverbs">proverbs</a>
 </p>
 
-<div id="outline-container-org9222e30" class="outline-2">
-<h2 id="org9222e30">使用方法</h2>
-<div class="outline-text-2" id="text-org9222e30">
+<div id="outline-container-org191eae5" class="outline-2">
+<h2 id="org191eae5">使用方法</h2>
+<div class="outline-text-2" id="text-org191eae5">
 <ol class="org-ol">
 <li><p>
 要让fortune能够使用该fortune文件,还需要先用 <code>strfile</code> 来产生一个索引文件 <code>proverbs.dat</code>
@@ -83,10 +83,7 @@ fortune文件可以从这里下载:<a href="https://raw.githubusercontent.com/lu
 <pre class="src src-shell">strfile proverbs
 </pre>
 </div></li>
-</ol>
 
-
-<ol class="org-ol">
 <li><p>
 要将该fortune文件安装到fortune数据库中,只需要将将fortune文件和生成的索引文件一起拷贝到fortune存储数据文件的目录中就行了
 </p>
@@ -111,12 +108,12 @@ fortune文件可以从这里下载:<a href="https://raw.githubusercontent.com/lu
 </div>
 
 
-<div id="outline-container-orgb9e160e" class="outline-2">
-<h2 id="orgb9e160e">实现</h2>
-<div class="outline-text-2" id="text-orgb9e160e">
-</div><div id="outline-container-orge6c3d60" class="outline-3">
-<h3 id="orge6c3d60">数据来源</h3>
-<div class="outline-text-3" id="text-orge6c3d60">
+<div id="outline-container-org57d7152" class="outline-2">
+<h2 id="org57d7152">实现</h2>
+<div class="outline-text-2" id="text-org57d7152">
+</div><div id="outline-container-org13f491a" class="outline-3">
+<h3 id="org13f491a">数据来源</h3>
+<div class="outline-text-3" id="text-org13f491a">
 <p>
 为了搜索格言,我先尝试在baidu上搜索了一下"格言",结果发现baidu除了显示出相关网页链接之外,还显示了一个小窗口里面列出了大量的格言:
 </p>
@@ -195,9 +192,9 @@ URL中的 <code>%E6%A0%BC%E8%A8%80</code> 就是格言的转义结果.
 </div>
 </div>
 
-<div id="outline-container-org24935db" class="outline-3">
-<h3 id="org24935db">fortune文件格式</h3>
-<div class="outline-text-3" id="text-org24935db">
+<div id="outline-container-org42f00ce" class="outline-3">
+<h3 id="org42f00ce">fortune文件格式</h3>
+<div class="outline-text-3" id="text-org42f00ce">
 <p>
 fortune文件格式蛮简单的,只需要用 <b>只包含%的行</b> 将各格言内容分开就行了. 
 </p>
