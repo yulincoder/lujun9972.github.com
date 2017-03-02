@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 28 2月 2017 23:11:19 CST</pubDate>
-    <lastBuildDate>二, 28 2月 2017 23:11:19 CST</lastBuildDate>
+    <pubDate>四, 02 3月 2017 14:51:38 CST</pubDate>
+    <lastBuildDate>四, 02 3月 2017 14:51:38 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>如何修改Elisp函数中的docstring</title>
+<link>http://lujun9972.github.io/blog/2017/03/02/如何修改elisp函数中的docstring/</link>
+<description>No Description</description>
+<pubDate>2017-03-02</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/03/02/如何修改elisp函数中的docstring/</guid>
+</item>
 <item>
 <title>在Emacs中获取CPU核的数量</title>
 <link>http://lujun9972.github.io/blog/2017/02/28/在emacs中获取cpu核的数量/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-01-01</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/12/30/使用rmail收取邮件/</guid>
-</item>
-<item>
-<title>如何正确地对$@进行赋值</title>
-<link>http://lujun9972.github.io/blog/2017/01/01/如何正确地对$@进行赋值/</link>
-<description>No Description</description>
-<pubDate>2017-01-01</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/01/01/如何正确地对$@进行赋值/</guid>
 </item>
 </channel>
 </rss>
