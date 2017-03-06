@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>Thu, 02 Mar 2017 22:25:57 CST</pubDate>
-    <lastBuildDate>Thu, 02 Mar 2017 22:25:57 CST</lastBuildDate>
+    <pubDate>一, 06 3月 2017 09:51:13 CST</pubDate>
+    <lastBuildDate>一, 06 3月 2017 09:51:13 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>scorll-all-mode</title>
+<link>http://lujun9972.github.io/blog/2017/03/06/scorll-all-mode/</link>
+<description>No Description</description>
+<pubDate>2017-03-06</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/03/06/scorll-all-mode/</guid>
+</item>
 <item>
 <title>如何修改Elisp函数中的docstring</title>
 <link>http://lujun9972.github.io/blog/2017/03/02/如何修改elisp函数中的docstring/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-01-09</pubDate>
 <guid>http://lujun9972.github.io/blog/2016/12/16/创建emacs版的notify-sender/</guid>
-</item>
-<item>
-<title>如何编写EmacsScript</title>
-<link>http://lujun9972.github.io/blog/2016/11/28/如何编写emacsscript/</link>
-<description>No Description</description>
-<pubDate>2017-01-09</pubDate>
-<guid>http://lujun9972.github.io/blog/2016/11/28/如何编写emacsscript/</guid>
 </item>
 </channel>
 </rss>
