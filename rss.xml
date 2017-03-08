@@ -4,8 +4,8 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>三, 08 3月 2017 10:54:22 CST</pubDate>
-    <lastBuildDate>三, 08 3月 2017 10:54:22 CST</lastBuildDate>
+    <pubDate>三, 08 3月 2017 14:53:11 CST</pubDate>
+    <lastBuildDate>三, 08 3月 2017 14:53:11 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
@@ -14,6 +14,13 @@
 <description>No Description</description>
 <pubDate>2017-03-08</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/03/07/duck-typing-vs-type-erasure/</guid>
+</item>
+<item>
+<title>Recovering Live Data with GDB</title>
+<link>http://lujun9972.github.io/blog/2017/03/08/recovering-live-data-with-gdb/</link>
+<description>No Description</description>
+<pubDate>2017-03-08</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/03/08/recovering-live-data-with-gdb/</guid>
 </item>
 <item>
 <title>scorll-all-mode</title>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-02-19</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/02/19/拷贝一个文件到多个目录的几种方法/</guid>
-</item>
-<item>
-<title>在archlinux上挂载virtualbox磁盘镜像文件</title>
-<link>http://lujun9972.github.io/blog/2017/02/10/在archlinux上挂载virtualbox磁盘镜像文件/</link>
-<description>No Description</description>
-<pubDate>2017-02-10</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/02/10/在archlinux上挂载virtualbox磁盘镜像文件/</guid>
 </item>
 </channel>
 </rss>
