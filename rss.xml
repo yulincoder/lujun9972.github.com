@@ -4,10 +4,24 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>五, 10 3月 2017 16:13:43 CST</pubDate>
-    <lastBuildDate>五, 10 3月 2017 16:13:43 CST</lastBuildDate>
+    <pubDate>Sat, 25 Mar 2017 09:04:59 CST</pubDate>
+    <lastBuildDate>Sat, 25 Mar 2017 09:04:59 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>检查linux命令是否存在的正确方式</title>
+<link>http://lujun9972.github.io/blog/2017/03/20/检查linux命令是否存在的正确方式/</link>
+<description>No Description</description>
+<pubDate>2017-03-25</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/03/20/检查linux命令是否存在的正确方式/</guid>
+</item>
+<item>
+<title>Python格式化字符串的几种方法</title>
+<link>http://lujun9972.github.io/blog/2017/03/24/python格式化字符串的几种方法/</link>
+<description>No Description</description>
+<pubDate>2017-03-24</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/03/24/python格式化字符串的几种方法/</guid>
+</item>
 <item>
 <title>deb文件的格式</title>
 <link>http://lujun9972.github.io/blog/2017/03/10/deb文件的格式/</link>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-03-02</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/03/02/如何防止elisp出现资源泄露/</guid>
-</item>
-<item>
-<title>在Emacs中获取CPU核的数量</title>
-<link>http://lujun9972.github.io/blog/2017/02/28/在emacs中获取cpu核的数量/</link>
-<description>No Description</description>
-<pubDate>2017-02-28</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/02/28/在emacs中获取cpu核的数量/</guid>
-</item>
-<item>
-<title>一个显示中文格言的fortune文件</title>
-<link>http://lujun9972.github.io/blog/2017/02/28/一个显示中文格言的fortune文件/</link>
-<description>No Description</description>
-<pubDate>2017-02-28</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/02/28/一个显示中文格言的fortune文件/</guid>
 </item>
 </channel>
 </rss>
