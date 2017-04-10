@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>一, 27 3月 2017 11:32:03 CST</pubDate>
-    <lastBuildDate>一, 27 3月 2017 11:32:03 CST</lastBuildDate>
+    <pubDate>一, 10 4月 2017 10:58:39 CST</pubDate>
+    <lastBuildDate>一, 10 4月 2017 10:58:39 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>在shell中快速跳转到常用目录</title>
+<link>http://lujun9972.github.io/blog/2017/04/10/在shell中快速跳转到常用目录/</link>
+<description>No Description</description>
+<pubDate>2017-04-10</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/04/10/在shell中快速跳转到常用目录/</guid>
+</item>
 <item>
 <title>检查linux命令是否存在的正确方式</title>
 <link>http://lujun9972.github.io/blog/2017/03/20/检查linux命令是否存在的正确方式/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-03-06</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/03/06/scorll-all-mode/</guid>
-</item>
-<item>
-<title>如何修改Elisp函数中的docstring</title>
-<link>http://lujun9972.github.io/blog/2017/03/02/如何修改elisp函数中的docstring/</link>
-<description>No Description</description>
-<pubDate>2017-03-02</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/03/02/如何修改elisp函数中的docstring/</guid>
 </item>
 </channel>
 </rss>
