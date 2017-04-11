@@ -54,16 +54,16 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9082363">marks函数</a></li>
-<li><a href="#org601505c">jump函数</a></li>
-<li><a href="#orgcf118fc">mark函数</a></li>
-<li><a href="#org06b5fd3">unmark函数</a></li>
-<li><a href="#org7b30afa">补全</a></li>
+<li><a href="#org9f2aa6e">marks函数</a></li>
+<li><a href="#org46f2791">jump函数</a></li>
+<li><a href="#org4a837b9">mark函数</a></li>
+<li><a href="#org7e64234">unmark函数</a></li>
+<li><a href="#org0c77e33">补全</a></li>
 </ul>
 </div>
 </div>
 <p>
-我在之前的文章中提到一种把目录加为书签以实现快速跳转的方法. 这个功能十分好用, 然而由于我用Eshell比较多,所以就像把这个功能移植到Eshell中.
+我在之前的文章中 <a href="http://lujun9972.github.io/blog/2017/04/10/%E5%9C%A8shell%E4%B8%AD%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E5%88%B0%E5%B8%B8%E7%94%A8%E7%9B%AE%E5%BD%95/">之前的文章中</a> 提到一种把目录加为书签以实现快速跳转的方法. 这个功能十分好用, 然而由于我用Eshell比较多,所以就像把这个功能移植到Eshell中.
 </p>
 
 <p>
@@ -78,9 +78,9 @@
 现在我们就来尝试实现一下吧.
 </p>
 
-<div id="outline-container-org9082363" class="outline-2">
-<h2 id="org9082363">marks函数</h2>
-<div class="outline-text-2" id="text-org9082363">
+<div id="outline-container-org9f2aa6e" class="outline-2">
+<h2 id="org9f2aa6e">marks函数</h2>
+<div class="outline-text-2" id="text-org9f2aa6e">
 <p>
 该函数用于列出所有的书签及其指向的目录:
 </p>
@@ -131,9 +131,9 @@
 </div>
 </div>
 
-<div id="outline-container-org601505c" class="outline-2">
-<h2 id="org601505c">jump函数</h2>
-<div class="outline-text-2" id="text-org601505c">
+<div id="outline-container-org46f2791" class="outline-2">
+<h2 id="org46f2791">jump函数</h2>
+<div class="outline-text-2" id="text-org46f2791">
 <p>
 jump函数接一个书签名作为参数,跳转到其指向的目录中:
 </p>
@@ -161,9 +161,9 @@ jump函数接一个书签名作为参数,跳转到其指向的目录中:
 </div>
 </div>
 
-<div id="outline-container-orgcf118fc" class="outline-2">
-<h2 id="orgcf118fc">mark函数</h2>
-<div class="outline-text-2" id="text-orgcf118fc">
+<div id="outline-container-org4a837b9" class="outline-2">
+<h2 id="org4a837b9">mark函数</h2>
+<div class="outline-text-2" id="text-org4a837b9">
 <p>
 mark函数接受一个书签名,并将当前目录加为书签:
 </p>
@@ -196,9 +196,9 @@ bookmark库本身提供了一个 <code>bookmark-set</code> 函数用于添加书
 </div>
 </div>
 
-<div id="outline-container-org06b5fd3" class="outline-2">
-<h2 id="org06b5fd3">unmark函数</h2>
-<div class="outline-text-2" id="text-org06b5fd3">
+<div id="outline-container-org7e64234" class="outline-2">
+<h2 id="org7e64234">unmark函数</h2>
+<div class="outline-text-2" id="text-org7e64234">
 <p>
 unmark函数接受一个书签名做参数,然后删掉指定的书签:
 </p>
@@ -213,9 +213,9 @@ unmark函数接受一个书签名做参数,然后删掉指定的书签:
 </div>
 </div>
 
-<div id="outline-container-org7b30afa" class="outline-2">
-<h2 id="org7b30afa">补全</h2>
-<div class="outline-text-2" id="text-org7b30afa">
+<div id="outline-container-org0c77e33" class="outline-2">
+<h2 id="org0c77e33">补全</h2>
+<div class="outline-text-2" id="text-org0c77e33">
 <p>
 最后是为jump函数添加补全功能. eshell使用pcomplete这个库来进行补全,至于怎么来写补全函数以后找时间再写另一片文章吧.
 </p>
