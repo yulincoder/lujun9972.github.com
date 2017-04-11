@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>一, 10 4月 2017 10:58:39 CST</pubDate>
-    <lastBuildDate>一, 10 4月 2017 10:58:39 CST</lastBuildDate>
+    <pubDate>二, 11 4月 2017 12:54:12 CST</pubDate>
+    <lastBuildDate>二, 11 4月 2017 12:54:12 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>在Eshell中快速跳转到常用目录</title>
+<link>http://lujun9972.github.io/blog/2017/04/11/在eshell中快速跳转到常用目录/</link>
+<description>No Description</description>
+<pubDate>2017-04-11</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/04/11/在eshell中快速跳转到常用目录/</guid>
+</item>
 <item>
 <title>在shell中快速跳转到常用目录</title>
 <link>http://lujun9972.github.io/blog/2017/04/10/在shell中快速跳转到常用目录/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-03-08</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/03/08/recovering-live-data-with-gdb/</guid>
-</item>
-<item>
-<title>scorll-all-mode</title>
-<link>http://lujun9972.github.io/blog/2017/03/06/scorll-all-mode/</link>
-<description>No Description</description>
-<pubDate>2017-03-06</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/03/06/scorll-all-mode/</guid>
 </item>
 </channel>
 </rss>
