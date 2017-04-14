@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 11 4月 2017 13:00:40 CST</pubDate>
-    <lastBuildDate>二, 11 4月 2017 13:00:40 CST</lastBuildDate>
+    <pubDate>五, 14 4月 2017 17:50:38 CST</pubDate>
+    <lastBuildDate>五, 14 4月 2017 17:50:38 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>UTF-8中的坑</title>
+<link>http://lujun9972.github.io/blog/2017/04/14/utf-8中的坑/</link>
+<description>No Description</description>
+<pubDate>2017-04-14</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/04/14/utf-8中的坑/</guid>
+</item>
 <item>
 <title>在Eshell中快速跳转到常用目录</title>
 <link>http://lujun9972.github.io/blog/2017/04/11/在eshell中快速跳转到常用目录/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-03-08</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/03/07/duck-typing-vs-type-erasure/</guid>
-</item>
-<item>
-<title>Recovering Live Data with GDB</title>
-<link>http://lujun9972.github.io/blog/2017/03/08/recovering-live-data-with-gdb/</link>
-<description>No Description</description>
-<pubDate>2017-03-08</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/03/08/recovering-live-data-with-gdb/</guid>
 </item>
 </channel>
 </rss>
