@@ -4,15 +4,24 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
+<<<<<<< HEAD
     <pubDate>五, 21 4月 2017 11:06:17 CST</pubDate>
     <lastBuildDate>五, 21 4月 2017 11:06:17 CST</lastBuildDate>
+=======
+    <pubDate>Wed, 19 Apr 2017 21:30:47 CST</pubDate>
+    <lastBuildDate>Wed, 19 Apr 2017 21:30:47 CST</lastBuildDate>
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
 <title>我的linux终端工具</title>
 <link>http://lujun9972.github.io/blog/2017/04/19/我的linux终端工具/</link>
 <description>No Description</description>
+<<<<<<< HEAD
 <pubDate>2017-04-21</pubDate>
+=======
+<pubDate>2017-04-19</pubDate>
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <guid>http://lujun9972.github.io/blog/2017/04/19/我的linux终端工具/</guid>
 </item>
 <item>

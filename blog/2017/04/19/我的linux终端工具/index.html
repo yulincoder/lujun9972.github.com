@@ -54,6 +54,7 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
+<<<<<<< HEAD
 <li><a href="#org6970f81">增加中文支持:fbterm + fcitx-fbterm</a></li>
 <li><a href="#orgcfdc685">收发邮件:Emacs(GNUS)</a>
 <ul>
@@ -94,6 +95,45 @@
 <li><a href="#orgfcb8313">阅读RSS:Emacs(elfeed)</a></li>
 <li><a href="#orgfdd111b">听播客:Emacs(podcaster)</a></li>
 <li><a href="#org74b3f6c">翻墙:shadowsocks + proxychains</a></li>
+=======
+<li><a href="#orgb01f3f7">增加中文支持:fbterm + fcitx-fbterm</a></li>
+<li><a href="#orgf444b30">收发邮件:Emacs + GNUS</a>
+<ul>
+<li><a href="#org32010b6">其他选择</a></li>
+</ul>
+</li>
+<li><a href="#org2087a15">浏览网页:Emacs + w3m</a>
+<ul>
+<li><a href="#org1f78a9a">其他选择</a></li>
+</ul>
+</li>
+<li><a href="#orgaa75327">文本编辑:Emacs</a>
+<ul>
+<li><a href="#org973ced4">其他选择</a></li>
+</ul>
+</li>
+<li><a href="#org2f47e2e">讲稿展示:Emacs + Org</a>
+<ul>
+<li><a href="#orgbdf3a4a">其他选择</a></li>
+</ul>
+</li>
+<li><a href="#orgba5f4e2">看视频:mplayer</a></li>
+<li><a href="#org9da3ef0">听音乐:Emacs + EMMS + Wangyi-music</a>
+<ul>
+<li><a href="#org71605c5">其他选择</a></li>
+</ul>
+</li>
+<li><a href="#org166f42f">看图片:fbi</a></li>
+<li><a href="#org5950048">截图:fbgrab</a></li>
+<li><a href="#org89f0e42">聊天:Emacs + ERC</a></li>
+<li><a href="#orgf2fb755">文件管理:Emacs + Dired</a></li>
+<li><a href="#org155dda0">下载:aria2</a></li>
+<li><a href="#org21d343a">GTD:Emacs + ORG</a></li>
+<li><a href="#org12efec4">阅读RSS:Emacs + elfeed</a></li>
+<li><a href="#orga79249c">听播客:Emacs + podcaster</a></li>
+<li><a href="#org042ae24">帐务管理:ledge</a></li>
+<li><a href="#org59980bc">翻墙:shadowsocks + proxychains</a></li>
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 </ul>
 </div>
 </div>
@@ -101,18 +141,31 @@
 家里有一台老旧的X41笔记本,跑不动X,所以就干脆让它保持在字符终端下了. 不过虽然处于纯文本的环境中,能做的事情倒也不少. 下面就来简单列一下我在linux终端中所用的那些工具.
 </p>
 
+<<<<<<< HEAD
 <div id="outline-container-org6970f81" class="outline-2">
 <h2 id="org6970f81">增加中文支持:fbterm + fcitx-fbterm</h2>
 <div class="outline-text-2" id="text-org6970f81">
+=======
+<div id="outline-container-orgb01f3f7" class="outline-2">
+<h2 id="orgb01f3f7">增加中文支持:fbterm + fcitx-fbterm</h2>
+<div class="outline-text-2" id="text-orgb01f3f7">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <p>
 linux默认情况下的终端是不能正常显示中文的,而启动<a href="https://wiki.archlinux.org/index.php/Fbterm_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">fbterm</a>后就能正确显示中文了.
 </p>
 <div class="org-src-container">
 <pre class="src src-sh">pacman --noconfirm -S fbterm libx86
+<<<<<<< HEAD
 <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#33509;&#24819;&#20351;&#29992;&#38750;&#26681;&#29992;&#25143;&#36816;&#34892;fbterm&#65292;&#38656;&#35201;&#25226;&#29992;&#25143;&#21152;&#20837;video&#32452;</span>
 gpasswd -a $<span style="color: #7590db;">YOUR_USERNAME</span> video
 <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#33509;&#24819;&#38750;&#26681;&#29992;&#25143;&#21487;&#20351;&#29992;&#38190;&#30424;&#24555;&#25463;&#26041;&#24335;&#65292;&#38656;&#35201;&#65306;</span>
 sudo setcap <span style="color: #2d9574;">'cap_sys_tty_config+ep'</span> /usr/bin/fbterm
+=======
+<span style="color: #ffff00;"># </span><span style="color: #ffff00;">&#33509;&#24819;&#20351;&#29992;&#38750;&#26681;&#29992;&#25143;&#36816;&#34892;fbterm&#65292;&#38656;&#35201;&#25226;&#29992;&#25143;&#21152;&#20837;video&#32452;</span>
+gpasswd -a $<span style="color: #ffff00;">YOUR_USERNAME</span> video
+<span style="color: #ffff00;"># </span><span style="color: #ffff00;">&#33509;&#24819;&#38750;&#26681;&#29992;&#25143;&#21487;&#20351;&#29992;&#38190;&#30424;&#24555;&#25463;&#26041;&#24335;&#65292;&#38656;&#35201;&#65306;</span>
+sudo setcap <span style="color: #00ff00;">'cap_sys_tty_config+ep'</span> /usr/bin/fbterm
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 </pre>
 </div>
 
@@ -144,6 +197,7 @@ sudo setcap <span style="color: #2d9574;">'cap_sys_tty_config+ep'</span> /usr/bi
 </div>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-orgcfdc685" class="outline-2">
 <h2 id="orgcfdc685">收发邮件:Emacs(GNUS)</h2>
 <div class="outline-text-2" id="text-orgcfdc685">
@@ -161,6 +215,20 @@ sudo setcap <span style="color: #2d9574;">'cap_sys_tty_config+ep'</span> /usr/bi
 <div id="outline-container-org2e3eb40" class="outline-3">
 <h3 id="org2e3eb40">其他选择</h3>
 <div class="outline-text-3" id="text-org2e3eb40">
+=======
+<div id="outline-container-orgf444b30" class="outline-2">
+<h2 id="orgf444b30">收发邮件:Emacs + GNUS</h2>
+<div class="outline-text-2" id="text-orgf444b30">
+<p>
+<a href="http://lujun9972.github.io/blog/2016/12/30/%E4%BD%BF%E7%94%A8rmail%E6%94%B6%E5%8F%96%E9%82%AE%E4%BB%B6/">GNUS </a>是Emacs中的一款重量级的邮件管理插件,它不仅仅能收发邮件,还能访问邮件组,只不过访问邮件组的人少了吧.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Gnus-reading-news.png/300px-Gnus-reading-news.png" alt="300px-Gnus-reading-news.png" />
+</p>
+</div>
+
+<div id="outline-container-org32010b6" class="outline-3">
+<h3 id="org32010b6">其他选择</h3>
+<div class="outline-text-3" id="text-org32010b6">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <ul class="org-ul">
 <li>Emacs + <a href="http://lujun9972.github.io/blog/2016/12/29/%E4%BD%BF%E7%94%A8emacs%E5%8F%91%E9%80%81%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/">smtpmail</a> + <a href="http://lujun9972.github.io/blog/2016/12/30/%E4%BD%BF%E7%94%A8rmail%E6%94%B6%E5%8F%96%E9%82%AE%E4%BB%B6/">Rmail(需要movemail的支持)</a></li>
 <li>mutt</li>
@@ -171,9 +239,15 @@ sudo setcap <span style="color: #2d9574;">'cap_sys_tty_config+ep'</span> /usr/bi
 </div>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-org464f9c2" class="outline-2">
 <h2 id="org464f9c2">浏览网页:Emacs(EWW) + w3m</h2>
 <div class="outline-text-2" id="text-org464f9c2">
+=======
+<div id="outline-container-org2087a15" class="outline-2">
+<h2 id="org2087a15">浏览网页:Emacs + w3m</h2>
+<div class="outline-text-2" id="text-org2087a15">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <p>
 Emacs24.4版本开始其实已经自带了一款 <a href="http://emacser.com/emacs-eww.htm">EWW</a> 的插件可以作为浏览器来用了
 </p>
@@ -202,9 +276,15 @@ Emacs24.4版本开始其实已经自带了一款 <a href="http://emacser.com/ema
 </p>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-orgb7768ae" class="outline-3">
 <h3 id="orgb7768ae">其他选择</h3>
 <div class="outline-text-3" id="text-orgb7768ae">
+=======
+<div id="outline-container-org1f78a9a" class="outline-3">
+<h3 id="org1f78a9a">其他选择</h3>
+<div class="outline-text-3" id="text-org1f78a9a">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <ul class="org-ul">
 <li>Emacs + emacs-w3m(需要w3m的支持)</li>
 <li>lynx</li>
@@ -213,17 +293,29 @@ Emacs24.4版本开始其实已经自带了一款 <a href="http://emacser.com/ema
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 <div id="outline-container-org0bfbea9" class="outline-2">
 <h2 id="org0bfbea9">文本编辑:Emacs</h2>
 <div class="outline-text-2" id="text-org0bfbea9">
+=======
+<div id="outline-container-orgaa75327" class="outline-2">
+<h2 id="orgaa75327">文本编辑:Emacs</h2>
+<div class="outline-text-2" id="text-orgaa75327">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <p>
 这还需要解释吗????
 </p>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-org6c6b39b" class="outline-3">
 <h3 id="org6c6b39b">其他选择</h3>
 <div class="outline-text-3" id="text-org6c6b39b">
+=======
+<div id="outline-container-org973ced4" class="outline-3">
+<h3 id="org973ced4">其他选择</h3>
+<div class="outline-text-3" id="text-org973ced4">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <ul class="org-ul">
 <li>vim</li>
 </ul>
@@ -231,18 +323,30 @@ Emacs24.4版本开始其实已经自带了一款 <a href="http://emacser.com/ema
 </div>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-orga5c9b6e" class="outline-2">
 <h2 id="orga5c9b6e">讲稿展示:Emacs(Org)</h2>
 <div class="outline-text-2" id="text-orga5c9b6e">
+=======
+<div id="outline-container-org2f47e2e" class="outline-2">
+<h2 id="org2f47e2e">讲稿展示:Emacs + Org</h2>
+<div class="outline-text-2" id="text-org2f47e2e">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <p>
 Org-mode本身就是一个很好的大纲编辑mode. 通过对Org进行一些定制,就能用Org来进行讲稿展示了.
 具体的方法请参见:<a href="https://github.com/lujun9972/emacs-document/blob/master/emacs-common/%E7%94%A8Emacs%E4%BD%9C%E5%B1%95%E7%A4%BA.org">用Emacs做展示</a>
 </p>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-orgeca6c5a" class="outline-3">
 <h3 id="orgeca6c5a">其他选择</h3>
 <div class="outline-text-3" id="text-orgeca6c5a">
+=======
+<div id="outline-container-orgbdf3a4a" class="outline-3">
+<h3 id="orgbdf3a4a">其他选择</h3>
+<div class="outline-text-3" id="text-orgbdf3a4a">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <ul class="org-ul">
 <li>tpp</li>
 </ul>
@@ -250,6 +354,7 @@ Org-mode本身就是一个很好的大纲编辑mode. 通过对Org进行一些定
 </div>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-org98e3917" class="outline-2">
 <h2 id="org98e3917">简单的电子表格功能:Emacs(SES)</h2>
 <div class="outline-text-2" id="text-org98e3917">
@@ -268,6 +373,11 @@ SES是一款简易的电子表格插件,它也支持公式计算,只不过它的
 <div id="outline-container-orgfa239b4" class="outline-2">
 <h2 id="orgfa239b4">看视频:mplayer</h2>
 <div class="outline-text-2" id="text-orgfa239b4">
+=======
+<div id="outline-container-orgba5f4e2" class="outline-2">
+<h2 id="orgba5f4e2">看视频:mplayer</h2>
+<div class="outline-text-2" id="text-orgba5f4e2">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <p>
 安装mplayer
 </p>
@@ -280,7 +390,11 @@ SES是一款简易的电子表格插件,它也支持公式计算,只不过它的
 mplayer支持在终端环境下播放影片,但是需要指明输出驱动:
 </p>
 <div class="org-src-container">
+<<<<<<< HEAD
 <pre class="src src-sh">mplayer -vo fbdev2 $<span style="color: #7590db;">MEDIA_FILE</span>
+=======
+<pre class="src src-sh">mplayer -vo fbdev2 $<span style="color: #ffff00;">MEDIA_FILE</span>
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 </pre>
 </div>
 
@@ -319,9 +433,15 @@ mplayer在播放时支持以下快捷键:
 </p>
 </div>
 </div>
+<<<<<<< HEAD
 <div id="outline-container-org5ea0cc1" class="outline-2">
 <h2 id="org5ea0cc1">听音乐:Emacs(EMMS + Wangyi-music)</h2>
 <div class="outline-text-2" id="text-org5ea0cc1">
+=======
+<div id="outline-container-org9da3ef0" class="outline-2">
+<h2 id="org9da3ef0">听音乐:Emacs + EMMS + Wangyi-music</h2>
+<div class="outline-text-2" id="text-org9da3ef0">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <p>
 <a href="https://www.gnu.org/software/emms/">EMMS</a> 全称Emacs Multimedia System,它能将Emacs打造成一款多媒体平台. 不过它本身并不负责对多媒体文件的播放,而是调用外部程序来实现的.
 </p>
@@ -343,9 +463,15 @@ Wangyi-music则是一款Emacs的网易云音乐的客户端插件.
 </div>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-orge5e70b5" class="outline-3">
 <h3 id="orge5e70b5">其他选择</h3>
 <div class="outline-text-3" id="text-orge5e70b5">
+=======
+<div id="outline-container-org71605c5" class="outline-3">
+<h3 id="org71605c5">其他选择</h3>
+<div class="outline-text-3" id="text-org71605c5">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <ul class="org-ul">
 <li>mpg123</li>
 <li>musicbox</li>
@@ -353,11 +479,20 @@ Wangyi-music则是一款Emacs的网易云音乐的客户端插件.
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 <div id="outline-container-org3acda18" class="outline-2">
 <h2 id="org3acda18">看图片/pdf:fbi + fbpdf</h2>
 <div class="outline-text-2" id="text-org3acda18">
 <p>
 fbi与fbpdf都是作为fbida的一部分来安装的.
+=======
+
+<div id="outline-container-org166f42f" class="outline-2">
+<h2 id="org166f42f">看图片:fbi</h2>
+<div class="outline-text-2" id="text-org166f42f">
+<p>
+fbi与fbgrab都是作为fbida的一部分来安装的.
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 </p>
 <div class="org-src-container">
 <pre class="src src-sh">pacman --noconfirm -S fbida
@@ -367,6 +502,7 @@ fbi与fbpdf都是作为fbida的一部分来安装的.
 <p>
 关于fbi的用法参见:<a href="http://lujun9972.github.io/blog/2016/12/13/%E4%BD%BF%E7%94%A8fbi%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%9F%A5%E7%9C%8B%E5%9B%BE%E7%89%87/">使用fbi在终端查看图片</a>
 </p>
+<<<<<<< HEAD
 
 <p>
 fbpdf则可以让你在终端下查看pdf
@@ -383,12 +519,24 @@ fbpdf则可以让你在终端下查看pdf
 <div id="outline-container-orgc7a8fb4" class="outline-2">
 <h2 id="orgc7a8fb4">截图:fbgrab</h2>
 <div class="outline-text-2" id="text-orgc7a8fb4">
+=======
+</div>
+</div>
+
+<div id="outline-container-org5950048" class="outline-2">
+<h2 id="org5950048">截图:fbgrab</h2>
+<div class="outline-text-2" id="text-org5950048">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <p>
 fbgrab会抓取frambuffer device中的屏幕内容并转存为png文件. 事实上这篇博客中的截图很多都是用它来截取的.
 它的使用方法也很简单:
 </p>
 <div class="org-src-container">
+<<<<<<< HEAD
 <pre class="src src-shell">fbgrab <span style="color: #4f97d7;">[</span>options<span style="color: #4f97d7;">]</span> filename
+=======
+<pre class="src src-shell">fbgrab <span style="color: #8c8c8c;">[</span>options<span style="color: #8c8c8c;">]</span> filename
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 </pre>
 </div>
 
@@ -404,6 +552,7 @@ fbgrab会抓取frambuffer device中的屏幕内容并转存为png文件. 事实�
 </div>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-orgfee8e13" class="outline-2">
 <h2 id="orgfee8e13">聊天:Emacs(ERC)</h2>
 <div class="outline-text-2" id="text-orgfee8e13">
@@ -411,6 +560,11 @@ fbgrab会抓取frambuffer device中的屏幕内容并转存为png文件. 事实�
 <a href="https://www.emacswiki.org/emacs/ERC">ERC</a>, 全称 <code>emacs irc client</code>,是一款给予Emacs的irc客户端.
 </p>
 
+=======
+<div id="outline-container-org89f0e42" class="outline-2">
+<h2 id="org89f0e42">聊天:Emacs + ERC</h2>
+<div class="outline-text-2" id="text-org89f0e42">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 
 <div class="figure">
 <p><img src="http://lujun9972.github.io/assets/blog/2017/04/19/我的linux终端工具/ERC.png" alt="ERC.png" />
@@ -418,16 +572,24 @@ fbgrab会抓取frambuffer device中的屏幕内容并转存为png文件. 事实�
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 <div id="outline-container-org1f44b37" class="outline-2">
 <h2 id="org1f44b37">文件管理:Emacs(Dired)</h2>
 <div class="outline-text-2" id="text-org1f44b37">
 <p>
 还用说什么呢,用过Emacs的人基本都知道的...
+=======
+<div id="outline-container-orgf2fb755" class="outline-2">
+<h2 id="orgf2fb755">文件管理:Emacs + Dired</h2>
+<div class="outline-text-2" id="text-orgf2fb755">
+<p>
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <img src="http://lujun9972.github.io/assets/blog/2017/04/19/我的linux终端工具/Dired.png" alt="Dired.png" />
 关于Dired的常用操作,请参见:<a href="http://lujun9972.github.io/blog/2016/12/10/emacs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8--dired%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/">Emacs文件管理神器--dired常用操作说明</a>
 </p>
 </div>
 </div>
+<<<<<<< HEAD
 <div id="outline-container-org9202657" class="outline-2">
 <h2 id="org9202657">GTD:Emacs(ORG)</h2>
 <div class="outline-text-2" id="text-org9202657">
@@ -457,18 +619,40 @@ fbgrab会抓取frambuffer device中的屏幕内容并转存为png文件. 事实�
 <div id="outline-container-orgfdd111b" class="outline-2">
 <h2 id="orgfdd111b">听播客:Emacs(podcaster)</h2>
 <div class="outline-text-2" id="text-orgfdd111b">
+=======
+<div id="outline-container-org155dda0" class="outline-2">
+<h2 id="org155dda0">下载:aria2</h2>
+</div>
+
+<div id="outline-container-org21d343a" class="outline-2">
+<h2 id="org21d343a">GTD:Emacs + ORG</h2>
+</div>
+
+<div id="outline-container-org12efec4" class="outline-2">
+<h2 id="org12efec4">阅读RSS:Emacs + elfeed</h2>
+</div>
+
+<div id="outline-container-orga79249c" class="outline-2">
+<h2 id="orga79249c">听播客:Emacs + podcaster</h2>
+<div class="outline-text-2" id="text-orga79249c">
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 <p>
 <a href="https://github.com/lujun9972/podcaster">podcaster</a> 是我自己编写的一个Emacs插件,可以实现在线听播客,当然它也需要借助外部程序来播放声音.
 </p>
 
 
 <div class="figure">
+<<<<<<< HEAD
 <p><img src="http://lujun9972.github.io/assets/blog/2017/04/19/我的linux终端工具/podcaster.png" alt="podcaster.png" />
+=======
+<p><img src="https://github.com/lujun9972/podcaster/raw/master/podcaster.png" alt="podcaster.png" />
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 </p>
 </div>
 </div>
 </div>
 
+<<<<<<< HEAD
 <div id="outline-container-org74b3f6c" class="outline-2">
 <h2 id="org74b3f6c">翻墙:shadowsocks + proxychains</h2>
 <div class="outline-text-2" id="text-org74b3f6c">
@@ -495,6 +679,14 @@ proxychains w3m http://www.google.com     <span style="color: #2aa1ae; backgroun
 </p>
 </div>
 </div>
+=======
+<div id="outline-container-org042ae24" class="outline-2">
+<h2 id="org042ae24">帐务管理:ledge</h2>
+</div>
+
+<div id="outline-container-org59980bc" class="outline-2">
+<h2 id="org59980bc">翻墙:shadowsocks + proxychains</h2>
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
 </div>
 
 </div>
@@ -502,9 +694,15 @@ proxychains w3m http://www.google.com     <span style="color: #2aa1ae; backgroun
 <div>
         <div class="post-meta">
             <span title="post date" class="post-info">2017-04-19</span>
+<<<<<<< HEAD
             <span title="last modification date" class="post-info">2017-04-21</span>
             <span title="tags" class="post-info">:<a href="http://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F41">lujun9972</a></span>
+=======
+            <span title="last modification date" class="post-info">2017-04-19</span>
+            <span title="tags" class="post-info">:<a href="http://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; x41">lujun9972</a></span>
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
         </div>
     <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -561,7 +759,11 @@ proxychains w3m http://www.google.com     <span style="color: #2aa1ae; backgroun
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
+<<<<<<< HEAD
             Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; F41">lujun9972</a>
+=======
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; x41">lujun9972</a>
+>>>>>>> 63d01a106f47bf6d65fd4386143fa8845c30eb08
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
