@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>五, 26 5月 2017 21:29:32 CST</pubDate>
-    <lastBuildDate>五, 26 5月 2017 21:29:32 CST</lastBuildDate>
+    <pubDate>五, 26 5月 2017 21:33:55 CST</pubDate>
+    <lastBuildDate>五, 26 5月 2017 21:33:55 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>smerge-mode帮你解决merge confict</title>
+<link>http://lujun9972.github.io/blog/2017/05/26/smerge-mode帮你解决merge-confict/</link>
+<description>No Description</description>
+<pubDate>2017-05-26</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/05/26/smerge-mode帮你解决merge-confict/</guid>
+</item>
 <item>
 <title>编写ansible playbook的一些注意事项</title>
 <link>http://lujun9972.github.io/blog/2017/05/21/编写ansible-playbook的一些注意事项/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-03-27</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/03/24/python格式化字符串的几种方法/</guid>
-</item>
-<item>
-<title>一个奇怪的Python Dict表达式</title>
-<link>http://lujun9972.github.io/blog/2017/03/27/一个奇怪的python-dict表达式/</link>
-<description>No Description</description>
-<pubDate>2017-03-27</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/03/27/一个奇怪的python-dict表达式/</guid>
 </item>
 </channel>
 </rss>
