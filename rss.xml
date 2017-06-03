@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>五, 26 5月 2017 22:23:11 CST</pubDate>
-    <lastBuildDate>五, 26 5月 2017 22:23:11 CST</lastBuildDate>
+    <pubDate>日, 04 6月 2017 07:41:17 CST</pubDate>
+    <lastBuildDate>日, 04 6月 2017 07:41:17 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>GLOBIGNORE变量的意义</title>
+<link>http://lujun9972.github.io/blog/2017/06/04/globignore变量的意义/</link>
+<description>No Description</description>
+<pubDate>2017-06-04</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/06/04/globignore变量的意义/</guid>
+</item>
 <item>
 <title>smerge-mode帮你解决merge confict</title>
 <link>http://lujun9972.github.io/blog/2017/05/26/smerge-mode帮你解决merge-confict/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-03-27</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/03/20/检查linux命令是否存在的正确方式/</guid>
-</item>
-<item>
-<title>Python格式化字符串的几种方法</title>
-<link>http://lujun9972.github.io/blog/2017/03/24/python格式化字符串的几种方法/</link>
-<description>No Description</description>
-<pubDate>2017-03-27</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/03/24/python格式化字符串的几种方法/</guid>
 </item>
 </channel>
 </rss>
