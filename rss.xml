@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>一, 12 6月 2017 19:38:58 CST</pubDate>
-    <lastBuildDate>一, 12 6月 2017 19:38:58 CST</lastBuildDate>
+    <pubDate>日, 18 6月 2017 18:15:48 CST</pubDate>
+    <lastBuildDate>日, 18 6月 2017 18:15:48 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>archlinux使用virtualbox的几个要点</title>
+<link>http://lujun9972.github.io/blog/2017/06/18/archlinux使用virtualbox的几个要点/</link>
+<description>No Description</description>
+<pubDate>2017-06-18</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/06/18/archlinux使用virtualbox的几个要点/</guid>
+</item>
 <item>
 <title>我的linux终端工具</title>
 <link>http://lujun9972.github.io/blog/2017/04/19/我的linux终端工具/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-04-15</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/04/14/utf-8中的坑/</guid>
-</item>
-<item>
-<title>在Eshell中快速跳转到常用目录</title>
-<link>http://lujun9972.github.io/blog/2017/04/11/在eshell中快速跳转到常用目录/</link>
-<description>No Description</description>
-<pubDate>2017-04-11</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/04/11/在eshell中快速跳转到常用目录/</guid>
 </item>
 </channel>
 </rss>
