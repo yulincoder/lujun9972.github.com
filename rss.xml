@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>日, 18 6月 2017 18:15:48 CST</pubDate>
-    <lastBuildDate>日, 18 6月 2017 18:15:48 CST</lastBuildDate>
+    <pubDate>二, 18 7月 2017 20:00:11 CST</pubDate>
+    <lastBuildDate>二, 18 7月 2017 20:00:11 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>在archlinux中使用蓝牙耳机</title>
+<link>http://lujun9972.github.io/blog/2017/07/18/在archlinux中使用蓝牙耳机/</link>
+<description>No Description</description>
+<pubDate>2017-07-18</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/07/18/在archlinux中使用蓝牙耳机/</guid>
+</item>
 <item>
 <title>archlinux使用virtualbox的几个要点</title>
 <link>http://lujun9972.github.io/blog/2017/06/18/archlinux使用virtualbox的几个要点/</link>
@@ -51,6 +58,13 @@
 <guid>http://lujun9972.github.io/blog/2017/05/26/smerge-mode帮你解决merge-confict/</guid>
 </item>
 <item>
+<title>使用auth-source库读取Netrc文件中的用户名和密码</title>
+<link>http://lujun9972.github.io/blog/2017/05/25/使用auth-source库读取netrc文件中的用户名和密码/</link>
+<description>No Description</description>
+<pubDate>2017-05-25</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/05/25/使用auth-source库读取netrc文件中的用户名和密码/</guid>
+</item>
+<item>
 <title>编写ansible playbook的一些注意事项</title>
 <link>http://lujun9972.github.io/blog/2017/05/21/编写ansible-playbook的一些注意事项/</link>
 <description>No Description</description>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-04-30</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/04/30/终端环境使用w3m访问视频站点的正确方式/</guid>
-</item>
-<item>
-<title>防止意外退出Emacs</title>
-<link>http://lujun9972.github.io/blog/2017/04/15/防止意外退出emacs/</link>
-<description>No Description</description>
-<pubDate>2017-04-15</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/04/15/防止意外退出emacs/</guid>
-</item>
-<item>
-<title>UTF-8中的坑</title>
-<link>http://lujun9972.github.io/blog/2017/04/14/utf-8中的坑/</link>
-<description>No Description</description>
-<pubDate>2017-04-15</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/04/14/utf-8中的坑/</guid>
 </item>
 </channel>
 </rss>
