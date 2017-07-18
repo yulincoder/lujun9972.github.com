@@ -54,22 +54,22 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org15a7bce">安装必要的软件包</a></li>
-<li><a href="#org256b33f">启动蓝牙服务</a></li>
-<li><a href="#org49c29bf">启动pulseaudio服务</a></li>
-<li><a href="#org40f1c3d">将用户加入lp用户组</a></li>
-<li><a href="#org23c3475">配置蓝牙(摘自archwiki)</a></li>
-<li><a href="#org16e3402">设置自动启动蓝牙</a></li>
-<li><a href="#org460bd06">指定使用蓝牙音频输出</a></li>
+<li><a href="#orgb7c9a3a">安装必要的软件包</a></li>
+<li><a href="#orgcbadc80">启动蓝牙服务</a></li>
+<li><a href="#orgd30491d">启动pulseaudio服务</a></li>
+<li><a href="#org4fd52c6">将用户加入lp用户组</a></li>
+<li><a href="#org7e4ee7d">配置蓝牙(摘自archwiki)</a></li>
+<li><a href="#orgb3c142d">设置自动启动蓝牙</a></li>
+<li><a href="#orgf2b520b">指定使用蓝牙音频输出</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org15a7bce" class="outline-2">
-<h2 id="org15a7bce">安装必要的软件包</h2>
-<div class="outline-text-2" id="text-org15a7bce">
+<div id="outline-container-orgb7c9a3a" class="outline-2">
+<h2 id="orgb7c9a3a">安装必要的软件包</h2>
+<div class="outline-text-2" id="text-orgb7c9a3a">
 <div class="org-src-container">
-<pre class="src src-shell">pacman -S bluez bluez-utils pulseaudio-bluetooth pavucontrol pulseaudio-alsa
+<pre class="src src-shell">pacman -S bluez bluez-utils bluez-firmware pulseaudio-bluetooth pavucontrol pulseaudio-alsa
 </pre>
 </div>
 
@@ -87,9 +87,9 @@
 </div>
 </div>
 
-<div id="outline-container-org256b33f" class="outline-2">
-<h2 id="org256b33f">启动蓝牙服务</h2>
-<div class="outline-text-2" id="text-org256b33f">
+<div id="outline-container-orgcbadc80" class="outline-2">
+<h2 id="orgcbadc80">启动蓝牙服务</h2>
+<div class="outline-text-2" id="text-orgcbadc80">
 <div class="org-src-container">
 <pre class="src src-shell">systemctl enable bluetooth
 systemctl start bluetooth
@@ -98,9 +98,9 @@ systemctl start bluetooth
 </div>
 </div>
 
-<div id="outline-container-org49c29bf" class="outline-2">
-<h2 id="org49c29bf">启动pulseaudio服务</h2>
-<div class="outline-text-2" id="text-org49c29bf">
+<div id="outline-container-orgd30491d" class="outline-2">
+<h2 id="orgd30491d">启动pulseaudio服务</h2>
+<div class="outline-text-2" id="text-orgd30491d">
 <div class="org-src-container">
 <pre class="src src-shell">pulseaudio -k                   <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#30830;&#20445;&#27809;&#26377;pulseaudio&#21551;&#21160;</span>
 pulseaudio --start              <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#21551;&#21160;pulseaudio&#26381;&#21153;</span>
@@ -109,9 +109,9 @@ pulseaudio --start              <span style="color: #2aa1ae; background-color: #
 </div>
 </div>
 
-<div id="outline-container-org40f1c3d" class="outline-2">
-<h2 id="org40f1c3d">将用户加入lp用户组</h2>
-<div class="outline-text-2" id="text-org40f1c3d">
+<div id="outline-container-org4fd52c6" class="outline-2">
+<h2 id="org4fd52c6">将用户加入lp用户组</h2>
+<div class="outline-text-2" id="text-org4fd52c6">
 <p>
 安装bluz后就应该会自动创建lp用户组了，因此无需自己再创建新组
 </p>
@@ -125,9 +125,9 @@ pulseaudio --start              <span style="color: #2aa1ae; background-color: #
 </div>
 </div>
 
-<div id="outline-container-org23c3475" class="outline-2">
-<h2 id="org23c3475">配置蓝牙(摘自archwiki)</h2>
-<div class="outline-text-2" id="text-org23c3475">
+<div id="outline-container-org7e4ee7d" class="outline-2">
+<h2 id="org7e4ee7d">配置蓝牙(摘自archwiki)</h2>
+<div class="outline-text-2" id="text-org7e4ee7d">
 <p>
 启动bluetoothctl交互命令.可以输入 <code>help</code> 列出所有有效的命令.
 </p>
@@ -175,9 +175,9 @@ Connection successful
 </div>
 </div>
 
-<div id="outline-container-org16e3402" class="outline-2">
-<h2 id="org16e3402">设置自动启动蓝牙</h2>
-<div class="outline-text-2" id="text-org16e3402">
+<div id="outline-container-orgb3c142d" class="outline-2">
+<h2 id="orgb3c142d">设置自动启动蓝牙</h2>
+<div class="outline-text-2" id="text-orgb3c142d">
 <p>
 将 <code>/etc/bluetooth/main.conf</code> 最后的 <code>AutoEnable</code> 值修改为 <code>true</code>
 </p>
@@ -188,9 +188,9 @@ Connection successful
 </div>
 </div>
 
-<div id="outline-container-org460bd06" class="outline-2">
-<h2 id="org460bd06">指定使用蓝牙音频输出</h2>
-<div class="outline-text-2" id="text-org460bd06">
+<div id="outline-container-orgf2b520b" class="outline-2">
+<h2 id="orgf2b520b">指定使用蓝牙音频输出</h2>
+<div class="outline-text-2" id="text-orgf2b520b">
 <p>
 通过 <code>pavucontrol</code> 的"Playback"和"Pecording"标签页重定向音频的输入和输出
 </p>
