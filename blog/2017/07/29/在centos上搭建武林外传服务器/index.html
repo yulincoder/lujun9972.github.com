@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>在centos上搭建武林外传服务器 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="无主之地" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+<div>
+  <header class="masthead">
+    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <p>=============&gt;随便,谢谢</p>
+    <nav class="site-nav">
+      <div class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
+          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
+          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
+        </svg>
+      </div>
+      <ul class="trigger">
+        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+      </ul>
+    </nav>
+    <form method="get" id="searchform" action="http://www.google.com/search">
+      <input type="text" class="field" name="q" id="s" placeholder="Search">
+      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+    </form>
+  </header>
+</div>
+
+<div>
+<div class="post">
+<h1 class="title">在centos上搭建武林外传服务器</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org10e9efe">安装必要的软件</a>
+<ul>
+<li><a href="#orgf84f97b">安装mysql(mariadb)</a></li>
+<li><a href="#org5fefa1b">安装java</a></li>
+<li><a href="#orgbe5d2a6">安装killall（stop脚本中会用到）</a></li>
+<li><a href="#org1fcb41e">安装32位支持</a></li>
+</ul>
+</li>
+<li><a href="#orgcb561ea">还原数据库内容</a>
+<ul>
+<li><a href="#org05c17fa">启动mariadb服务</a></li>
+<li><a href="#orgfca6076">设置root用户密码为root</a></li>
+<li><a href="#orga1af46b">还原zmwm数据库内容以及存储过程</a></li>
+</ul>
+</li>
+<li><a href="#org6c4b8c7">拷贝其他文件</a></li>
+<li><a href="#org1780a77">配置客户端中的IP</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org10e9efe" class="outline-2">
+<h2 id="org10e9efe">安装必要的软件</h2>
+<div class="outline-text-2" id="text-org10e9efe">
+</div><div id="outline-container-orgf84f97b" class="outline-3">
+<h3 id="orgf84f97b">安装mysql(mariadb)</h3>
+<div class="outline-text-3" id="text-orgf84f97b">
+<div class="org-src-container">
+<pre class="src src-shell">yum install mariadb mariadb-server
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5fefa1b" class="outline-3">
+<h3 id="org5fefa1b">安装java</h3>
+<div class="outline-text-3" id="text-org5fefa1b">
+<div class="org-src-container">
+<pre class="src src-shell">yum install  java-1.8.0-openjdk
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbe5d2a6" class="outline-3">
+<h3 id="orgbe5d2a6">安装killall（stop脚本中会用到）</h3>
+<div class="outline-text-3" id="text-orgbe5d2a6">
+<div class="org-src-container">
+<pre class="src src-shell">yum install psmisc
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1fcb41e" class="outline-3">
+<h3 id="org1fcb41e">安装32位支持</h3>
+<div class="outline-text-3" id="text-org1fcb41e">
+<div class="org-src-container">
+<pre class="src src-shell">yum install glibc.i686
+yum install libxml2.so.2
+yum install libstdc++.so.5
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcb561ea" class="outline-2">
+<h2 id="orgcb561ea">还原数据库内容</h2>
+<div class="outline-text-2" id="text-orgcb561ea">
+</div><div id="outline-container-org05c17fa" class="outline-3">
+<h3 id="org05c17fa">启动mariadb服务</h3>
+<div class="outline-text-3" id="text-org05c17fa">
+<div class="org-src-container">
+<pre class="src src-shell">systemctl start mariadb
+systemctl enable mariadb
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfca6076" class="outline-3">
+<h3 id="orgfca6076">设置root用户密码为root</h3>
+<div class="outline-text-3" id="text-orgfca6076">
+<p>
+刚安装好mariadb并无需密码就能登陆root
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">mysql -uroot -p
+</pre>
+</div>
+
+<p>
+然后使用下面语句更新root密码
+</p>
+<div class="org-src-container">
+<pre class="src src-sql">use mysql;
+<span style="color: #4f97d7; font-weight: bold;">update</span> <span style="color: #4f97d7;">user</span> <span style="color: #4f97d7; font-weight: bold;">set</span> password=password<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">'root'</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7; font-weight: bold;">where</span> <span style="color: #4f97d7;">user</span>=<span style="color: #2d9574;">'root'</span>;
+flush <span style="color: #4f97d7; font-weight: bold;">privileges</span>; 
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga1af46b" class="outline-3">
+<h3 id="orga1af46b">还原zmwm数据库内容以及存储过程</h3>
+<div class="outline-text-3" id="text-orga1af46b">
+<p>
+先在mysql中创建空的zmwm库
+</p>
+<div class="org-src-container">
+<pre class="src src-sql"><span style="color: #4f97d7; font-weight: bold;">create</span> <span style="color: #4f97d7; font-weight: bold;">table</span> <span style="color: #bc6ec5; font-weight: bold;">zmwm</span>;
+</pre>
+</div>
+
+<p>
+然后下载wulin_sql.tar后解压，会有两个sql文件：zmwm_proc.sql和zmwm_table.sql。
+</p>
+
+<p>
+执行下面命令导入原数据
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">mysql -uroot -proot zmwm &lt;zmwm_proc.sql
+mysql -uroot -proot zmwm &lt;zmwm_table.sql
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6c4b8c7" class="outline-2">
+<h2 id="org6c4b8c7">拷贝其他文件</h2>
+<div class="outline-text-2" id="text-org6c4b8c7">
+<p>
+将下类内容添加到 <code>/etc/hosts</code> 中
+</p>
+<div class="org-src-container">
+<pre class="src src-conf">127.0.0.1       PW-Server
+127.0.0.1       aumanager
+127.0.0.1       manager
+127.0.0.1       link1
+127.0.0.1       game1
+127.0.0.1       game2
+127.0.0.1       delivery
+127.0.0.1       database
+127.0.0.1       backup
+127.0.0.1       auth
+127.0.0.1       audb
+127.0.0.1       gmserver
+</pre>
+</div>
+
+<p>
+下载 <code>authd.conf</code> 文件，然后将之拷贝到 <code>/etc/</code> 目录中
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">cp authd.conf /etc
+</pre>
+</div>
+
+<p>
+下载 <code>wulin_lib.tar.gz</code> 文件，将其中的 <code>libtask.so</code> 和 <code>libskill.so</code> 拷贝到 <code>/lib/</code> 目录下
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">tar -zxvf wulin_lib.tar.gz
+mv libtask.so libskill.so /lib
+</pre>
+</div>
+
+<p>
+下载 <code>wulin_pwserver.tar.gz</code> 文件，将其中的内容解压到 <code>/root</code> 目录下
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #4f97d7;">cd</span> /root
+tar -zxvf wulin_pwserver.tar.gz
+</pre>
+</div>
+
+<p>
+完成后， <code>/root</code> 目录下会有一个 <code>pwserver</code> 目录和一些管理脚本。
+</p>
+
+<p>
+其中执行 <code>my</code> 脚本会启动服务器,执行 <code>stop</code> 脚本会关闭服务器.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1780a77" class="outline-2">
+<h2 id="org1780a77">配置客户端中的IP</h2>
+<div class="outline-text-2" id="text-org1780a77">
+<p>
+从这里下载客户端
+链接: <a href="https://pan.baidu.com/s/1c8NhiY">https://pan.baidu.com/s/1c8NhiY</a> 密码: z5i2
+</p>
+
+
+<p>
+然后修改patcher\server\serverlist.txt和element\userdata\server\serverlist.txt中的IP
+</p>
+
+<p>
+例如
+</p>
+<pre class="example">
+  体验活动区
+  体验电信	29000:139.159.246.231			645
+  体验网通	29000:139.159.246.231			646
+  跨服PK赛	29000:139.159.246.231			212
+</pre>
+
+<p>
+之后，直接运行 <code>element/elementclient.exe</code> 就能开始玩了。
+</p>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2017-07-29</span>
+            <span title="last modification date" class="post-info">2017-07-29</span>
+            <span title="tags" class="post-info">:<a href="http://lujun9972.github.io/tags/无主之地">无主之地</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+        </div>
+    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+                    <a class="ds-label">使用多说评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2017/07/29/在centos上搭建武林外传服务器/";
+         var disqus_url = "http://lujun9972.github.io/blog/2017/07/29/在centos上搭建武林外传服务器/";
+         var disqus_shortname = '暗日';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="ds-thread"></div>
+        <script type="text/javascript">
+         var duoshuoQuery = {short_name:'暗日'};
+         (function() {
+             var ds = document.createElement('script');
+             ds.type = 'text/javascript';ds.async = true;
+             ds.src = 'http://static.duoshuo.com/embed.js';
+             ds.charset = 'UTF-8';
+             (document.getElementsByTagName('head')[0]
+           || document.getElementsByTagName('body')[0]).appendChild(ds);
+             $('.ds-thread').css('display','block');
+         })();
+        </script>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>

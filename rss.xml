@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 18 7月 2017 20:26:38 CST</pubDate>
-    <lastBuildDate>二, 18 7月 2017 20:26:38 CST</lastBuildDate>
+    <pubDate>六, 29 7月 2017 21:44:03 CST</pubDate>
+    <lastBuildDate>六, 29 7月 2017 21:44:03 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>在centos上搭建武林外传服务器</title>
+<link>http://lujun9972.github.io/blog/2017/07/29/在centos上搭建武林外传服务器/</link>
+<description>No Description</description>
+<pubDate>2017-07-29</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/07/29/在centos上搭建武林外传服务器/</guid>
+</item>
 <item>
 <title>在archlinux中使用蓝牙耳机</title>
 <link>http://lujun9972.github.io/blog/2017/07/18/在archlinux中使用蓝牙耳机/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-05-21</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/05/21/编写ansible-playbook的一些注意事项/</guid>
-</item>
-<item>
-<title>终端环境使用w3m访问视频站点的正确方式</title>
-<link>http://lujun9972.github.io/blog/2017/04/30/终端环境使用w3m访问视频站点的正确方式/</link>
-<description>No Description</description>
-<pubDate>2017-04-30</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/04/30/终端环境使用w3m访问视频站点的正确方式/</guid>
 </item>
 </channel>
 </rss>
