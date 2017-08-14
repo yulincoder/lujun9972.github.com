@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>六, 29 7月 2017 22:29:52 CST</pubDate>
-    <lastBuildDate>六, 29 7月 2017 22:29:52 CST</lastBuildDate>
+    <pubDate>一, 14 8月 2017 14:55:47 CST</pubDate>
+    <lastBuildDate>一, 14 8月 2017 14:55:47 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>观看无广告的youtube</title>
+<link>http://lujun9972.github.io/blog/2017/08/14/观看无广告的youtube/</link>
+<description>No Description</description>
+<pubDate>2017-08-14</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/08/14/观看无广告的youtube/</guid>
+</item>
 <item>
 <title>在centos上搭建武林外传服务器</title>
 <link>http://lujun9972.github.io/blog/2017/07/29/在centos上搭建武林外传服务器/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-05-25</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/05/25/使用auth-source库读取netrc文件中的用户名和密码/</guid>
-</item>
-<item>
-<title>编写ansible playbook的一些注意事项</title>
-<link>http://lujun9972.github.io/blog/2017/05/21/编写ansible-playbook的一些注意事项/</link>
-<description>No Description</description>
-<pubDate>2017-05-21</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/05/21/编写ansible-playbook的一些注意事项/</guid>
 </item>
 </channel>
 </rss>
