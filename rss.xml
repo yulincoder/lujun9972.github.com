@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>一, 14 8月 2017 15:01:01 CST</pubDate>
-    <lastBuildDate>一, 14 8月 2017 15:01:01 CST</lastBuildDate>
+    <pubDate>三, 16 8月 2017 11:30:53 CST</pubDate>
+    <lastBuildDate>三, 16 8月 2017 11:30:53 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>使用shell编写打字游戏</title>
+<link>http://lujun9972.github.io/blog/2017/06/29/使用shell编写打字游戏/</link>
+<description>No Description</description>
+<pubDate>2017-08-16</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/06/29/使用shell编写打字游戏/</guid>
+</item>
 <item>
 <title>如何下载YouTube视频</title>
 <link>http://lujun9972.github.io/blog/2017/08/14/如何下载youtube视频/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-06-04</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/06/04/如何使用sudo命令来添加内容到文件中/</guid>
-</item>
-<item>
-<title>smerge-mode帮你解决merge confict</title>
-<link>http://lujun9972.github.io/blog/2017/05/26/smerge-mode帮你解决merge-confict/</link>
-<description>No Description</description>
-<pubDate>2017-05-26</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/05/26/smerge-mode帮你解决merge-confict/</guid>
 </item>
 </channel>
 </rss>
