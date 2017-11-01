@@ -4,23 +4,30 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>日, 22 10月 2017 17:23:17 CST</pubDate>
-    <lastBuildDate>日, 22 10月 2017 17:23:17 CST</lastBuildDate>
+    <pubDate>三, 01 11月 2017 23:01:52 CST</pubDate>
+    <lastBuildDate>三, 01 11月 2017 23:01:52 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>使用DosBox运行dos游戏的简易方法</title>
+<link>http://lujun9972.github.io/blog/2017/11/01/使用dosbox运行dos游戏的简易方法/</link>
+<description>No Description</description>
+<pubDate>2017-11-01</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/11/01/使用dosbox运行dos游戏的简易方法/</guid>
+</item>
+<item>
+<title>Bash_Style_Guide_and_Coding_Standard</title>
+<link>http://lujun9972.github.io/blog/2017/09/26/bash_style_guide_and_coding_standard/</link>
+<description>No Description</description>
+<pubDate>2017-10-25</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/09/26/bash_style_guide_and_coding_standard/</guid>
+</item>
 <item>
 <title>保留org代码块中TAB的方法</title>
 <link>http://lujun9972.github.io/blog/2017/10/22/保留org代码块中tab的方法/</link>
 <description>No Description</description>
 <pubDate>2017-10-22</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/10/22/保留org代码块中tab的方法/</guid>
-</item>
-<item>
-<title>Bash_Style_Guide_and_Coding_Standard</title>
-<link>http://lujun9972.github.io/blog/2017/09/26/bash_style_guide_and_coding_standard/</link>
-<description>No Description</description>
-<pubDate>2017-10-20</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/09/26/bash_style_guide_and_coding_standard/</guid>
 </item>
 <item>
 <title>[译]DOSBox安装与基本配置</title>
@@ -38,10 +45,10 @@
 </item>
 <item>
 <title>使用unrar解压分片rar压缩文件</title>
-<link>http://lujun9972.github.io/blog/2017/10/22/使用unrar解压分片rar压缩文件/</link>
+<link>http://lujun9972.github.io/blog/2017/11/01/使用unrar解压分片rar压缩文件/</link>
 <description>No Description</description>
 <pubDate>2017-08-27</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/10/22/使用unrar解压分片rar压缩文件/</guid>
+<guid>http://lujun9972.github.io/blog/2017/11/01/使用unrar解压分片rar压缩文件/</guid>
 </item>
 <item>
 <title>测试打印机小窍门</title>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-08-14</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/08/14/观看无广告的youtube/</guid>
-</item>
-<item>
-<title>在centos上搭建武林外传服务器</title>
-<link>http://lujun9972.github.io/blog/2017/07/29/在centos上搭建武林外传服务器/</link>
-<description>No Description</description>
-<pubDate>2017-07-29</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/07/29/在centos上搭建武林外传服务器/</guid>
 </item>
 </channel>
 </rss>
