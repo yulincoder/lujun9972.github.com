@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 30 11月 2017 21:41:00 CST</pubDate>
-    <lastBuildDate>四, 30 11月 2017 21:41:00 CST</lastBuildDate>
+    <pubDate>四, 30 11月 2017 23:12:13 CST</pubDate>
+    <lastBuildDate>四, 30 11月 2017 23:12:13 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>sed中的[:alpha:]到底包含哪些字符</title>
+<link>http://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</link>
+<description>No Description</description>
+<pubDate>2017-11-30</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</guid>
+</item>
 <item>
 <title>记一次隐含子shell引发的问题</title>
 <link>http://lujun9972.github.io/blog/2017/11/30/记一次隐含子shell引发的问题/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-08-17</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/08/17/测试打印机小窍门/</guid>
-</item>
-<item>
-<title>使用shell编写打字游戏</title>
-<link>http://lujun9972.github.io/blog/2017/06/29/使用shell编写打字游戏/</link>
-<description>No Description</description>
-<pubDate>2017-08-16</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/06/29/使用shell编写打字游戏/</guid>
 </item>
 </channel>
 </rss>
