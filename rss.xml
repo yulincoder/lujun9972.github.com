@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 30 11月 2017 23:12:13 CST</pubDate>
-    <lastBuildDate>四, 30 11月 2017 23:12:13 CST</lastBuildDate>
+    <pubDate>五, 01 12月 2017 23:59:50 CST</pubDate>
+    <lastBuildDate>五, 01 12月 2017 23:59:50 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>为Linux安装杀毒软件</title>
+<link>http://lujun9972.github.io/blog/2017/12/01/为linux安装杀毒软件/</link>
+<description>No Description</description>
+<pubDate>2017-12-01</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/12/01/为linux安装杀毒软件/</guid>
+</item>
 <item>
 <title>sed中的[:alpha:]到底包含哪些字符</title>
 <link>http://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</link>
@@ -66,17 +73,10 @@
 </item>
 <item>
 <title>使用unrar解压分片rar压缩文件</title>
-<link>http://lujun9972.github.io/blog/2017/11/30/使用unrar解压分片rar压缩文件/</link>
+<link>http://lujun9972.github.io/blog/2017/12/01/使用unrar解压分片rar压缩文件/</link>
 <description>No Description</description>
 <pubDate>2017-08-27</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/11/30/使用unrar解压分片rar压缩文件/</guid>
-</item>
-<item>
-<title>测试打印机小窍门</title>
-<link>http://lujun9972.github.io/blog/2017/08/17/测试打印机小窍门/</link>
-<description>No Description</description>
-<pubDate>2017-08-17</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/08/17/测试打印机小窍门/</guid>
+<guid>http://lujun9972.github.io/blog/2017/12/01/使用unrar解压分片rar压缩文件/</guid>
 </item>
 </channel>
 </rss>
