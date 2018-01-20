@@ -4,6 +4,7 @@
     <title>暗无天日</title>
     <link>http://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
+<<<<<<< HEAD
     <pubDate>六, 02 12月 2017 22:13:44 CST</pubDate>
     <lastBuildDate>六, 02 12月 2017 22:13:44 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
@@ -37,6 +38,13 @@
 <guid>http://lujun9972.github.io/blog/2017/11/30/记一次隐含子shell引发的问题/</guid>
 </item>
 <item>
+=======
+    <pubDate>二, 07 11月 2017 10:48:40 CST</pubDate>
+    <lastBuildDate>二, 07 11月 2017 10:48:40 CST</lastBuildDate>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+>>>>>>> e0f3721799cfa2fe6f433dec48705d43f593abde
 <title>回车的妙用</title>
 <link>http://lujun9972.github.io/blog/2017/11/07/回车的妙用/</link>
 <description>No Description</description>
@@ -78,5 +86,36 @@
 <pubDate>2017-09-06</pubDate>
 <guid>http://lujun9972.github.io/blog/2017/09/06/kile编译时提示[viewpdf]failed-to-start的解决方法/</guid>
 </item>
+<<<<<<< HEAD
+=======
+<item>
+<title>使用unrar解压分片rar压缩文件</title>
+<link>http://lujun9972.github.io/blog/2017/11/07/使用unrar解压分片rar压缩文件/</link>
+<description>No Description</description>
+<pubDate>2017-08-27</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/11/07/使用unrar解压分片rar压缩文件/</guid>
+</item>
+<item>
+<title>测试打印机小窍门</title>
+<link>http://lujun9972.github.io/blog/2017/08/17/测试打印机小窍门/</link>
+<description>No Description</description>
+<pubDate>2017-08-17</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/08/17/测试打印机小窍门/</guid>
+</item>
+<item>
+<title>使用shell编写打字游戏</title>
+<link>http://lujun9972.github.io/blog/2017/06/29/使用shell编写打字游戏/</link>
+<description>No Description</description>
+<pubDate>2017-08-16</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/06/29/使用shell编写打字游戏/</guid>
+</item>
+<item>
+<title>如何下载YouTube视频</title>
+<link>http://lujun9972.github.io/blog/2017/08/14/如何下载youtube视频/</link>
+<description>No Description</description>
+<pubDate>2017-08-14</pubDate>
+<guid>http://lujun9972.github.io/blog/2017/08/14/如何下载youtube视频/</guid>
+</item>
+>>>>>>> e0f3721799cfa2fe6f433dec48705d43f593abde
 </channel>
 </rss>
