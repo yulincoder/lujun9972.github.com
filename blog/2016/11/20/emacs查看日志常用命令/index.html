@@ -53,17 +53,17 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org11cf324">1. Tramp</a></li>
-<li><a href="#orgba6ff41">2. read-only-mode</a></li>
-<li><a href="#org9ac4cbe">3. keep-lines/flush-lines</a></li>
-<li><a href="#org3cc278d">4. Highlights</a></li>
-<li><a href="#org5d98981">5. auto-revert</a></li>
+<li><a href="#org4d0ff49">1. Tramp</a></li>
+<li><a href="#org7966801">2. read-only-mode</a></li>
+<li><a href="#orgdda3aab">3. keep-lines/flush-lines</a></li>
+<li><a href="#org10eaa73">4. Highlights</a></li>
+<li><a href="#org73b684b">5. auto-revert</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org11cf324" class="outline-2">
-<h2 id="org11cf324"><span class="section-number-2">1</span> Tramp</h2>
+<div id="outline-container-org4d0ff49" class="outline-2">
+<h2 id="org4d0ff49"><span class="section-number-2">1</span> Tramp</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Emacs提供了tramp可以让你直接访问远程主机上的日志文件. 
@@ -83,8 +83,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </div>
 </div>
 
-<div id="outline-container-orgba6ff41" class="outline-2">
-<h2 id="orgba6ff41"><span class="section-number-2">2</span> read-only-mode</h2>
+<div id="outline-container-org7966801" class="outline-2">
+<h2 id="org7966801"><span class="section-number-2">2</span> read-only-mode</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 若怕查看日志文件时不小心对它进行了修改,那么就可以进入只读模式,方法是执行 <code>M-x read-only-mode</code>.
@@ -100,8 +100,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </div>
 </div>
 
-<div id="outline-container-org9ac4cbe" class="outline-2">
-<h2 id="org9ac4cbe"><span class="section-number-2">3</span> keep-lines/flush-lines</h2>
+<div id="outline-container-orgdda3aab" class="outline-2">
+<h2 id="orgdda3aab"><span class="section-number-2">3</span> keep-lines/flush-lines</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 有时日志中的内容太多了,为了凸出重点就需要用 <code>keep-lines</code> 或 <code>flush-lines</code> 来删除掉不用关注的内容.
@@ -222,8 +222,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </div>
 </div>
 
-<div id="outline-container-org3cc278d" class="outline-2">
-<h2 id="org3cc278d"><span class="section-number-2">4</span> Highlights</h2>
+<div id="outline-container-org10eaa73" class="outline-2">
+<h2 id="org10eaa73"><span class="section-number-2">4</span> Highlights</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 我们还可以让Emacs依据某种条件高亮显示日志中的某些内容. 常用的高亮命令有以下几个
@@ -286,8 +286,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </p>
 </div>
 </div>
-<div id="outline-container-org5d98981" class="outline-2">
-<h2 id="org5d98981"><span class="section-number-2">5</span> auto-revert</h2>
+<div id="outline-container-org73b684b" class="outline-2">
+<h2 id="org73b684b"><span class="section-number-2">5</span> auto-revert</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 在服务不停止的情况下,会不断往日志文件中加入新的内容. 若希望Emacs自动反映出这些改动那么就可以使用 <code>M-x auto-revert-mode</code> 与 <code>M-x auto-revert-tail-mode</code> 了.
@@ -317,7 +317,6 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -336,19 +335,6 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

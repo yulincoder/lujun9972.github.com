@@ -54,30 +54,30 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7455b39">配置</a></li>
-<li><a href="#org7f15ac9">阅读邮件</a></li>
-<li><a href="#org07a8990">修改邮件</a></li>
-<li><a href="#orgb8a0e43">删除邮件</a></li>
-<li><a href="#org18149de">保存邮件</a></li>
-<li><a href="#orgaa45b2e">回复邮件</a></li>
-<li><a href="#orgda4e89a">邮件标签</a>
+<li><a href="#orgf55a63e">配置</a></li>
+<li><a href="#org3ed93bb">阅读邮件</a></li>
+<li><a href="#org8e9e497">修改邮件</a></li>
+<li><a href="#orge181c9c">删除邮件</a></li>
+<li><a href="#org2ba89b3">保存邮件</a></li>
+<li><a href="#org75f8d7c">回复邮件</a></li>
+<li><a href="#orge91b117">邮件标签</a>
 <ul>
-<li><a href="#org04dc154">邮件属性</a></li>
+<li><a href="#orgd99ac98">邮件属性</a></li>
 </ul>
 </li>
-<li><a href="#org79b26dc">邮件概览</a>
+<li><a href="#orge0b7f67">邮件概览</a>
 <ul>
-<li><a href="#orgbcffe49">进入Summary buffer</a></li>
-<li><a href="#orgf7befd4">Summary buffer的操作</a></li>
+<li><a href="#org1874a54">进入Summary buffer</a></li>
+<li><a href="#org416577d">Summary buffer的操作</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org7455b39" class="outline-2">
-<h2 id="org7455b39">配置</h2>
-<div class="outline-text-2" id="text-org7455b39">
+<div id="outline-container-orgf55a63e" class="outline-2">
+<h2 id="orgf55a63e">配置</h2>
+<div class="outline-text-2" id="text-orgf55a63e">
 <p>
 Rmail启动时会调用 <code>movemail</code> 这个程序来从各个inbox中获取新邮件并合并到一个所谓的 <code>primary Rmail file</code> 中,然后读取其中的第一个未读邮件.
 </p>
@@ -145,9 +145,9 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 </div>
 </div>
 
-<div id="outline-container-org7f15ac9" class="outline-2">
-<h2 id="org7f15ac9">阅读邮件</h2>
-<div class="outline-text-2" id="text-org7f15ac9">
+<div id="outline-container-org3ed93bb" class="outline-2">
+<h2 id="org3ed93bb">阅读邮件</h2>
+<div class="outline-text-2" id="text-org3ed93bb">
 <p>
 设置完之后就可以直接运行 <code>M-x rmail</code> 了,rmail会从自动进入Rmail文件中第一个未读的邮件中.
 </p>
@@ -174,9 +174,9 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 </div>
 </div>
 
-<div id="outline-container-org07a8990" class="outline-2">
-<h2 id="org07a8990">修改邮件</h2>
-<div class="outline-text-2" id="text-org07a8990">
+<div id="outline-container-org8e9e497" class="outline-2">
+<h2 id="org8e9e497">修改邮件</h2>
+<div class="outline-text-2" id="text-org8e9e497">
 <p>
 默认情况下Rmail阅读邮件时是只读的. 但是你可以通过 <code>e (rmail-edit-current-message)</code> 编辑当前邮件.
 </p>
@@ -191,9 +191,9 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 </div>
 </div>
 
-<div id="outline-container-orgb8a0e43" class="outline-2">
-<h2 id="orgb8a0e43">删除邮件</h2>
-<div class="outline-text-2" id="text-orgb8a0e43">
+<div id="outline-container-orge181c9c" class="outline-2">
+<h2 id="orge181c9c">删除邮件</h2>
+<div class="outline-text-2" id="text-orge181c9c">
 <p>
 有两种删除邮件的方法:
 </p>
@@ -216,9 +216,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-org18149de" class="outline-2">
-<h2 id="org18149de">保存邮件</h2>
-<div class="outline-text-2" id="text-org18149de">
+<div id="outline-container-org2ba89b3" class="outline-2">
+<h2 id="org2ba89b3">保存邮件</h2>
+<div class="outline-text-2" id="text-org2ba89b3">
 <p>
 以下命令可以将邮件保存到其他文件:
 </p>
@@ -231,9 +231,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-orgaa45b2e" class="outline-2">
-<h2 id="orgaa45b2e">回复邮件</h2>
-<div class="outline-text-2" id="text-orgaa45b2e">
+<div id="outline-container-org75f8d7c" class="outline-2">
+<h2 id="org75f8d7c">回复邮件</h2>
+<div class="outline-text-2" id="text-org75f8d7c">
 <p>
 除了 <code>C-x m</code> 之外,Rmail还提供了以下快捷键帮你发送邮件:
 </p>
@@ -257,9 +257,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-orgda4e89a" class="outline-2">
-<h2 id="orgda4e89a">邮件标签</h2>
-<div class="outline-text-2" id="text-orgda4e89a">
+<div id="outline-container-orge91b117" class="outline-2">
+<h2 id="orge91b117">邮件标签</h2>
+<div class="outline-text-2" id="text-orge91b117">
 <p>
 你可以为邮件添加各式的标签并以此作为邮件分类的一种方法:
 </p>
@@ -273,9 +273,9 @@ Rmail提供了如下命令来删除邮件:
 </dl>
 </div>
 
-<div id="outline-container-org04dc154" class="outline-3">
-<h3 id="org04dc154">邮件属性</h3>
-<div class="outline-text-3" id="text-org04dc154">
+<div id="outline-container-orgd99ac98" class="outline-3">
+<h3 id="orgd99ac98">邮件属性</h3>
+<div class="outline-text-3" id="text-orgd99ac98">
 <p>
 某些特定的标签有其特定的意义,这些标签被称之为属性,一般由Rmail自己维护:
 </p>
@@ -294,9 +294,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-org79b26dc" class="outline-2">
-<h2 id="org79b26dc">邮件概览</h2>
-<div class="outline-text-2" id="text-org79b26dc">
+<div id="outline-container-orge0b7f67" class="outline-2">
+<h2 id="orge0b7f67">邮件概览</h2>
+<div class="outline-text-2" id="text-orge0b7f67">
 <p>
 你可以以概览的方式浏览所有的邮件,这时buffer中的每一行都代表一个邮件,并列出了该邮件的编号,日期,发送者,行数,标签以及标题.
 若觉得邮件的总行数显示了也没有意义,可以设置变量 <code>rmail-summary-line-count-flag</code> 为 <code>nil</code>. 这样在概览信息中就不会显示邮件的总行数了.
@@ -311,9 +311,9 @@ Rmail提供了如下命令来删除邮件:
 </p>
 </div>
 
-<div id="outline-container-orgbcffe49" class="outline-3">
-<h3 id="orgbcffe49">进入Summary buffer</h3>
-<div class="outline-text-3" id="text-orgbcffe49">
+<div id="outline-container-org1874a54" class="outline-3">
+<h3 id="org1874a54">进入Summary buffer</h3>
+<div class="outline-text-3" id="text-org1874a54">
 <p>
 概览buffer中的信息会随着Rmail文件的改变而自动更新.
 </p>
@@ -329,9 +329,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-orgf7befd4" class="outline-3">
-<h3 id="orgf7befd4">Summary buffer的操作</h3>
-<div class="outline-text-3" id="text-orgf7befd4">
+<div id="outline-container-org416577d" class="outline-3">
+<h3 id="org416577d">Summary buffer的操作</h3>
+<div class="outline-text-3" id="text-org416577d">
 <p>
 在概览buffer中,可以使用几乎所有的Rmail命令,这些命令会作用于光标所在行的邮件上. 例如
 </p>
@@ -374,7 +374,6 @@ Rmail提供了如下命令来删除邮件:
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -393,19 +392,6 @@ Rmail提供了如下命令来删除邮件:
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

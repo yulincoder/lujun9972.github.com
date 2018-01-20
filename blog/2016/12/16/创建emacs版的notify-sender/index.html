@@ -53,9 +53,9 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6d21f02">1. notify-send</a></li>
-<li><a href="#org8585b0f">2. EmacsLisp的notification库</a></li>
-<li><a href="#org754c2f1">3. 实现</a></li>
+<li><a href="#org7160e4b">1. notify-send</a></li>
+<li><a href="#orgfb80d60">2. EmacsLisp的notification库</a></li>
+<li><a href="#org493968d">3. 实现</a></li>
 </ul>
 </div>
 </div>
@@ -63,8 +63,8 @@
 最近对EmacsScript颇有兴趣,刚好翻看Emacs Lisp Manual的时候看到"Desktop Notifications"这一章,于是突发奇想,尝试实现一个Emacs版的notify-send.
 </p>
 
-<div id="outline-container-org6d21f02" class="outline-2">
-<h2 id="org6d21f02"><span class="section-number-2">1</span> notify-send</h2>
+<div id="outline-container-org7160e4b" class="outline-2">
+<h2 id="org7160e4b"><span class="section-number-2">1</span> notify-send</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 notify-send是一个可以用来发送桌面通知的命令, 我经常在脚本中用它来通知一些值得关注的消息.
@@ -102,8 +102,8 @@ notify-send是一个可以用来发送桌面通知的命令, 我经常在脚本�
 </div>
 </div>
 
-<div id="outline-container-org8585b0f" class="outline-2">
-<h2 id="org8585b0f"><span class="section-number-2">2</span> EmacsLisp的notification库</h2>
+<div id="outline-container-orgfb80d60" class="outline-2">
+<h2 id="orgfb80d60"><span class="section-number-2">2</span> EmacsLisp的notification库</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 若Emacs编译时开启了D-Bus支持,则通过加载`notifications'库,Emacs可以给某些操作系统发送"通知"
@@ -366,8 +366,8 @@ notification server未告知原因
 </div>
 </div>
 
-<div id="outline-container-org754c2f1" class="outline-2">
-<h2 id="org754c2f1"><span class="section-number-2">3</span> 实现</h2>
+<div id="outline-container-org493968d" class="outline-2">
+<h2 id="org493968d"><span class="section-number-2">3</span> 实现</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 有了notifications库,实现起来就异常的简单了,基本上只需要调用 <code>notifications-notify</code> 这个函数就OK了.
@@ -454,7 +454,6 @@ notification server未告知原因
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -473,19 +472,6 @@ notification server未告知原因
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

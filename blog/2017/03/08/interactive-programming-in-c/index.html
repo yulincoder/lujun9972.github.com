@@ -54,10 +54,10 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgdc7ad89">An example with the Game of Life</a>
+<li><a href="#org39ad4f2">An example with the Game of Life</a>
 <ul>
-<li><a href="#orgc48d061">Quick start:</a></li>
-<li><a href="#orged7baae">dlopen, dlsym, and dlclose</a></li>
+<li><a href="#org2b7759f">Quick start:</a></li>
+<li><a href="#org63b8d73">dlopen, dlsym, and dlclose</a></li>
 </ul>
 </li>
 </ul>
@@ -91,9 +91,9 @@
 这使得你很难把把交互式编程与 <a href="http://nullprogram.com/blog/2014/10/21/">基于C的面向对象编程</a> 整合起来用.
 </p>
 
-<div id="outline-container-orgdc7ad89" class="outline-2">
-<h2 id="orgdc7ad89">An example with the Game of Life</h2>
-<div class="outline-text-2" id="text-orgdc7ad89">
+<div id="outline-container-org39ad4f2" class="outline-2">
+<h2 id="org39ad4f2">An example with the Game of Life</h2>
+<div class="outline-text-2" id="text-org39ad4f2">
 <p>
 为了说明交互式编程的实现远离,我这里搞了个例子. 它是一个简单的基于 <code>ncurses</code> 实现的Life游戏. 你可以下载它的源代码并在类Unix系统上跑起来体验一下.
 </p>
@@ -103,9 +103,9 @@
 </ul>
 </div>
 
-<div id="outline-container-orgc48d061" class="outline-3">
-<h3 id="orgc48d061">Quick start:</h3>
-<div class="outline-text-3" id="text-orgc48d061">
+<div id="outline-container-org2b7759f" class="outline-3">
+<h3 id="org2b7759f">Quick start:</h3>
+<div class="outline-text-3" id="text-org2b7759f">
 <ol class="org-ol">
 <li>在终端下运行 <code>make</code> 编译代码, 然后运行 <code>./main</code> 启动程序. 按 <code>r</code> 生成随机的初始状态, 按 <code>q</code> 退出程序.</li>
 <li>编辑 <code>game.c</code> 做一些修改.</li>
@@ -204,9 +204,9 @@ structure.
 </div>
 </div>
 
-<div id="outline-container-orged7baae" class="outline-3">
-<h3 id="orged7baae">dlopen, dlsym, and dlclose</h3>
-<div class="outline-text-3" id="text-orged7baae">
+<div id="outline-container-org63b8d73" class="outline-3">
+<h3 id="org63b8d73">dlopen, dlsym, and dlclose</h3>
+<div class="outline-text-3" id="text-org63b8d73">
 <p>
 The wrapper is focused on calling dlopen(), dlsym(), and dlclose() in the
 right order at the right time. The game will be compiled to the file
@@ -391,7 +391,6 @@ ability to develop interactively is very appealing.
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -410,19 +409,6 @@ ability to develop interactively is very appealing.
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

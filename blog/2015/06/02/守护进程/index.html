@@ -53,15 +53,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd183a14">1. 守护进程的特点</a></li>
-<li><a href="#org744fef3">2. 编写守护进程的基本规则</a></li>
-<li><a href="#org75fd436">3. 编写守护进程的惯例</a></li>
+<li><a href="#org5d9e6df">1. 守护进程的特点</a></li>
+<li><a href="#orga4ecd87">2. 编写守护进程的基本规则</a></li>
+<li><a href="#org077d703">3. 编写守护进程的惯例</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd183a14" class="outline-2">
-<h2 id="orgd183a14"><span class="section-number-2">1</span> 守护进程的特点</h2>
+<div id="outline-container-org5d9e6df" class="outline-2">
+<h2 id="org5d9e6df"><span class="section-number-2">1</span> 守护进程的特点</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li><b>大多数</b> 守护进程以超级用户特权运行</li>
@@ -72,8 +72,8 @@
 </div>
 </div>
 
-<div id="outline-container-org744fef3" class="outline-2">
-<h2 id="org744fef3"><span class="section-number-2">2</span> 编写守护进程的基本规则</h2>
+<div id="outline-container-orga4ecd87" class="outline-2">
+<h2 id="orga4ecd87"><span class="section-number-2">2</span> 编写守护进程的基本规则</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 编写守护进程需要遵循一些基本规则,以防止产生并不需要的交互作用.
@@ -132,8 +132,8 @@
 </div>
 </div>
 
-<div id="outline-container-org75fd436" class="outline-2">
-<h2 id="org75fd436"><span class="section-number-2">3</span> 编写守护进程的惯例</h2>
+<div id="outline-container-org077d703" class="outline-2">
+<h2 id="org077d703"><span class="section-number-2">3</span> 编写守护进程的惯例</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>若守护进程使用锁文件(<b>可以保证只有一个守护进程副本运行</b>),那么该文件通常存放在`/var/run'目录下,且名称通常为`守护进程或服务名称.pid'. 例如cron守护进程额锁文件为`/var/run/crond.pid'</li>
@@ -161,7 +161,6 @@
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -180,19 +179,6 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

@@ -53,20 +53,20 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8f98856">1. 使用tramp编辑远程文件</a></li>
-<li><a href="#org1052da5">2. Tramp与其他命令的整合</a></li>
-<li><a href="#orgab55e4c">3. 其他用法</a>
+<li><a href="#orgb0ac189">1. 使用tramp编辑远程文件</a></li>
+<li><a href="#org9a1f880">2. Tramp与其他命令的整合</a></li>
+<li><a href="#org240e86d">3. 其他用法</a>
 <ul>
-<li><a href="#orgac8ea2f">3.1. 用户切换</a></li>
-<li><a href="#orgc14a274">3.2. 多重跳转</a></li>
+<li><a href="#org63eaf50">3.1. 用户切换</a></li>
+<li><a href="#orgee4c8f2">3.2. 多重跳转</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8f98856" class="outline-2">
-<h2 id="org8f98856"><span class="section-number-2">1</span> 使用tramp编辑远程文件</h2>
+<div id="outline-container-orgb0ac189" class="outline-2">
+<h2 id="orgb0ac189"><span class="section-number-2">1</span> 使用tramp编辑远程文件</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 借助TRAMP,你可以像编辑本地文件一样来编辑远程文件. 
@@ -102,8 +102,8 @@ tramp支持通过多种协议来编辑远程文件(具体tramp支持哪些协议
 </p>
 </div>
 </div>
-<div id="outline-container-org1052da5" class="outline-2">
-<h2 id="org1052da5"><span class="section-number-2">2</span> Tramp与其他命令的整合</h2>
+<div id="outline-container-org9a1f880" class="outline-2">
+<h2 id="org9a1f880"><span class="section-number-2">2</span> Tramp与其他命令的整合</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Tramp对其他命令来说几乎都是透明的. 下面是一些与tramp实现无缝结合的常用命令:
@@ -119,12 +119,12 @@ Tramp对其他命令来说几乎都是透明的. 下面是一些与tramp实现�
 </dl>
 </div>
 </div>
-<div id="outline-container-orgab55e4c" class="outline-2">
-<h2 id="orgab55e4c"><span class="section-number-2">3</span> 其他用法</h2>
+<div id="outline-container-org240e86d" class="outline-2">
+<h2 id="org240e86d"><span class="section-number-2">3</span> 其他用法</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgac8ea2f" class="outline-3">
-<h3 id="orgac8ea2f"><span class="section-number-3">3.1</span> 用户切换</h3>
+<div id="outline-container-org63eaf50" class="outline-3">
+<h3 id="org63eaf50"><span class="section-number-3">3.1</span> 用户切换</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 除了编辑远程文件外,tramp还能让你以另一个客户的身份来打开文件,方法是使用 <code>sudo</code> 或 <code>su</code> 协议.
@@ -139,8 +139,8 @@ Tramp对其他命令来说几乎都是透明的. 下面是一些与tramp实现�
 </p>
 </div>
 </div>
-<div id="outline-container-orgc14a274" class="outline-3">
-<h3 id="orgc14a274"><span class="section-number-3">3.2</span> 多重跳转</h3>
+<div id="outline-container-orgee4c8f2" class="outline-3">
+<h3 id="orgee4c8f2"><span class="section-number-3">3.2</span> 多重跳转</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 若连接远程主机时需要通过一个中间跳板机,则需要使用tramp的多重跳转格式了.
@@ -190,7 +190,6 @@ tramp的多重跳转格式为
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -209,19 +208,6 @@ tramp的多重跳转格式为
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

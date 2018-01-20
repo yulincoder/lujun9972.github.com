@@ -55,9 +55,9 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org26e0d0e">大量的API看不到详细说明</a></li>
-<li><a href="#orga5ecc4e">单词拼写有问题</a></li>
-<li><a href="#org10d072f">API的接口说明与实际不符</a></li>
+<li><a href="#org3261265">大量的API看不到详细说明</a></li>
+<li><a href="#org880222d">单词拼写有问题</a></li>
+<li><a href="#org813c9a8">API的接口说明与实际不符</a></li>
 </ul>
 </div>
 </div>
@@ -69,9 +69,9 @@
 目前发现的问题有以下几个：
 </p>
 
-<div id="outline-container-org26e0d0e" class="outline-2">
-<h2 id="org26e0d0e">大量的API看不到详细说明</h2>
-<div class="outline-text-2" id="text-org26e0d0e">
+<div id="outline-container-org3261265" class="outline-2">
+<h2 id="org3261265">大量的API看不到详细说明</h2>
+<div class="outline-text-2" id="text-org3261265">
 <p>
 点进去就直接显示“系统维护中......”
 </p>
@@ -89,18 +89,18 @@
 </div>
 </div>
 
-<div id="outline-container-orga5ecc4e" class="outline-2">
-<h2 id="orga5ecc4e">单词拼写有问题</h2>
-<div class="outline-text-2" id="text-orga5ecc4e">
+<div id="outline-container-org880222d" class="outline-2">
+<h2 id="org880222d">单词拼写有问题</h2>
+<div class="outline-text-2" id="text-org880222d">
 <p>
 我很神奇的发现， <code>bbs/gettopics</code> 这个API，传递参数时参数名用"forum"居然提示是 <code>froum是不可缺少的参数</code>. 这很明显是实现API时出现了拼写错误
 </p>
 </div>
 </div>
 
-<div id="outline-container-org10d072f" class="outline-2">
-<h2 id="org10d072f">API的接口说明与实际不符</h2>
-<div class="outline-text-2" id="text-org10d072f">
+<div id="outline-container-org813c9a8" class="outline-2">
+<h2 id="org813c9a8">API的接口说明与实际不符</h2>
+<div class="outline-text-2" id="text-org813c9a8">
 <p>
 在 <code>blog/getarticle</code> 这个API的返回结果中，我居然看到了有 <code>markdowncontent</code> 和 <code>markdowndirectory</code> 这样的字段，然而接口说明中找不到相关说明
 </p>
@@ -121,7 +121,6 @@
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -140,19 +139,6 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

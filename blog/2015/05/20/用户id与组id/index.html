@@ -53,21 +53,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0263d8f">1. 实际ID,有效ID与保存的设置ID</a></li>
-<li><a href="#org88af307">2. 更改用户/组ID函数</a>
+<li><a href="#orgc46c170">1. 实际ID,有效ID与保存的设置ID</a></li>
+<li><a href="#org424a54b">2. 更改用户/组ID函数</a>
 <ul>
-<li><a href="#org599a2d0">2.1. 关于设置用户ID的规则说明</a></li>
-<li><a href="#org4778aec">2.2. 关于设置组ID的规则说明</a></li>
+<li><a href="#org1bc6049">2.1. 关于设置用户ID的规则说明</a></li>
+<li><a href="#org1a2dbc3">2.2. 关于设置组ID的规则说明</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0263d8f" class="outline-2">
-<h2 id="org0263d8f"><span class="section-number-2">1</span> 实际ID,有效ID与保存的设置ID</h2>
+<div id="outline-container-orgc46c170" class="outline-2">
+<h2 id="orgc46c170"><span class="section-number-2">1</span> 实际ID,有效ID与保存的设置ID</h2>
 </div>
-<div id="outline-container-org88af307" class="outline-2">
-<h2 id="org88af307"><span class="section-number-2">2</span> 更改用户/组ID函数</h2>
+<div id="outline-container-org424a54b" class="outline-2">
+<h2 id="org424a54b"><span class="section-number-2">2</span> 更改用户/组ID函数</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -91,8 +91,8 @@
 <li>若上面条件都不满足,则将errno设置为EPERM,并返回-1</li>
 </ol>
 </div>
-<div id="outline-container-org599a2d0" class="outline-3">
-<h3 id="org599a2d0"><span class="section-number-3">2.1</span> 关于设置用户ID的规则说明</h3>
+<div id="outline-container-org1bc6049" class="outline-3">
+<h3 id="org1bc6049"><span class="section-number-3">2.1</span> 关于设置用户ID的规则说明</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li>只有超级用户进程可以更改实际用户ID</li>
@@ -103,8 +103,8 @@
 </ol>
 </div>
 </div>
-<div id="outline-container-org4778aec" class="outline-3">
-<h3 id="org4778aec"><span class="section-number-3">2.2</span> 关于设置组ID的规则说明</h3>
+<div id="outline-container-org1a2dbc3" class="outline-3">
+<h3 id="org1a2dbc3"><span class="section-number-3">2.2</span> 关于设置组ID的规则说明</h3>
 <div class="outline-text-3" id="text-2-2">
 <ol class="org-ol">
 <li>组ID的规则类似用户ID的规则</li>
@@ -128,7 +128,6 @@
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -147,19 +146,6 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

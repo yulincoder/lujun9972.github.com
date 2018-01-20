@@ -54,8 +54,8 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd782468">Buffered Output Review</a></li>
-<li><a href="#orgd0ce206">Debugger to the Rescue</a></li>
+<li><a href="#orge6108ae">Buffered Output Review</a></li>
+<li><a href="#org961e151">Debugger to the Rescue</a></li>
 </ul>
 </div>
 </div>
@@ -93,9 +93,9 @@
 </pre>
 </div>
 
-<div id="outline-container-orgd782468" class="outline-2">
-<h2 id="orgd782468">Buffered Output Review</h2>
-<div class="outline-text-2" id="text-orgd782468">
+<div id="outline-container-orge6108ae" class="outline-2">
+<h2 id="orge6108ae">Buffered Output Review</h2>
+<div class="outline-text-2" id="text-orge6108ae">
 <p>
 <code>printf</code> and <code>putchar</code> 这两个C库函数,都会以某种方式来缓存输出的内容. 这意味着不是每次调用这些函数都会实际输出数据.
 另一方面, POSIX定义的函数 <code>read</code> 和 <code>write</code> 则是不带buffer的系统调用.
@@ -130,9 +130,9 @@ $ ./a.out &gt; output.txt
 </div>
 </div>
 
-<div id="outline-container-orgd0ce206" class="outline-2">
-<h2 id="orgd0ce206">Debugger to the Rescue</h2>
-<div class="outline-text-2" id="text-orgd0ce206">
+<div id="outline-container-org961e151" class="outline-2">
+<h2 id="org961e151">Debugger to the Rescue</h2>
+<div class="outline-text-2" id="text-org961e151">
 <p>
 幸运的是,有一个东西可以暂停正在运行的程序并帮我们维护程序的状态:那就是调试器.
 </p>
@@ -197,7 +197,6 @@ $ cat output.txt
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -216,19 +215,6 @@ $ cat output.txt
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

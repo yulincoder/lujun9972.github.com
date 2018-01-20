@@ -54,13 +54,13 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8186964">配置</a></li>
-<li><a href="#orga0798aa">编写新邮件</a></li>
-<li><a href="#org30d1579">添加附件</a></li>
-<li><a href="#orge82dd34">设置mail address的别名</a></li>
-<li><a href="#orgdcdd9aa">添加签名</a></li>
-<li><a href="#org55873e2">Queued delivery</a></li>
-<li><a href="#org91c3344">调试</a></li>
+<li><a href="#org90af193">配置</a></li>
+<li><a href="#orgbbde4d5">编写新邮件</a></li>
+<li><a href="#org0483266">添加附件</a></li>
+<li><a href="#orgd6d2d1d">设置mail address的别名</a></li>
+<li><a href="#orga6181ef">添加签名</a></li>
+<li><a href="#orgdb68af7">Queued delivery</a></li>
+<li><a href="#org77be70f">调试</a></li>
 </ul>
 </div>
 </div>
@@ -68,9 +68,9 @@
 Emacs自带了SMTP库,这使的Emacs无需任何第三方软件的帮助就能通过第三方邮件服务商发送电子邮件.
 </p>
 
-<div id="outline-container-org8186964" class="outline-2">
-<h2 id="org8186964">配置</h2>
-<div class="outline-text-2" id="text-org8186964">
+<div id="outline-container-org90af193" class="outline-2">
+<h2 id="org90af193">配置</h2>
+<div class="outline-text-2" id="text-org90af193">
 <p>
 在写邮件之前,推荐先配置一下 <code>user-full-name</code> 与 <code>user-mail-address</code> 这两个变量. 
 在编写新邮件时,Emacs会使用这两个变量来形成邮件中的 <code>From</code> header域的值.
@@ -114,9 +114,9 @@ Emacs自带了SMTP库,这使的Emacs无需任何第三方软件的帮助就能�
 </div>
 </div>
 
-<div id="outline-container-orga0798aa" class="outline-2">
-<h2 id="orga0798aa">编写新邮件</h2>
-<div class="outline-text-2" id="text-orga0798aa">
+<div id="outline-container-orgbbde4d5" class="outline-2">
+<h2 id="orgbbde4d5">编写新邮件</h2>
+<div class="outline-text-2" id="text-orgbbde4d5">
 <p>
 按下 <code>C-x m</code> 或者直接执行 <code>M-x compose-mail</code> 就会弹出一个 <code>*unsent mail*</code> 的buffer,看起来大概是这样的:
 </p>
@@ -168,9 +168,9 @@ machine smtp服务器地址 login 用户名 port 端口号 password 密码
 </div>
 </div>
 
-<div id="outline-container-org30d1579" class="outline-2">
-<h2 id="org30d1579">添加附件</h2>
-<div class="outline-text-2" id="text-org30d1579">
+<div id="outline-container-org0483266" class="outline-2">
+<h2 id="org0483266">添加附件</h2>
+<div class="outline-text-2" id="text-org0483266">
 <p>
 按下 <code>C-c C-a (mml-attach-file)</code>  就能为邮件添加附件. Emacs会依次提示输入附件路径,类型,描述以及整合方式.
 </p>
@@ -192,9 +192,9 @@ machine smtp服务器地址 login 用户名 port 端口号 password 密码
 </div>
 </div>
 
-<div id="outline-container-orge82dd34" class="outline-2">
-<h2 id="orge82dd34">设置mail address的别名</h2>
-<div class="outline-text-2" id="text-orge82dd34">
+<div id="outline-container-orgd6d2d1d" class="outline-2">
+<h2 id="orgd6d2d1d">设置mail address的别名</h2>
+<div class="outline-text-2" id="text-orgd6d2d1d">
 <p>
 一个别名可以代表一个或多个邮件地址.
 </p>
@@ -233,9 +233,9 @@ source FILENAME
 </div>
 </div>
 
-<div id="outline-container-orgdcdd9aa" class="outline-2">
-<h2 id="orgdcdd9aa">添加签名</h2>
-<div class="outline-text-2" id="text-orgdcdd9aa">
+<div id="outline-container-orga6181ef" class="outline-2">
+<h2 id="orga6181ef">添加签名</h2>
+<div class="outline-text-2" id="text-orga6181ef">
 <p>
 变量 <code>message-signature</code> 的值决定了Emacs如何处理你的邮件签名, 它支持以下几种值:
 </p>
@@ -260,9 +260,9 @@ source FILENAME
 </div>
 </div>
 
-<div id="outline-container-org55873e2" class="outline-2">
-<h2 id="org55873e2">Queued delivery</h2>
-<div class="outline-text-2" id="text-org55873e2">
+<div id="outline-container-orgdb68af7" class="outline-2">
+<h2 id="orgdb68af7">Queued delivery</h2>
+<div class="outline-text-2" id="text-orgdb68af7">
 <p>
 若你的电脑不是一直连接到互联网上的,则你可以先写好邮件,将这些邮件暂存到一个队列中,然后等到连接到互联网上之后再一次性发送出去.
 </p>
@@ -273,9 +273,9 @@ source FILENAME
 </div>
 </div>
 
-<div id="outline-container-org91c3344" class="outline-2">
-<h2 id="org91c3344">调试</h2>
-<div class="outline-text-2" id="text-org91c3344">
+<div id="outline-container-org77be70f" class="outline-2">
+<h2 id="org77be70f">调试</h2>
+<div class="outline-text-2" id="text-org77be70f">
 <p>
 在发送邮件的过程中如果出现问题想调试,可以开启smtpmail的调试功能:
 </p>
@@ -304,7 +304,6 @@ source FILENAME
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -323,19 +322,6 @@ source FILENAME
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

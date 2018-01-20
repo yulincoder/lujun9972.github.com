@@ -53,22 +53,22 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgde036b1">1. 产生日志消息的方法</a></li>
-<li><a href="#orgf6ce725">2. 日志消息存放地址</a></li>
-<li><a href="#org2cdac16">3. syslog相关函数</a>
+<li><a href="#org7906401">1. 产生日志消息的方法</a></li>
+<li><a href="#org30378fd">2. 日志消息存放地址</a></li>
+<li><a href="#org2dee141">3. syslog相关函数</a>
 <ul>
-<li><a href="#orgee621bd">3.1. openlog说明</a></li>
-<li><a href="#orgd2136d5">3.2. syslog函数豁免</a></li>
-<li><a href="#orgace976a">3.3. closelog说明</a></li>
-<li><a href="#orgd0e7fd8">3.4. setlogmask</a></li>
+<li><a href="#org5b095ee">3.1. openlog说明</a></li>
+<li><a href="#orgfa260dc">3.2. syslog函数豁免</a></li>
+<li><a href="#org47e6d72">3.3. closelog说明</a></li>
+<li><a href="#org301695f">3.4. setlogmask</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgde036b1" class="outline-2">
-<h2 id="orgde036b1"><span class="section-number-2">1</span> 产生日志消息的方法</h2>
+<div id="outline-container-org7906401" class="outline-2">
+<h2 id="org7906401"><span class="section-number-2">1</span> 产生日志消息的方法</h2>
 <div class="outline-text-2" id="text-1">
 <ol class="org-ol">
 <li>内核程序可以调用log函数记日志. 任何用户进程可以打开并读取/dev/klog设备读取这些消息</li>
@@ -78,8 +78,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgf6ce725" class="outline-2">
-<h2 id="orgf6ce725"><span class="section-number-2">2</span> 日志消息存放地址</h2>
+<div id="outline-container-org30378fd" class="outline-2">
+<h2 id="org30378fd"><span class="section-number-2">2</span> 日志消息存放地址</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 通常syslogd守护进程会读取一个配置文件(/etc/syslog.conf)来决定不同类型的消息应该送到何处.
@@ -87,8 +87,8 @@
 </div>
 </div>
 
-<div id="outline-container-org2cdac16" class="outline-2">
-<h2 id="org2cdac16"><span class="section-number-2">3</span> syslog相关函数</h2>
+<div id="outline-container-org2dee141" class="outline-2">
+<h2 id="org2dee141"><span class="section-number-2">3</span> syslog相关函数</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">syslog.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -107,8 +107,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgee621bd" class="outline-3">
-<h3 id="orgee621bd"><span class="section-number-3">3.1</span> openlog说明</h3>
+<div id="outline-container-org5b095ee" class="outline-3">
+<h3 id="org5b095ee"><span class="section-number-3">3.1</span> openlog说明</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>调用openlog是可选择的,若不调用openlog则第一次调用syslog时自动调用syslog</li>
@@ -249,8 +249,8 @@ option参数是指定许多选项的位屏蔽
 </div>
 </div>
 
-<div id="outline-container-orgd2136d5" class="outline-3">
-<h3 id="orgd2136d5"><span class="section-number-3">3.2</span> syslog函数豁免</h3>
+<div id="outline-container-orgfa260dc" class="outline-3">
+<h3 id="orgfa260dc"><span class="section-number-3">3.2</span> syslog函数豁免</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 参数priority可以用来指明消息的 <b>种类</b> 和 <b>等级</b>
@@ -383,8 +383,8 @@ option参数是指定许多选项的位屏蔽
 </div>
 </div>
 
-<div id="outline-container-orgace976a" class="outline-3">
-<h3 id="orgace976a"><span class="section-number-3">3.3</span> closelog说明</h3>
+<div id="outline-container-org47e6d72" class="outline-3">
+<h3 id="org47e6d72"><span class="section-number-3">3.3</span> closelog说明</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 closelog也是可选的,只有在调用openlog后才需要调用. 它用于关闭曾被用于与syslogd守护进程通信的描述符
@@ -392,8 +392,8 @@ closelog也是可选的,只有在调用openlog后才需要调用. 它用于关�
 </div>
 </div>
 
-<div id="outline-container-orgd0e7fd8" class="outline-3">
-<h3 id="orgd0e7fd8"><span class="section-number-3">3.4</span> setlogmask</h3>
+<div id="outline-container-org301695f" class="outline-3">
+<h3 id="org301695f"><span class="section-number-3">3.4</span> setlogmask</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 setlogmask函数用于设置进程的日志优先级屏蔽字.
@@ -424,7 +424,6 @@ setlogmask函数用于设置进程的日志优先级屏蔽字.
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -443,19 +442,6 @@ setlogmask函数用于设置进程的日志优先级屏蔽字.
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

@@ -54,11 +54,11 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge8249c6">marks函数</a></li>
-<li><a href="#orga9befbe">jump函数</a></li>
-<li><a href="#org6ae822a">mark函数</a></li>
-<li><a href="#orga6a9cab">unmark函数</a></li>
-<li><a href="#org809a6cf">补全</a></li>
+<li><a href="#org410febe">marks函数</a></li>
+<li><a href="#org0fdc7cd">jump函数</a></li>
+<li><a href="#orgc21bbbe">mark函数</a></li>
+<li><a href="#org1659433">unmark函数</a></li>
+<li><a href="#org4682ff7">补全</a></li>
 </ul>
 </div>
 </div>
@@ -78,9 +78,9 @@
 现在我们就来尝试实现一下吧.
 </p>
 
-<div id="outline-container-orge8249c6" class="outline-2">
-<h2 id="orge8249c6">marks函数</h2>
-<div class="outline-text-2" id="text-orge8249c6">
+<div id="outline-container-org410febe" class="outline-2">
+<h2 id="org410febe">marks函数</h2>
+<div class="outline-text-2" id="text-org410febe">
 <p>
 该函数用于列出所有的书签及其指向的目录:
 </p>
@@ -131,9 +131,9 @@
 </div>
 </div>
 
-<div id="outline-container-orga9befbe" class="outline-2">
-<h2 id="orga9befbe">jump函数</h2>
-<div class="outline-text-2" id="text-orga9befbe">
+<div id="outline-container-org0fdc7cd" class="outline-2">
+<h2 id="org0fdc7cd">jump函数</h2>
+<div class="outline-text-2" id="text-org0fdc7cd">
 <p>
 jump函数接一个书签名作为参数,跳转到其指向的目录中:
 </p>
@@ -161,9 +161,9 @@ jump函数接一个书签名作为参数,跳转到其指向的目录中:
 </div>
 </div>
 
-<div id="outline-container-org6ae822a" class="outline-2">
-<h2 id="org6ae822a">mark函数</h2>
-<div class="outline-text-2" id="text-org6ae822a">
+<div id="outline-container-orgc21bbbe" class="outline-2">
+<h2 id="orgc21bbbe">mark函数</h2>
+<div class="outline-text-2" id="text-orgc21bbbe">
 <p>
 mark函数接受一个书签名,并将当前目录加为书签:
 </p>
@@ -196,9 +196,9 @@ bookmark库本身提供了一个 <code>bookmark-set</code> 函数用于添加书
 </div>
 </div>
 
-<div id="outline-container-orga6a9cab" class="outline-2">
-<h2 id="orga6a9cab">unmark函数</h2>
-<div class="outline-text-2" id="text-orga6a9cab">
+<div id="outline-container-org1659433" class="outline-2">
+<h2 id="org1659433">unmark函数</h2>
+<div class="outline-text-2" id="text-org1659433">
 <p>
 unmark函数接受一个书签名做参数,然后删掉指定的书签:
 </p>
@@ -213,9 +213,9 @@ unmark函数接受一个书签名做参数,然后删掉指定的书签:
 </div>
 </div>
 
-<div id="outline-container-org809a6cf" class="outline-2">
-<h2 id="org809a6cf">补全</h2>
-<div class="outline-text-2" id="text-org809a6cf">
+<div id="outline-container-org4682ff7" class="outline-2">
+<h2 id="org4682ff7">补全</h2>
+<div class="outline-text-2" id="text-org4682ff7">
 <p>
 最后是为jump函数添加补全功能. eshell使用pcomplete这个库来进行补全,至于怎么来写补全函数以后找时间再写另一片文章吧.
 </p>
@@ -257,7 +257,6 @@ unmark函数接受一个书签名做参数,然后删掉指定的书签:
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -276,19 +275,6 @@ unmark函数接受一个书签名做参数,然后删掉指定的书签:
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

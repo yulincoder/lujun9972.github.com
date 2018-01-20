@@ -54,15 +54,15 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd8bf91b">执行代码块时提示"Evaluation of this XXXX code-blockis disabled."</a></li>
-<li><a href="#org6252131">执行代码块是提示"org-babel-variable-assignments:sh: Symbol’s function definition is void: org-babel-get-header"</a></li>
+<li><a href="#orgfc07531">执行代码块时提示"Evaluation of this XXXX code-blockis disabled."</a></li>
+<li><a href="#orgdb3d8a8">执行代码块是提示"org-babel-variable-assignments:sh: Symbol’s function definition is void: org-babel-get-header"</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd8bf91b" class="outline-2">
-<h2 id="orgd8bf91b">执行代码块时提示"Evaluation of this XXXX code-blockis disabled."</h2>
-<div class="outline-text-2" id="text-orgd8bf91b">
+<div id="outline-container-orgfc07531" class="outline-2">
+<h2 id="orgfc07531">执行代码块时提示"Evaluation of this XXXX code-blockis disabled."</h2>
+<div class="outline-text-2" id="text-orgfc07531">
 <p>
 出现这个问题的原因是在新版本的org-mode中"org-babel-check-confirm-evaluate"从一个宏变成了函数. 
 </p>
@@ -78,9 +78,9 @@
 </div>
 
 
-<div id="outline-container-org6252131" class="outline-2">
-<h2 id="org6252131">执行代码块是提示"org-babel-variable-assignments:sh: Symbol’s function definition is void: org-babel-get-header"</h2>
-<div class="outline-text-2" id="text-org6252131">
+<div id="outline-container-orgdb3d8a8" class="outline-2">
+<h2 id="orgdb3d8a8">执行代码块是提示"org-babel-variable-assignments:sh: Symbol’s function definition is void: org-babel-get-header"</h2>
+<div class="outline-text-2" id="text-orgdb3d8a8">
 <p>
 要执行shell代码块,需要用"shell"替换"sh",即之前是 <code>#+BEGIN_SRC sh</code> 现在要改成 <code>#+BEGIN_SRC shell</code>
 </p>
@@ -101,7 +101,6 @@
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -120,19 +119,6 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');

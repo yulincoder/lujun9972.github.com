@@ -54,11 +54,11 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org34d20e6">使用方法</a></li>
-<li><a href="#org2e49c4f">实现</a>
+<li><a href="#org8a9daf0">使用方法</a></li>
+<li><a href="#org55f10dc">实现</a>
 <ul>
-<li><a href="#org8070fc5">数据来源</a></li>
-<li><a href="#orga4b158b">fortune文件格式</a></li>
+<li><a href="#org7e6e6a4">数据来源</a></li>
+<li><a href="#orgb42a857">fortune文件格式</a></li>
 </ul>
 </li>
 </ul>
@@ -72,9 +72,9 @@
 fortune文件可以从这里下载:<a href="https://raw.githubusercontent.com/lujun9972/proverb-fortune/master/proverbs">proverbs</a>
 </p>
 
-<div id="outline-container-org34d20e6" class="outline-2">
-<h2 id="org34d20e6">使用方法</h2>
-<div class="outline-text-2" id="text-org34d20e6">
+<div id="outline-container-org8a9daf0" class="outline-2">
+<h2 id="org8a9daf0">使用方法</h2>
+<div class="outline-text-2" id="text-org8a9daf0">
 <ol class="org-ol">
 <li><p>
 要让fortune能够使用该fortune文件,还需要先用 <code>strfile</code> 来产生一个索引文件 <code>proverbs.dat</code>
@@ -108,13 +108,13 @@ fortune文件可以从这里下载:<a href="https://raw.githubusercontent.com/lu
 </div>
 
 
-<div id="outline-container-org2e49c4f" class="outline-2">
-<h2 id="org2e49c4f">实现</h2>
-<div class="outline-text-2" id="text-org2e49c4f">
+<div id="outline-container-org55f10dc" class="outline-2">
+<h2 id="org55f10dc">实现</h2>
+<div class="outline-text-2" id="text-org55f10dc">
 </div>
-<div id="outline-container-org8070fc5" class="outline-3">
-<h3 id="org8070fc5">数据来源</h3>
-<div class="outline-text-3" id="text-org8070fc5">
+<div id="outline-container-org7e6e6a4" class="outline-3">
+<h3 id="org7e6e6a4">数据来源</h3>
+<div class="outline-text-3" id="text-org7e6e6a4">
 <p>
 为了搜索格言,我先尝试在baidu上搜索了一下"格言",结果发现baidu除了显示出相关网页链接之外,还显示了一个小窗口里面列出了大量的格言:
 </p>
@@ -193,9 +193,9 @@ URL中的 <code>%E6%A0%BC%E8%A8%80</code> 就是格言的转义结果.
 </div>
 </div>
 
-<div id="outline-container-orga4b158b" class="outline-3">
-<h3 id="orga4b158b">fortune文件格式</h3>
-<div class="outline-text-3" id="text-orga4b158b">
+<div id="outline-container-orgb42a857" class="outline-3">
+<h3 id="orgb42a857">fortune文件格式</h3>
+<div class="outline-text-3" id="text-orgb42a857">
 <p>
 fortune文件格式蛮简单的,只需要用 <b>只包含%的行</b> 将各格言内容分开就行了. 
 </p>
@@ -250,7 +250,6 @@ fortune文件格式蛮简单的,只需要用 <b>只包含%的行</b> 将各格�
             <h1>Comments</h1>
             <div id="comment-wrap">
                     <a class="disqus_label">使用 Disqus 评论</a>
-                    <a class="ds-label">使用多说评论</a>
     </ul>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -269,19 +268,6 @@ fortune文件格式蛮简单的,只需要用 <b>只包含%的行</b> 将各格�
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        <div class="ds-thread"></div>
-        <script type="text/javascript">
-         var duoshuoQuery = {short_name:'暗日'};
-         (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-           || document.getElementsByTagName('body')[0]).appendChild(ds);
-             $('.ds-thread').css('display','block');
-         })();
-        </script>
     <script>
      /* comments */
      var ego_disqus_thread=$('#disqus_thread');
