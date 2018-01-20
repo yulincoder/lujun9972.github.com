@@ -13,14 +13,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
     <p>=============&gt;随便,谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -31,12 +31,12 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="https://lujun9972.github.io/about/">About</a></li>
         <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -53,36 +53,35 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. passwd文件</a></li>
-<li><a href="#orgheadline2">2. shadow文件</a></li>
-<li><a href="#orgheadline3">3. group文件</a></li>
-<li><a href="#orgheadline8">4. 其他数据文件</a>
+<li><a href="#orgb19c7bd">1. passwd文件</a></li>
+<li><a href="#org5507b41">2. shadow文件</a></li>
+<li><a href="#org0e0bff4">3. group文件</a></li>
+<li><a href="#org6f91bc1">4. 其他数据文件</a>
 <ul>
-<li><a href="#orgheadline4">4.1. hosts文件</a></li>
-<li><a href="#orgheadline5">4.2. networks文件</a></li>
-<li><a href="#orgheadline6">4.3. protocols文件</a></li>
-<li><a href="#orgheadline7">4.4. services文件</a></li>
+<li><a href="#org76b6406">4.1. hosts文件</a></li>
+<li><a href="#orgae70fcd">4.2. networks文件</a></li>
+<li><a href="#orgadc6dcc">4.3. protocols文件</a></li>
+<li><a href="#org2b79810">4.4. services文件</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline9">5. 登录账户记录</a></li>
-<li><a href="#orgheadline12">6. 系统标识</a>
+<li><a href="#orgaebac93">5. 登录账户记录</a></li>
+<li><a href="#org3cf8b88">6. 系统标识</a>
 <ul>
-<li><a href="#orgheadline10">6.1. uname函数:获取当前主机与操作系统相关信息</a></li>
-<li><a href="#orgheadline11">6.2. gethostname函数:只返回主机名</a></li>
+<li><a href="#org3904926">6.1. uname函数:获取当前主机与操作系统相关信息</a></li>
+<li><a href="#org2174d86">6.2. gethostname函数:只返回主机名</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> passwd文件</h2>
+<div id="outline-container-orgb19c7bd" class="outline-2">
+<h2 id="orgb19c7bd"><span class="section-number-2">1</span> passwd文件</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 &lt;pwd.h&gt;中定义了passwd结构体,并提供了获取指定passwd项的函数
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pwd.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#26681;&#25454;uid&#33719;&#21462;passwd&#39033; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -102,6 +101,7 @@
   <span style="color: #ce537a; font-weight: bold;">time_t</span> <span style="color: #7590db;">pw_change</span>;             <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#19979;&#27425;&#26356;&#25913;&#23494;&#30721;&#26102;&#38388; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
   <span style="color: #ce537a; font-weight: bold;">time_t</span> <span style="color: #7590db;">pw_expire</span>;             <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#36134;&#25143;&#21040;&#26399;&#26102;&#38388; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #4f97d7;">}</span>
+
 </pre>
 </div>
 
@@ -109,7 +109,6 @@
 下面三个函数,则提供了遍历获取passwd项的函数
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pwd.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#33509;&#26410;&#25171;&#24320;passwd&#25991;&#20214;&#21017;&#25171;&#24320;passwd&#25991;&#20214;,&#24182;&#23558;&#35835;&#25351;&#38024;&#25918;&#21040;&#31532;&#19968;&#26465;&#35760;&#24405;&#22788; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -131,14 +130,13 @@
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> shadow文件</h2>
+<div id="outline-container-org5507b41" class="outline-2">
+<h2 id="org5507b41"><span class="section-number-2">2</span> shadow文件</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 类似passwd相关函数
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">shadow.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#26681;&#25454;&#29992;&#25143;&#21517;&#33719;&#21462;shadow&#39033; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -167,11 +165,10 @@
 </div>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3"><span class="section-number-2">3</span> group文件</h2>
+<div id="outline-container-org0e0bff4" class="outline-2">
+<h2 id="org0e0bff4"><span class="section-number-2">3</span> group文件</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">grp.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#26681;&#25454;gid&#33719;&#21462;group&#39033; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -200,7 +197,6 @@
 但与passwd不同的是,UNIX具有附加组的概念. 为了获取和设置附加组ID,提供了下列三个函数:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">grp.h</span><span style="color: #4f97d7;">&gt;</span>
 <span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
 
@@ -222,8 +218,8 @@
 </div>
 
 
-<div id="outline-container-orgheadline8" class="outline-2">
-<h2 id="orgheadline8"><span class="section-number-2">4</span> 其他数据文件</h2>
+<div id="outline-container-org6f91bc1" class="outline-2">
+<h2 id="org6f91bc1"><span class="section-number-2">4</span> 其他数据文件</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 对于hosts,networks,protocols,services等系统文件,UNIX也提供了与passwd类似的函数.
@@ -324,14 +320,13 @@ end函数
 </ul>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">4.1</span> hosts文件</h3>
+<div id="outline-container-org76b6406" class="outline-3">
+<h3 id="org76b6406"><span class="section-number-3">4.1</span> hosts文件</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 本机信息存放在/etc/hosts中,可以通过调用gethostent查找本机主机信息
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">netdb.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#33719;&#21462;&#20027;&#26426;&#20449;&#24687; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -363,7 +358,6 @@ end函数
 gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,gethostent还会打开它</b>
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
 <span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">netdb.h</span><span style="color: #4f97d7;">&gt;</span>
 <span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -395,6 +389,7 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
   show_hostent<span style="color: #bc6ec5;">(</span>h<span style="color: #bc6ec5;">)</span>;
   <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
 <span style="color: #4f97d7;">}</span>
+
 </pre>
 </div></li>
 <li>sethostent会打开文件并重置记录指针,参数stayopen为非0时,调用gethostent之后,文件将依然是打开的.</li>
@@ -403,14 +398,13 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">4.2</span> networks文件</h3>
+<div id="outline-container-orgae70fcd" class="outline-3">
+<h3 id="orgae70fcd"><span class="section-number-3">4.2</span> networks文件</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 我们使用以下函数获得网络名字和网络编号
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">netdb.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">netent</span>* <span style="color: #bc6ec5; font-weight: bold;">getnetbyaddr</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">uint32_t</span> <span style="color: #7590db;">net</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">type</span><span style="color: #4f97d7;">)</span>;
@@ -436,14 +430,13 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-3">
-<h3 id="orgheadline6"><span class="section-number-3">4.3</span> protocols文件</h3>
+<div id="outline-container-orgadc6dcc" class="outline-3">
+<h3 id="orgadc6dcc"><span class="section-number-3">4.3</span> protocols文件</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 我们可以使用以下函数在协议名字和协议编号之间进行映射
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">netdb.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">protoent</span>* <span style="color: #bc6ec5; font-weight: bold;">getprotobyname</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">name</span><span style="color: #4f97d7;">)</span>;
@@ -468,14 +461,13 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">4.4</span> services文件</h3>
+<div id="outline-container-org2b79810" class="outline-3">
+<h3 id="org2b79810"><span class="section-number-3">4.4</span> services文件</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 服务由地址的端口号部分表示,每个服务由一个唯一的总所周知的端口号来表示
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">netdb.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">proto&#25351;&#26126;&#20102;&#20351;&#29992;&#30340;&#32593;&#32476;&#21327;&#35758; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -500,8 +492,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline9" class="outline-2">
-<h2 id="orgheadline9"><span class="section-number-2">5</span> 登录账户记录</h2>
+<div id="outline-container-orgaebac93" class="outline-2">
+<h2 id="orgaebac93"><span class="section-number-2">5</span> 登录账户记录</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 大多数UNIX系统都提供下面两个数据文件:
@@ -515,7 +507,6 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 每次写入这两个文件的是包含以下结构的二进制记录:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">utmp</span><span style="color: #4f97d7;">{</span>
   <span style="color: #ce537a; font-weight: bold;">char</span> <span style="color: #7590db;">ut_line</span><span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">8</span><span style="color: #bc6ec5;">]</span>;              <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">tty&#32534;&#21495; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
   <span style="color: #ce537a; font-weight: bold;">char</span> <span style="color: #7590db;">ut_name</span><span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">8</span><span style="color: #bc6ec5;">]</span>;              <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#30331;&#24405;&#21517;,&#27880;&#38144;&#26102;&#20026;&#31354; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -526,14 +517,14 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">6</span> 系统标识</h2>
+<div id="outline-container-org3cf8b88" class="outline-2">
+<h2 id="org3cf8b88"><span class="section-number-2">6</span> 系统标识</h2>
 <div class="outline-text-2" id="text-6">
-</div><div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10"><span class="section-number-3">6.1</span> uname函数:获取当前主机与操作系统相关信息</h3>
+</div>
+<div id="outline-container-org3904926" class="outline-3">
+<h3 id="org3904926"><span class="section-number-3">6.1</span> uname函数:获取当前主机与操作系统相关信息</h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/utsname.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">uname</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">utsname</span>* <span style="color: #7590db;">name</span><span style="color: #4f97d7;">)</span>;
@@ -550,11 +541,10 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">6.2</span> gethostname函数:只返回主机名</h3>
+<div id="outline-container-org2174d86" class="outline-3">
+<h3 id="org2174d86"><span class="section-number-3">6.2</span> gethostname函数:只返回主机名</h3>
 <div class="outline-text-3" id="text-6-2">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">ing</span> <span style="color: #bc6ec5; font-weight: bold;">gethostname</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">name</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">bufsize</span><span style="color: #4f97d7;">)</span>;
@@ -574,9 +564,9 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
             <span title="post date" class="post-info">2015-05-16</span>
             <span title="last modification date" class="post-info">2016-10-24</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">DarkSun</a></span>
         </div>
-    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
             <h1>Comments</h1>
             <div id="comment-wrap">
@@ -588,7 +578,7 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
          //var disqus_developer = 1;
          var preempt_signal=false;
          var disqus_identifier = "/blog/2015/05/16/系统文件/";
-         var disqus_url = "http://lujun9972.github.io/blog/2015/05/16/系统文件/";
+         var disqus_url = "https://lujun9972.github.io/blog/2015/05/16/系统文件/";
          var disqus_shortname = '暗日';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
@@ -627,11 +617,11 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
      });
     </script>
         </section>
-    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">DarkSun</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

@@ -13,14 +13,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
     <p>=============&gt;随便,谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -31,12 +31,12 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="https://lujun9972.github.io/about/">About</a></li>
         <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -53,65 +53,65 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline4">1. 套接字描述符</a>
+<li><a href="#orgced9b07">1. 套接字描述符</a>
 <ul>
-<li><a href="#orgheadline1">1.1. 创建套接字</a></li>
-<li><a href="#orgheadline2">1.2. 使用文件描述符函数操作套接字描述符</a></li>
-<li><a href="#orgheadline3">1.3. shutdown函数</a></li>
+<li><a href="#orgd0ab5e4">1.1. 创建套接字</a></li>
+<li><a href="#orgecee58f">1.2. 使用文件描述符函数操作套接字描述符</a></li>
+<li><a href="#org5b4d3bb">1.3. shutdown函数</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline16">2. 寻址</a>
+<li><a href="#org1e727c1">2. 寻址</a>
 <ul>
-<li><a href="#orgheadline5">2.1. 处理器字节序与网络字节序的转换函数</a></li>
-<li><a href="#orgheadline6">2.2. 地址格式</a></li>
-<li><a href="#orgheadline7">2.3. 地址格式转换</a></li>
-<li><a href="#orgheadline11">2.4. 地址映射</a>
+<li><a href="#org626a8e7">2.1. 处理器字节序与网络字节序的转换函数</a></li>
+<li><a href="#org9cb7007">2.2. 地址格式</a></li>
+<li><a href="#orgb0da84a">2.3. 地址格式转换</a></li>
+<li><a href="#org42b135b">2.4. 地址映射</a>
 <ul>
-<li><a href="#orgheadline8">2.4.1. getaddrinfo</a></li>
-<li><a href="#orgheadline9">2.4.2. gai_strerror</a></li>
-<li><a href="#orgheadline10">2.4.3. getnameinfo</a></li>
+<li><a href="#orgb7689c1">2.4.1. getaddrinfo</a></li>
+<li><a href="#orgc7ce614">2.4.2. gai_strerror</a></li>
+<li><a href="#org4655d01">2.4.3. getnameinfo</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline15">2.5. 将套接字与地址关联</a>
+<li><a href="#org508aa19">2.5. 将套接字与地址关联</a>
 <ul>
-<li><a href="#orgheadline12">2.5.1. 用bind函数来关联地址和套接字</a></li>
-<li><a href="#orgheadline13">2.5.2. getsockname函数来发现绑定到套接字上的地址</a></li>
-<li><a href="#orgheadline14">2.5.3. getperrname函数查找对方的地址</a></li>
+<li><a href="#org499a9c4">2.5.1. 用bind函数来关联地址和套接字</a></li>
+<li><a href="#org686dd59">2.5.2. getsockname函数来发现绑定到套接字上的地址</a></li>
+<li><a href="#orgc29e1c0">2.5.3. getperrname函数查找对方的地址</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline19">3. 建立连接</a>
+<li><a href="#org73475f8">3. 建立连接</a>
 <ul>
-<li><a href="#orgheadline17">3.1. 客户端建立连接</a></li>
-<li><a href="#orgheadline18">3.2. 服务端建立连接</a></li>
+<li><a href="#org26e7c8e">3.1. 客户端建立连接</a></li>
+<li><a href="#orgd8bbb4f">3.2. 服务端建立连接</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline23">4. 数据传输</a>
+<li><a href="#orgbce2397">4. 数据传输</a>
 <ul>
-<li><a href="#orgheadline20">4.1. send和recv</a></li>
-<li><a href="#orgheadline21">4.2. sendto和recvfrom</a></li>
-<li><a href="#orgheadline22">4.3. sendmsg和recvmsg</a></li>
+<li><a href="#orgc89e9ad">4.1. send和recv</a></li>
+<li><a href="#orgdb2fcdd">4.2. sendto和recvfrom</a></li>
+<li><a href="#org40a72ee">4.3. sendmsg和recvmsg</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline25">5. 套接字选项</a>
+<li><a href="#org775fb07">5. 套接字选项</a>
 <ul>
-<li><a href="#orgheadline24">5.1. setsockopt函数设置套接字选项</a></li>
+<li><a href="#org68b7c4e">5.1. setsockopt函数设置套接字选项</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline26">6. 带外数据</a></li>
+<li><a href="#org2f0097f">6. 带外数据</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-2">
-<h2 id="orgheadline4"><span class="section-number-2">1</span> 套接字描述符</h2>
+<div id="outline-container-orgced9b07" class="outline-2">
+<h2 id="orgced9b07"><span class="section-number-2">1</span> 套接字描述符</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-orgheadline1" class="outline-3">
-<h3 id="orgheadline1"><span class="section-number-3">1.1</span> 创建套接字</h3>
+</div>
+<div id="outline-container-orgd0ab5e4" class="outline-3">
+<h3 id="orgd0ab5e4"><span class="section-number-3">1.1</span> 创建套接字</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#25104;&#21151;&#36820;&#22238;&#22871;&#25509;&#23383;&#25551;&#36848;&#31526;,&#20986;&#38169;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -225,8 +225,8 @@ AF_INET域+SOCK_DGRAM套接字类型的默认协议是UDP
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline2" class="outline-3">
-<h3 id="orgheadline2"><span class="section-number-3">1.2</span> 使用文件描述符函数操作套接字描述符</h3>
+<div id="outline-container-orgecee58f" class="outline-3">
+<h3 id="orgecee58f"><span class="section-number-3">1.2</span> 使用文件描述符函数操作套接字描述符</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 虽然套接字描述符本质上是一个文件描述符,但不是所有参数为文件描述符的函数都可以接受套接字描述符.
@@ -339,14 +339,13 @@ AF_INET域+SOCK_DGRAM套接字类型的默认协议是UDP
 </table>
 </div>
 </div>
-<div id="outline-container-orgheadline3" class="outline-3">
-<h3 id="orgheadline3"><span class="section-number-3">1.3</span> shutdown函数</h3>
+<div id="outline-container-org5b4d3bb" class="outline-3">
+<h3 id="org5b4d3bb"><span class="section-number-3">1.3</span> shutdown函数</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 可以使用函数shutdown来禁止套接字上的输入/输出
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">shutdown</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">how</span><span style="color: #4f97d7;">)</span>;
@@ -371,19 +370,18 @@ shutdown与close的区别在于:
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline16" class="outline-2">
-<h2 id="orgheadline16"><span class="section-number-2">2</span> 寻址</h2>
+<div id="outline-container-org1e727c1" class="outline-2">
+<h2 id="org1e727c1"><span class="section-number-2">2</span> 寻址</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 TCP/IP协议栈规定了采用大端字节序,而处理器字节序分大端和小端两种,因此应用程序需要在处理器的字节序与网络字节序之间进行转换.
 </p>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">2.1</span> 处理器字节序与网络字节序的转换函数</h3>
+<div id="outline-container-org626a8e7" class="outline-3">
+<h3 id="org626a8e7"><span class="section-number-3">2.1</span> 处理器字节序与网络字节序的转换函数</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">arpa/inet.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#36820;&#22238;&#20197;&#32593;&#32476;&#23383;&#33410;&#24207;&#34920;&#31034;&#30340;32&#20301;&#25972;&#22411;&#25968; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -397,13 +395,14 @@ TCP/IP协议栈规定了采用大端字节序,而处理器字节序分大端和�
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#36820;&#22238;&#20197;&#20027;&#26426;&#23383;&#33410;&#24207;&#34920;&#31034;&#30340;16&#20301;&#25972;&#22411;&#25968; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
 <span style="color: #ce537a; font-weight: bold;">uint16_t</span> <span style="color: #bc6ec5; font-weight: bold;">ntohs</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">uint16_t</span> <span style="color: #7590db;">netint16</span><span style="color: #4f97d7;">)</span>;
+
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-3">
-<h3 id="orgheadline6"><span class="section-number-3">2.2</span> 地址格式</h3>
+<div id="outline-container-org9cb7007" class="outline-3">
+<h3 id="org9cb7007"><span class="section-number-3">2.2</span> 地址格式</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 一个地址用于标识一个特定通讯域的套接字端点,因此地址格式与特定的通讯域相关.
@@ -413,7 +412,6 @@ TCP/IP协议栈规定了采用大端字节序,而处理器字节序分大端和�
 为了使不同格式地址能够传入到套接字函数,地址会被 <b>强制转换为一个通用的地址结构sockaddr</b>:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sockaddr</span><span style="color: #4f97d7;">{</span>
   <span style="color: #ce537a; font-weight: bold;">sa_family_t</span> <span style="color: #7590db;">sa_family</span>;        <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">address&#30340;&#21327;&#35758;&#31181;&#31867; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
   <span style="color: #ce537a; font-weight: bold;">char</span> <span style="color: #7590db;">sa_data</span><span style="color: #bc6ec5;">[]</span>;               <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#22823;&#23567;&#21487;&#21464;&#30340;&#22320;&#22336; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -426,7 +424,6 @@ TCP/IP协议栈规定了采用大端字节序,而处理器字节序分大端和�
 因特网地址定义在&lt;netinet/in.h&gt;头文件中. 在IPv4因特网域(AF_INET)中,套接字的地址用结构sockaddr_in表示:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sockaddr_in</span>
 <span style="color: #4f97d7;">{</span>
   <span style="color: #ce537a; font-weight: bold;">sa_family_t</span> <span style="color: #7590db;">sin_family</span>;       <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#22320;&#22336;family </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -445,7 +442,6 @@ TCP/IP协议栈规定了采用大端字节序,而处理器字节序分大端和�
 IPv6则用结构sockaddr_in6表示:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sockaddr_in6</span><span style="color: #4f97d7;">{</span>
   <span style="color: #ce537a; font-weight: bold;">sa_family_t</span> <span style="color: #7590db;">sin6_family</span>;      <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#22320;&#22336;family </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
   <span style="color: #ce537a; font-weight: bold;">in_port_t</span> <span style="color: #7590db;">sin6_port</span>;          <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#31471;&#21475;&#21495; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -462,14 +458,13 @@ IPv6则用结构sockaddr_in6表示:
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">2.3</span> 地址格式转换</h3>
+<div id="outline-container-orgb0da84a" class="outline-3">
+<h3 id="orgb0da84a"><span class="section-number-3">2.3</span> 地址格式转换</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 通过inet_ntop能把IPv4和IPv6的地址转换为人能理解的字符串格式
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">arpa/inet.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#25104;&#21151;&#36820;&#22238;&#22320;&#22336;&#23383;&#31526;&#20018;&#25351;&#38024;. &#26684;&#24335;&#26080;&#25928;&#36820;&#22238;0. &#20986;&#38169;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -485,7 +480,6 @@ IPv6则用结构sockaddr_in6表示:
 通过inet_pton能把人理解的字符串格式转换成网络字节序的二进制格式.
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">arpa/inet.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#33509;&#25104;&#21151;,&#36820;&#22238;1;&#26684;&#24335;&#26080;&#25928;&#36820;&#22238;0;&#20986;&#38169;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -495,21 +489,20 @@ IPv6则用结构sockaddr_in6表示:
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">2.4</span> 地址映射</h3>
+<div id="outline-container-org42b135b" class="outline-3">
+<h3 id="org42b135b"><span class="section-number-3">2.4</span> 地址映射</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 POSIX.1定义了若干新函数,用于将一个主机名和服务器名映射到一个地址或者反之.
 </p>
 </div>
-<div id="outline-container-orgheadline8" class="outline-4">
-<h4 id="orgheadline8"><span class="section-number-4">2.4.1</span> getaddrinfo</h4>
+<div id="outline-container-orgb7689c1" class="outline-4">
+<h4 id="orgb7689c1"><span class="section-number-4">2.4.1</span> getaddrinfo</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <p>
 getaddrinfo函数允许将一个主机名和服务名映射到一个地址
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 <span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">netdb.h</span><span style="color: #4f97d7;">&gt;</span>
 
@@ -596,27 +589,25 @@ ai_flags字段中的标志意义为:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline9" class="outline-4">
-<h4 id="orgheadline9"><span class="section-number-4">2.4.2</span> gai_strerror</h4>
+<div id="outline-container-orgc7ce614" class="outline-4">
+<h4 id="orgc7ce614"><span class="section-number-4">2.4.2</span> gai_strerror</h4>
 <div class="outline-text-4" id="text-2-4-2">
 <p>
 <b>如果getaddrinfo失败,不能使用perror或strerror来生成错误信息,而需要用gai_strerror将返回值转换成错误信息</b>
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #bc6ec5; font-weight: bold;">gai_strerror</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">error</span><span style="color: #4f97d7;">)</span>;
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline10" class="outline-4">
-<h4 id="orgheadline10"><span class="section-number-4">2.4.3</span> getnameinfo</h4>
+<div id="outline-container-org4655d01" class="outline-4">
+<h4 id="org4655d01"><span class="section-number-4">2.4.3</span> getnameinfo</h4>
 <div class="outline-text-4" id="text-2-4-3">
 <p>
 getnameinfo函数将一个地址转换成一个主机名和服务名
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 <span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">netdb.h</span><span style="color: #4f97d7;">&gt;</span>
 
@@ -680,14 +671,14 @@ flags参数提供了一些控制翻译的方式
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline15" class="outline-3">
-<h3 id="orgheadline15"><span class="section-number-3">2.5</span> 将套接字与地址关联</h3>
+<div id="outline-container-org508aa19" class="outline-3">
+<h3 id="org508aa19"><span class="section-number-3">2.5</span> 将套接字与地址关联</h3>
 <div class="outline-text-3" id="text-2-5">
-</div><div id="outline-container-orgheadline12" class="outline-4">
-<h4 id="orgheadline12"><span class="section-number-4">2.5.1</span> 用bind函数来关联地址和套接字</h4>
+</div>
+<div id="outline-container-org499a9c4" class="outline-4">
+<h4 id="org499a9c4"><span class="section-number-4">2.5.1</span> 用bind函数来关联地址和套接字</h4>
 <div class="outline-text-4" id="text-2-5-1">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">bind</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sockaddr</span>* <span style="color: #7590db;">addr</span>,<span style="color: #ce537a; font-weight: bold;">socklen_t</span> <span style="color: #7590db;">len</span><span style="color: #4f97d7;">)</span>;
@@ -701,11 +692,10 @@ flags参数提供了一些控制翻译的方式
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline13" class="outline-4">
-<h4 id="orgheadline13"><span class="section-number-4">2.5.2</span> getsockname函数来发现绑定到套接字上的地址</h4>
+<div id="outline-container-org686dd59" class="outline-4">
+<h4 id="org686dd59"><span class="section-number-4">2.5.2</span> getsockname函数来发现绑定到套接字上的地址</h4>
 <div class="outline-text-4" id="text-2-5-2">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">getsockname</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sockaddr</span>* <span style="color: #7590db;">addr</span>, <span style="color: #ce537a; font-weight: bold;">socklen_t</span>* <span style="color: #7590db;">alenp</span><span style="color: #4f97d7;">)</span>;
@@ -716,11 +706,10 @@ flags参数提供了一些控制翻译的方式
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline14" class="outline-4">
-<h4 id="orgheadline14"><span class="section-number-4">2.5.3</span> getperrname函数查找对方的地址</h4>
+<div id="outline-container-orgc29e1c0" class="outline-4">
+<h4 id="orgc29e1c0"><span class="section-number-4">2.5.3</span> getperrname函数查找对方的地址</h4>
 <div class="outline-text-4" id="text-2-5-3">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">getpeername</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sockaddr</span>* <span style="color: #7590db;">addr</span>,<span style="color: #ce537a; font-weight: bold;">socklen_t</span>* <span style="color: #7590db;">alenp</span><span style="color: #4f97d7;">)</span>
@@ -733,17 +722,17 @@ flags参数提供了一些控制翻译的方式
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline19" class="outline-2">
-<h2 id="orgheadline19"><span class="section-number-2">3</span> 建立连接</h2>
+<div id="outline-container-org73475f8" class="outline-2">
+<h2 id="org73475f8"><span class="section-number-2">3</span> 建立连接</h2>
 <div class="outline-text-2" id="text-3">
-</div><div id="outline-container-orgheadline17" class="outline-3">
-<h3 id="orgheadline17"><span class="section-number-3">3.1</span> 客户端建立连接</h3>
+</div>
+<div id="outline-container-org26e7c8e" class="outline-3">
+<h3 id="org26e7c8e"><span class="section-number-3">3.1</span> 客户端建立连接</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 在客户端上使用connect函数来建立与服务端之间的连接
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">connect</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sockaddr</span>* <span style="color: #7590db;">addr</span>,<span style="color: #ce537a; font-weight: bold;">socklen_t</span> <span style="color: #7590db;">len</span><span style="color: #4f97d7;">)</span>;
@@ -757,14 +746,13 @@ flags参数提供了一些控制翻译的方式
 </div>
 </div>
 
-<div id="outline-container-orgheadline18" class="outline-3">
-<h3 id="orgheadline18"><span class="section-number-3">3.2</span> 服务端建立连接</h3>
+<div id="outline-container-orgd8bbb4f" class="outline-3">
+<h3 id="orgd8bbb4f"><span class="section-number-3">3.2</span> 服务端建立连接</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 在服务端调用listen函数监听端口
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#25104;&#21151;&#36820;&#22238;0,&#19981;&#25104;&#21151;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -783,7 +771,6 @@ flags参数提供了一些控制翻译的方式
 服务端使用accept函数获取连接请求并建立连接
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#33509;&#25104;&#21151;&#21017;&#36820;&#22238;&#26032;&#30340;&#24050;&#24314;&#31435;&#36830;&#25509;&#30340;&#22871;&#25509;&#23383;&#25551;&#36848;&#31526; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -800,22 +787,21 @@ flags参数提供了一些控制翻译的方式
 </div>
 </div>
 
-<div id="outline-container-orgheadline23" class="outline-2">
-<h2 id="orgheadline23"><span class="section-number-2">4</span> 数据传输</h2>
+<div id="outline-container-orgbce2397" class="outline-2">
+<h2 id="orgbce2397"><span class="section-number-2">4</span> 数据传输</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 除了read和write外,还有三对为数据传递而设计的套接字函数
 </p>
 </div>
 
-<div id="outline-container-orgheadline20" class="outline-3">
-<h3 id="orgheadline20"><span class="section-number-3">4.1</span> send和recv</h3>
+<div id="outline-container-orgc89e9ad" class="outline-3">
+<h3 id="orgc89e9ad"><span class="section-number-3">4.1</span> send和recv</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 send和write很类似,但可以指定标志来改变传输数据的方式
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">ssize_t</span> <span style="color: #bc6ec5; font-weight: bold;">send</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">void</span>* <span style="color: #7590db;">buf</span>,<span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">nbytes</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">flags</span><span style="color: #4f97d7;">)</span>;
@@ -891,7 +877,6 @@ flag参数说明
 recv函数与read类似,但recv可以指定标志来控制如何接受数据.
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">ssize_t</span> <span style="color: #bc6ec5; font-weight: bold;">recv</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #ce537a; font-weight: bold;">void</span>* <span style="color: #7590db;">buf</span>,<span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">nbytes</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">flags</span><span style="color: #4f97d7;">)</span>;
@@ -961,14 +946,13 @@ recv函数与read类似,但recv可以指定标志来控制如何接受数据.
 </div>
 </div>
 
-<div id="outline-container-orgheadline21" class="outline-3">
-<h3 id="orgheadline21"><span class="section-number-3">4.2</span> sendto和recvfrom</h3>
+<div id="outline-container-orgdb2fcdd" class="outline-3">
+<h3 id="orgdb2fcdd"><span class="section-number-3">4.2</span> sendto和recvfrom</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 sendto和send很类似,区别在于sendto可以在无连接的套接字上指定一个目标地址.
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#33509;&#25104;&#21151;&#36820;&#22238;&#21457;&#36865;&#30340;&#23383;&#33410;&#25968;,&#20986;&#38169;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -984,7 +968,6 @@ sendto和send很类似,区别在于sendto可以在无连接的套接字上指定
 recvfrom也可以在无连接的套接字上指定一个目标地址
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">ssize_t</span> <span style="color: #bc6ec5; font-weight: bold;">recvfrom</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #ce537a; font-weight: bold;">void</span>* <span style="color: #7590db;">buf</span>,<span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">len</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">flags</span>,
@@ -997,14 +980,13 @@ recvfrom也可以在无连接的套接字上指定一个目标地址
 </div>
 </div>
 
-<div id="outline-container-orgheadline22" class="outline-3">
-<h3 id="orgheadline22"><span class="section-number-3">4.3</span> sendmsg和recvmsg</h3>
+<div id="outline-container-org40a72ee" class="outline-3">
+<h3 id="org40a72ee"><span class="section-number-3">4.3</span> sendmsg和recvmsg</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 调用msghdr结构的sendmsg可以指定多重缓冲区传输数据,这和writev函数很类似
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#25104;&#21151;&#36820;&#22238;&#21457;&#36865;&#30340;&#23383;&#33410;&#25968;,&#20986;&#38169;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -1029,7 +1011,6 @@ recvfrom也可以在无连接的套接字上指定一个目标地址
 recvmsg类似readv,可以将接收到的数据送入多个缓冲区.
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">ssize_t</span> <span style="color: #bc6ec5; font-weight: bold;">recvmsg</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">msghdr</span>* <span style="color: #7590db;">msg</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">flags</span><span style="color: #4f97d7;">)</span>;
@@ -1085,19 +1066,18 @@ recvmsg类似readv,可以将接收到的数据送入多个缓冲区.
 </div>
 </div>
 
-<div id="outline-container-orgheadline25" class="outline-2">
-<h2 id="orgheadline25"><span class="section-number-2">5</span> 套接字选项</h2>
+<div id="outline-container-org775fb07" class="outline-2">
+<h2 id="org775fb07"><span class="section-number-2">5</span> 套接字选项</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 套接字选项可以控制套接字行为,
 </p>
 </div>
 
-<div id="outline-container-orgheadline24" class="outline-3">
-<h3 id="orgheadline24"><span class="section-number-3">5.1</span> setsockopt函数设置套接字选项</h3>
+<div id="outline-container-org68b7c4e" class="outline-3">
+<h3 id="org68b7c4e"><span class="section-number-3">5.1</span> setsockopt函数设置套接字选项</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#25104;&#21151;&#36820;&#22238;0,&#22833;&#36133;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -1265,7 +1245,6 @@ recvmsg类似readv,可以将接收到的数据送入多个缓冲区.
 可以使用getsockopt函数来查看选项的当前值
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">getsockopt</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sockfd</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">level</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">option</span>,<span style="color: #ce537a; font-weight: bold;">void</span>* <span style="color: #7590db;">val</span>,<span style="color: #ce537a; font-weight: bold;">socklen_t</span>* <span style="color: #7590db;">lenp</span><span style="color: #4f97d7;">)</span>;
@@ -1278,8 +1257,8 @@ recvmsg类似readv,可以将接收到的数据送入多个缓冲区.
 </div>
 </div>
 
-<div id="outline-container-orgheadline26" class="outline-2">
-<h2 id="orgheadline26"><span class="section-number-2">6</span> 带外数据</h2>
+<div id="outline-container-org2f0097f" class="outline-2">
+<h2 id="org2f0097f"><span class="section-number-2">6</span> 带外数据</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 带外数据是一些通讯协议所支持的可选功能,它具有比普通数据更高优先级的数据传输. 因此带外数据也被成为紧急数据.
@@ -1309,7 +1288,6 @@ TCP支持一个字节的带外数据,但UDP不支持.
 使用函数sockatmark可以判断将要读取的下一个字节是否为带外数据
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/socket.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#23558;&#35201;&#35835;&#21462;&#24102;&#22806;&#25968;&#25454;&#36820;&#22238;1,&#21542;&#21017;&#36820;&#22238;0,&#20986;&#38169;&#36820;&#22238;-1 </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
@@ -1326,9 +1304,9 @@ TCP支持一个字节的带外数据,但UDP不支持.
             <span title="post date" class="post-info">2015-06-08</span>
             <span title="last modification date" class="post-info">2016-10-24</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">DarkSun</a></span>
         </div>
-    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
             <h1>Comments</h1>
             <div id="comment-wrap">
@@ -1340,7 +1318,7 @@ TCP支持一个字节的带外数据,但UDP不支持.
          //var disqus_developer = 1;
          var preempt_signal=false;
          var disqus_identifier = "/blog/2015/06/08/网络ipc/";
-         var disqus_url = "http://lujun9972.github.io/blog/2015/06/08/网络ipc/";
+         var disqus_url = "https://lujun9972.github.io/blog/2015/06/08/网络ipc/";
          var disqus_shortname = '暗日';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
@@ -1379,11 +1357,11 @@ TCP支持一个字节的带外数据,但UDP不支持.
      });
     </script>
         </section>
-    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">DarkSun</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

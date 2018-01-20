@@ -15,14 +15,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
     <p>=============&gt;随便,谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -33,12 +33,12 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="https://lujun9972.github.io/about/">About</a></li>
         <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -55,16 +55,16 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">什么是Habitica</a></li>
-<li><a href="#orgheadline2">Habash介绍</a></li>
-<li><a href="#orgheadline3">结合Habash与Travis-ci自动完成habit</a></li>
+<li><a href="#org35242ef">什么是Habitica</a></li>
+<li><a href="#org94f609d">Habash介绍</a></li>
+<li><a href="#org075eba9">结合Habash与Travis-ci自动完成habit</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1">什么是Habitica</h2>
-<div class="outline-text-2" id="text-orgheadline1">
+<div id="outline-container-org35242ef" class="outline-2">
+<h2 id="org35242ef">什么是Habitica</h2>
+<div class="outline-text-2" id="text-org35242ef">
 <p>
 <a href="https://habitica.com">Habitica</a> 是一个款超赞的游戏化软件，它致力于帮助用户培养习惯和提高效率。
 与传统的效率类软件不同的是，Habitica使生活看起来就像一场复古的像素风角色扮演游戏。
@@ -88,9 +88,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2">Habash介绍</h2>
-<div class="outline-text-2" id="text-orgheadline2">
+<div id="outline-container-org94f609d" class="outline-2">
+<h2 id="org94f609d">Habash介绍</h2>
+<div class="outline-text-2" id="text-org94f609d">
 <p>
 habash是一款由shell实现的habitica api，它的用法也很简单，只需要：
 </p>
@@ -103,9 +103,9 @@ habash是一款由shell实现的habitica api，它的用法也很简单，只需
 </div>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3">结合Habash与Travis-ci自动完成habit</h2>
-<div class="outline-text-2" id="text-orgheadline3">
+<div id="outline-container-org075eba9" class="outline-2">
+<h2 id="org075eba9">结合Habash与Travis-ci自动完成habit</h2>
+<div class="outline-text-2" id="text-org075eba9">
 <p>
 travis-ci能让我们在每次提交github后自动触发执行一段脚本。 所以我们只需要让travis-ci帮我们自动调用habash来完成任务就行了。 
 </p>
@@ -119,21 +119,20 @@ travis-ci能让我们在每次提交github后自动触发执行一段脚本。 �
 在要监控的github repo上添加一个 <code>.travis.yml</code> 文件，录入下面内容
 </p>
 <div class="org-src-container">
+<pre class="src src-yaml">language: generic
+sudo: false
 
-<pre class="src src-yaml"><span style="color: #7590db;">language</span>: generic
-<span style="color: #7590db;">sudo</span>: <span style="color: #a45bad;">false</span>
-
-<span style="color: #7590db;">branches</span>:
-  <span style="color: #7590db;">only</span>:
+branches:
+  only:
     - master
     - source
-    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#36825;&#37324;&#21487;&#20197;&#28155;&#21152;&#20320;&#35201;&#30417;&#25511;&#21738;&#20123;branch</span>
+    # 这里可以添加你要监控哪些branch
 
-<span style="color: #7590db;">before_install</span>:
+before_install:
  - git clone https://github.com/nasfarley88/habash
 
-<span style="color: #7590db;">script</span>:
-- ./habash/habash up <span style="color: #2d9574;">"&lt;&#20320;&#33258;&#24049;&#30340;Habit&#20219;&#21153;&#25551;&#36848;&gt;"</span>
+script:
+- ./habash/habash up "&lt;你自己的Habit任务描述&gt;"
 </pre>
 </div></li>
 
@@ -152,10 +151,10 @@ travis-ci能让我们在每次提交github后自动触发执行一段脚本。 �
         <div class="post-meta">
             <span title="post date" class="post-info">2016-11-01</span>
             <span title="last modification date" class="post-info">2016-11-01</span>
-            <span title="tags" class="post-info">:<a href="http://lujun9972.github.io/tags/github">github</a> : <a href="http://lujun9972.github.io/tags/habitica">habitica</a> : <a href="http://lujun9972.github.io/tags/gtd">GTD</a>:</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/github">github</a> : <a href="https://lujun9972.github.io/tags/habitica">habitica</a> : <a href="https://lujun9972.github.io/tags/gtd">GTD</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">lujun9972</a></span>
         </div>
-    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
             <h1>Comments</h1>
             <div id="comment-wrap">
@@ -167,7 +166,7 @@ travis-ci能让我们在每次提交github后自动触发执行一段脚本。 �
          //var disqus_developer = 1;
          var preempt_signal=false;
          var disqus_identifier = "/时间管理/2016/11/01/提交github后自动完成habitica-habit/ Or /时间管理/提交github后自动完成habitica-habit/";
-         var disqus_url = "http://lujun9972.github.io/时间管理/2016/11/01/提交github后自动完成habitica-habit/ Or /时间管理/提交github后自动完成habitica-habit/";
+         var disqus_url = "https://lujun9972.github.io/时间管理/2016/11/01/提交github后自动完成habitica-habit/ Or /时间管理/提交github后自动完成habitica-habit/";
          var disqus_shortname = '暗日';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
@@ -206,9 +205,9 @@ travis-ci能让我们在每次提交github后自动触发执行一段脚本。 �
      });
     </script>
         </section>
-    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
             Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;

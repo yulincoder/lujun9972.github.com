@@ -2,120 +2,81 @@
 <rss version="2.0">
   <channel>
     <title>暗无天日</title>
-    <link>http://lujun9972.github.io</link>
+    <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-<<<<<<< HEAD
-    <pubDate>六, 02 12月 2017 22:13:44 CST</pubDate>
-    <lastBuildDate>六, 02 12月 2017 22:13:44 CST</lastBuildDate>
+    <pubDate>六, 20 1月 2018 23:15:19 CST</pubDate>
+    <lastBuildDate>六, 20 1月 2018 23:15:19 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
 <title>从undistract-me项目代码中学到的bash知识</title>
-<link>http://lujun9972.github.io/blog/2017/12/02/从undistract-me项目代码中学到的bash知识/</link>
+<link>https://lujun9972.github.io/blog/2017/12/02/从undistract-me项目代码中学到的bash知识/</link>
 <description>No Description</description>
 <pubDate>2017-12-02</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/12/02/从undistract-me项目代码中学到的bash知识/</guid>
+<guid>https://lujun9972.github.io/blog/2017/12/02/从undistract-me项目代码中学到的bash知识/</guid>
 </item>
 <item>
 <title>为Linux安装杀毒软件</title>
-<link>http://lujun9972.github.io/blog/2017/12/01/为linux安装杀毒软件/</link>
+<link>https://lujun9972.github.io/blog/2017/12/01/为linux安装杀毒软件/</link>
 <description>No Description</description>
 <pubDate>2017-12-01</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/12/01/为linux安装杀毒软件/</guid>
+<guid>https://lujun9972.github.io/blog/2017/12/01/为linux安装杀毒软件/</guid>
 </item>
 <item>
 <title>sed中的[:alpha:]到底包含哪些字符</title>
-<link>http://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</link>
+<link>https://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</link>
 <description>No Description</description>
 <pubDate>2017-11-30</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</guid>
+<guid>https://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</guid>
 </item>
 <item>
 <title>记一次隐含子shell引发的问题</title>
-<link>http://lujun9972.github.io/blog/2017/11/30/记一次隐含子shell引发的问题/</link>
+<link>https://lujun9972.github.io/blog/2017/11/30/记一次隐含子shell引发的问题/</link>
 <description>No Description</description>
 <pubDate>2017-11-30</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/11/30/记一次隐含子shell引发的问题/</guid>
+<guid>https://lujun9972.github.io/blog/2017/11/30/记一次隐含子shell引发的问题/</guid>
 </item>
 <item>
-=======
-    <pubDate>二, 07 11月 2017 10:48:40 CST</pubDate>
-    <lastBuildDate>二, 07 11月 2017 10:48:40 CST</lastBuildDate>
-    <docs>http://www.rssboard.org/rss-specification</docs>
-    <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
-<item>
->>>>>>> e0f3721799cfa2fe6f433dec48705d43f593abde
 <title>回车的妙用</title>
-<link>http://lujun9972.github.io/blog/2017/11/07/回车的妙用/</link>
+<link>https://lujun9972.github.io/blog/2017/11/07/回车的妙用/</link>
 <description>No Description</description>
 <pubDate>2017-11-07</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/11/07/回车的妙用/</guid>
+<guid>https://lujun9972.github.io/blog/2017/11/07/回车的妙用/</guid>
 </item>
 <item>
 <title>使用DosBox运行dos游戏的简易方法</title>
-<link>http://lujun9972.github.io/blog/2017/11/01/使用dosbox运行dos游戏的简易方法/</link>
+<link>https://lujun9972.github.io/blog/2017/11/01/使用dosbox运行dos游戏的简易方法/</link>
 <description>No Description</description>
 <pubDate>2017-11-01</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/11/01/使用dosbox运行dos游戏的简易方法/</guid>
+<guid>https://lujun9972.github.io/blog/2017/11/01/使用dosbox运行dos游戏的简易方法/</guid>
 </item>
 <item>
 <title>Bash_Style_Guide_and_Coding_Standard</title>
-<link>http://lujun9972.github.io/blog/2017/09/26/bash_style_guide_and_coding_standard/</link>
+<link>https://lujun9972.github.io/blog/2017/09/26/bash_style_guide_and_coding_standard/</link>
 <description>No Description</description>
 <pubDate>2017-10-25</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/09/26/bash_style_guide_and_coding_standard/</guid>
+<guid>https://lujun9972.github.io/blog/2017/09/26/bash_style_guide_and_coding_standard/</guid>
 </item>
 <item>
 <title>保留org代码块中TAB的方法</title>
-<link>http://lujun9972.github.io/blog/2017/10/22/保留org代码块中tab的方法/</link>
+<link>https://lujun9972.github.io/blog/2017/10/22/保留org代码块中tab的方法/</link>
 <description>No Description</description>
 <pubDate>2017-10-22</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/10/22/保留org代码块中tab的方法/</guid>
+<guid>https://lujun9972.github.io/blog/2017/10/22/保留org代码块中tab的方法/</guid>
 </item>
 <item>
 <title>[译]DOSBox安装与基本配置</title>
-<link>http://lujun9972.github.io/blog/2017/10/14/[译]dosbox安装与基本配置/</link>
+<link>https://lujun9972.github.io/blog/2017/10/14/[译]dosbox安装与基本配置/</link>
 <description>No Description</description>
 <pubDate>2017-10-15</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/10/14/[译]dosbox安装与基本配置/</guid>
+<guid>https://lujun9972.github.io/blog/2017/10/14/[译]dosbox安装与基本配置/</guid>
 </item>
 <item>
 <title>kile编译时提示[ViewPDF]failed to start的解决方法</title>
-<link>http://lujun9972.github.io/blog/2017/09/06/kile编译时提示[viewpdf]failed-to-start的解决方法/</link>
+<link>https://lujun9972.github.io/blog/2017/09/06/kile编译时提示[viewpdf]failed-to-start的解决方法/</link>
 <description>No Description</description>
 <pubDate>2017-09-06</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/09/06/kile编译时提示[viewpdf]failed-to-start的解决方法/</guid>
+<guid>https://lujun9972.github.io/blog/2017/09/06/kile编译时提示[viewpdf]failed-to-start的解决方法/</guid>
 </item>
-<<<<<<< HEAD
-=======
-<item>
-<title>使用unrar解压分片rar压缩文件</title>
-<link>http://lujun9972.github.io/blog/2017/11/07/使用unrar解压分片rar压缩文件/</link>
-<description>No Description</description>
-<pubDate>2017-08-27</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/11/07/使用unrar解压分片rar压缩文件/</guid>
-</item>
-<item>
-<title>测试打印机小窍门</title>
-<link>http://lujun9972.github.io/blog/2017/08/17/测试打印机小窍门/</link>
-<description>No Description</description>
-<pubDate>2017-08-17</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/08/17/测试打印机小窍门/</guid>
-</item>
-<item>
-<title>使用shell编写打字游戏</title>
-<link>http://lujun9972.github.io/blog/2017/06/29/使用shell编写打字游戏/</link>
-<description>No Description</description>
-<pubDate>2017-08-16</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/06/29/使用shell编写打字游戏/</guid>
-</item>
-<item>
-<title>如何下载YouTube视频</title>
-<link>http://lujun9972.github.io/blog/2017/08/14/如何下载youtube视频/</link>
-<description>No Description</description>
-<pubDate>2017-08-14</pubDate>
-<guid>http://lujun9972.github.io/blog/2017/08/14/如何下载youtube视频/</guid>
-</item>
->>>>>>> e0f3721799cfa2fe6f433dec48705d43f593abde
 </channel>
 </rss>

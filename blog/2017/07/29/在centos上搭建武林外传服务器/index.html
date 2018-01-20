@@ -14,14 +14,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
     <p>=============&gt;随便,谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -32,12 +32,12 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="https://lujun9972.github.io/about/">About</a></li>
         <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -54,24 +54,24 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga6c35fe">安装必要的软件</a>
+<li><a href="#org016d7c6">安装必要的软件</a>
 <ul>
-<li><a href="#org48cfd34">安装mysql(mariadb)</a></li>
-<li><a href="#org03b006f">安装java</a></li>
-<li><a href="#org537b2b3">安装killall（stop脚本中会用到）</a></li>
-<li><a href="#org4a4e34e">安装32位支持</a></li>
+<li><a href="#org89817da">安装mysql(mariadb)</a></li>
+<li><a href="#org802f05f">安装java</a></li>
+<li><a href="#org587fd94">安装killall（stop脚本中会用到）</a></li>
+<li><a href="#org79fb2d1">安装32位支持</a></li>
 </ul>
 </li>
-<li><a href="#orgdb9b7ff">下载搭建服务器所需的文件</a></li>
-<li><a href="#orgdc45665">还原数据库内容</a>
+<li><a href="#orgcb3ca59">下载搭建服务器所需的文件</a></li>
+<li><a href="#org156c6d8">还原数据库内容</a>
 <ul>
-<li><a href="#org0bbda8f">启动mariadb服务</a></li>
-<li><a href="#orga203097">设置root用户密码为root</a></li>
-<li><a href="#orga98d31e">还原zmwm数据库内容以及存储过程</a></li>
+<li><a href="#org3f98535">启动mariadb服务</a></li>
+<li><a href="#org13c3659">设置root用户密码为root</a></li>
+<li><a href="#org7002e01">还原zmwm数据库内容以及存储过程</a></li>
 </ul>
 </li>
-<li><a href="#orga642f70">拷贝其他文件</a></li>
-<li><a href="#orge9306c1">配置客户端中的IP</a></li>
+<li><a href="#org3f1ca6c">拷贝其他文件</a></li>
+<li><a href="#orgb2520a1">配置客户端中的IP</a></li>
 </ul>
 </div>
 </div>
@@ -87,39 +87,40 @@
 于是折腾了一下，把它移植到了centos中（挂在华为云中）
 </p>
 
-<div id="outline-container-orga6c35fe" class="outline-2">
-<h2 id="orga6c35fe">安装必要的软件</h2>
-<div class="outline-text-2" id="text-orga6c35fe">
-</div><div id="outline-container-org48cfd34" class="outline-3">
-<h3 id="org48cfd34">安装mysql(mariadb)</h3>
-<div class="outline-text-3" id="text-org48cfd34">
+<div id="outline-container-org016d7c6" class="outline-2">
+<h2 id="org016d7c6">安装必要的软件</h2>
+<div class="outline-text-2" id="text-org016d7c6">
+</div>
+<div id="outline-container-org89817da" class="outline-3">
+<h3 id="org89817da">安装mysql(mariadb)</h3>
+<div class="outline-text-3" id="text-org89817da">
 <div class="org-src-container">
 <pre class="src src-shell">yum install mariadb mariadb-server
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org03b006f" class="outline-3">
-<h3 id="org03b006f">安装java</h3>
-<div class="outline-text-3" id="text-org03b006f">
+<div id="outline-container-org802f05f" class="outline-3">
+<h3 id="org802f05f">安装java</h3>
+<div class="outline-text-3" id="text-org802f05f">
 <div class="org-src-container">
 <pre class="src src-shell">yum install  java-1.8.0-openjdk
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org537b2b3" class="outline-3">
-<h3 id="org537b2b3">安装killall（stop脚本中会用到）</h3>
-<div class="outline-text-3" id="text-org537b2b3">
+<div id="outline-container-org587fd94" class="outline-3">
+<h3 id="org587fd94">安装killall（stop脚本中会用到）</h3>
+<div class="outline-text-3" id="text-org587fd94">
 <div class="org-src-container">
 <pre class="src src-shell">yum install psmisc
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org4a4e34e" class="outline-3">
-<h3 id="org4a4e34e">安装32位支持</h3>
-<div class="outline-text-3" id="text-org4a4e34e">
+<div id="outline-container-org79fb2d1" class="outline-3">
+<h3 id="org79fb2d1">安装32位支持</h3>
+<div class="outline-text-3" id="text-org79fb2d1">
 <div class="org-src-container">
 <pre class="src src-shell">yum install glibc.i686
 yum install libxml2.so.2
@@ -130,21 +131,22 @@ yum install libstdc++.so.5
 </div>
 </div>
 
-<div id="outline-container-orgdb9b7ff" class="outline-2">
-<h2 id="orgdb9b7ff">下载搭建服务器所需的文件</h2>
-<div class="outline-text-2" id="text-orgdb9b7ff">
+<div id="outline-container-orgcb3ca59" class="outline-2">
+<h2 id="orgcb3ca59">下载搭建服务器所需的文件</h2>
+<div class="outline-text-2" id="text-orgcb3ca59">
 <p>
 链接: <a href="https://pan.baidu.com/s/1i5eMLu9">https://pan.baidu.com/s/1i5eMLu9</a> 密码: f8ha
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdc45665" class="outline-2">
-<h2 id="orgdc45665">还原数据库内容</h2>
-<div class="outline-text-2" id="text-orgdc45665">
-</div><div id="outline-container-org0bbda8f" class="outline-3">
-<h3 id="org0bbda8f">启动mariadb服务</h3>
-<div class="outline-text-3" id="text-org0bbda8f">
+<div id="outline-container-org156c6d8" class="outline-2">
+<h2 id="org156c6d8">还原数据库内容</h2>
+<div class="outline-text-2" id="text-org156c6d8">
+</div>
+<div id="outline-container-org3f98535" class="outline-3">
+<h3 id="org3f98535">启动mariadb服务</h3>
+<div class="outline-text-3" id="text-org3f98535">
 <div class="org-src-container">
 <pre class="src src-shell">systemctl start mariadb
 systemctl enable mariadb
@@ -153,9 +155,9 @@ systemctl enable mariadb
 </div>
 </div>
 
-<div id="outline-container-orga203097" class="outline-3">
-<h3 id="orga203097">设置root用户密码为root</h3>
-<div class="outline-text-3" id="text-orga203097">
+<div id="outline-container-org13c3659" class="outline-3">
+<h3 id="org13c3659">设置root用户密码为root</h3>
+<div class="outline-text-3" id="text-org13c3659">
 <p>
 刚安装好mariadb并无需密码就能登陆root
 </p>
@@ -176,9 +178,9 @@ flush <span style="color: #4f97d7; font-weight: bold;">privileges</span>;
 </div>
 </div>
 
-<div id="outline-container-orga98d31e" class="outline-3">
-<h3 id="orga98d31e">还原zmwm数据库内容以及存储过程</h3>
-<div class="outline-text-3" id="text-orga98d31e">
+<div id="outline-container-org7002e01" class="outline-3">
+<h3 id="org7002e01">还原zmwm数据库内容以及存储过程</h3>
+<div class="outline-text-3" id="text-org7002e01">
 <p>
 先在mysql中创建空的zmwm库
 </p>
@@ -203,9 +205,9 @@ mysql -uroot -proot zmwm &lt;zmwm_table.sql
 </div>
 </div>
 
-<div id="outline-container-orga642f70" class="outline-2">
-<h2 id="orga642f70">拷贝其他文件</h2>
-<div class="outline-text-2" id="text-orga642f70">
+<div id="outline-container-org3f1ca6c" class="outline-2">
+<h2 id="org3f1ca6c">拷贝其他文件</h2>
+<div class="outline-text-2" id="text-org3f1ca6c">
 <p>
 将下类内容添加到 <code>/etc/hosts</code> 中
 </p>
@@ -261,9 +263,9 @@ tar -zxvf wulin_pwserver.tar.gz
 </div>
 </div>
 
-<div id="outline-container-orge9306c1" class="outline-2">
-<h2 id="orge9306c1">配置客户端中的IP</h2>
-<div class="outline-text-2" id="text-orge9306c1">
+<div id="outline-container-orgb2520a1" class="outline-2">
+<h2 id="orgb2520a1">配置客户端中的IP</h2>
+<div class="outline-text-2" id="text-orgb2520a1">
 <p>
 从这里下载客户端
 链接: <a href="https://pan.baidu.com/s/1c8NhiY">https://pan.baidu.com/s/1c8NhiY</a> 密码: z5i2
@@ -295,10 +297,10 @@ tar -zxvf wulin_pwserver.tar.gz
         <div class="post-meta">
             <span title="post date" class="post-info">2017-07-29</span>
             <span title="last modification date" class="post-info">2017-07-29</span>
-            <span title="tags" class="post-info">:<a href="http://lujun9972.github.io/tags/无主之地">无主之地</a>:</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/无主之地">无主之地</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
         </div>
-    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
             <h1>Comments</h1>
             <div id="comment-wrap">
@@ -310,7 +312,7 @@ tar -zxvf wulin_pwserver.tar.gz
          //var disqus_developer = 1;
          var preempt_signal=false;
          var disqus_identifier = "/blog/2017/07/29/在centos上搭建武林外传服务器/";
-         var disqus_url = "http://lujun9972.github.io/blog/2017/07/29/在centos上搭建武林外传服务器/";
+         var disqus_url = "https://lujun9972.github.io/blog/2017/07/29/在centos上搭建武林外传服务器/";
          var disqus_shortname = '暗日';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
@@ -349,7 +351,7 @@ tar -zxvf wulin_pwserver.tar.gz
      });
     </script>
         </section>
-    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>

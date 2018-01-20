@@ -14,14 +14,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
     <p>=============&gt;随便,谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -32,12 +32,12 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="https://lujun9972.github.io/about/">About</a></li>
         <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -63,7 +63,6 @@
 遍历 "$@" 的效果:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">function </span><span style="color: #4f97d7;">test</span>
 <span style="color: #4f97d7;">{</span>
     <span style="color: #4f97d7; font-weight: bold;">for</span> var<span style="color: #4f97d7; font-weight: bold;"> in</span> <span style="color: #2d9574;">"$@"</span>;<span style="color: #4f97d7; font-weight: bold;">do</span>
@@ -76,7 +75,6 @@
 </div>
 
 <div class="org-src-container">
-
 <pre class="src src-org">1
 2 3
 4
@@ -87,7 +85,6 @@
 用一般变量commands保存 "$@",并遍历 "$commands"
 </p>
 <div class="org-src-container">
-
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">function </span><span style="color: #4f97d7;">test</span>
 <span style="color: #4f97d7;">{</span>
     <span style="color: #7590db;">commands</span>=<span style="color: #2d9574;">"$@"</span>
@@ -101,7 +98,6 @@
 </div>
 
 <div class="org-src-container">
-
 <pre class="src src-org">1 2 3 4
 </pre>
 </div>
@@ -114,7 +110,6 @@
 用一般变量commands保存 "$@",并遍历 $commands
 </p>
 <div class="org-src-container">
-
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">function </span><span style="color: #4f97d7;">test</span>
 <span style="color: #4f97d7;">{</span>
     <span style="color: #7590db;">commands</span>=<span style="color: #2d9574;">"$@"</span>
@@ -128,7 +123,6 @@
 </div>
 
 <div class="org-src-container">
-
 <pre class="src src-org">1
 2
 3
@@ -144,7 +138,6 @@
 用数组变量commands保存 "$@",并遍历 "$commands"
 </p>
 <div class="org-src-container">
-
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">function </span><span style="color: #4f97d7;">test</span>
 <span style="color: #4f97d7;">{</span>
     <span style="color: #7590db;">commands</span>=<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"$@"</span><span style="color: #bc6ec5;">)</span>
@@ -158,7 +151,6 @@
 </div>
 
 <div class="org-src-container">
-
 <pre class="src src-org">1
 2 3
 4
@@ -179,7 +171,6 @@
 使用数组变量保存 <code>$@</code> 的值: 
 </p>
 <div class="org-src-container">
-
 <pre class="src src-shell"><span style="color: #7590db;">commands</span>=<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"$@"</span><span style="color: #4f97d7;">)</span>
 </pre>
 </div></li>
@@ -188,7 +179,6 @@
 便利数组变量时,需要使用带引号的@进行遍历
 </p>
 <div class="org-src-container">
-
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">for</span> var<span style="color: #4f97d7; font-weight: bold;"> in</span> <span style="color: #2d9574;">"${commands[@]}"</span>;<span style="color: #4f97d7; font-weight: bold;">do</span>
 <span style="color: #4f97d7; font-weight: bold;">done</span>
 </pre>
@@ -201,10 +191,10 @@
         <div class="post-meta">
             <span title="post date" class="post-info">2017-01-01</span>
             <span title="last modification date" class="post-info">2017-01-01</span>
-            <span title="tags" class="post-info">:<a href="http://lujun9972.github.io/tags/编程之旅">编程之旅</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; x41">lujun9972</a></span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/编程之旅">编程之旅</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
         </div>
-    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
             <h1>Comments</h1>
             <div id="comment-wrap">
@@ -216,7 +206,7 @@
          //var disqus_developer = 1;
          var preempt_signal=false;
          var disqus_identifier = "/blog/2017/01/01/如何正确地对$@进行赋值/";
-         var disqus_url = "http://lujun9972.github.io/blog/2017/01/01/如何正确地对$@进行赋值/";
+         var disqus_url = "https://lujun9972.github.io/blog/2017/01/01/如何正确地对$@进行赋值/";
          var disqus_shortname = '暗日';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
@@ -255,11 +245,11 @@
      });
     </script>
         </section>
-    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; x41">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

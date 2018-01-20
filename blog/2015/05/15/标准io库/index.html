@@ -13,14 +13,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
     <p>=============&gt;随便,谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -31,12 +31,12 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="https://lujun9972.github.io/about/">About</a></li>
         <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -53,53 +53,54 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline12">1. 流与FILE对象</a>
+<li><a href="#orgacaebf1">1. 流与FILE对象</a>
 <ul>
-<li><a href="#orgheadline3">1.1. 流定向</a>
+<li><a href="#org1d5f6e5">1.1. 流定向</a>
 <ul>
-<li><a href="#orgheadline1">1.1.1. fwide函数:设置流的定向</a></li>
-<li><a href="#orgheadline2">1.1.2. freopen函数:清除一个流的定向</a></li>
+<li><a href="#orga984962">1.1.1. fwide函数:设置流的定向</a></li>
+<li><a href="#org176ed92">1.1.2. freopen函数:清除一个流的定向</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline4">1.2. 打开流</a></li>
-<li><a href="#orgheadline8">1.3. 读写流</a>
+<li><a href="#org3d0317f">1.2. 打开流</a></li>
+<li><a href="#org0e78407">1.3. 读写流</a>
 <ul>
-<li><a href="#orgheadline5">1.3.1. 一次一个字符的IO</a></li>
-<li><a href="#orgheadline6">1.3.2. 一次一行的IO</a></li>
-<li><a href="#orgheadline7">1.3.3. 二进制直接IO</a></li>
+<li><a href="#org08c5d6c">1.3.1. 一次一个字符的IO</a></li>
+<li><a href="#orgd7743ef">1.3.2. 一次一行的IO</a></li>
+<li><a href="#org0787987">1.3.3. 二进制直接IO</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline9">1.4. 定位流</a></li>
-<li><a href="#orgheadline10">1.5. 错误判断</a></li>
-<li><a href="#orgheadline11">1.6. fileno:获取流对应的文件描述符</a></li>
+<li><a href="#orge540a60">1.4. 定位流</a></li>
+<li><a href="#org6ce3a64">1.5. 错误判断</a></li>
+<li><a href="#org7c1eac1">1.6. fileno:获取流对应的文件描述符</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline20">2. 缓冲</a>
+<li><a href="#org41dea96">2. 缓冲</a>
 <ul>
-<li><a href="#orgheadline13">2.1. 全缓冲</a></li>
-<li><a href="#orgheadline14">2.2. 行缓冲</a></li>
-<li><a href="#orgheadline15">2.3. 缓冲的惯例</a></li>
-<li><a href="#orgheadline19">2.4. 更改缓冲类型</a>
+<li><a href="#orgd92e71f">2.1. 全缓冲</a></li>
+<li><a href="#org1c4475f">2.2. 行缓冲</a></li>
+<li><a href="#orgea1056e">2.3. 缓冲的惯例</a></li>
+<li><a href="#orgdb4864a">2.4. 更改缓冲类型</a>
 <ul>
-<li><a href="#orgheadline16">2.4.1. setbuf函数:打开/关闭缓冲机制</a></li>
-<li><a href="#orgheadline17">2.4.2. setvbuf函数:精确指定缓冲类型</a></li>
-<li><a href="#orgheadline18">2.4.3. fflush函数:强制将缓冲区内容写入磁盘</a></li>
+<li><a href="#org0a4c2c8">2.4.1. setbuf函数:打开/关闭缓冲机制</a></li>
+<li><a href="#org6fbad06">2.4.2. setvbuf函数:精确指定缓冲类型</a></li>
+<li><a href="#org3034d73">2.4.3. fflush函数:强制将缓冲区内容写入磁盘</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline21">3. 标准输入,标准输出和标准出错</a></li>
-<li><a href="#orgheadline22">4. 产生临时文件</a></li>
-<li><a href="#orgheadline23">5. 线程安全的方式管理FILE对象</a></li>
+<li><a href="#org6a67c9c">3. 标准输入,标准输出和标准出错</a></li>
+<li><a href="#orge6bee6d">4. 产生临时文件</a></li>
+<li><a href="#org604a4bf">5. 线程安全的方式管理FILE对象</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">1</span> 流与FILE对象</h2>
+<div id="outline-container-orgacaebf1" class="outline-2">
+<h2 id="orgacaebf1"><span class="section-number-2">1</span> 流与FILE对象</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-orgheadline3" class="outline-3">
-<h3 id="orgheadline3"><span class="section-number-3">1.1</span> 流定向</h3>
+</div>
+<div id="outline-container-org1d5f6e5" class="outline-3">
+<h3 id="org1d5f6e5"><span class="section-number-3">1.1</span> 流定向</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 标准IO文件流可用于单字符或多字符字符集. 流的定向(orientation)决定了所读,写的字符是单字符还是多字符的.
@@ -118,11 +119,10 @@
 </p>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-4">
-<h4 id="orgheadline1"><span class="section-number-4">1.1.1</span> fwide函数:设置流的定向</h4>
+<div id="outline-container-orga984962" class="outline-4">
+<h4 id="orga984962"><span class="section-number-4">1.1.1</span> fwide函数:设置流的定向</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 <span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">wchar.h</span><span style="color: #4f97d7;">&gt;</span>
 
@@ -143,16 +143,15 @@
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-4">
-<h4 id="orgheadline2"><span class="section-number-4">1.1.2</span> freopen函数:清除一个流的定向</h4>
+<div id="outline-container-org176ed92" class="outline-4">
+<h4 id="org176ed92"><span class="section-number-4">1.1.2</span> freopen函数:清除一个流的定向</h4>
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">1.2</span> 打开流</h3>
+<div id="outline-container-org3d0317f" class="outline-3">
+<h3 id="org3d0317f"><span class="section-number-3">1.2</span> 打开流</h3>
 <div class="outline-text-3" id="text-1-2">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #bc6ec5; font-weight: bold;">fopen</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">path</span>,<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">type</span><span style="color: #4f97d7;">)</span>;
@@ -198,14 +197,14 @@ fdopen将一个标准IO流与文件描述符相结合.
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">1.3</span> 读写流</h3>
+<div id="outline-container-org0e78407" class="outline-3">
+<h3 id="org0e78407"><span class="section-number-3">1.3</span> 读写流</h3>
 <div class="outline-text-3" id="text-1-3">
-</div><div id="outline-container-orgheadline5" class="outline-4">
-<h4 id="orgheadline5"><span class="section-number-4">1.3.1</span> 一次一个字符的IO</h4>
+</div>
+<div id="outline-container-org08c5d6c" class="outline-4">
+<h4 id="org08c5d6c"><span class="section-number-4">1.3.1</span> 一次一个字符的IO</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">getc</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #7590db;">fp</span><span style="color: #4f97d7;">)</span>;
@@ -233,11 +232,10 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline6" class="outline-4">
-<h4 id="orgheadline6"><span class="section-number-4">1.3.2</span> 一次一行的IO</h4>
+<div id="outline-container-orgd7743ef" class="outline-4">
+<h4 id="orgd7743ef"><span class="section-number-4">1.3.2</span> 一次一行的IO</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #bc6ec5; font-weight: bold;">fgets</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">buf</span>,<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">n</span>,<span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #7590db;">fp</span><span style="color: #4f97d7;">)</span>;
@@ -257,11 +255,10 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline7" class="outline-4">
-<h4 id="orgheadline7"><span class="section-number-4">1.3.3</span> 二进制直接IO</h4>
+<div id="outline-container-org0787987" class="outline-4">
+<h4 id="org0787987"><span class="section-number-4">1.3.3</span> 二进制直接IO</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #bc6ec5; font-weight: bold;">fread</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">void</span>* <span style="color: #7590db;">ptr</span>,<span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">size</span>,<span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">ntimes</span>,<span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #7590db;">fp</span><span style="color: #4f97d7;">)</span>;
@@ -275,11 +272,10 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><span class="section-number-3">1.4</span> 定位流</h3>
+<div id="outline-container-orge540a60" class="outline-3">
+<h3 id="orge540a60"><span class="section-number-3">1.4</span> 定位流</h3>
 <div class="outline-text-3" id="text-1-4">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">long</span> <span style="color: #bc6ec5; font-weight: bold;">ftell</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #7590db;">fp</span><span style="color: #4f97d7;">)</span>;
@@ -296,14 +292,13 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10"><span class="section-number-3">1.5</span> 错误判断</h3>
+<div id="outline-container-org6ce3a64" class="outline-3">
+<h3 id="org6ce3a64"><span class="section-number-3">1.5</span> 错误判断</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 读取出错或到达文件结尾,读取函数的返回值都是同一个值. 为了区分这两种不同的情况,必须调用ferror或feof
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">ferror</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #7590db;">fp</span><span style="color: #4f97d7;">)</span>;
@@ -315,11 +310,10 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">1.6</span> fileno:获取流对应的文件描述符</h3>
+<div id="outline-container-org7c1eac1" class="outline-3">
+<h3 id="org7c1eac1"><span class="section-number-3">1.6</span> fileno:获取流对应的文件描述符</h3>
 <div class="outline-text-3" id="text-1-6">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">fileno</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #7590db;">fp</span><span style="color: #4f97d7;">)</span>;
@@ -328,16 +322,16 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline20" class="outline-2">
-<h2 id="orgheadline20"><span class="section-number-2">2</span> 缓冲</h2>
+<div id="outline-container-org41dea96" class="outline-2">
+<h2 id="org41dea96"><span class="section-number-2">2</span> 缓冲</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 标准IO提供了2种类型的缓冲
 </p>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-3">
-<h3 id="orgheadline13"><span class="section-number-3">2.1</span> 全缓冲</h3>
+<div id="outline-container-orgd92e71f" class="outline-3">
+<h3 id="orgd92e71f"><span class="section-number-3">2.1</span> 全缓冲</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 填满IO缓冲区才进行实际的IO操作
@@ -349,8 +343,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-3">
-<h3 id="orgheadline14"><span class="section-number-3">2.2</span> 行缓冲</h3>
+<div id="outline-container-org1c4475f" class="outline-3">
+<h3 id="org1c4475f"><span class="section-number-3">2.2</span> 行缓冲</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 当输入和输出中遇到换行符时,标准IO库执行IO操作
@@ -362,8 +356,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline15" class="outline-3">
-<h3 id="orgheadline15"><span class="section-number-3">2.3</span> 缓冲的惯例</h3>
+<div id="outline-container-orgea1056e" class="outline-3">
+<h3 id="orgea1056e"><span class="section-number-3">2.3</span> 缓冲的惯例</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 一般标准IO缓冲的惯例为:标准出错不带缓冲,打开至终端设备的流是行缓冲,其他流是全缓冲.
@@ -371,11 +365,10 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline19" class="outline-3">
-<h3 id="orgheadline19"><span class="section-number-3">2.4</span> 更改缓冲类型</h3>
+<div id="outline-container-orgdb4864a" class="outline-3">
+<h3 id="orgdb4864a"><span class="section-number-3">2.4</span> 更改缓冲类型</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">setbuf</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #7590db;">fp</span>,<span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">buf</span><span style="color: #4f97d7;">)</span>;
@@ -384,8 +377,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline16" class="outline-4">
-<h4 id="orgheadline16"><span class="section-number-4">2.4.1</span> setbuf函数:打开/关闭缓冲机制</h4>
+<div id="outline-container-org0a4c2c8" class="outline-4">
+<h4 id="org0a4c2c8"><span class="section-number-4">2.4.1</span> setbuf函数:打开/关闭缓冲机制</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <p>
 当为打开缓冲机制时,这里参数buf必须为一个长度为BUFSIZ的缓冲区(BUFSIZ定义在stdio.h中)
@@ -397,8 +390,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline17" class="outline-4">
-<h4 id="orgheadline17"><span class="section-number-4">2.4.2</span> setvbuf函数:精确指定缓冲类型</h4>
+<div id="outline-container-org6fbad06" class="outline-4">
+<h4 id="org6fbad06"><span class="section-number-4">2.4.2</span> setvbuf函数:精确指定缓冲类型</h4>
 <div class="outline-text-4" id="text-2-4-2">
 <ul class="org-ul">
 <li><p>
@@ -445,11 +438,10 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline18" class="outline-4">
-<h4 id="orgheadline18"><span class="section-number-4">2.4.3</span> fflush函数:强制将缓冲区内容写入磁盘</h4>
+<div id="outline-container-org3034d73" class="outline-4">
+<h4 id="org3034d73"><span class="section-number-4">2.4.3</span> fflush函数:强制将缓冲区内容写入磁盘</h4>
 <div class="outline-text-4" id="text-2-4-3">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">fflush</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #7590db;">fp</span><span style="color: #4f97d7;">)</span>;
@@ -459,8 +451,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline21" class="outline-2">
-<h2 id="orgheadline21"><span class="section-number-2">3</span> 标准输入,标准输出和标准出错</h2>
+<div id="outline-container-org6a67c9c" class="outline-2">
+<h2 id="org6a67c9c"><span class="section-number-2">3</span> 标准输入,标准输出和标准出错</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 &lt;stdio.h&gt;中预定义了三个文件指针:stdin,stdout和stderr
@@ -468,11 +460,10 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline22" class="outline-2">
-<h2 id="orgheadline22"><span class="section-number-2">4</span> 产生临时文件</h2>
+<div id="outline-container-orge6bee6d" class="outline-2">
+<h2 id="orge6bee6d"><span class="section-number-2">4</span> 产生临时文件</h2>
 <div class="outline-text-2" id="text-4">
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #bc6ec5; font-weight: bold;">tmpnam</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">ptr</span><span style="color: #4f97d7;">)</span>;
@@ -511,8 +502,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgheadline23" class="outline-2">
-<h2 id="orgheadline23"><span class="section-number-2">5</span> 线程安全的方式管理FILE对象</h2>
+<div id="outline-container-org604a4bf" class="outline-2">
+<h2 id="org604a4bf"><span class="section-number-2">5</span> 线程安全的方式管理FILE对象</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 PSOXI.1提供了以线程安全的方式管理FILE文件的方法. 可以使用`flockfile'和`ftrylockfile'获取与FILE对象关联的锁,且这个锁为递归锁.
@@ -522,7 +513,6 @@ PSOXI.1提供了以线程安全的方式管理FILE文件的方法. 可以使用`
 所有操作FILE对象的标准IO函数,都需要表现的好像内部调用了flockfile和funlockfile一样,即不能出现多个线程同时写入同一FILE对象时出现乱序的情况.
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">ftrylockfile</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">FILE</span>* <span style="color: #7590db;">fp</span><span style="color: #4f97d7;">)</span>;
@@ -540,7 +530,6 @@ PSOXI.1提供了以线程安全的方式管理FILE文件的方法. 可以使用`
 若标准IO函数每次操作都获取自己的锁再释放,那么在进行单字符的IO操作时,会消耗大量的性能到加解锁中,因此就有了 <b>不加锁的基于字符的标准IO函数</b>
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">getchar_unlocked</span><span style="color: #4f97d7;">()</span>;
@@ -563,9 +552,9 @@ PSOXI.1提供了以线程安全的方式管理FILE文件的方法. 可以使用`
             <span title="post date" class="post-info">2015-05-15</span>
             <span title="last modification date" class="post-info">2016-10-24</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">DarkSun</a></span>
         </div>
-    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
             <h1>Comments</h1>
             <div id="comment-wrap">
@@ -577,7 +566,7 @@ PSOXI.1提供了以线程安全的方式管理FILE文件的方法. 可以使用`
          //var disqus_developer = 1;
          var preempt_signal=false;
          var disqus_identifier = "/blog/2015/05/15/标准io库/";
-         var disqus_url = "http://lujun9972.github.io/blog/2015/05/15/标准io库/";
+         var disqus_url = "https://lujun9972.github.io/blog/2015/05/15/标准io库/";
          var disqus_shortname = '暗日';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
@@ -616,11 +605,11 @@ PSOXI.1提供了以线程安全的方式管理FILE文件的方法. 可以使用`
      });
     </script>
         </section>
-    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">DarkSun</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">DarkSun</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

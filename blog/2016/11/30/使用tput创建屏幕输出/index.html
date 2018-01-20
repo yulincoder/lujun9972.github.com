@@ -13,14 +13,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
     <p>=============&gt;随便,谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -31,12 +31,12 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="https://lujun9972.github.io/about/">About</a></li>
         <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -53,21 +53,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. tput与terminfo</a></li>
-<li><a href="#orgheadline2">2. tput常用法</a></li>
-<li><a href="#orgheadline6">3. tput的使用</a>
+<li><a href="#org1eab67d">1. tput与terminfo</a></li>
+<li><a href="#orgc8f75ff">2. tput常用法</a></li>
+<li><a href="#orgf4d649a">3. tput的使用</a>
 <ul>
-<li><a href="#orgheadline3">3.1. 设置终端属性</a></li>
-<li><a href="#orgheadline4">3.2. 获取终端属性</a></li>
-<li><a href="#orgheadline5">3.3. 判断终端是否存在某项能力</a></li>
+<li><a href="#org0c4ceff">3.1. 设置终端属性</a></li>
+<li><a href="#org36b9648">3.2. 获取终端属性</a></li>
+<li><a href="#orgc543486">3.3. 判断终端是否存在某项能力</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> tput与terminfo</h2>
+<div id="outline-container-org1eab67d" class="outline-2">
+<h2 id="org1eab67d"><span class="section-number-2">1</span> tput与terminfo</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 tput 命令将通过 terminfo 数据库对您的终端会话进行初始化和操作。通过使用 tput，您可以更改几项终端功能，如移动或更改光标、更改文本属性，以及清除终端屏幕的特定区域。
@@ -80,8 +80,8 @@ UNIX 中的几个常用程序都依赖 terminfo 数据库提供这些属性以�
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">2</span> tput常用法</h2>
+<div id="outline-container-orgc8f75ff" class="outline-2">
+<h2 id="orgc8f75ff"><span class="section-number-2">2</span> tput常用法</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 tput默认通过$TERM的值来指示终端类型，但我们也可以通过 <code>-T $Type</code> 来指定终端类型。不过一般来说都没有这个必要。
@@ -101,8 +101,8 @@ tput默认通过$TERM的值来指示终端类型，但我们也可以通过 <cod
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-2">
-<h2 id="orgheadline6"><span class="section-number-2">3</span> tput的使用</h2>
+<div id="outline-container-orgf4d649a" class="outline-2">
+<h2 id="orgf4d649a"><span class="section-number-2">3</span> tput的使用</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 tput一般用于作三件事情: 设置终端属性,获取终端属性以及判断终端是否支持某项能力.
@@ -117,8 +117,8 @@ tput一般用于作三件事情: 设置终端属性,获取终端属性以及判�
 </p>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-3">
-<h3 id="orgheadline3"><span class="section-number-3">3.1</span> 设置终端属性</h3>
+<div id="outline-container-org0c4ceff" class="outline-3">
+<h3 id="org0c4ceff"><span class="section-number-3">3.1</span> 设置终端属性</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 tput主要是通过输出控制码字符串来实现一些特殊终端效果的. 
@@ -207,7 +207,6 @@ tput主要是通过输出控制码字符串来实现一些特殊终端效果的.
 下面是一个例子
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh"><span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">!/bin/</span><span style="color: #4f97d7; font-weight: bold;">bash</span>
 
 <span style="color: #7590db;">BOLD</span>=$<span style="color: #4f97d7;">(</span><span style="color: #fa8072;">tput</span> bold<span style="color: #4f97d7;">)</span>
@@ -229,8 +228,8 @@ tput cup <span style="color: #a45bad;">2</span> <span style="color: #a45bad;">15
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">3.2</span> 获取终端属性</h3>
+<div id="outline-container-org36b9648" class="outline-3">
+<h3 id="org36b9648"><span class="section-number-3">3.2</span> 获取终端属性</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 tput会输出一个数字,表示该属性的值.
@@ -246,21 +245,19 @@ tput会输出一个数字,表示该属性的值.
 下面是一个例子
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh"><span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">"The terminal is $(</span><span style="color: #fa8072;">tput</span><span style="color: #2d9574;"> cols) x $(</span><span style="color: #fa8072;">tput</span><span style="color: #2d9574;"> lines)"</span>
 </pre>
 </div>
 
 <div class="org-src-container">
-
-<pre class="src src-org">The terminal is  x
+<pre class="src src-org">The terminal is  x 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">3.3</span> 判断终端是否存在某项能力</h3>
+<div id="outline-container-orgc543486" class="outline-3">
+<h3 id="orgc543486"><span class="section-number-3">3.3</span> 判断终端是否存在某项能力</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 tput会通过返回值来表示是否具有这项能力(0表示true,1表示false).
@@ -275,7 +272,6 @@ tput会通过返回值来表示是否具有这项能力(0表示true,1表示false
 下面是一个例子:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-sh"><span style="color: #4f97d7; font-weight: bold;">if</span> tput hs;<span style="color: #4f97d7; font-weight: bold;">then</span>
     <span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">"your terminal has a status lne"</span>
 <span style="color: #4f97d7; font-weight: bold;">else</span>
@@ -285,7 +281,6 @@ tput会通过返回值来表示是否具有这项能力(0表示true,1表示false
 </div>
 
 <div class="org-src-container">
-
 <pre class="src src-org">your terminal has NO status line
 </pre>
 </div>
@@ -300,9 +295,9 @@ tput会通过返回值来表示是否具有这项能力(0表示true,1表示false
             <span title="post date" class="post-info">2016-11-30</span>
             <span title="last modification date" class="post-info">2016-12-01</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
         </div>
-    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
             <h1>Comments</h1>
             <div id="comment-wrap">
@@ -314,7 +309,7 @@ tput会通过返回值来表示是否具有这项能力(0表示true,1表示false
          //var disqus_developer = 1;
          var preempt_signal=false;
          var disqus_identifier = "/blog/2016/11/30/使用tput创建屏幕输出/";
-         var disqus_url = "http://lujun9972.github.io/blog/2016/11/30/使用tput创建屏幕输出/";
+         var disqus_url = "https://lujun9972.github.io/blog/2016/11/30/使用tput创建屏幕输出/";
          var disqus_shortname = '暗日';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
@@ -353,11 +348,11 @@ tput会通过返回值来表示是否具有这项能力(0表示true,1表示false
      });
     </script>
         </section>
-    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; lujun9972-desktop">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

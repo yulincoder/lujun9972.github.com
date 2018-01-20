@@ -14,14 +14,14 @@
    #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/main.css" type="text/css"/>
-  <link rel="stylesheet" href="http://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
 </head>
 
   <body><div class="container">
 <div>
   <header class="masthead">
-    <h1 class="masthead-title"><a href="http://lujun9972.github.io/">暗无天日</a></h1>
+    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
     <p>=============&gt;随便,谢谢</p>
     <nav class="site-nav">
       <div class="menu-icon">
@@ -32,12 +32,12 @@
         </svg>
       </div>
       <ul class="trigger">
-        <li><a href="http://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="http://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="http://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="http://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="https://lujun9972.github.io/about/">About</a></li>
         <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="http://lujun9972.github.io/rss.xml">RSS</a></li>
+        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
       </ul>
     </nav>
     <form method="get" id="searchform" action="http://www.google.com/search">
@@ -54,30 +54,30 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">配置</a></li>
-<li><a href="#orgheadline2">阅读邮件</a></li>
-<li><a href="#orgheadline3">修改邮件</a></li>
-<li><a href="#orgheadline4">删除邮件</a></li>
-<li><a href="#orgheadline5">保存邮件</a></li>
-<li><a href="#orgheadline6">回复邮件</a></li>
-<li><a href="#orgheadline7">邮件标签</a>
+<li><a href="#org7455b39">配置</a></li>
+<li><a href="#org7f15ac9">阅读邮件</a></li>
+<li><a href="#org07a8990">修改邮件</a></li>
+<li><a href="#orgb8a0e43">删除邮件</a></li>
+<li><a href="#org18149de">保存邮件</a></li>
+<li><a href="#orgaa45b2e">回复邮件</a></li>
+<li><a href="#orgda4e89a">邮件标签</a>
 <ul>
-<li><a href="#orgheadline8">邮件属性</a></li>
+<li><a href="#org04dc154">邮件属性</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline9">邮件概览</a>
+<li><a href="#org79b26dc">邮件概览</a>
 <ul>
-<li><a href="#orgheadline10">进入Summary buffer</a></li>
-<li><a href="#orgheadline11">Summary buffer的操作</a></li>
+<li><a href="#orgbcffe49">进入Summary buffer</a></li>
+<li><a href="#orgf7befd4">Summary buffer的操作</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1">配置</h2>
-<div class="outline-text-2" id="text-orgheadline1">
+<div id="outline-container-org7455b39" class="outline-2">
+<h2 id="org7455b39">配置</h2>
+<div class="outline-text-2" id="text-org7455b39">
 <p>
 Rmail启动时会调用 <code>movemail</code> 这个程序来从各个inbox中获取新邮件并合并到一个所谓的 <code>primary Rmail file</code> 中,然后读取其中的第一个未读邮件.
 </p>
@@ -86,7 +86,6 @@ Rmail启动时会调用 <code>movemail</code> 这个程序来从各个inbox中�
 因此我们首先要设置 <code>movemail</code> 这个程序的路径. 需要注意的是,存在两个版本的 <code>movemail</code>, 一个是Emacs版的movemail,一个是mailutil版本的movemail. 其中Emacs版的movemail功能很受限,不支持imap协议,也不支持TLS加密. 因此比较推荐使用mailutil版的movemail.
 </p>
 <div class="org-src-container">
-
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> rmail-movemail-program <span style="color: #2d9574;">"/usr/bin/movemail"</span><span style="color: #4f97d7;">)</span>
 </pre>
 </div>
@@ -95,7 +94,6 @@ Rmail启动时会调用 <code>movemail</code> 这个程序来从各个inbox中�
 另外,参数 <code>rmail-movemail-flags</code> 中可以传递额外的命令行参数给movemail程序, 例如要反转下载邮件的顺序可以添加 <code>-r</code> 选项,要支持TLS加密,可以添加 <code>--tls</code> 参数.
 </p>
 <div class="org-src-container">
-
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> rmail-movemail-flags <span style="color: #bc6ec5;">(</span>cons <span style="color: #2d9574;">"--tls"</span> rmail-movemail-flags<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
 </pre>
 </div>
@@ -104,7 +102,6 @@ Rmail启动时会调用 <code>movemail</code> 这个程序来从各个inbox中�
 不过 <b>如果想让movemail下载邮件后依然让服务器保持原邮件,不要向 <code>rmail-movemail-flags</code> 添加 <code>-p</code> 参数,而应该配置 <code>rmail-preserve-inbox</code> 参数</b>
 </p>
 <div class="org-src-container">
-
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> rmail-preserve-inbox t<span style="color: #4f97d7;">)</span>
 </pre>
 </div>
@@ -134,7 +131,6 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 </dl>
 
 <div class="org-src-container">
-
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">push</span> <span style="color: #2d9574;">"imap://lujun9972@imap.sina.com"</span> rmail-primary-inbox-list<span style="color: #4f97d7;">)</span>
 </pre>
 </div>
@@ -143,16 +139,15 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 最后我们告诉Rmail,读取远程server上的mail需要密码
 </p>
 <div class="org-src-container">
-
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> rmail-remote-password-required t<span style="color: #4f97d7;">)</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2">阅读邮件</h2>
-<div class="outline-text-2" id="text-orgheadline2">
+<div id="outline-container-org7f15ac9" class="outline-2">
+<h2 id="org7f15ac9">阅读邮件</h2>
+<div class="outline-text-2" id="text-org7f15ac9">
 <p>
 设置完之后就可以直接运行 <code>M-x rmail</code> 了,rmail会从自动进入Rmail文件中第一个未读的邮件中.
 </p>
@@ -179,9 +174,9 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 </div>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3">修改邮件</h2>
-<div class="outline-text-2" id="text-orgheadline3">
+<div id="outline-container-org07a8990" class="outline-2">
+<h2 id="org07a8990">修改邮件</h2>
+<div class="outline-text-2" id="text-org07a8990">
 <p>
 默认情况下Rmail阅读邮件时是只读的. 但是你可以通过 <code>e (rmail-edit-current-message)</code> 编辑当前邮件.
 </p>
@@ -196,9 +191,9 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-2">
-<h2 id="orgheadline4">删除邮件</h2>
-<div class="outline-text-2" id="text-orgheadline4">
+<div id="outline-container-orgb8a0e43" class="outline-2">
+<h2 id="orgb8a0e43">删除邮件</h2>
+<div class="outline-text-2" id="text-orgb8a0e43">
 <p>
 有两种删除邮件的方法:
 </p>
@@ -221,9 +216,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-2">
-<h2 id="orgheadline5">保存邮件</h2>
-<div class="outline-text-2" id="text-orgheadline5">
+<div id="outline-container-org18149de" class="outline-2">
+<h2 id="org18149de">保存邮件</h2>
+<div class="outline-text-2" id="text-org18149de">
 <p>
 以下命令可以将邮件保存到其他文件:
 </p>
@@ -236,9 +231,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-2">
-<h2 id="orgheadline6">回复邮件</h2>
-<div class="outline-text-2" id="text-orgheadline6">
+<div id="outline-container-orgaa45b2e" class="outline-2">
+<h2 id="orgaa45b2e">回复邮件</h2>
+<div class="outline-text-2" id="text-orgaa45b2e">
 <p>
 除了 <code>C-x m</code> 之外,Rmail还提供了以下快捷键帮你发送邮件:
 </p>
@@ -262,9 +257,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-2">
-<h2 id="orgheadline7">邮件标签</h2>
-<div class="outline-text-2" id="text-orgheadline7">
+<div id="outline-container-orgda4e89a" class="outline-2">
+<h2 id="orgda4e89a">邮件标签</h2>
+<div class="outline-text-2" id="text-orgda4e89a">
 <p>
 你可以为邮件添加各式的标签并以此作为邮件分类的一种方法:
 </p>
@@ -278,9 +273,9 @@ Rmail提供了如下命令来删除邮件:
 </dl>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8">邮件属性</h3>
-<div class="outline-text-3" id="text-orgheadline8">
+<div id="outline-container-org04dc154" class="outline-3">
+<h3 id="org04dc154">邮件属性</h3>
+<div class="outline-text-3" id="text-org04dc154">
 <p>
 某些特定的标签有其特定的意义,这些标签被称之为属性,一般由Rmail自己维护:
 </p>
@@ -299,9 +294,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-2">
-<h2 id="orgheadline9">邮件概览</h2>
-<div class="outline-text-2" id="text-orgheadline9">
+<div id="outline-container-org79b26dc" class="outline-2">
+<h2 id="org79b26dc">邮件概览</h2>
+<div class="outline-text-2" id="text-org79b26dc">
 <p>
 你可以以概览的方式浏览所有的邮件,这时buffer中的每一行都代表一个邮件,并列出了该邮件的编号,日期,发送者,行数,标签以及标题.
 若觉得邮件的总行数显示了也没有意义,可以设置变量 <code>rmail-summary-line-count-flag</code> 为 <code>nil</code>. 这样在概览信息中就不会显示邮件的总行数了.
@@ -316,9 +311,9 @@ Rmail提供了如下命令来删除邮件:
 </p>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10">进入Summary buffer</h3>
-<div class="outline-text-3" id="text-orgheadline10">
+<div id="outline-container-orgbcffe49" class="outline-3">
+<h3 id="orgbcffe49">进入Summary buffer</h3>
+<div class="outline-text-3" id="text-orgbcffe49">
 <p>
 概览buffer中的信息会随着Rmail文件的改变而自动更新.
 </p>
@@ -334,9 +329,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11">Summary buffer的操作</h3>
-<div class="outline-text-3" id="text-orgheadline11">
+<div id="outline-container-orgf7befd4" class="outline-3">
+<h3 id="orgf7befd4">Summary buffer的操作</h3>
+<div class="outline-text-3" id="text-orgf7befd4">
 <p>
 在概览buffer中,可以使用几乎所有的Rmail命令,这些命令会作用于光标所在行的邮件上. 例如
 </p>
@@ -371,10 +366,10 @@ Rmail提供了如下命令来删除邮件:
         <div class="post-meta">
             <span title="post date" class="post-info">2016-12-30</span>
             <span title="last modification date" class="post-info">2017-01-01</span>
-            <span title="tags" class="post-info">:<a href="http://lujun9972.github.io/tags/emacs之怒">Emacs之怒</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; x41">lujun9972</a></span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/emacs之怒">Emacs之怒</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
         </div>
-    <script src="http://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
             <h1>Comments</h1>
             <div id="comment-wrap">
@@ -386,7 +381,7 @@ Rmail提供了如下命令来删除邮件:
          //var disqus_developer = 1;
          var preempt_signal=false;
          var disqus_identifier = "/blog/2016/12/30/使用rmail收取邮件/";
-         var disqus_url = "http://lujun9972.github.io/blog/2016/12/30/使用rmail收取邮件/";
+         var disqus_url = "https://lujun9972.github.io/blog/2016/12/30/使用rmail收取邮件/";
          var disqus_shortname = '暗日';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
@@ -425,11 +420,11 @@ Rmail提供了如下命令来删除邮件:
      });
     </script>
         </section>
-    <script src="http://lujun9972.github.io/media/js/main.js"></script>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; x41">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
