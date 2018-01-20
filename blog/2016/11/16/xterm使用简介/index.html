@@ -53,36 +53,36 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1e4a0ec">1. 配置</a>
+<li><a href="#orgd339c61">1. 配置</a>
 <ul>
-<li><a href="#orgb9de69b">1.1. 让Alt键发送Escape character</a></li>
-<li><a href="#orgf1291f9">1.2. 正确显示中文</a></li>
-<li><a href="#org3a0ce1a">1.3. 滚动栏</a></li>
-<li><a href="#org8dac52b">1.4. log文件</a></li>
-<li><a href="#org7217a95">1.5. 其他配置</a>
+<li><a href="#orgf8feb33">1.1. 让Alt键发送Escape character</a></li>
+<li><a href="#org166f2f7">1.2. 正确显示中文</a></li>
+<li><a href="#org08855e6">1.3. 滚动栏</a></li>
+<li><a href="#org30d5704">1.4. log文件</a></li>
+<li><a href="#org60ba071">1.5. 其他配置</a>
 <ul>
-<li><a href="#org740a6ed">1.5.1. Enable bell urgency</a></li>
-<li><a href="#orgca84d17">1.5.2. Use color in place of bold and italics</a></li>
-<li><a href="#org70127d6">1.5.3. Adjust line spacing</a></li>
-<li><a href="#org79c95d8">1.5.4. Remove black border</a></li>
+<li><a href="#orga5ec26e">1.5.1. Enable bell urgency</a></li>
+<li><a href="#orgb729ed6">1.5.2. Use color in place of bold and italics</a></li>
+<li><a href="#org690e90a">1.5.3. Adjust line spacing</a></li>
+<li><a href="#org3d55688">1.5.4. Remove black border</a></li>
 </ul>
 </li>
-<li><a href="#orgcca33ee">1.6. 保存当前XTerm的配置</a></li>
+<li><a href="#orgefbf762">1.6. 保存当前XTerm的配置</a></li>
 </ul>
 </li>
-<li><a href="#org82dd04c">2. 复制与粘贴</a></li>
-<li><a href="#org1585fcb">3. xterm菜单</a>
+<li><a href="#orgbfd7c57">2. 复制与粘贴</a></li>
+<li><a href="#orgc4b8db0">3. xterm菜单</a>
 <ul>
-<li><a href="#org1b89fb2">3.1. Main Options菜单</a></li>
-<li><a href="#org99b7857">3.2. VT Options菜单</a></li>
-<li><a href="#orgea54762">3.3. VT Fonts菜单</a></li>
-<li><a href="#orgb445528">3.4. Tek options菜单</a></li>
+<li><a href="#orgd5654e7">3.1. Main Options菜单</a></li>
+<li><a href="#org0155abf">3.2. VT Options菜单</a></li>
+<li><a href="#org122d32d">3.3. VT Fonts菜单</a></li>
+<li><a href="#orgb098d64">3.4. Tek options菜单</a></li>
 </ul>
 </li>
-<li><a href="#org7549e5e">4. xterm其他参数说明</a>
+<li><a href="#org8f57c01">4. xterm其他参数说明</a>
 <ul>
-<li><a href="#org1906793">4.1. -ls选项</a></li>
-<li><a href="#orga1ba967">4.2. -xrm选项</a></li>
+<li><a href="#org251e6e6">4.1. -ls选项</a></li>
+<li><a href="#orgab07f6f">4.2. -xrm选项</a></li>
 </ul>
 </li>
 </ul>
@@ -92,12 +92,12 @@
 配置xterm其实挺折腾的,没什么特殊要求的话,用urxvt代替吧.
 </p>
 
-<div id="outline-container-org1e4a0ec" class="outline-2">
-<h2 id="org1e4a0ec"><span class="section-number-2">1</span> 配置</h2>
+<div id="outline-container-orgd339c61" class="outline-2">
+<h2 id="orgd339c61"><span class="section-number-2">1</span> 配置</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgb9de69b" class="outline-3">
-<h3 id="orgb9de69b"><span class="section-number-3">1.1</span> 让Alt键发送Escape character</h3>
+<div id="outline-container-orgf8feb33" class="outline-3">
+<h3 id="orgf8feb33"><span class="section-number-3">1.1</span> 让Alt键发送Escape character</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 默认xterm中的Alt键是发送八位输入符(eight bit input characters)的,
@@ -115,8 +115,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgf1291f9" class="outline-3">
-<h3 id="orgf1291f9"><span class="section-number-3">1.2</span> 正确显示中文</h3>
+<div id="outline-container-org166f2f7" class="outline-3">
+<h3 id="org166f2f7"><span class="section-number-3">1.2</span> 正确显示中文</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 fonts can be specified from the command line, with the options -fn for bitmap font names and -fa for Xft names
@@ -169,8 +169,8 @@ fonts can be specified from the command line, with the options -fn for bitmap fo
 </div>
 </div>
 
-<div id="outline-container-org3a0ce1a" class="outline-3">
-<h3 id="org3a0ce1a"><span class="section-number-3">1.3</span> 滚动栏</h3>
+<div id="outline-container-org08855e6" class="outline-3">
+<h3 id="org08855e6"><span class="section-number-3">1.3</span> 滚动栏</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 使用 <code>-sb</code> 选项可以让xterm显示出滚动条.
@@ -243,8 +243,8 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 
-<div id="outline-container-org8dac52b" class="outline-3">
-<h3 id="org8dac52b"><span class="section-number-3">1.4</span> log文件</h3>
+<div id="outline-container-org30d5704" class="outline-3">
+<h3 id="org30d5704"><span class="section-number-3">1.4</span> log文件</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 若xterm在编译时开启了logging功能,则可以使用 <code>-l</code> 选项让xterm记录下在xterm中的所有操作.
@@ -263,12 +263,12 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 </div>
-<div id="outline-container-org7217a95" class="outline-3">
-<h3 id="org7217a95"><span class="section-number-3">1.5</span> 其他配置</h3>
+<div id="outline-container-org60ba071" class="outline-3">
+<h3 id="org60ba071"><span class="section-number-3">1.5</span> 其他配置</h3>
 <div class="outline-text-3" id="text-1-5">
 </div>
-<div id="outline-container-org740a6ed" class="outline-4">
-<h4 id="org740a6ed"><span class="section-number-4">1.5.1</span> Enable bell urgency</h4>
+<div id="outline-container-orga5ec26e" class="outline-4">
+<h4 id="orga5ec26e"><span class="section-number-4">1.5.1</span> Enable bell urgency</h4>
 <div class="outline-text-4" id="text-1-5-1">
 <div class="org-src-container">
 <pre class="src src-conf-xdefaults"><span style="color: #7590db;">xterm*bellIsUrgent</span>: true
@@ -276,8 +276,8 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 </div>
-<div id="outline-container-orgca84d17" class="outline-4">
-<h4 id="orgca84d17"><span class="section-number-4">1.5.2</span> Use color in place of bold and italics</h4>
+<div id="outline-container-orgb729ed6" class="outline-4">
+<h4 id="orgb729ed6"><span class="section-number-4">1.5.2</span> Use color in place of bold and italics</h4>
 <div class="outline-text-4" id="text-1-5-2">
 <p>
 当字体太小时,粗体和斜体字就变得很难阅读了. 可以用不同的颜色来代替粗体与斜体的展示
@@ -293,8 +293,8 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 </div>
-<div id="outline-container-org70127d6" class="outline-4">
-<h4 id="org70127d6"><span class="section-number-4">1.5.3</span> Adjust line spacing</h4>
+<div id="outline-container-org690e90a" class="outline-4">
+<h4 id="org690e90a"><span class="section-number-4">1.5.3</span> Adjust line spacing</h4>
 <div class="outline-text-4" id="text-1-5-3">
 <div class="org-src-container">
 <pre class="src src-conf-xdefaults"><span style="color: #7590db;">XTerm*scaleHeight</span>: 1.01
@@ -302,8 +302,8 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 </div>
-<div id="outline-container-org79c95d8" class="outline-4">
-<h4 id="org79c95d8"><span class="section-number-4">1.5.4</span> Remove black border</h4>
+<div id="outline-container-org3d55688" class="outline-4">
+<h4 id="org3d55688"><span class="section-number-4">1.5.4</span> Remove black border</h4>
 <div class="outline-text-4" id="text-1-5-4">
 <div class="org-src-container">
 <pre class="src src-conf-xdefaults"><span style="color: #7590db;">xterm*borderWidth</span>: 0
@@ -313,13 +313,13 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 
-<div id="outline-container-orgcca33ee" class="outline-3">
-<h3 id="orgcca33ee"><span class="section-number-3">1.6</span> 保存当前XTerm的配置</h3>
+<div id="outline-container-orgefbf762" class="outline-3">
+<h3 id="orgefbf762"><span class="section-number-3">1.6</span> 保存当前XTerm的配置</h3>
 </div>
 </div>
 
-<div id="outline-container-org82dd04c" class="outline-2">
-<h2 id="org82dd04c"><span class="section-number-2">2</span> 复制与粘贴</h2>
+<div id="outline-container-orgbfd7c57" class="outline-2">
+<h2 id="orgbfd7c57"><span class="section-number-2">2</span> 复制与粘贴</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 只要按下鼠标并拖拽鼠标选中要复制的内容就完成复制操作了.
@@ -343,8 +343,8 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 
-<div id="outline-container-org1585fcb" class="outline-2">
-<h2 id="org1585fcb"><span class="section-number-2">3</span> xterm菜单</h2>
+<div id="outline-container-orgc4b8db0" class="outline-2">
+<h2 id="orgc4b8db0"><span class="section-number-2">3</span> xterm菜单</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 按住Ctrl,再分别单击鼠标左键,中建和右键,会分别弹出 <code>Main Options</code>, <code>VT Options</code>, <code>VT Fonts</code> 菜单.
@@ -355,8 +355,8 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </p>
 </div>
 
-<div id="outline-container-org1b89fb2" class="outline-3">
-<h3 id="org1b89fb2"><span class="section-number-3">3.1</span> Main Options菜单</h3>
+<div id="outline-container-orgd5654e7" class="outline-3">
+<h3 id="orgd5654e7"><span class="section-number-3">3.1</span> Main Options菜单</h3>
 <div class="outline-text-3" id="text-3-1">
 <dl class="org-dl">
 <dt>Secure Keyboard</dt><dd>attempts to ensure only the xterm window, and no other application, receives your keystrokes. The display changes to reverse video when it is invoked. If the display is not in reverse video, the Secure Keyboard mode is not in effect. Please read the "SECURITY" section of the xterm man page for this option's limitations.</dd>
@@ -372,8 +372,8 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 
-<div id="outline-container-org99b7857" class="outline-3">
-<h3 id="org99b7857"><span class="section-number-3">3.2</span> VT Options菜单</h3>
+<div id="outline-container-org0155abf" class="outline-3">
+<h3 id="org0155abf"><span class="section-number-3">3.2</span> VT Options菜单</h3>
 <div class="outline-text-3" id="text-3-2">
 <dl class="org-dl">
 <dt>Select to Clipboard</dt><dd>Normally, selected text is stored in PRIMARY, to be pasted with Shift+Insert or by using the middle mouse button. By toggling this option to on, selected text will use CLIPBOARD, allowing you to paste the text selected in an xterm window into a GUI application using Ctrl+v. The corresponding XTerm resource is selectToClipboard.</dd>
@@ -385,8 +385,8 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 
-<div id="outline-container-orgea54762" class="outline-3">
-<h3 id="orgea54762"><span class="section-number-3">3.3</span> VT Fonts菜单</h3>
+<div id="outline-container-org122d32d" class="outline-3">
+<h3 id="org122d32d"><span class="section-number-3">3.3</span> VT Fonts菜单</h3>
 <div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>When using XLFD fonts, the first seven menu items will change the font face and the font size used in the current xterm window. If you are using an Xft font, only the font size will change, the font face will not change with the different selections,</li>
@@ -396,8 +396,8 @@ xterm中的滚动方式跟其他程序中用滚动条拉动滚动的方式是不
 </div>
 </div>
 
-<div id="outline-container-orgb445528" class="outline-3">
-<h3 id="orgb445528"><span class="section-number-3">3.4</span> Tek options菜单</h3>
+<div id="outline-container-orgb098d64" class="outline-3">
+<h3 id="orgb098d64"><span class="section-number-3">3.4</span> Tek options菜单</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 The first section's options allow you to change the Tek window font size. 
@@ -411,12 +411,12 @@ The second set of options are used to move the focus between the Tek emulation w
 </div>
 
 
-<div id="outline-container-org7549e5e" class="outline-2">
-<h2 id="org7549e5e"><span class="section-number-2">4</span> xterm其他参数说明</h2>
+<div id="outline-container-org8f57c01" class="outline-2">
+<h2 id="org8f57c01"><span class="section-number-2">4</span> xterm其他参数说明</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org1906793" class="outline-3">
-<h3 id="org1906793"><span class="section-number-3">4.1</span> -ls选项</h3>
+<div id="outline-container-org251e6e6" class="outline-3">
+<h3 id="org251e6e6"><span class="section-number-3">4.1</span> -ls选项</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 ls是login shell的意思,若带此选项运行xterm,则xterm会加载你的~/.bash_profile(bash shell),或者你的~/.login文件(c shell)
@@ -424,8 +424,8 @@ ls是login shell的意思,若带此选项运行xterm,则xterm会加载你的~/.b
 </div>
 </div>
 
-<div id="outline-container-orga1ba967" class="outline-3">
-<h3 id="orga1ba967"><span class="section-number-3">4.2</span> -xrm选项</h3>
+<div id="outline-container-orgab07f6f" class="outline-3">
+<h3 id="orgab07f6f"><span class="section-number-3">4.2</span> -xrm选项</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 大多数一般的资源均能被命令行选项明确地设定，例如你可以用 <code>-bg colour</code> 设定窗口背景颜色.但无论如何,有一些资源并没有符合的选项.
@@ -468,7 +468,7 @@ ls是login shell的意思,若带此选项运行xterm,则xterm会加载你的~/.b
          var preempt_signal=false;
          var disqus_identifier = "/blog/2016/11/16/xterm使用简介/";
          var disqus_url = "https://lujun9972.github.io/blog/2016/11/16/xterm使用简介/";
-         var disqus_shortname = '暗日';
+         var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

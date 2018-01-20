@@ -54,11 +54,11 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8a9daf0">使用方法</a></li>
-<li><a href="#org55f10dc">实现</a>
+<li><a href="#org5ad34c8">使用方法</a></li>
+<li><a href="#org78e1873">实现</a>
 <ul>
-<li><a href="#org7e6e6a4">数据来源</a></li>
-<li><a href="#orgb42a857">fortune文件格式</a></li>
+<li><a href="#orgc485e88">数据来源</a></li>
+<li><a href="#org6400cf2">fortune文件格式</a></li>
 </ul>
 </li>
 </ul>
@@ -72,9 +72,9 @@
 fortune文件可以从这里下载:<a href="https://raw.githubusercontent.com/lujun9972/proverb-fortune/master/proverbs">proverbs</a>
 </p>
 
-<div id="outline-container-org8a9daf0" class="outline-2">
-<h2 id="org8a9daf0">使用方法</h2>
-<div class="outline-text-2" id="text-org8a9daf0">
+<div id="outline-container-org5ad34c8" class="outline-2">
+<h2 id="org5ad34c8">使用方法</h2>
+<div class="outline-text-2" id="text-org5ad34c8">
 <ol class="org-ol">
 <li><p>
 要让fortune能够使用该fortune文件,还需要先用 <code>strfile</code> 来产生一个索引文件 <code>proverbs.dat</code>
@@ -108,13 +108,13 @@ fortune文件可以从这里下载:<a href="https://raw.githubusercontent.com/lu
 </div>
 
 
-<div id="outline-container-org55f10dc" class="outline-2">
-<h2 id="org55f10dc">实现</h2>
-<div class="outline-text-2" id="text-org55f10dc">
+<div id="outline-container-org78e1873" class="outline-2">
+<h2 id="org78e1873">实现</h2>
+<div class="outline-text-2" id="text-org78e1873">
 </div>
-<div id="outline-container-org7e6e6a4" class="outline-3">
-<h3 id="org7e6e6a4">数据来源</h3>
-<div class="outline-text-3" id="text-org7e6e6a4">
+<div id="outline-container-orgc485e88" class="outline-3">
+<h3 id="orgc485e88">数据来源</h3>
+<div class="outline-text-3" id="text-orgc485e88">
 <p>
 为了搜索格言,我先尝试在baidu上搜索了一下"格言",结果发现baidu除了显示出相关网页链接之外,还显示了一个小窗口里面列出了大量的格言:
 </p>
@@ -193,9 +193,9 @@ URL中的 <code>%E6%A0%BC%E8%A8%80</code> 就是格言的转义结果.
 </div>
 </div>
 
-<div id="outline-container-orgb42a857" class="outline-3">
-<h3 id="orgb42a857">fortune文件格式</h3>
-<div class="outline-text-3" id="text-orgb42a857">
+<div id="outline-container-org6400cf2" class="outline-3">
+<h3 id="org6400cf2">fortune文件格式</h3>
+<div class="outline-text-3" id="text-org6400cf2">
 <p>
 fortune文件格式蛮简单的,只需要用 <b>只包含%的行</b> 将各格言内容分开就行了. 
 </p>
@@ -257,7 +257,7 @@ fortune文件格式蛮简单的,只需要用 <b>只包含%的行</b> 将各格�
          var preempt_signal=false;
          var disqus_identifier = "/blog/2017/02/28/一个显示中文格言的fortune文件/";
          var disqus_url = "https://lujun9972.github.io/blog/2017/02/28/一个显示中文格言的fortune文件/";
-         var disqus_shortname = '暗日';
+         var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

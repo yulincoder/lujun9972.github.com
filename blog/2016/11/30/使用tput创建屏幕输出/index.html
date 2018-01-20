@@ -53,21 +53,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1528c28">1. tput与terminfo</a></li>
-<li><a href="#orgfd7f917">2. tput常用法</a></li>
-<li><a href="#org5cb7f6c">3. tput的使用</a>
+<li><a href="#orgad37d4d">1. tput与terminfo</a></li>
+<li><a href="#org3130cdd">2. tput常用法</a></li>
+<li><a href="#org8a16039">3. tput的使用</a>
 <ul>
-<li><a href="#org202b0e0">3.1. 设置终端属性</a></li>
-<li><a href="#orgdb76368">3.2. 获取终端属性</a></li>
-<li><a href="#org07e0c2b">3.3. 判断终端是否存在某项能力</a></li>
+<li><a href="#org4467b52">3.1. 设置终端属性</a></li>
+<li><a href="#org43ae8ad">3.2. 获取终端属性</a></li>
+<li><a href="#orgc22c966">3.3. 判断终端是否存在某项能力</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1528c28" class="outline-2">
-<h2 id="org1528c28"><span class="section-number-2">1</span> tput与terminfo</h2>
+<div id="outline-container-orgad37d4d" class="outline-2">
+<h2 id="orgad37d4d"><span class="section-number-2">1</span> tput与terminfo</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 tput 命令将通过 terminfo 数据库对您的终端会话进行初始化和操作。通过使用 tput，您可以更改几项终端功能，如移动或更改光标、更改文本属性，以及清除终端屏幕的特定区域。
@@ -80,8 +80,8 @@ UNIX 中的几个常用程序都依赖 terminfo 数据库提供这些属性以�
 </div>
 </div>
 
-<div id="outline-container-orgfd7f917" class="outline-2">
-<h2 id="orgfd7f917"><span class="section-number-2">2</span> tput常用法</h2>
+<div id="outline-container-org3130cdd" class="outline-2">
+<h2 id="org3130cdd"><span class="section-number-2">2</span> tput常用法</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 tput默认通过$TERM的值来指示终端类型，但我们也可以通过 <code>-T $Type</code> 来指定终端类型。不过一般来说都没有这个必要。
@@ -101,8 +101,8 @@ tput默认通过$TERM的值来指示终端类型，但我们也可以通过 <cod
 </div>
 </div>
 
-<div id="outline-container-org5cb7f6c" class="outline-2">
-<h2 id="org5cb7f6c"><span class="section-number-2">3</span> tput的使用</h2>
+<div id="outline-container-org8a16039" class="outline-2">
+<h2 id="org8a16039"><span class="section-number-2">3</span> tput的使用</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 tput一般用于作三件事情: 设置终端属性,获取终端属性以及判断终端是否支持某项能力.
@@ -117,8 +117,8 @@ tput一般用于作三件事情: 设置终端属性,获取终端属性以及判�
 </p>
 </div>
 
-<div id="outline-container-org202b0e0" class="outline-3">
-<h3 id="org202b0e0"><span class="section-number-3">3.1</span> 设置终端属性</h3>
+<div id="outline-container-org4467b52" class="outline-3">
+<h3 id="org4467b52"><span class="section-number-3">3.1</span> 设置终端属性</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 tput主要是通过输出控制码字符串来实现一些特殊终端效果的. 
@@ -228,8 +228,8 @@ tput cup <span style="color: #a45bad;">2</span> <span style="color: #a45bad;">15
 </div>
 </div>
 
-<div id="outline-container-orgdb76368" class="outline-3">
-<h3 id="orgdb76368"><span class="section-number-3">3.2</span> 获取终端属性</h3>
+<div id="outline-container-org43ae8ad" class="outline-3">
+<h3 id="org43ae8ad"><span class="section-number-3">3.2</span> 获取终端属性</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 tput会输出一个数字,表示该属性的值.
@@ -256,8 +256,8 @@ tput会输出一个数字,表示该属性的值.
 </div>
 </div>
 
-<div id="outline-container-org07e0c2b" class="outline-3">
-<h3 id="org07e0c2b"><span class="section-number-3">3.3</span> 判断终端是否存在某项能力</h3>
+<div id="outline-container-orgc22c966" class="outline-3">
+<h3 id="orgc22c966"><span class="section-number-3">3.3</span> 判断终端是否存在某项能力</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 tput会通过返回值来表示是否具有这项能力(0表示true,1表示false).
@@ -309,7 +309,7 @@ tput会通过返回值来表示是否具有这项能力(0表示true,1表示false
          var preempt_signal=false;
          var disqus_identifier = "/blog/2016/11/30/使用tput创建屏幕输出/";
          var disqus_url = "https://lujun9972.github.io/blog/2016/11/30/使用tput创建屏幕输出/";
-         var disqus_shortname = '暗日';
+         var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

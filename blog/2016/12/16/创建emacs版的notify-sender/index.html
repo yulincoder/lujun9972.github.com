@@ -53,9 +53,9 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7160e4b">1. notify-send</a></li>
-<li><a href="#orgfb80d60">2. EmacsLisp的notification库</a></li>
-<li><a href="#org493968d">3. 实现</a></li>
+<li><a href="#org96d4651">1. notify-send</a></li>
+<li><a href="#org62d64f7">2. EmacsLisp的notification库</a></li>
+<li><a href="#org79784a1">3. 实现</a></li>
 </ul>
 </div>
 </div>
@@ -63,8 +63,8 @@
 最近对EmacsScript颇有兴趣,刚好翻看Emacs Lisp Manual的时候看到"Desktop Notifications"这一章,于是突发奇想,尝试实现一个Emacs版的notify-send.
 </p>
 
-<div id="outline-container-org7160e4b" class="outline-2">
-<h2 id="org7160e4b"><span class="section-number-2">1</span> notify-send</h2>
+<div id="outline-container-org96d4651" class="outline-2">
+<h2 id="org96d4651"><span class="section-number-2">1</span> notify-send</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 notify-send是一个可以用来发送桌面通知的命令, 我经常在脚本中用它来通知一些值得关注的消息.
@@ -102,8 +102,8 @@ notify-send是一个可以用来发送桌面通知的命令, 我经常在脚本�
 </div>
 </div>
 
-<div id="outline-container-orgfb80d60" class="outline-2">
-<h2 id="orgfb80d60"><span class="section-number-2">2</span> EmacsLisp的notification库</h2>
+<div id="outline-container-org62d64f7" class="outline-2">
+<h2 id="org62d64f7"><span class="section-number-2">2</span> EmacsLisp的notification库</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 若Emacs编译时开启了D-Bus支持,则通过加载`notifications'库,Emacs可以给某些操作系统发送"通知"
@@ -366,8 +366,8 @@ notification server未告知原因
 </div>
 </div>
 
-<div id="outline-container-org493968d" class="outline-2">
-<h2 id="org493968d"><span class="section-number-2">3</span> 实现</h2>
+<div id="outline-container-org79784a1" class="outline-2">
+<h2 id="org79784a1"><span class="section-number-2">3</span> 实现</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 有了notifications库,实现起来就异常的简单了,基本上只需要调用 <code>notifications-notify</code> 这个函数就OK了.
@@ -461,7 +461,7 @@ notification server未告知原因
          var preempt_signal=false;
          var disqus_identifier = "/blog/2016/12/16/创建emacs版的notify-sender/";
          var disqus_url = "https://lujun9972.github.io/blog/2016/12/16/创建emacs版的notify-sender/";
-         var disqus_shortname = '暗日';
+         var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

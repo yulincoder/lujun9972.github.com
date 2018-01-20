@@ -53,21 +53,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc46c170">1. 实际ID,有效ID与保存的设置ID</a></li>
-<li><a href="#org424a54b">2. 更改用户/组ID函数</a>
+<li><a href="#orgbd66bd4">1. 实际ID,有效ID与保存的设置ID</a></li>
+<li><a href="#org7f49f77">2. 更改用户/组ID函数</a>
 <ul>
-<li><a href="#org1bc6049">2.1. 关于设置用户ID的规则说明</a></li>
-<li><a href="#org1a2dbc3">2.2. 关于设置组ID的规则说明</a></li>
+<li><a href="#org44ae20a">2.1. 关于设置用户ID的规则说明</a></li>
+<li><a href="#org72da93c">2.2. 关于设置组ID的规则说明</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc46c170" class="outline-2">
-<h2 id="orgc46c170"><span class="section-number-2">1</span> 实际ID,有效ID与保存的设置ID</h2>
+<div id="outline-container-orgbd66bd4" class="outline-2">
+<h2 id="orgbd66bd4"><span class="section-number-2">1</span> 实际ID,有效ID与保存的设置ID</h2>
 </div>
-<div id="outline-container-org424a54b" class="outline-2">
-<h2 id="org424a54b"><span class="section-number-2">2</span> 更改用户/组ID函数</h2>
+<div id="outline-container-org7f49f77" class="outline-2">
+<h2 id="org7f49f77"><span class="section-number-2">2</span> 更改用户/组ID函数</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -91,8 +91,8 @@
 <li>若上面条件都不满足,则将errno设置为EPERM,并返回-1</li>
 </ol>
 </div>
-<div id="outline-container-org1bc6049" class="outline-3">
-<h3 id="org1bc6049"><span class="section-number-3">2.1</span> 关于设置用户ID的规则说明</h3>
+<div id="outline-container-org44ae20a" class="outline-3">
+<h3 id="org44ae20a"><span class="section-number-3">2.1</span> 关于设置用户ID的规则说明</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li>只有超级用户进程可以更改实际用户ID</li>
@@ -103,8 +103,8 @@
 </ol>
 </div>
 </div>
-<div id="outline-container-org1a2dbc3" class="outline-3">
-<h3 id="org1a2dbc3"><span class="section-number-3">2.2</span> 关于设置组ID的规则说明</h3>
+<div id="outline-container-org72da93c" class="outline-3">
+<h3 id="org72da93c"><span class="section-number-3">2.2</span> 关于设置组ID的规则说明</h3>
 <div class="outline-text-3" id="text-2-2">
 <ol class="org-ol">
 <li>组ID的规则类似用户ID的规则</li>
@@ -135,7 +135,7 @@
          var preempt_signal=false;
          var disqus_identifier = "/blog/2015/05/20/用户id与组id/";
          var disqus_url = "https://lujun9972.github.io/blog/2015/05/20/用户id与组id/";
-         var disqus_shortname = '暗日';
+         var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

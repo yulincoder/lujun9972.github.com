@@ -54,13 +54,13 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org90af193">配置</a></li>
-<li><a href="#orgbbde4d5">编写新邮件</a></li>
-<li><a href="#org0483266">添加附件</a></li>
-<li><a href="#orgd6d2d1d">设置mail address的别名</a></li>
-<li><a href="#orga6181ef">添加签名</a></li>
-<li><a href="#orgdb68af7">Queued delivery</a></li>
-<li><a href="#org77be70f">调试</a></li>
+<li><a href="#orga8d4a4a">配置</a></li>
+<li><a href="#orga7b61ec">编写新邮件</a></li>
+<li><a href="#org0f3693e">添加附件</a></li>
+<li><a href="#orgd9bcdfd">设置mail address的别名</a></li>
+<li><a href="#orga3b1fc6">添加签名</a></li>
+<li><a href="#orga8cf813">Queued delivery</a></li>
+<li><a href="#org84e7a17">调试</a></li>
 </ul>
 </div>
 </div>
@@ -68,9 +68,9 @@
 Emacs自带了SMTP库,这使的Emacs无需任何第三方软件的帮助就能通过第三方邮件服务商发送电子邮件.
 </p>
 
-<div id="outline-container-org90af193" class="outline-2">
-<h2 id="org90af193">配置</h2>
-<div class="outline-text-2" id="text-org90af193">
+<div id="outline-container-orga8d4a4a" class="outline-2">
+<h2 id="orga8d4a4a">配置</h2>
+<div class="outline-text-2" id="text-orga8d4a4a">
 <p>
 在写邮件之前,推荐先配置一下 <code>user-full-name</code> 与 <code>user-mail-address</code> 这两个变量. 
 在编写新邮件时,Emacs会使用这两个变量来形成邮件中的 <code>From</code> header域的值.
@@ -114,9 +114,9 @@ Emacs自带了SMTP库,这使的Emacs无需任何第三方软件的帮助就能�
 </div>
 </div>
 
-<div id="outline-container-orgbbde4d5" class="outline-2">
-<h2 id="orgbbde4d5">编写新邮件</h2>
-<div class="outline-text-2" id="text-orgbbde4d5">
+<div id="outline-container-orga7b61ec" class="outline-2">
+<h2 id="orga7b61ec">编写新邮件</h2>
+<div class="outline-text-2" id="text-orga7b61ec">
 <p>
 按下 <code>C-x m</code> 或者直接执行 <code>M-x compose-mail</code> 就会弹出一个 <code>*unsent mail*</code> 的buffer,看起来大概是这样的:
 </p>
@@ -168,9 +168,9 @@ machine smtp服务器地址 login 用户名 port 端口号 password 密码
 </div>
 </div>
 
-<div id="outline-container-org0483266" class="outline-2">
-<h2 id="org0483266">添加附件</h2>
-<div class="outline-text-2" id="text-org0483266">
+<div id="outline-container-org0f3693e" class="outline-2">
+<h2 id="org0f3693e">添加附件</h2>
+<div class="outline-text-2" id="text-org0f3693e">
 <p>
 按下 <code>C-c C-a (mml-attach-file)</code>  就能为邮件添加附件. Emacs会依次提示输入附件路径,类型,描述以及整合方式.
 </p>
@@ -192,9 +192,9 @@ machine smtp服务器地址 login 用户名 port 端口号 password 密码
 </div>
 </div>
 
-<div id="outline-container-orgd6d2d1d" class="outline-2">
-<h2 id="orgd6d2d1d">设置mail address的别名</h2>
-<div class="outline-text-2" id="text-orgd6d2d1d">
+<div id="outline-container-orgd9bcdfd" class="outline-2">
+<h2 id="orgd9bcdfd">设置mail address的别名</h2>
+<div class="outline-text-2" id="text-orgd9bcdfd">
 <p>
 一个别名可以代表一个或多个邮件地址.
 </p>
@@ -233,9 +233,9 @@ source FILENAME
 </div>
 </div>
 
-<div id="outline-container-orga6181ef" class="outline-2">
-<h2 id="orga6181ef">添加签名</h2>
-<div class="outline-text-2" id="text-orga6181ef">
+<div id="outline-container-orga3b1fc6" class="outline-2">
+<h2 id="orga3b1fc6">添加签名</h2>
+<div class="outline-text-2" id="text-orga3b1fc6">
 <p>
 变量 <code>message-signature</code> 的值决定了Emacs如何处理你的邮件签名, 它支持以下几种值:
 </p>
@@ -260,9 +260,9 @@ source FILENAME
 </div>
 </div>
 
-<div id="outline-container-orgdb68af7" class="outline-2">
-<h2 id="orgdb68af7">Queued delivery</h2>
-<div class="outline-text-2" id="text-orgdb68af7">
+<div id="outline-container-orga8cf813" class="outline-2">
+<h2 id="orga8cf813">Queued delivery</h2>
+<div class="outline-text-2" id="text-orga8cf813">
 <p>
 若你的电脑不是一直连接到互联网上的,则你可以先写好邮件,将这些邮件暂存到一个队列中,然后等到连接到互联网上之后再一次性发送出去.
 </p>
@@ -273,9 +273,9 @@ source FILENAME
 </div>
 </div>
 
-<div id="outline-container-org77be70f" class="outline-2">
-<h2 id="org77be70f">调试</h2>
-<div class="outline-text-2" id="text-org77be70f">
+<div id="outline-container-org84e7a17" class="outline-2">
+<h2 id="org84e7a17">调试</h2>
+<div class="outline-text-2" id="text-org84e7a17">
 <p>
 在发送邮件的过程中如果出现问题想调试,可以开启smtpmail的调试功能:
 </p>
@@ -311,7 +311,7 @@ source FILENAME
          var preempt_signal=false;
          var disqus_identifier = "/blog/2016/12/29/使用emacs发送电子邮件/";
          var disqus_url = "https://lujun9972.github.io/blog/2016/12/29/使用emacs发送电子邮件/";
-         var disqus_shortname = '暗日';
+         var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

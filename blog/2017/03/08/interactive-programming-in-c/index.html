@@ -54,10 +54,10 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org39ad4f2">An example with the Game of Life</a>
+<li><a href="#orgc860a70">An example with the Game of Life</a>
 <ul>
-<li><a href="#org2b7759f">Quick start:</a></li>
-<li><a href="#org63b8d73">dlopen, dlsym, and dlclose</a></li>
+<li><a href="#orgccd8610">Quick start:</a></li>
+<li><a href="#org1542cb9">dlopen, dlsym, and dlclose</a></li>
 </ul>
 </li>
 </ul>
@@ -91,9 +91,9 @@
 这使得你很难把把交互式编程与 <a href="http://nullprogram.com/blog/2014/10/21/">基于C的面向对象编程</a> 整合起来用.
 </p>
 
-<div id="outline-container-org39ad4f2" class="outline-2">
-<h2 id="org39ad4f2">An example with the Game of Life</h2>
-<div class="outline-text-2" id="text-org39ad4f2">
+<div id="outline-container-orgc860a70" class="outline-2">
+<h2 id="orgc860a70">An example with the Game of Life</h2>
+<div class="outline-text-2" id="text-orgc860a70">
 <p>
 为了说明交互式编程的实现远离,我这里搞了个例子. 它是一个简单的基于 <code>ncurses</code> 实现的Life游戏. 你可以下载它的源代码并在类Unix系统上跑起来体验一下.
 </p>
@@ -103,9 +103,9 @@
 </ul>
 </div>
 
-<div id="outline-container-org2b7759f" class="outline-3">
-<h3 id="org2b7759f">Quick start:</h3>
-<div class="outline-text-3" id="text-org2b7759f">
+<div id="outline-container-orgccd8610" class="outline-3">
+<h3 id="orgccd8610">Quick start:</h3>
+<div class="outline-text-3" id="text-orgccd8610">
 <ol class="org-ol">
 <li>在终端下运行 <code>make</code> 编译代码, 然后运行 <code>./main</code> 启动程序. 按 <code>r</code> 生成随机的初始状态, 按 <code>q</code> 退出程序.</li>
 <li>编辑 <code>game.c</code> 做一些修改.</li>
@@ -204,9 +204,9 @@ structure.
 </div>
 </div>
 
-<div id="outline-container-org63b8d73" class="outline-3">
-<h3 id="org63b8d73">dlopen, dlsym, and dlclose</h3>
-<div class="outline-text-3" id="text-org63b8d73">
+<div id="outline-container-org1542cb9" class="outline-3">
+<h3 id="org1542cb9">dlopen, dlsym, and dlclose</h3>
+<div class="outline-text-3" id="text-org1542cb9">
 <p>
 The wrapper is focused on calling dlopen(), dlsym(), and dlclose() in the
 right order at the right time. The game will be compiled to the file
@@ -398,7 +398,7 @@ ability to develop interactively is very appealing.
          var preempt_signal=false;
          var disqus_identifier = "/blog/2017/03/08/interactive-programming-in-c/";
          var disqus_url = "https://lujun9972.github.io/blog/2017/03/08/interactive-programming-in-c/";
-         var disqus_shortname = '暗日';
+         var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

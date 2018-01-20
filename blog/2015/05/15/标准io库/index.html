@@ -53,54 +53,54 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org5a14683">1. 流与FILE对象</a>
+<li><a href="#org4f33080">1. 流与FILE对象</a>
 <ul>
-<li><a href="#org26aee11">1.1. 流定向</a>
+<li><a href="#orgf052024">1.1. 流定向</a>
 <ul>
-<li><a href="#org9cc08e0">1.1.1. fwide函数:设置流的定向</a></li>
-<li><a href="#orgef19f95">1.1.2. freopen函数:清除一个流的定向</a></li>
+<li><a href="#orgc3d21d7">1.1.1. fwide函数:设置流的定向</a></li>
+<li><a href="#orgd1470a3">1.1.2. freopen函数:清除一个流的定向</a></li>
 </ul>
 </li>
-<li><a href="#orga570315">1.2. 打开流</a></li>
-<li><a href="#org20958a0">1.3. 读写流</a>
+<li><a href="#org8c64767">1.2. 打开流</a></li>
+<li><a href="#orgee18189">1.3. 读写流</a>
 <ul>
-<li><a href="#orgd8b3f18">1.3.1. 一次一个字符的IO</a></li>
-<li><a href="#org12ddd27">1.3.2. 一次一行的IO</a></li>
-<li><a href="#orgc7f4007">1.3.3. 二进制直接IO</a></li>
+<li><a href="#org980e4a8">1.3.1. 一次一个字符的IO</a></li>
+<li><a href="#orgaad2c08">1.3.2. 一次一行的IO</a></li>
+<li><a href="#org5b1e1b1">1.3.3. 二进制直接IO</a></li>
 </ul>
 </li>
-<li><a href="#org83f6821">1.4. 定位流</a></li>
-<li><a href="#org36770bf">1.5. 错误判断</a></li>
-<li><a href="#org7f7f19c">1.6. fileno:获取流对应的文件描述符</a></li>
+<li><a href="#org3f4b594">1.4. 定位流</a></li>
+<li><a href="#org6f76829">1.5. 错误判断</a></li>
+<li><a href="#org04f4d58">1.6. fileno:获取流对应的文件描述符</a></li>
 </ul>
 </li>
-<li><a href="#orga32b6b2">2. 缓冲</a>
+<li><a href="#orgace88cf">2. 缓冲</a>
 <ul>
-<li><a href="#org5f7281f">2.1. 全缓冲</a></li>
-<li><a href="#orgbd3748d">2.2. 行缓冲</a></li>
-<li><a href="#org5d7da92">2.3. 缓冲的惯例</a></li>
-<li><a href="#org4c67366">2.4. 更改缓冲类型</a>
+<li><a href="#orgc3093c8">2.1. 全缓冲</a></li>
+<li><a href="#org3093bbd">2.2. 行缓冲</a></li>
+<li><a href="#org75be361">2.3. 缓冲的惯例</a></li>
+<li><a href="#org4fb07f6">2.4. 更改缓冲类型</a>
 <ul>
-<li><a href="#orgbcd242b">2.4.1. setbuf函数:打开/关闭缓冲机制</a></li>
-<li><a href="#orgc4a3b19">2.4.2. setvbuf函数:精确指定缓冲类型</a></li>
-<li><a href="#orgc9094cc">2.4.3. fflush函数:强制将缓冲区内容写入磁盘</a></li>
+<li><a href="#org8b7786c">2.4.1. setbuf函数:打开/关闭缓冲机制</a></li>
+<li><a href="#orge619b0b">2.4.2. setvbuf函数:精确指定缓冲类型</a></li>
+<li><a href="#org77cd143">2.4.3. fflush函数:强制将缓冲区内容写入磁盘</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org279dcb8">3. 标准输入,标准输出和标准出错</a></li>
-<li><a href="#org2251c7b">4. 产生临时文件</a></li>
-<li><a href="#org303e425">5. 线程安全的方式管理FILE对象</a></li>
+<li><a href="#orgcbc4fd9">3. 标准输入,标准输出和标准出错</a></li>
+<li><a href="#org9427c87">4. 产生临时文件</a></li>
+<li><a href="#org6703231">5. 线程安全的方式管理FILE对象</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5a14683" class="outline-2">
-<h2 id="org5a14683"><span class="section-number-2">1</span> 流与FILE对象</h2>
+<div id="outline-container-org4f33080" class="outline-2">
+<h2 id="org4f33080"><span class="section-number-2">1</span> 流与FILE对象</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org26aee11" class="outline-3">
-<h3 id="org26aee11"><span class="section-number-3">1.1</span> 流定向</h3>
+<div id="outline-container-orgf052024" class="outline-3">
+<h3 id="orgf052024"><span class="section-number-3">1.1</span> 流定向</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 标准IO文件流可用于单字符或多字符字符集. 流的定向(orientation)决定了所读,写的字符是单字符还是多字符的.
@@ -119,8 +119,8 @@
 </p>
 </div>
 
-<div id="outline-container-org9cc08e0" class="outline-4">
-<h4 id="org9cc08e0"><span class="section-number-4">1.1.1</span> fwide函数:设置流的定向</h4>
+<div id="outline-container-orgc3d21d7" class="outline-4">
+<h4 id="orgc3d21d7"><span class="section-number-4">1.1.1</span> fwide函数:设置流的定向</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -143,13 +143,13 @@
 </div>
 </div>
 
-<div id="outline-container-orgef19f95" class="outline-4">
-<h4 id="orgef19f95"><span class="section-number-4">1.1.2</span> freopen函数:清除一个流的定向</h4>
+<div id="outline-container-orgd1470a3" class="outline-4">
+<h4 id="orgd1470a3"><span class="section-number-4">1.1.2</span> freopen函数:清除一个流的定向</h4>
 </div>
 </div>
 
-<div id="outline-container-orga570315" class="outline-3">
-<h3 id="orga570315"><span class="section-number-3">1.2</span> 打开流</h3>
+<div id="outline-container-org8c64767" class="outline-3">
+<h3 id="org8c64767"><span class="section-number-3">1.2</span> 打开流</h3>
 <div class="outline-text-3" id="text-1-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -197,12 +197,12 @@ fdopen将一个标准IO流与文件描述符相结合.
 </div>
 </div>
 
-<div id="outline-container-org20958a0" class="outline-3">
-<h3 id="org20958a0"><span class="section-number-3">1.3</span> 读写流</h3>
+<div id="outline-container-orgee18189" class="outline-3">
+<h3 id="orgee18189"><span class="section-number-3">1.3</span> 读写流</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-orgd8b3f18" class="outline-4">
-<h4 id="orgd8b3f18"><span class="section-number-4">1.3.1</span> 一次一个字符的IO</h4>
+<div id="outline-container-org980e4a8" class="outline-4">
+<h4 id="org980e4a8"><span class="section-number-4">1.3.1</span> 一次一个字符的IO</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -232,8 +232,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </p>
 </div>
 </div>
-<div id="outline-container-org12ddd27" class="outline-4">
-<h4 id="org12ddd27"><span class="section-number-4">1.3.2</span> 一次一行的IO</h4>
+<div id="outline-container-orgaad2c08" class="outline-4">
+<h4 id="orgaad2c08"><span class="section-number-4">1.3.2</span> 一次一行的IO</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -255,8 +255,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc7f4007" class="outline-4">
-<h4 id="orgc7f4007"><span class="section-number-4">1.3.3</span> 二进制直接IO</h4>
+<div id="outline-container-org5b1e1b1" class="outline-4">
+<h4 id="org5b1e1b1"><span class="section-number-4">1.3.3</span> 二进制直接IO</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -272,8 +272,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-org83f6821" class="outline-3">
-<h3 id="org83f6821"><span class="section-number-3">1.4</span> 定位流</h3>
+<div id="outline-container-org3f4b594" class="outline-3">
+<h3 id="org3f4b594"><span class="section-number-3">1.4</span> 定位流</h3>
 <div class="outline-text-3" id="text-1-4">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -292,8 +292,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-org36770bf" class="outline-3">
-<h3 id="org36770bf"><span class="section-number-3">1.5</span> 错误判断</h3>
+<div id="outline-container-org6f76829" class="outline-3">
+<h3 id="org6f76829"><span class="section-number-3">1.5</span> 错误判断</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 读取出错或到达文件结尾,读取函数的返回值都是同一个值. 为了区分这两种不同的情况,必须调用ferror或feof
@@ -310,8 +310,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-org7f7f19c" class="outline-3">
-<h3 id="org7f7f19c"><span class="section-number-3">1.6</span> fileno:获取流对应的文件描述符</h3>
+<div id="outline-container-org04f4d58" class="outline-3">
+<h3 id="org04f4d58"><span class="section-number-3">1.6</span> fileno:获取流对应的文件描述符</h3>
 <div class="outline-text-3" id="text-1-6">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -322,16 +322,16 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 </div>
-<div id="outline-container-orga32b6b2" class="outline-2">
-<h2 id="orga32b6b2"><span class="section-number-2">2</span> 缓冲</h2>
+<div id="outline-container-orgace88cf" class="outline-2">
+<h2 id="orgace88cf"><span class="section-number-2">2</span> 缓冲</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 标准IO提供了2种类型的缓冲
 </p>
 </div>
 
-<div id="outline-container-org5f7281f" class="outline-3">
-<h3 id="org5f7281f"><span class="section-number-3">2.1</span> 全缓冲</h3>
+<div id="outline-container-orgc3093c8" class="outline-3">
+<h3 id="orgc3093c8"><span class="section-number-3">2.1</span> 全缓冲</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 填满IO缓冲区才进行实际的IO操作
@@ -343,8 +343,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgbd3748d" class="outline-3">
-<h3 id="orgbd3748d"><span class="section-number-3">2.2</span> 行缓冲</h3>
+<div id="outline-container-org3093bbd" class="outline-3">
+<h3 id="org3093bbd"><span class="section-number-3">2.2</span> 行缓冲</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 当输入和输出中遇到换行符时,标准IO库执行IO操作
@@ -356,8 +356,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-org5d7da92" class="outline-3">
-<h3 id="org5d7da92"><span class="section-number-3">2.3</span> 缓冲的惯例</h3>
+<div id="outline-container-org75be361" class="outline-3">
+<h3 id="org75be361"><span class="section-number-3">2.3</span> 缓冲的惯例</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 一般标准IO缓冲的惯例为:标准出错不带缓冲,打开至终端设备的流是行缓冲,其他流是全缓冲.
@@ -365,8 +365,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-org4c67366" class="outline-3">
-<h3 id="org4c67366"><span class="section-number-3">2.4</span> 更改缓冲类型</h3>
+<div id="outline-container-org4fb07f6" class="outline-3">
+<h3 id="org4fb07f6"><span class="section-number-3">2.4</span> 更改缓冲类型</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -377,8 +377,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgbcd242b" class="outline-4">
-<h4 id="orgbcd242b"><span class="section-number-4">2.4.1</span> setbuf函数:打开/关闭缓冲机制</h4>
+<div id="outline-container-org8b7786c" class="outline-4">
+<h4 id="org8b7786c"><span class="section-number-4">2.4.1</span> setbuf函数:打开/关闭缓冲机制</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <p>
 当为打开缓冲机制时,这里参数buf必须为一个长度为BUFSIZ的缓冲区(BUFSIZ定义在stdio.h中)
@@ -390,8 +390,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgc4a3b19" class="outline-4">
-<h4 id="orgc4a3b19"><span class="section-number-4">2.4.2</span> setvbuf函数:精确指定缓冲类型</h4>
+<div id="outline-container-orge619b0b" class="outline-4">
+<h4 id="orge619b0b"><span class="section-number-4">2.4.2</span> setvbuf函数:精确指定缓冲类型</h4>
 <div class="outline-text-4" id="text-2-4-2">
 <ul class="org-ul">
 <li><p>
@@ -438,8 +438,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-orgc9094cc" class="outline-4">
-<h4 id="orgc9094cc"><span class="section-number-4">2.4.3</span> fflush函数:强制将缓冲区内容写入磁盘</h4>
+<div id="outline-container-org77cd143" class="outline-4">
+<h4 id="org77cd143"><span class="section-number-4">2.4.3</span> fflush函数:强制将缓冲区内容写入磁盘</h4>
 <div class="outline-text-4" id="text-2-4-3">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -451,8 +451,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 </div>
-<div id="outline-container-org279dcb8" class="outline-2">
-<h2 id="org279dcb8"><span class="section-number-2">3</span> 标准输入,标准输出和标准出错</h2>
+<div id="outline-container-orgcbc4fd9" class="outline-2">
+<h2 id="orgcbc4fd9"><span class="section-number-2">3</span> 标准输入,标准输出和标准出错</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 &lt;stdio.h&gt;中预定义了三个文件指针:stdin,stdout和stderr
@@ -460,8 +460,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </p>
 </div>
 </div>
-<div id="outline-container-org2251c7b" class="outline-2">
-<h2 id="org2251c7b"><span class="section-number-2">4</span> 产生临时文件</h2>
+<div id="outline-container-org9427c87" class="outline-2">
+<h2 id="org9427c87"><span class="section-number-2">4</span> 产生临时文件</h2>
 <div class="outline-text-2" id="text-4">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdio.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -502,8 +502,8 @@ putc和fputc的区别类似于getc和fgetc的区别.
 </div>
 </div>
 
-<div id="outline-container-org303e425" class="outline-2">
-<h2 id="org303e425"><span class="section-number-2">5</span> 线程安全的方式管理FILE对象</h2>
+<div id="outline-container-org6703231" class="outline-2">
+<h2 id="org6703231"><span class="section-number-2">5</span> 线程安全的方式管理FILE对象</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 PSOXI.1提供了以线程安全的方式管理FILE文件的方法. 可以使用`flockfile'和`ftrylockfile'获取与FILE对象关联的锁,且这个锁为递归锁.
@@ -566,7 +566,7 @@ PSOXI.1提供了以线程安全的方式管理FILE文件的方法. 可以使用`
          var preempt_signal=false;
          var disqus_identifier = "/blog/2015/05/15/标准io库/";
          var disqus_url = "https://lujun9972.github.io/blog/2015/05/15/标准io库/";
-         var disqus_shortname = '暗日';
+         var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
