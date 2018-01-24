@@ -53,30 +53,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org313a3a2">1. passwd文件</a></li>
-<li><a href="#org13128e9">2. shadow文件</a></li>
-<li><a href="#orgc8058b0">3. group文件</a></li>
-<li><a href="#orge97ca7a">4. 其他数据文件</a>
+<li><a href="#orgb276bf3">1. passwd文件</a></li>
+<li><a href="#org42922a2">2. shadow文件</a></li>
+<li><a href="#org94efb2b">3. group文件</a></li>
+<li><a href="#org0af57fa">4. 其他数据文件</a>
 <ul>
-<li><a href="#org6b331cd">4.1. hosts文件</a></li>
-<li><a href="#org0dd487d">4.2. networks文件</a></li>
-<li><a href="#orgc31c275">4.3. protocols文件</a></li>
-<li><a href="#orga3bffdf">4.4. services文件</a></li>
+<li><a href="#org333f64a">4.1. hosts文件</a></li>
+<li><a href="#org6289b22">4.2. networks文件</a></li>
+<li><a href="#org60f67dc">4.3. protocols文件</a></li>
+<li><a href="#orge8e9236">4.4. services文件</a></li>
 </ul>
 </li>
-<li><a href="#org514e62c">5. 登录账户记录</a></li>
-<li><a href="#org923b4a6">6. 系统标识</a>
+<li><a href="#org284a5c2">5. 登录账户记录</a></li>
+<li><a href="#org1a1496d">6. 系统标识</a>
 <ul>
-<li><a href="#org0cdba9a">6.1. uname函数:获取当前主机与操作系统相关信息</a></li>
-<li><a href="#orga232058">6.2. gethostname函数:只返回主机名</a></li>
+<li><a href="#orgce40004">6.1. uname函数:获取当前主机与操作系统相关信息</a></li>
+<li><a href="#org9d8ddb1">6.2. gethostname函数:只返回主机名</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org313a3a2" class="outline-2">
-<h2 id="org313a3a2"><span class="section-number-2">1</span> passwd文件</h2>
+<div id="outline-container-orgb276bf3" class="outline-2">
+<h2 id="orgb276bf3"><span class="section-number-2">1</span> passwd文件</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 &lt;pwd.h&gt;中定义了passwd结构体,并提供了获取指定passwd项的函数
@@ -130,8 +130,8 @@
 </div>
 </div>
 
-<div id="outline-container-org13128e9" class="outline-2">
-<h2 id="org13128e9"><span class="section-number-2">2</span> shadow文件</h2>
+<div id="outline-container-org42922a2" class="outline-2">
+<h2 id="org42922a2"><span class="section-number-2">2</span> shadow文件</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 类似passwd相关函数
@@ -165,8 +165,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgc8058b0" class="outline-2">
-<h2 id="orgc8058b0"><span class="section-number-2">3</span> group文件</h2>
+<div id="outline-container-org94efb2b" class="outline-2">
+<h2 id="org94efb2b"><span class="section-number-2">3</span> group文件</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">grp.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -218,8 +218,8 @@
 </div>
 
 
-<div id="outline-container-orge97ca7a" class="outline-2">
-<h2 id="orge97ca7a"><span class="section-number-2">4</span> 其他数据文件</h2>
+<div id="outline-container-org0af57fa" class="outline-2">
+<h2 id="org0af57fa"><span class="section-number-2">4</span> 其他数据文件</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 对于hosts,networks,protocols,services等系统文件,UNIX也提供了与passwd类似的函数.
@@ -320,8 +320,8 @@ end函数
 </ul>
 </div>
 
-<div id="outline-container-org6b331cd" class="outline-3">
-<h3 id="org6b331cd"><span class="section-number-3">4.1</span> hosts文件</h3>
+<div id="outline-container-org333f64a" class="outline-3">
+<h3 id="org333f64a"><span class="section-number-3">4.1</span> hosts文件</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 本机信息存放在/etc/hosts中,可以通过调用gethostent查找本机主机信息
@@ -398,8 +398,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-org0dd487d" class="outline-3">
-<h3 id="org0dd487d"><span class="section-number-3">4.2</span> networks文件</h3>
+<div id="outline-container-org6289b22" class="outline-3">
+<h3 id="org6289b22"><span class="section-number-3">4.2</span> networks文件</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 我们使用以下函数获得网络名字和网络编号
@@ -430,8 +430,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-orgc31c275" class="outline-3">
-<h3 id="orgc31c275"><span class="section-number-3">4.3</span> protocols文件</h3>
+<div id="outline-container-org60f67dc" class="outline-3">
+<h3 id="org60f67dc"><span class="section-number-3">4.3</span> protocols文件</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 我们可以使用以下函数在协议名字和协议编号之间进行映射
@@ -461,8 +461,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-orga3bffdf" class="outline-3">
-<h3 id="orga3bffdf"><span class="section-number-3">4.4</span> services文件</h3>
+<div id="outline-container-orge8e9236" class="outline-3">
+<h3 id="orge8e9236"><span class="section-number-3">4.4</span> services文件</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 服务由地址的端口号部分表示,每个服务由一个唯一的总所周知的端口号来表示
@@ -492,8 +492,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 </div>
-<div id="outline-container-org514e62c" class="outline-2">
-<h2 id="org514e62c"><span class="section-number-2">5</span> 登录账户记录</h2>
+<div id="outline-container-org284a5c2" class="outline-2">
+<h2 id="org284a5c2"><span class="section-number-2">5</span> 登录账户记录</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 大多数UNIX系统都提供下面两个数据文件:
@@ -517,12 +517,12 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-org923b4a6" class="outline-2">
-<h2 id="org923b4a6"><span class="section-number-2">6</span> 系统标识</h2>
+<div id="outline-container-org1a1496d" class="outline-2">
+<h2 id="org1a1496d"><span class="section-number-2">6</span> 系统标识</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org0cdba9a" class="outline-3">
-<h3 id="org0cdba9a"><span class="section-number-3">6.1</span> uname函数:获取当前主机与操作系统相关信息</h3>
+<div id="outline-container-orgce40004" class="outline-3">
+<h3 id="orgce40004"><span class="section-number-3">6.1</span> uname函数:获取当前主机与操作系统相关信息</h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/utsname.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -541,8 +541,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-orga232058" class="outline-3">
-<h3 id="orga232058"><span class="section-number-3">6.2</span> gethostname函数:只返回主机名</h3>
+<div id="outline-container-org9d8ddb1" class="outline-3">
+<h3 id="org9d8ddb1"><span class="section-number-3">6.2</span> gethostname函数:只返回主机名</h3>
 <div class="outline-text-3" id="text-6-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>

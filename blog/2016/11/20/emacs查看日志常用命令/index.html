@@ -53,17 +53,17 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0d537f2">1. Tramp</a></li>
-<li><a href="#org04e74c4">2. read-only-mode</a></li>
-<li><a href="#orga618c28">3. keep-lines/flush-lines</a></li>
-<li><a href="#org8951e49">4. Highlights</a></li>
-<li><a href="#org130d7a7">5. auto-revert</a></li>
+<li><a href="#orga61f490">1. Tramp</a></li>
+<li><a href="#org21a8c42">2. read-only-mode</a></li>
+<li><a href="#org310887e">3. keep-lines/flush-lines</a></li>
+<li><a href="#orgb26a480">4. Highlights</a></li>
+<li><a href="#org6d66576">5. auto-revert</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0d537f2" class="outline-2">
-<h2 id="org0d537f2"><span class="section-number-2">1</span> Tramp</h2>
+<div id="outline-container-orga61f490" class="outline-2">
+<h2 id="orga61f490"><span class="section-number-2">1</span> Tramp</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Emacs提供了tramp可以让你直接访问远程主机上的日志文件. 
@@ -83,8 +83,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </div>
 </div>
 
-<div id="outline-container-org04e74c4" class="outline-2">
-<h2 id="org04e74c4"><span class="section-number-2">2</span> read-only-mode</h2>
+<div id="outline-container-org21a8c42" class="outline-2">
+<h2 id="org21a8c42"><span class="section-number-2">2</span> read-only-mode</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 若怕查看日志文件时不小心对它进行了修改,那么就可以进入只读模式,方法是执行 <code>M-x read-only-mode</code>.
@@ -100,8 +100,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </div>
 </div>
 
-<div id="outline-container-orga618c28" class="outline-2">
-<h2 id="orga618c28"><span class="section-number-2">3</span> keep-lines/flush-lines</h2>
+<div id="outline-container-org310887e" class="outline-2">
+<h2 id="org310887e"><span class="section-number-2">3</span> keep-lines/flush-lines</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 有时日志中的内容太多了,为了凸出重点就需要用 <code>keep-lines</code> 或 <code>flush-lines</code> 来删除掉不用关注的内容.
@@ -222,8 +222,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </div>
 </div>
 
-<div id="outline-container-org8951e49" class="outline-2">
-<h2 id="org8951e49"><span class="section-number-2">4</span> Highlights</h2>
+<div id="outline-container-orgb26a480" class="outline-2">
+<h2 id="orgb26a480"><span class="section-number-2">4</span> Highlights</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 我们还可以让Emacs依据某种条件高亮显示日志中的某些内容. 常用的高亮命令有以下几个
@@ -286,8 +286,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </p>
 </div>
 </div>
-<div id="outline-container-org130d7a7" class="outline-2">
-<h2 id="org130d7a7"><span class="section-number-2">5</span> auto-revert</h2>
+<div id="outline-container-org6d66576" class="outline-2">
+<h2 id="org6d66576"><span class="section-number-2">5</span> auto-revert</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 在服务不停止的情况下,会不断往日志文件中加入新的内容. 若希望Emacs自动反映出这些改动那么就可以使用 <code>M-x auto-revert-mode</code> 与 <code>M-x auto-revert-tail-mode</code> 了.

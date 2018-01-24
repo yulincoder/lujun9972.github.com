@@ -54,10 +54,10 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0cfd90d">在linux/cygwin下获取CPU核的数量</a></li>
-<li><a href="#org144084c">在Windows下获取CPU核的数量</a></li>
-<li><a href="#org9207bf4">在BSD/OSX下获取CPU核的数量</a></li>
-<li><a href="#orged966b0">综合起来</a></li>
+<li><a href="#org6629dc5">在linux/cygwin下获取CPU核的数量</a></li>
+<li><a href="#orge19ad44">在Windows下获取CPU核的数量</a></li>
+<li><a href="#org6be8304">在BSD/OSX下获取CPU核的数量</a></li>
+<li><a href="#org91ec14b">综合起来</a></li>
 </ul>
 </div>
 </div>
@@ -65,9 +65,9 @@
 从 <a href="http://nullprogram.com/blog/2015/10/14/">Counting Processor Cores in Emacs</a> 这里看到的,记录一下
 </p>
 
-<div id="outline-container-org0cfd90d" class="outline-2">
-<h2 id="org0cfd90d">在linux/cygwin下获取CPU核的数量</h2>
-<div class="outline-text-2" id="text-org0cfd90d">
+<div id="outline-container-org6629dc5" class="outline-2">
+<h2 id="org6629dc5">在linux/cygwin下获取CPU核的数量</h2>
+<div class="outline-text-2" id="text-org6629dc5">
 <p>
 linux/cygwin提供了 <code>/proc</code> 虚拟文件系统可以获取系统信息,具体来说,在 <code>/proc/cpuinfo</code> 中会列出所有CPU核的信息
 </p>
@@ -81,9 +81,9 @@ linux/cygwin提供了 <code>/proc</code> 虚拟文件系统可以获取系统信
 </div>
 </div>
 
-<div id="outline-container-org144084c" class="outline-2">
-<h2 id="org144084c">在Windows下获取CPU核的数量</h2>
-<div class="outline-text-2" id="text-org144084c">
+<div id="outline-container-orge19ad44" class="outline-2">
+<h2 id="orge19ad44">在Windows下获取CPU核的数量</h2>
+<div class="outline-text-2" id="text-orge19ad44">
 <p>
 Windows提供了一个名为 <code>NUMBER_OF_PROCESSORS</code> 的环境变量,里面存的就是核的数量
 </p>
@@ -96,9 +96,9 @@ Windows提供了一个名为 <code>NUMBER_OF_PROCESSORS</code> 的环境变量,�
 </div>
 </div>
 
-<div id="outline-container-org9207bf4" class="outline-2">
-<h2 id="org9207bf4">在BSD/OSX下获取CPU核的数量</h2>
-<div class="outline-text-2" id="text-org9207bf4">
+<div id="outline-container-org6be8304" class="outline-2">
+<h2 id="org6be8304">在BSD/OSX下获取CPU核的数量</h2>
+<div class="outline-text-2" id="text-org6be8304">
 <p>
 需要调用 <code>sysctl</code> 来获取
 </p>
@@ -112,9 +112,9 @@ Windows提供了一个名为 <code>NUMBER_OF_PROCESSORS</code> 的环境变量,�
 </div>
 </div>
 
-<div id="outline-container-orged966b0" class="outline-2">
-<h2 id="orged966b0">综合起来</h2>
-<div class="outline-text-2" id="text-orged966b0">
+<div id="outline-container-org91ec14b" class="outline-2">
+<h2 id="org91ec14b">综合起来</h2>
+<div class="outline-text-2" id="text-org91ec14b">
 <p>
 通过变量 <code>system-type</code> 可以获得操作系统的类型,不同操作系统调用不同的方法来获取CPU核的数量
 </p>
