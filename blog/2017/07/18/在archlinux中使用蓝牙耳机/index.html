@@ -54,20 +54,20 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org57e6e1e">安装必要的软件包</a></li>
-<li><a href="#org0df0c01">启动蓝牙服务</a></li>
-<li><a href="#org277b46e">启动pulseaudio服务</a></li>
-<li><a href="#org6119783">将用户加入lp用户组</a></li>
-<li><a href="#org87be641">配置蓝牙(摘自archwiki)</a></li>
-<li><a href="#orge1e1bf9">设置自动启动蓝牙</a></li>
-<li><a href="#org1fbd724">指定使用蓝牙音频输出</a></li>
+<li><a href="#orgbe717cc">安装必要的软件包</a></li>
+<li><a href="#org52779fc">启动蓝牙服务</a></li>
+<li><a href="#orgdc170da">启动pulseaudio服务</a></li>
+<li><a href="#orgd4d83f7">将用户加入lp用户组</a></li>
+<li><a href="#org115d877">配置蓝牙(摘自archwiki)</a></li>
+<li><a href="#orgff62199">设置自动启动蓝牙</a></li>
+<li><a href="#org3efb740">指定使用蓝牙音频输出</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org57e6e1e" class="outline-2">
-<h2 id="org57e6e1e">安装必要的软件包</h2>
-<div class="outline-text-2" id="text-org57e6e1e">
+<div id="outline-container-orgbe717cc" class="outline-2">
+<h2 id="orgbe717cc">安装必要的软件包</h2>
+<div class="outline-text-2" id="text-orgbe717cc">
 <div class="org-src-container">
 <pre class="src src-shell">pacman -S bluez bluez-utils bluez-firmware pulseaudio-bluetooth pavucontrol pulseaudio-alsa
 </pre>
@@ -87,9 +87,9 @@
 </div>
 </div>
 
-<div id="outline-container-org0df0c01" class="outline-2">
-<h2 id="org0df0c01">启动蓝牙服务</h2>
-<div class="outline-text-2" id="text-org0df0c01">
+<div id="outline-container-org52779fc" class="outline-2">
+<h2 id="org52779fc">启动蓝牙服务</h2>
+<div class="outline-text-2" id="text-org52779fc">
 <div class="org-src-container">
 <pre class="src src-shell">systemctl enable bluetooth
 systemctl start bluetooth
@@ -98,9 +98,9 @@ systemctl start bluetooth
 </div>
 </div>
 
-<div id="outline-container-org277b46e" class="outline-2">
-<h2 id="org277b46e">启动pulseaudio服务</h2>
-<div class="outline-text-2" id="text-org277b46e">
+<div id="outline-container-orgdc170da" class="outline-2">
+<h2 id="orgdc170da">启动pulseaudio服务</h2>
+<div class="outline-text-2" id="text-orgdc170da">
 <div class="org-src-container">
 <pre class="src src-shell">pulseaudio -k                   <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#30830;&#20445;&#27809;&#26377;pulseaudio&#21551;&#21160;</span>
 pulseaudio --start              <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#21551;&#21160;pulseaudio&#26381;&#21153;</span>
@@ -109,9 +109,9 @@ pulseaudio --start              <span style="color: #2aa1ae; background-color: #
 </div>
 </div>
 
-<div id="outline-container-org6119783" class="outline-2">
-<h2 id="org6119783">将用户加入lp用户组</h2>
-<div class="outline-text-2" id="text-org6119783">
+<div id="outline-container-orgd4d83f7" class="outline-2">
+<h2 id="orgd4d83f7">将用户加入lp用户组</h2>
+<div class="outline-text-2" id="text-orgd4d83f7">
 <p>
 安装bluz后就应该会自动创建lp用户组了，因此无需自己再创建新组
 </p>
@@ -125,9 +125,9 @@ pulseaudio --start              <span style="color: #2aa1ae; background-color: #
 </div>
 </div>
 
-<div id="outline-container-org87be641" class="outline-2">
-<h2 id="org87be641">配置蓝牙(摘自archwiki)</h2>
-<div class="outline-text-2" id="text-org87be641">
+<div id="outline-container-org115d877" class="outline-2">
+<h2 id="org115d877">配置蓝牙(摘自archwiki)</h2>
+<div class="outline-text-2" id="text-org115d877">
 <p>
 启动bluetoothctl交互命令.可以输入 <code>help</code> 列出所有有效的命令.
 </p>
@@ -175,9 +175,9 @@ Connection successful
 </div>
 </div>
 
-<div id="outline-container-orge1e1bf9" class="outline-2">
-<h2 id="orge1e1bf9">设置自动启动蓝牙</h2>
-<div class="outline-text-2" id="text-orge1e1bf9">
+<div id="outline-container-orgff62199" class="outline-2">
+<h2 id="orgff62199">设置自动启动蓝牙</h2>
+<div class="outline-text-2" id="text-orgff62199">
 <p>
 将 <code>/etc/bluetooth/main.conf</code> 最后的 <code>AutoEnable</code> 值修改为 <code>true</code>
 </p>
@@ -188,9 +188,9 @@ Connection successful
 </div>
 </div>
 
-<div id="outline-container-org1fbd724" class="outline-2">
-<h2 id="org1fbd724">指定使用蓝牙音频输出</h2>
-<div class="outline-text-2" id="text-org1fbd724">
+<div id="outline-container-org3efb740" class="outline-2">
+<h2 id="org3efb740">指定使用蓝牙音频输出</h2>
+<div class="outline-text-2" id="text-org3efb740">
 <p>
 通过 <code>pavucontrol</code> 的"Playback"和"Pecording"标签页重定向音频的输入和输出
 </p>
@@ -204,7 +204,7 @@ Connection successful
             <span title="post date" class="post-info">2017-07-18</span>
             <span title="last modification date" class="post-info">2017-07-18</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -222,7 +222,7 @@ Connection successful
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
              $('#disqus_thread').css('display','none');
          })();
@@ -247,7 +247,7 @@ Connection successful
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

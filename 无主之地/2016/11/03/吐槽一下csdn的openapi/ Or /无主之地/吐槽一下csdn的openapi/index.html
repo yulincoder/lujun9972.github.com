@@ -55,9 +55,9 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgad7abe1">大量的API看不到详细说明</a></li>
-<li><a href="#org4b4aca9">单词拼写有问题</a></li>
-<li><a href="#org460fb2d">API的接口说明与实际不符</a></li>
+<li><a href="#orgd19e988">大量的API看不到详细说明</a></li>
+<li><a href="#org8b78488">单词拼写有问题</a></li>
+<li><a href="#org771f295">API的接口说明与实际不符</a></li>
 </ul>
 </div>
 </div>
@@ -69,9 +69,9 @@
 目前发现的问题有以下几个：
 </p>
 
-<div id="outline-container-orgad7abe1" class="outline-2">
-<h2 id="orgad7abe1">大量的API看不到详细说明</h2>
-<div class="outline-text-2" id="text-orgad7abe1">
+<div id="outline-container-orgd19e988" class="outline-2">
+<h2 id="orgd19e988">大量的API看不到详细说明</h2>
+<div class="outline-text-2" id="text-orgd19e988">
 <p>
 点进去就直接显示“系统维护中......”
 </p>
@@ -89,18 +89,18 @@
 </div>
 </div>
 
-<div id="outline-container-org4b4aca9" class="outline-2">
-<h2 id="org4b4aca9">单词拼写有问题</h2>
-<div class="outline-text-2" id="text-org4b4aca9">
+<div id="outline-container-org8b78488" class="outline-2">
+<h2 id="org8b78488">单词拼写有问题</h2>
+<div class="outline-text-2" id="text-org8b78488">
 <p>
 我很神奇的发现， <code>bbs/gettopics</code> 这个API，传递参数时参数名用"forum"居然提示是 <code>froum是不可缺少的参数</code>. 这很明显是实现API时出现了拼写错误
 </p>
 </div>
 </div>
 
-<div id="outline-container-org460fb2d" class="outline-2">
-<h2 id="org460fb2d">API的接口说明与实际不符</h2>
-<div class="outline-text-2" id="text-org460fb2d">
+<div id="outline-container-org771f295" class="outline-2">
+<h2 id="org771f295">API的接口说明与实际不符</h2>
+<div class="outline-text-2" id="text-org771f295">
 <p>
 在 <code>blog/getarticle</code> 这个API的返回结果中，我居然看到了有 <code>markdowncontent</code> 和 <code>markdowndirectory</code> 这样的字段，然而接口说明中找不到相关说明
 </p>
@@ -132,7 +132,7 @@
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
              $('#disqus_thread').css('display','none');
          })();

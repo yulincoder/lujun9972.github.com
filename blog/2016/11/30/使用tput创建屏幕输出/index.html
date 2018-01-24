@@ -53,21 +53,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgec952bd">1. tput与terminfo</a></li>
-<li><a href="#org5a5b500">2. tput常用法</a></li>
-<li><a href="#org6c9c376">3. tput的使用</a>
+<li><a href="#org62750eb">1. tput与terminfo</a></li>
+<li><a href="#org2cc46df">2. tput常用法</a></li>
+<li><a href="#org3f5067e">3. tput的使用</a>
 <ul>
-<li><a href="#org4f02314">3.1. 设置终端属性</a></li>
-<li><a href="#orge5d77d2">3.2. 获取终端属性</a></li>
-<li><a href="#org8960e03">3.3. 判断终端是否存在某项能力</a></li>
+<li><a href="#orgcf3660a">3.1. 设置终端属性</a></li>
+<li><a href="#org6ed6c6c">3.2. 获取终端属性</a></li>
+<li><a href="#org722d2e8">3.3. 判断终端是否存在某项能力</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgec952bd" class="outline-2">
-<h2 id="orgec952bd"><span class="section-number-2">1</span> tput与terminfo</h2>
+<div id="outline-container-org62750eb" class="outline-2">
+<h2 id="org62750eb"><span class="section-number-2">1</span> tput与terminfo</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 tput 命令将通过 terminfo 数据库对您的终端会话进行初始化和操作。通过使用 tput，您可以更改几项终端功能，如移动或更改光标、更改文本属性，以及清除终端屏幕的特定区域。
@@ -80,8 +80,8 @@ UNIX 中的几个常用程序都依赖 terminfo 数据库提供这些属性以�
 </div>
 </div>
 
-<div id="outline-container-org5a5b500" class="outline-2">
-<h2 id="org5a5b500"><span class="section-number-2">2</span> tput常用法</h2>
+<div id="outline-container-org2cc46df" class="outline-2">
+<h2 id="org2cc46df"><span class="section-number-2">2</span> tput常用法</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 tput默认通过$TERM的值来指示终端类型，但我们也可以通过 <code>-T $Type</code> 来指定终端类型。不过一般来说都没有这个必要。
@@ -101,8 +101,8 @@ tput默认通过$TERM的值来指示终端类型，但我们也可以通过 <cod
 </div>
 </div>
 
-<div id="outline-container-org6c9c376" class="outline-2">
-<h2 id="org6c9c376"><span class="section-number-2">3</span> tput的使用</h2>
+<div id="outline-container-org3f5067e" class="outline-2">
+<h2 id="org3f5067e"><span class="section-number-2">3</span> tput的使用</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 tput一般用于作三件事情: 设置终端属性,获取终端属性以及判断终端是否支持某项能力.
@@ -117,8 +117,8 @@ tput一般用于作三件事情: 设置终端属性,获取终端属性以及判�
 </p>
 </div>
 
-<div id="outline-container-org4f02314" class="outline-3">
-<h3 id="org4f02314"><span class="section-number-3">3.1</span> 设置终端属性</h3>
+<div id="outline-container-orgcf3660a" class="outline-3">
+<h3 id="orgcf3660a"><span class="section-number-3">3.1</span> 设置终端属性</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 tput主要是通过输出控制码字符串来实现一些特殊终端效果的. 
@@ -228,8 +228,8 @@ tput cup <span style="color: #a45bad;">2</span> <span style="color: #a45bad;">15
 </div>
 </div>
 
-<div id="outline-container-orge5d77d2" class="outline-3">
-<h3 id="orge5d77d2"><span class="section-number-3">3.2</span> 获取终端属性</h3>
+<div id="outline-container-org6ed6c6c" class="outline-3">
+<h3 id="org6ed6c6c"><span class="section-number-3">3.2</span> 获取终端属性</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 tput会输出一个数字,表示该属性的值.
@@ -256,8 +256,8 @@ tput会输出一个数字,表示该属性的值.
 </div>
 </div>
 
-<div id="outline-container-org8960e03" class="outline-3">
-<h3 id="org8960e03"><span class="section-number-3">3.3</span> 判断终端是否存在某项能力</h3>
+<div id="outline-container-org722d2e8" class="outline-3">
+<h3 id="org722d2e8"><span class="section-number-3">3.3</span> 判断终端是否存在某项能力</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 tput会通过返回值来表示是否具有这项能力(0表示true,1表示false).
@@ -295,7 +295,7 @@ tput会通过返回值来表示是否具有这项能力(0表示true,1表示false
             <span title="post date" class="post-info">2016-11-30</span>
             <span title="last modification date" class="post-info">2016-12-01</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -313,7 +313,7 @@ tput会通过返回值来表示是否具有这项能力(0表示true,1表示false
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
              $('#disqus_thread').css('display','none');
          })();
@@ -338,7 +338,7 @@ tput会通过返回值来表示是否具有这项能力(0表示true,1表示false
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

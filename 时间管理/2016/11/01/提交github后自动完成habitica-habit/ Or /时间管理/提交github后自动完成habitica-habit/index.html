@@ -55,16 +55,16 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfb834e3">什么是Habitica</a></li>
-<li><a href="#org16141bd">Habash介绍</a></li>
-<li><a href="#org364e1cb">结合Habash与Travis-ci自动完成habit</a></li>
+<li><a href="#org3d33795">什么是Habitica</a></li>
+<li><a href="#org1a50f71">Habash介绍</a></li>
+<li><a href="#org5b03ca4">结合Habash与Travis-ci自动完成habit</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgfb834e3" class="outline-2">
-<h2 id="orgfb834e3">什么是Habitica</h2>
-<div class="outline-text-2" id="text-orgfb834e3">
+<div id="outline-container-org3d33795" class="outline-2">
+<h2 id="org3d33795">什么是Habitica</h2>
+<div class="outline-text-2" id="text-org3d33795">
 <p>
 <a href="https://habitica.com">Habitica</a> 是一个款超赞的游戏化软件，它致力于帮助用户培养习惯和提高效率。
 与传统的效率类软件不同的是，Habitica使生活看起来就像一场复古的像素风角色扮演游戏。
@@ -88,9 +88,9 @@
 </div>
 </div>
 
-<div id="outline-container-org16141bd" class="outline-2">
-<h2 id="org16141bd">Habash介绍</h2>
-<div class="outline-text-2" id="text-org16141bd">
+<div id="outline-container-org1a50f71" class="outline-2">
+<h2 id="org1a50f71">Habash介绍</h2>
+<div class="outline-text-2" id="text-org1a50f71">
 <p>
 habash是一款由shell实现的habitica api，它的用法也很简单，只需要：
 </p>
@@ -103,9 +103,9 @@ habash是一款由shell实现的habitica api，它的用法也很简单，只需
 </div>
 </div>
 
-<div id="outline-container-org364e1cb" class="outline-2">
-<h2 id="org364e1cb">结合Habash与Travis-ci自动完成habit</h2>
-<div class="outline-text-2" id="text-org364e1cb">
+<div id="outline-container-org5b03ca4" class="outline-2">
+<h2 id="org5b03ca4">结合Habash与Travis-ci自动完成habit</h2>
+<div class="outline-text-2" id="text-org5b03ca4">
 <p>
 travis-ci能让我们在每次提交github后自动触发执行一段脚本。 所以我们只需要让travis-ci帮我们自动调用habash来完成任务就行了。 
 </p>
@@ -170,7 +170,7 @@ script:
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
              $('#disqus_thread').css('display','none');
          })();

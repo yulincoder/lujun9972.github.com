@@ -54,13 +54,13 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org467d4da">配置</a></li>
-<li><a href="#orgb1a4761">编写新邮件</a></li>
-<li><a href="#orgb69ec78">添加附件</a></li>
-<li><a href="#org340df08">设置mail address的别名</a></li>
-<li><a href="#org8b050d1">添加签名</a></li>
-<li><a href="#orgc8ed872">Queued delivery</a></li>
-<li><a href="#orgacbefb7">调试</a></li>
+<li><a href="#org6564c7e">配置</a></li>
+<li><a href="#org69605f7">编写新邮件</a></li>
+<li><a href="#orgb3ec35a">添加附件</a></li>
+<li><a href="#orgce5a097">设置mail address的别名</a></li>
+<li><a href="#orgc968c9e">添加签名</a></li>
+<li><a href="#org8727a43">Queued delivery</a></li>
+<li><a href="#org162e542">调试</a></li>
 </ul>
 </div>
 </div>
@@ -68,9 +68,9 @@
 Emacs自带了SMTP库,这使的Emacs无需任何第三方软件的帮助就能通过第三方邮件服务商发送电子邮件.
 </p>
 
-<div id="outline-container-org467d4da" class="outline-2">
-<h2 id="org467d4da">配置</h2>
-<div class="outline-text-2" id="text-org467d4da">
+<div id="outline-container-org6564c7e" class="outline-2">
+<h2 id="org6564c7e">配置</h2>
+<div class="outline-text-2" id="text-org6564c7e">
 <p>
 在写邮件之前,推荐先配置一下 <code>user-full-name</code> 与 <code>user-mail-address</code> 这两个变量. 
 在编写新邮件时,Emacs会使用这两个变量来形成邮件中的 <code>From</code> header域的值.
@@ -114,9 +114,9 @@ Emacs自带了SMTP库,这使的Emacs无需任何第三方软件的帮助就能�
 </div>
 </div>
 
-<div id="outline-container-orgb1a4761" class="outline-2">
-<h2 id="orgb1a4761">编写新邮件</h2>
-<div class="outline-text-2" id="text-orgb1a4761">
+<div id="outline-container-org69605f7" class="outline-2">
+<h2 id="org69605f7">编写新邮件</h2>
+<div class="outline-text-2" id="text-org69605f7">
 <p>
 按下 <code>C-x m</code> 或者直接执行 <code>M-x compose-mail</code> 就会弹出一个 <code>*unsent mail*</code> 的buffer,看起来大概是这样的:
 </p>
@@ -168,9 +168,9 @@ machine smtp服务器地址 login 用户名 port 端口号 password 密码
 </div>
 </div>
 
-<div id="outline-container-orgb69ec78" class="outline-2">
-<h2 id="orgb69ec78">添加附件</h2>
-<div class="outline-text-2" id="text-orgb69ec78">
+<div id="outline-container-orgb3ec35a" class="outline-2">
+<h2 id="orgb3ec35a">添加附件</h2>
+<div class="outline-text-2" id="text-orgb3ec35a">
 <p>
 按下 <code>C-c C-a (mml-attach-file)</code>  就能为邮件添加附件. Emacs会依次提示输入附件路径,类型,描述以及整合方式.
 </p>
@@ -192,9 +192,9 @@ machine smtp服务器地址 login 用户名 port 端口号 password 密码
 </div>
 </div>
 
-<div id="outline-container-org340df08" class="outline-2">
-<h2 id="org340df08">设置mail address的别名</h2>
-<div class="outline-text-2" id="text-org340df08">
+<div id="outline-container-orgce5a097" class="outline-2">
+<h2 id="orgce5a097">设置mail address的别名</h2>
+<div class="outline-text-2" id="text-orgce5a097">
 <p>
 一个别名可以代表一个或多个邮件地址.
 </p>
@@ -233,9 +233,9 @@ source FILENAME
 </div>
 </div>
 
-<div id="outline-container-org8b050d1" class="outline-2">
-<h2 id="org8b050d1">添加签名</h2>
-<div class="outline-text-2" id="text-org8b050d1">
+<div id="outline-container-orgc968c9e" class="outline-2">
+<h2 id="orgc968c9e">添加签名</h2>
+<div class="outline-text-2" id="text-orgc968c9e">
 <p>
 变量 <code>message-signature</code> 的值决定了Emacs如何处理你的邮件签名, 它支持以下几种值:
 </p>
@@ -260,9 +260,9 @@ source FILENAME
 </div>
 </div>
 
-<div id="outline-container-orgc8ed872" class="outline-2">
-<h2 id="orgc8ed872">Queued delivery</h2>
-<div class="outline-text-2" id="text-orgc8ed872">
+<div id="outline-container-org8727a43" class="outline-2">
+<h2 id="org8727a43">Queued delivery</h2>
+<div class="outline-text-2" id="text-org8727a43">
 <p>
 若你的电脑不是一直连接到互联网上的,则你可以先写好邮件,将这些邮件暂存到一个队列中,然后等到连接到互联网上之后再一次性发送出去.
 </p>
@@ -273,9 +273,9 @@ source FILENAME
 </div>
 </div>
 
-<div id="outline-container-orgacbefb7" class="outline-2">
-<h2 id="orgacbefb7">调试</h2>
-<div class="outline-text-2" id="text-orgacbefb7">
+<div id="outline-container-org162e542" class="outline-2">
+<h2 id="org162e542">调试</h2>
+<div class="outline-text-2" id="text-org162e542">
 <p>
 在发送邮件的过程中如果出现问题想调试,可以开启smtpmail的调试功能:
 </p>
@@ -297,7 +297,7 @@ source FILENAME
             <span title="post date" class="post-info">2016-12-29</span>
             <span title="last modification date" class="post-info">2016-12-30</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/emacs之怒">Emacs之怒</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -315,7 +315,7 @@ source FILENAME
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
              $('#disqus_thread').css('display','none');
          })();
@@ -340,7 +340,7 @@ source FILENAME
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

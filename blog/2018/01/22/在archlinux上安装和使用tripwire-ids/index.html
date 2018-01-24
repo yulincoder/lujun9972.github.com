@@ -54,37 +54,37 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org619553b">Tripwire是什么</a></li>
-<li><a href="#org573e7bf">安装Tripwire</a></li>
-<li><a href="#orgba3f2fd">配置Tripwire</a>
+<li><a href="#orgc6d4f2c">Tripwire是什么</a></li>
+<li><a href="#org75b7a1a">安装Tripwire</a></li>
+<li><a href="#org20fbdbd">配置Tripwire</a>
 <ul>
-<li><a href="#org189930e">创建keyfile</a></li>
-<li><a href="#orgcb65a00">生成配置文件</a></li>
+<li><a href="#orga0f3ea6">创建keyfile</a></li>
+<li><a href="#org8fc63ea">生成配置文件</a></li>
 </ul>
 </li>
-<li><a href="#org851efc5">生成并查看检查报告</a>
+<li><a href="#org86d58de">生成并查看检查报告</a>
 <ul>
-<li><a href="#org4236c73">初始化数据库</a></li>
-<li><a href="#org7f52b39">生成检查报告</a></li>
-<li><a href="#orge3a515d">查看检查报告</a></li>
+<li><a href="#org5249e53">初始化数据库</a></li>
+<li><a href="#org22bde6d">生成检查报告</a></li>
+<li><a href="#org8d44810">查看检查报告</a></li>
 </ul>
 </li>
-<li><a href="#orgb89bcca">如何获取帮助</a></li>
+<li><a href="#org33aca5a">如何获取帮助</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org619553b" class="outline-2">
-<h2 id="org619553b">Tripwire是什么</h2>
-<div class="outline-text-2" id="text-org619553b">
+<div id="outline-container-orgc6d4f2c" class="outline-2">
+<h2 id="orgc6d4f2c">Tripwire是什么</h2>
+<div class="outline-text-2" id="text-orgc6d4f2c">
 <p>
 Tripwire是一款入侵检测软件，它通过为每个要监控的文件产生数字签名的方式来检测文件是否被篡改。
 </p>
 </div>
 </div>
-<div id="outline-container-org573e7bf" class="outline-2">
-<h2 id="org573e7bf">安装Tripwire</h2>
-<div class="outline-text-2" id="text-org573e7bf">
+<div id="outline-container-org75b7a1a" class="outline-2">
+<h2 id="org75b7a1a">安装Tripwire</h2>
+<div class="outline-text-2" id="text-org75b7a1a">
 <p>
 Tripwire在AUR中，可以通过 <code>yaourt</code> 来安装
 </p>
@@ -107,13 +107,13 @@ Tripwire在AUR中，可以通过 <code>yaourt</code> 来安装
 </div>
 
 
-<div id="outline-container-orgba3f2fd" class="outline-2">
-<h2 id="orgba3f2fd">配置Tripwire</h2>
-<div class="outline-text-2" id="text-orgba3f2fd">
+<div id="outline-container-org20fbdbd" class="outline-2">
+<h2 id="org20fbdbd">配置Tripwire</h2>
+<div class="outline-text-2" id="text-org20fbdbd">
 </div>
-<div id="outline-container-org189930e" class="outline-3">
-<h3 id="org189930e">创建keyfile</h3>
-<div class="outline-text-3" id="text-org189930e">
+<div id="outline-container-orga0f3ea6" class="outline-3">
+<h3 id="orga0f3ea6">创建keyfile</h3>
+<div class="outline-text-3" id="text-orga0f3ea6">
 <p>
 安装完之后，还需要用 <code>twadmin</code> 生成 <code>site-keyfile</code> 和 <code>local-keyfile</code>
 </p>
@@ -146,9 +146,9 @@ Generating key (this may take several minutes)...Key generation complete.
 </p>
 </div>
 </div>
-<div id="outline-container-orgcb65a00" class="outline-3">
-<h3 id="orgcb65a00">生成配置文件</h3>
-<div class="outline-text-3" id="text-orgcb65a00">
+<div id="outline-container-org8fc63ea" class="outline-3">
+<h3 id="org8fc63ea">生成配置文件</h3>
+<div class="outline-text-3" id="text-org8fc63ea">
 <p>
 Tripwire在安装时会在 <code>/etc/tripwire/</code> 目录中生成两个文件 <code>twcfg.txt</code> 和 <code>twpol.txt</code>,为tripwire默认的配置文件和策略文件的模板,我们直接使用它的默认模板
 </p>
@@ -202,13 +202,13 @@ sudo cp tw.sitekey /etc/tripwire/site.key
 </div>
 </div>
 </div>
-<div id="outline-container-org851efc5" class="outline-2">
-<h2 id="org851efc5">生成并查看检查报告</h2>
-<div class="outline-text-2" id="text-org851efc5">
+<div id="outline-container-org86d58de" class="outline-2">
+<h2 id="org86d58de">生成并查看检查报告</h2>
+<div class="outline-text-2" id="text-org86d58de">
 </div>
-<div id="outline-container-org4236c73" class="outline-3">
-<h3 id="org4236c73">初始化数据库</h3>
-<div class="outline-text-3" id="text-org4236c73">
+<div id="outline-container-org5249e53" class="outline-3">
+<h3 id="org5249e53">初始化数据库</h3>
+<div class="outline-text-3" id="text-org5249e53">
 <p>
 第一次运行tripwire时需要先初始化数据库
 </p>
@@ -233,9 +233,9 @@ Generating the database...
 </pre>
 </div>
 </div>
-<div id="outline-container-org7f52b39" class="outline-3">
-<h3 id="org7f52b39">生成检查报告</h3>
-<div class="outline-text-3" id="text-org7f52b39">
+<div id="outline-container-org22bde6d" class="outline-3">
+<h3 id="org22bde6d">生成检查报告</h3>
+<div class="outline-text-3" id="text-org22bde6d">
 <p>
 运行 <code>tripwire --check</code> 会就会生成检查报告了，检查报告存放的地址参见配置文件中 <code>REPORTFILE</code> 定义的位置，默认为 <code>/var/lib/tripwire/report/$(HOSTNAME)-$(DATE).twr</code>
 </p>
@@ -245,9 +245,9 @@ Generating the database...
 </div>
 </div>
 </div>
-<div id="outline-container-orge3a515d" class="outline-3">
-<h3 id="orge3a515d">查看检查报告</h3>
-<div class="outline-text-3" id="text-orge3a515d">
+<div id="outline-container-org8d44810" class="outline-3">
+<h3 id="org8d44810">查看检查报告</h3>
+<div class="outline-text-3" id="text-org8d44810">
 <p>
 tripwire生成的 <code>.twr</code> 文件是二进制的，无法直接查看，需要使用 <code>twprint</code> 来转换成可阅读的文本格式
 </p>
@@ -265,9 +265,9 @@ view /tmp/report.txt
 </div>
 </div>
 
-<div id="outline-container-orgb89bcca" class="outline-2">
-<h2 id="orgb89bcca">如何获取帮助</h2>
-<div class="outline-text-2" id="text-orgb89bcca">
+<div id="outline-container-org33aca5a" class="outline-2">
+<h2 id="org33aca5a">如何获取帮助</h2>
+<div class="outline-text-2" id="text-org33aca5a">
 <p>
 可以通过 <code>man twintro</code> 来查看关于 <code>tripwire</code> 的介绍。
 </p>
@@ -285,7 +285,7 @@ view /tmp/report.txt
             <span title="post date" class="post-info">2018-01-22</span>
             <span title="last modification date" class="post-info">2018-01-22</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -303,7 +303,7 @@ view /tmp/report.txt
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
              $('#disqus_thread').css('display','none');
          })();
@@ -328,7 +328,7 @@ view /tmp/report.txt
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

@@ -54,10 +54,10 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgee4691a">安装Termux</a></li>
-<li><a href="#org2bdd705">安装sshd</a></li>
-<li><a href="#org10ba9e1">添加Public key</a></li>
-<li><a href="#orga5e5ec3">客户端登陆</a></li>
+<li><a href="#org1098caf">安装Termux</a></li>
+<li><a href="#orgb1d7b55">安装sshd</a></li>
+<li><a href="#orga50704c">添加Public key</a></li>
+<li><a href="#orga05fa47">客户端登陆</a></li>
 </ul>
 </div>
 </div>
@@ -65,9 +65,9 @@
 Termux是一款能够为Android手机提供Linux环境的应用。它最大的特点就是无需root，而且自带pkg包管理软件，可以很方便的其他linux应用。
 </p>
 
-<div id="outline-container-orgee4691a" class="outline-2">
-<h2 id="orgee4691a">安装Termux</h2>
-<div class="outline-text-2" id="text-orgee4691a">
+<div id="outline-container-org1098caf" class="outline-2">
+<h2 id="org1098caf">安装Termux</h2>
+<div class="outline-text-2" id="text-org1098caf">
 <p>
 可以在Google Play Store或F-Droid上搜索Termux来安装，目前的版本是0.47。
 </p>
@@ -78,9 +78,9 @@ Termux是一款能够为Android手机提供Linux环境的应用。它最大的�
 </div>
 </div>
 
-<div id="outline-container-org2bdd705" class="outline-2">
-<h2 id="org2bdd705">安装sshd</h2>
-<div class="outline-text-2" id="text-org2bdd705">
+<div id="outline-container-orgb1d7b55" class="outline-2">
+<h2 id="orgb1d7b55">安装sshd</h2>
+<div class="outline-text-2" id="text-orgb1d7b55">
 <p>
 打开 <code>Termux</code> 会出现一个类似Linux终端的界面。
 </p>
@@ -119,9 +119,9 @@ Termux是一款能够为Android手机提供Linux环境的应用。它最大的�
 </div>
 </div>
 
-<div id="outline-container-org10ba9e1" class="outline-2">
-<h2 id="org10ba9e1">添加Public key</h2>
-<div class="outline-text-2" id="text-org10ba9e1">
+<div id="outline-container-orga50704c" class="outline-2">
+<h2 id="orga50704c">添加Public key</h2>
+<div class="outline-text-2" id="text-orga50704c">
 <p>
 Termux的sshd只能通过密钥登陆，因此你需要在linux客户机上生成密钥对
 </p>
@@ -153,19 +153,19 @@ Termux的sshd只能通过密钥登陆，因此你需要在linux客户机上生�
 </div>
 
 
-<div id="outline-container-orga5e5ec3" class="outline-2">
-<h2 id="orga5e5ec3">客户端登陆</h2>
-<div class="outline-text-2" id="text-orga5e5ec3">
+<div id="outline-container-orga05fa47" class="outline-2">
+<h2 id="orga05fa47">客户端登陆</h2>
+<div class="outline-text-2" id="text-orga05fa47">
 <p>
 在客户端上执行
 </p>
 <div class="org-src-container">
-<pre class="src src-shell">ssh phone_ip -p <span style="color: #a45bad;">8022</span>
+<pre class="src src-shell">ssh <span style="color: #a45bad;">192.4.4.9</span> -p <span style="color: #a45bad;">8022</span>
 </pre>
 </div>
 
 <p>
-将这里的phone_ip修改为手机的ip，就能登陆到Termux中了。
+将这里的 <code>192.4.4.9</code> 修改为手机的ip，就能登陆到Termux中了。
 </p>
 
 <p>
@@ -174,6 +174,20 @@ Termux的sshd只能通过密钥登陆，因此你需要在linux客户机上生�
 
 <p>
 需要说明的是，使用ssh登陆Termux时无需带上用户名，因为Termux是单用户系统。即使你登陆时带上了用户名，Termux也会忽略该用户名
+</p>
+
+<p>
+为了方便，我们可以配置一下ssh client的配置文件,将下面内容加入到 <code>~/.ssh/config</code> 文件中
+</p>
+<div class="org-src-container">
+<pre class="src src-conf">Host termux
+     HostName 192.4.4.9
+     Port 8022
+</pre>
+</div>
+
+<p>
+这样只需要执行 <code>ssh termux</code> 就能登陆termx了。
 </p>
 </div>
 </div>
@@ -185,7 +199,7 @@ Termux的sshd只能通过密钥登陆，因此你需要在linux客户机上生�
             <span title="post date" class="post-info">2018-01-24</span>
             <span title="last modification date" class="post-info">2018-01-24</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -203,7 +217,7 @@ Termux的sshd只能通过密钥登陆，因此你需要在linux客户机上生�
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
              $('#disqus_thread').css('display','none');
          })();
@@ -228,7 +242,7 @@ Termux的sshd只能通过密钥登陆，因此你需要在linux客户机上生�
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
