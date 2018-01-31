@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 25 1月 2018 00:34:21 CST</pubDate>
-    <lastBuildDate>四, 25 1月 2018 00:34:21 CST</lastBuildDate>
+    <pubDate>三, 31 1月 2018 22:07:45 CST</pubDate>
+    <lastBuildDate>三, 31 1月 2018 22:07:45 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>如何禁用bash中的history</title>
+<link>https://lujun9972.github.io/blog/2018/01/31/如何禁用bash中的history/</link>
+<description>No Description</description>
+<pubDate>2018-01-31</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/01/31/如何禁用bash中的history/</guid>
+</item>
 <item>
 <title>sshtron让你在终端玩的多人贪吃蛇</title>
 <link>https://lujun9972.github.io/blog/2018/01/24/sshtron让你在终端玩的多人贪吃蛇/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-11-30</pubDate>
 <guid>https://lujun9972.github.io/blog/2017/11/30/记一次隐含子shell引发的问题/</guid>
-</item>
-<item>
-<title>回车的妙用</title>
-<link>https://lujun9972.github.io/blog/2017/11/07/回车的妙用/</link>
-<description>No Description</description>
-<pubDate>2017-11-07</pubDate>
-<guid>https://lujun9972.github.io/blog/2017/11/07/回车的妙用/</guid>
 </item>
 </channel>
 </rss>
