@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>三, 31 1月 2018 22:07:45 CST</pubDate>
-    <lastBuildDate>三, 31 1月 2018 22:07:45 CST</lastBuildDate>
+    <pubDate>五, 02 2月 2018 14:47:08 CST</pubDate>
+    <lastBuildDate>五, 02 2月 2018 14:47:08 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>pacman中的Pac-Man</title>
+<link>https://lujun9972.github.io/blog/2018/02/02/pacman中的pac-man/</link>
+<description>No Description</description>
+<pubDate>2018-02-02</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/02/pacman中的pac-man/</guid>
+</item>
 <item>
 <title>如何禁用bash中的history</title>
 <link>https://lujun9972.github.io/blog/2018/01/31/如何禁用bash中的history/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-11-30</pubDate>
 <guid>https://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</guid>
-</item>
-<item>
-<title>记一次隐含子shell引发的问题</title>
-<link>https://lujun9972.github.io/blog/2017/11/30/记一次隐含子shell引发的问题/</link>
-<description>No Description</description>
-<pubDate>2017-11-30</pubDate>
-<guid>https://lujun9972.github.io/blog/2017/11/30/记一次隐含子shell引发的问题/</guid>
 </item>
 </channel>
 </rss>
