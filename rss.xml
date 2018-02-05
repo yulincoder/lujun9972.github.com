@@ -4,16 +4,30 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>五, 02 2月 2018 14:47:08 CST</pubDate>
-    <lastBuildDate>五, 02 2月 2018 14:47:08 CST</lastBuildDate>
+    <pubDate>一, 05 2月 2018 18:33:43 CST</pubDate>
+    <lastBuildDate>一, 05 2月 2018 18:33:43 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>/dev/urandom和/dev/random的区别是什么</title>
+<link>https://lujun9972.github.io/blog/2018/02/05/-dev-urandom和-dev-random的区别是什么/</link>
+<description>No Description</description>
+<pubDate>2018-02-05</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/05/-dev-urandom和-dev-random的区别是什么/</guid>
+</item>
 <item>
 <title>pacman中的Pac-Man</title>
 <link>https://lujun9972.github.io/blog/2018/02/02/pacman中的pac-man/</link>
 <description>No Description</description>
 <pubDate>2018-02-02</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/02/02/pacman中的pac-man/</guid>
+</item>
+<item>
+<title>使用snap在archlinux上安装skype</title>
+<link>https://lujun9972.github.io/blog/2018/02/02/使用snap在archlinux上安装skype/</link>
+<description>No Description</description>
+<pubDate>2018-02-02</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/02/使用snap在archlinux上安装skype/</guid>
 </item>
 <item>
 <title>如何禁用bash中的history</title>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2017-12-02</pubDate>
 <guid>https://lujun9972.github.io/blog/2017/12/02/从undistract-me项目代码中学到的bash知识/</guid>
-</item>
-<item>
-<title>为Linux安装杀毒软件</title>
-<link>https://lujun9972.github.io/blog/2017/12/01/为linux安装杀毒软件/</link>
-<description>No Description</description>
-<pubDate>2017-12-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2017/12/01/为linux安装杀毒软件/</guid>
-</item>
-<item>
-<title>sed中的[:alpha:]到底包含哪些字符</title>
-<link>https://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</link>
-<description>No Description</description>
-<pubDate>2017-11-30</pubDate>
-<guid>https://lujun9972.github.io/blog/2017/11/30/sed中的[-alpha-]到底包含哪些字符/</guid>
 </item>
 </channel>
 </rss>
