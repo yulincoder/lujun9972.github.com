@@ -54,13 +54,13 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6a23c5c">熵</a>
+<li><a href="#orge620019">熵</a>
 <ul>
-<li><a href="#org664ba0a">如何查看系统中的熵</a></li>
-<li><a href="#orgc52ef2c">如何快速生成熵</a></li>
+<li><a href="#orge75dec3">如何查看系统中的熵</a></li>
+<li><a href="#org9ebf4b1">如何快速生成熵</a></li>
 </ul>
 </li>
-<li><a href="#org0eaf648">/dev/random 与 /dev/urandom 的区别</a></li>
+<li><a href="#orga71dfb5">/dev/random 与 /dev/urandom 的区别</a></li>
 </ul>
 </div>
 </div>
@@ -71,9 +71,9 @@ linux中提供了 <code>/dev/urandom</code> 和 <code>/dev/random</code> 两个�
 <p>
 要回答这个问题，先需要了解熵这个概念。
 </p>
-<div id="outline-container-org6a23c5c" class="outline-2">
-<h2 id="org6a23c5c">熵</h2>
-<div class="outline-text-2" id="text-org6a23c5c">
+<div id="outline-container-orge620019" class="outline-2">
+<h2 id="orge620019">熵</h2>
+<div class="outline-text-2" id="text-orge620019">
 <p>
 linux是根据系统的熵池来产生随机数的。熵池就是系统当前的环境噪音,环境噪音的来源很多，键盘的输入、鼠标的移动、内存的使用、文件的使用量、进程数量等等。
 </p>
@@ -83,14 +83,22 @@ linux是根据系统的熵池来产生随机数的。熵池就是系统当前的
 </p>
 </div>
 
-<div id="outline-container-org664ba0a" class="outline-3">
-<h3 id="org664ba0a">如何查看系统中的熵</h3>
-<div class="outline-text-3" id="text-org664ba0a">
+<div id="outline-container-orge75dec3" class="outline-3">
+<h3 id="orge75dec3">如何查看系统中的熵</h3>
+<div class="outline-text-3" id="text-orge75dec3">
 <p>
 通过下面命令可以查看系统熵池的容量:
 </p>
 <div class="org-src-container">
 <pre class="src src-shell">cat /proc/sys/kernel/random/poolsize
+</pre>
+</div>
+
+<p>
+结果为:
+</p>
+<div class="org-src-container">
+<pre class="src src-org">4096
 </pre>
 </div>
 
@@ -101,12 +109,20 @@ linux是根据系统的熵池来产生随机数的。熵池就是系统当前的
 <pre class="src src-shell">cat /proc/sys/kernel/random/entropy_avail 
 </pre>
 </div>
+
+<p>
+结果为:
+</p>
+<div class="org-src-container">
+<pre class="src src-org">3793
+</pre>
+</div>
 </div>
 </div>
 
-<div id="outline-container-orgc52ef2c" class="outline-3">
-<h3 id="orgc52ef2c">如何快速生成熵</h3>
-<div class="outline-text-3" id="text-orgc52ef2c">
+<div id="outline-container-org9ebf4b1" class="outline-3">
+<h3 id="org9ebf4b1">如何快速生成熵</h3>
+<div class="outline-text-3" id="text-org9ebf4b1">
 <p>
 通过开启 <code>haveged</code> 服务可以快速产生熵。若 <code>entropy_avail</code> 的值小于1000,则建议安装 <code>haveged</code>,否则加密程序会阻塞直到系统有足够的熵后才继续运行。
 </p>
@@ -128,9 +144,9 @@ systemctl start haveged
 </div>
 </div>
 
-<div id="outline-container-org0eaf648" class="outline-2">
-<h2 id="org0eaf648">/dev/random 与 /dev/urandom 的区别</h2>
-<div class="outline-text-2" id="text-org0eaf648">
+<div id="outline-container-orga71dfb5" class="outline-2">
+<h2 id="orga71dfb5">/dev/random 与 /dev/urandom 的区别</h2>
+<div class="outline-text-2" id="text-orga71dfb5">
 <p>
 <code>/dev/random</code> 是真随机数生成器，它会消耗熵值来产生随机数，同时在熵耗尽的情况下会阻塞，直到有新的熵生成. 其产生的随机效果很好。
 </p>
