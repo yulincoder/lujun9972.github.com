@@ -4,8 +4,8 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 06 2月 2018 09:40:05 CST</pubDate>
-    <lastBuildDate>二, 06 2月 2018 09:40:05 CST</lastBuildDate>
+    <pubDate>二, 06 2月 2018 22:13:28 CST</pubDate>
+    <lastBuildDate>二, 06 2月 2018 22:13:28 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
@@ -14,6 +14,13 @@
 <description>No Description</description>
 <pubDate>2018-02-06</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/02/05/-dev-urandom和-dev-random的区别是什么/</guid>
+</item>
+<item>
+<title>解决orangepi lite刷官网ubuntu-server 不能apt update的方法</title>
+<link>https://lujun9972.github.io/blog/2018/02/06/解决orangepi-lite刷官网ubuntu-server-不能apt-update的方法/</link>
+<description>No Description</description>
+<pubDate>2018-02-06</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/06/解决orangepi-lite刷官网ubuntu-server-不能apt-update的方法/</guid>
 </item>
 <item>
 <title>pacman中的Pac-Man</title>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-01-22</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/01/22/把archwiki搬回家/</guid>
-</item>
-<item>
-<title>从undistract-me项目代码中学到的bash知识</title>
-<link>https://lujun9972.github.io/blog/2017/12/02/从undistract-me项目代码中学到的bash知识/</link>
-<description>No Description</description>
-<pubDate>2017-12-02</pubDate>
-<guid>https://lujun9972.github.io/blog/2017/12/02/从undistract-me项目代码中学到的bash知识/</guid>
 </item>
 </channel>
 </rss>
