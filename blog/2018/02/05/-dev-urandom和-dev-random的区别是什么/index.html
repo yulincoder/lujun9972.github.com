@@ -54,13 +54,13 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge620019">熵</a>
+<li><a href="#org15f0a26">熵</a>
 <ul>
-<li><a href="#orge75dec3">如何查看系统中的熵</a></li>
-<li><a href="#org9ebf4b1">如何快速生成熵</a></li>
+<li><a href="#org4cc618e">如何查看系统中的熵</a></li>
+<li><a href="#org594326b">如何快速生成熵</a></li>
 </ul>
 </li>
-<li><a href="#orga71dfb5">/dev/random 与 /dev/urandom 的区别</a></li>
+<li><a href="#orgfee1fbb">/dev/random 与 /dev/urandom 的区别</a></li>
 </ul>
 </div>
 </div>
@@ -71,9 +71,9 @@ linux中提供了 <code>/dev/urandom</code> 和 <code>/dev/random</code> 两个�
 <p>
 要回答这个问题，先需要了解熵这个概念。
 </p>
-<div id="outline-container-orge620019" class="outline-2">
-<h2 id="orge620019">熵</h2>
-<div class="outline-text-2" id="text-orge620019">
+<div id="outline-container-org15f0a26" class="outline-2">
+<h2 id="org15f0a26">熵</h2>
+<div class="outline-text-2" id="text-org15f0a26">
 <p>
 linux是根据系统的熵池来产生随机数的。熵池就是系统当前的环境噪音,环境噪音的来源很多，键盘的输入、鼠标的移动、内存的使用、文件的使用量、进程数量等等。
 </p>
@@ -83,9 +83,9 @@ linux是根据系统的熵池来产生随机数的。熵池就是系统当前的
 </p>
 </div>
 
-<div id="outline-container-orge75dec3" class="outline-3">
-<h3 id="orge75dec3">如何查看系统中的熵</h3>
-<div class="outline-text-3" id="text-orge75dec3">
+<div id="outline-container-org4cc618e" class="outline-3">
+<h3 id="org4cc618e">如何查看系统中的熵</h3>
+<div class="outline-text-3" id="text-org4cc618e">
 <p>
 通过下面命令可以查看系统熵池的容量:
 </p>
@@ -120,9 +120,9 @@ linux是根据系统的熵池来产生随机数的。熵池就是系统当前的
 </div>
 </div>
 
-<div id="outline-container-org9ebf4b1" class="outline-3">
-<h3 id="org9ebf4b1">如何快速生成熵</h3>
-<div class="outline-text-3" id="text-org9ebf4b1">
+<div id="outline-container-org594326b" class="outline-3">
+<h3 id="org594326b">如何快速生成熵</h3>
+<div class="outline-text-3" id="text-org594326b">
 <p>
 通过开启 <code>haveged</code> 服务可以快速产生熵。若 <code>entropy_avail</code> 的值小于1000,则建议安装 <code>haveged</code>,否则加密程序会阻塞直到系统有足够的熵后才继续运行。
 </p>
@@ -144,19 +144,27 @@ systemctl start haveged
 </div>
 </div>
 
-<div id="outline-container-orga71dfb5" class="outline-2">
-<h2 id="orga71dfb5">/dev/random 与 /dev/urandom 的区别</h2>
-<div class="outline-text-2" id="text-orga71dfb5">
+<div id="outline-container-orgfee1fbb" class="outline-2">
+<h2 id="orgfee1fbb">/dev/random 与 /dev/urandom 的区别</h2>
+<div class="outline-text-2" id="text-orgfee1fbb">
 <p>
-<code>/dev/random</code> 是真随机数生成器，它会消耗熵值来产生随机数，同时在熵耗尽的情况下会阻塞，直到有新的熵生成. 其产生的随机效果很好。
+<code>/dev/random</code> 是真随机数生成器，它会消耗熵值来产生随机数，同时在熵耗尽的情况下会阻塞，直到有新的熵生成. 
 </p>
 
 <p>
-而 <code>/dev/urandom</code> 是伪随机数生成器，它根据一个初始的随机种子来产生一系列的伪随机数，而并不会消耗熵，也不会在熵耗尽的情况下阻塞。
+注：网上有关于random具有更好的随机性的说法，这一点存在疑问,请阅读<a href="https://sockpuppet.org/blog/2014/02/25/safely-generate-random-numbers/">How To Safely Generate A Random Number</a> 和 <a href="https://www.2uo.de/myths-about-urandom/">Myths about /dev/urandom</a> 这两篇文章。
 </p>
 
 <p>
-结合这者的特点，可以看出，除非对安全性需要特别的关注，否则一般都是使用 <code>/dev/urandom</code> 来产生随机数，这样才不会引起程序莫名的挂起。
+而 <code>/dev/urandom</code> 是伪随机数生成器，它根据一个初始的随机种子(这个种子来源就是熵池中的熵)来产生一系列的伪随机数，而并不会在熵耗尽的情况下阻塞。
+</p>
+
+<p>
+但是 <b>若在系统启动阶段使用 <code>/dev/urandom</code> 则可能存在熵池中还不存在任何熵的情况，这时用 <code>/dev/urandom</code> 产生的随机数是可预测的！</b>
+</p>
+
+<p>
+结合这者的特点，可以看出，除非要在启动启动阶段产生随机数，否则绝大多数情况下还是使用 <code>/dev/urandom</code> 来产生随机数，这样才不会引起程序莫名的挂起。
 </p>
 </div>
 </div>
@@ -166,7 +174,7 @@ systemctl start haveged
 <div>
         <div class="post-meta">
             <span title="post date" class="post-info">2018-02-05</span>
-            <span title="last modification date" class="post-info">2018-02-05</span>
+            <span title="last modification date" class="post-info">2018-02-06</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a></span>
         </div>
