@@ -4,8 +4,8 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>三, 07 2月 2018 15:36:25 CST</pubDate>
-    <lastBuildDate>三, 07 2月 2018 15:36:25 CST</lastBuildDate>
+    <pubDate>三, 07 2月 2018 16:09:56 CST</pubDate>
+    <lastBuildDate>三, 07 2月 2018 16:09:56 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
@@ -14,6 +14,13 @@
 <description>No Description</description>
 <pubDate>2018-02-07</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/02/07/使用aspell检查英文拼写错误/</guid>
+</item>
+<item>
+<title>使用ping命令来探测目标主机的操作系统类型</title>
+<link>https://lujun9972.github.io/blog/2018/02/07/使用ping命令来探测目标主机的操作系统类型/</link>
+<description>No Description</description>
+<pubDate>2018-02-07</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/07/使用ping命令来探测目标主机的操作系统类型/</guid>
 </item>
 <item>
 <title>/dev/urandom和/dev/random的区别是什么</title>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-01-24</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/01/24/在archlinux下安装和使用skype/</guid>
-</item>
-<item>
-<title>在Archlinux上安装和使用Tripwire IDS</title>
-<link>https://lujun9972.github.io/blog/2018/01/22/在archlinux上安装和使用tripwire-ids/</link>
-<description>No Description</description>
-<pubDate>2018-01-22</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/01/22/在archlinux上安装和使用tripwire-ids/</guid>
 </item>
 </channel>
 </rss>
