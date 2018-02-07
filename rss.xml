@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 06 2月 2018 22:13:28 CST</pubDate>
-    <lastBuildDate>二, 06 2月 2018 22:13:28 CST</lastBuildDate>
+    <pubDate>三, 07 2月 2018 15:36:25 CST</pubDate>
+    <lastBuildDate>三, 07 2月 2018 15:36:25 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>使用aspell检查英文拼写错误</title>
+<link>https://lujun9972.github.io/blog/2018/02/07/使用aspell检查英文拼写错误/</link>
+<description>No Description</description>
+<pubDate>2018-02-07</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/07/使用aspell检查英文拼写错误/</guid>
+</item>
 <item>
 <title>/dev/urandom和/dev/random的区别是什么</title>
 <link>https://lujun9972.github.io/blog/2018/02/05/-dev-urandom和-dev-random的区别是什么/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-01-22</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/01/22/在archlinux上安装和使用tripwire-ids/</guid>
-</item>
-<item>
-<title>把archwiki搬回家</title>
-<link>https://lujun9972.github.io/blog/2018/01/22/把archwiki搬回家/</link>
-<description>No Description</description>
-<pubDate>2018-01-22</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/01/22/把archwiki搬回家/</guid>
 </item>
 </channel>
 </rss>
