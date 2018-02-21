@@ -54,18 +54,18 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0e69725">安装官方的ubuntu server</a></li>
-<li><a href="#org8a0b419">配置wifi</a></li>
-<li><a href="#org33b540e">使用国内源</a></li>
-<li><a href="#org9378ecd">修正无法apt update的问题</a></li>
-<li><a href="#org0df4739">升级Ubuntu Server 16.04</a></li>
+<li><a href="#orgd1d781d">安装官方的ubuntu server</a></li>
+<li><a href="#org3625185">配置wifi</a></li>
+<li><a href="#orgecb3db3">使用国内源</a></li>
+<li><a href="#org9146dea">修正无法apt update的问题</a></li>
+<li><a href="#org39a648a">升级Ubuntu Server 16.04</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org0e69725" class="outline-2">
-<h2 id="org0e69725">安装官方的ubuntu server</h2>
-<div class="outline-text-2" id="text-org0e69725">
+<div id="outline-container-orgd1d781d" class="outline-2">
+<h2 id="orgd1d781d">安装官方的ubuntu server</h2>
+<div class="outline-text-2" id="text-orgd1d781d">
 <p>
 Orange Pi官方有为Orange Pi Lite准备官方的Ubuntu Server镜像，下载下来用 <code>dd</code> 拷贝到TF卡上就行。
 </p>
@@ -138,9 +138,9 @@ Device     Boot  Start      End  Sectors  Size Id Type
 </div>
 </div>
 
-<div id="outline-container-org8a0b419" class="outline-2">
-<h2 id="org8a0b419">配置wifi</h2>
-<div class="outline-text-2" id="text-org8a0b419">
+<div id="outline-container-org3625185" class="outline-2">
+<h2 id="org3625185">配置wifi</h2>
+<div class="outline-text-2" id="text-org3625185">
 <p>
 写入镜像到TF卡后，你会发现TF卡被分成了两个分区，一个是BOOT分区，一个是linux分区。
 </p>
@@ -179,7 +179,7 @@ Device     Boot  Start      End  Sectors  Size Id Type
 可以配置多个wifi
 </p>
 <div class="org-src-container">
-<pre class="src src-shell">sudo wpa_passphrase MERCURY_6220_201 $<span style="color: #7590db;">WIFIPWD</span> |sudo tee -a etc/network/wpa_passphrase.conf
+<pre class="src src-shell">sudo wpa_passphrase $<span style="color: #7590db;">SSID</span> $<span style="color: #7590db;">WIFIPWD</span> |sudo tee -a etc/network/wpa_passphrase.conf
 </pre>
 </div></li>
 
@@ -196,7 +196,7 @@ Device     Boot  Start      End  Sectors  Size Id Type
 </div>
 
 <p>
-至此wifi就设置好了,推出TF卡，插入Orange Pi Lite后通电，Orange Pi Lite就会自动连接上wifi了
+至此wifi就设置好了,退出TF卡，插入Orange Pi Lite后通电，Orange Pi Lite就会自动连接上wifi了
 </p>
 
 <p>
@@ -244,9 +244,9 @@ sudo rm /usr/local/bin/fs_resize_warning
 </div>
 </div>
 
-<div id="outline-container-org33b540e" class="outline-2">
-<h2 id="org33b540e">使用国内源</h2>
-<div class="outline-text-2" id="text-org33b540e">
+<div id="outline-container-orgecb3db3" class="outline-2">
+<h2 id="orgecb3db3">使用国内源</h2>
+<div class="outline-text-2" id="text-orgecb3db3">
 <div class="org-src-container">
 <pre class="src src-shell">sed -i  <span style="color: #2d9574;">'s/ports.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/'</span> /etc/apt/sources.list
 </pre>
@@ -254,9 +254,9 @@ sudo rm /usr/local/bin/fs_resize_warning
 </div>
 </div>
 
-<div id="outline-container-org9378ecd" class="outline-2">
-<h2 id="org9378ecd">修正无法apt update的问题</h2>
-<div class="outline-text-2" id="text-org9378ecd">
+<div id="outline-container-org9146dea" class="outline-2">
+<h2 id="org9146dea">修正无法apt update的问题</h2>
+<div class="outline-text-2" id="text-org9146dea">
 <p>
 刷完官网上的Ubuntu Server后你会发现无法运行apt update,总是提示
 </p>
@@ -297,9 +297,9 @@ apt-get dist-upgrade
 </div>
 </div>
 
-<div id="outline-container-org0df4739" class="outline-2">
-<h2 id="org0df4739">升级Ubuntu Server 16.04</h2>
-<div class="outline-text-2" id="text-org0df4739">
+<div id="outline-container-org39a648a" class="outline-2">
+<h2 id="org39a648a">升级Ubuntu Server 16.04</h2>
+<div class="outline-text-2" id="text-org39a648a">
 <ol class="org-ol">
 <li><p>
 安装更新管理器核心 <code>update-manager-core</code>
