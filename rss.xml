@@ -4,15 +4,29 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>一, 12 2月 2018 22:28:24 CST</pubDate>
-    <lastBuildDate>一, 12 2月 2018 22:28:24 CST</lastBuildDate>
+    <pubDate>三, 21 2月 2018 19:25:55 CST</pubDate>
+    <lastBuildDate>三, 21 2月 2018 19:25:55 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>把Orange Pi Lite打造成ubuntu server</title>
+<link>https://lujun9972.github.io/blog/2018/02/21/把orange-pi-lite打造成ubuntu-server/</link>
+<description>No Description</description>
+<pubDate>2018-02-21</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/21/把orange-pi-lite打造成ubuntu-server/</guid>
+</item>
+<item>
+<title>anki-editor:让你通过Org-mode来创建Anki cards</title>
+<link>https://lujun9972.github.io/blog/2018/02/13/anki-editor-让你通过org-mode来创建anki-cards/</link>
+<description>No Description</description>
+<pubDate>2018-02-14</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/13/anki-editor-让你通过org-mode来创建anki-cards/</guid>
+</item>
 <item>
 <title>使用Emacs编辑浏览器中的文本框</title>
 <link>https://lujun9972.github.io/blog/2018/02/12/使用emacs编辑浏览器中的文本框/</link>
 <description>No Description</description>
-<pubDate>2018-02-12</pubDate>
+<pubDate>2018-02-13</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/02/12/使用emacs编辑浏览器中的文本框/</guid>
 </item>
 <item>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-02-06</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/02/05/-dev-urandom和-dev-random的区别是什么/</guid>
-</item>
-<item>
-<title>解决orangepi lite刷官网ubuntu-server 不能apt update的方法</title>
-<link>https://lujun9972.github.io/blog/2018/02/06/解决orangepi-lite刷官网ubuntu-server-不能apt-update的方法/</link>
-<description>No Description</description>
-<pubDate>2018-02-06</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/02/06/解决orangepi-lite刷官网ubuntu-server-不能apt-update的方法/</guid>
-</item>
-<item>
-<title>pacman中的Pac-Man</title>
-<link>https://lujun9972.github.io/blog/2018/02/02/pacman中的pac-man/</link>
-<description>No Description</description>
-<pubDate>2018-02-02</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/02/02/pacman中的pac-man/</guid>
 </item>
 </channel>
 </rss>
