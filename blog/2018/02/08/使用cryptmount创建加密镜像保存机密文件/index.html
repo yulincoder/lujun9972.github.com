@@ -19,33 +19,23 @@
 </head>
 
   <body><div class="container">
-<div>
-  <header class="masthead">
-    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
-    <p>=============&gt;随便,谢谢</p>
-    <nav class="site-nav">
-      <div class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
-          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
-          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
-        </svg>
-      </div>
-      <ul class="trigger">
-        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="https://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
-      </ul>
-    </nav>
-    <form method="get" id="searchform" action="http://www.google.com/search">
-      <input type="text" class="field" name="q" id="s" placeholder="Search">
-      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
-    </form>
-  </header>
-</div>
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
 
 <div>
 <div class="post">
@@ -54,12 +44,12 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga946a73">安装cryptmount</a></li>
-<li><a href="#orgc73fe63">配置cryptmount</a></li>
-<li><a href="#org8c5a53c">创建镜像文件</a></li>
-<li><a href="#org9a49572">创建密钥文件</a></li>
-<li><a href="#orgdfc869b">格式化镜像文件</a></li>
-<li><a href="#orged8530f">挂载和卸载加密镜像</a></li>
+<li><a href="#org38996be">安装cryptmount</a></li>
+<li><a href="#org5f5c898">配置cryptmount</a></li>
+<li><a href="#org3ba42d4">创建镜像文件</a></li>
+<li><a href="#orge1b9b68">创建密钥文件</a></li>
+<li><a href="#org095aee5">格式化镜像文件</a></li>
+<li><a href="#org6674518">挂载和卸载加密镜像</a></li>
 </ul>
 </div>
 </div>
@@ -67,9 +57,9 @@
 cryptmount是一个创建、挂载和卸载加密镜像的工具，你可以用它来创建一个加密镜像并挂载到文件系统中，然后将机密文件存入其中，再卸载这个镜像，这样就能做到神不知、鬼不觉地保存机密文件了。
 </p>
 
-<div id="outline-container-orga946a73" class="outline-2">
-<h2 id="orga946a73">安装cryptmount</h2>
-<div class="outline-text-2" id="text-orga946a73">
+<div id="outline-container-org38996be" class="outline-2">
+<h2 id="org38996be">安装cryptmount</h2>
+<div class="outline-text-2" id="text-org38996be">
 <p>
 cryptmount是archlinux中的aur仓库中，因此可以通过下面命令来安装
 </p>
@@ -92,9 +82,9 @@ cryptmount是archlinux中的aur仓库中，因此可以通过下面命令来安�
 </div>
 </div>
 
-<div id="outline-container-orgc73fe63" class="outline-2">
-<h2 id="orgc73fe63">配置cryptmount</h2>
-<div class="outline-text-2" id="text-orgc73fe63">
+<div id="outline-container-org5f5c898" class="outline-2">
+<h2 id="org5f5c898">配置cryptmount</h2>
+<div class="outline-text-2" id="text-org5f5c898">
 <p>
 使用root修改 <code>/etc/cryptmount/cmtab</code>,加入下面内容
 </p>
@@ -117,9 +107,9 @@ SecureImage {                               #配置项名称
 </div>
 </div>
 
-<div id="outline-container-org8c5a53c" class="outline-2">
-<h2 id="org8c5a53c">创建镜像文件</h2>
-<div class="outline-text-2" id="text-org8c5a53c">
+<div id="outline-container-org3ba42d4" class="outline-2">
+<h2 id="org3ba42d4">创建镜像文件</h2>
+<div class="outline-text-2" id="text-org3ba42d4">
 <p>
 使用 <code>dd</code> 创建一个镜像文件:
 </p>
@@ -138,9 +128,9 @@ SecureImage {                               #配置项名称
 </div>
 </div>
 
-<div id="outline-container-org9a49572" class="outline-2">
-<h2 id="org9a49572">创建密钥文件</h2>
-<div class="outline-text-2" id="text-org9a49572">
+<div id="outline-container-orge1b9b68" class="outline-2">
+<h2 id="orge1b9b68">创建密钥文件</h2>
+<div class="outline-text-2" id="text-orge1b9b68">
 <div class="org-src-container">
 <pre class="src src-shell">sudo cryptmount --generate-key <span style="color: #a45bad;">32</span> SecureImage
 </pre>
@@ -160,9 +150,9 @@ cryptmount就根据 <code>cmtab</code> 中cmtab的 <code>keyfile</code> 生成�
 </div>
 </div>
 
-<div id="outline-container-orgdfc869b" class="outline-2">
-<h2 id="orgdfc869b">格式化镜像文件</h2>
-<div class="outline-text-2" id="text-orgdfc869b">
+<div id="outline-container-org095aee5" class="outline-2">
+<h2 id="org095aee5">格式化镜像文件</h2>
+<div class="outline-text-2" id="text-org095aee5">
 <p>
 首先根据镜像文件来创建设备文件，运行:
 </p>
@@ -193,9 +183,9 @@ cryptmount就根据 <code>cmtab</code> 中cmtab的 <code>keyfile</code> 生成�
 </div>
 </div>
 
-<div id="outline-container-orged8530f" class="outline-2">
-<h2 id="orged8530f">挂载和卸载加密镜像</h2>
-<div class="outline-text-2" id="text-orged8530f">
+<div id="outline-container-org6674518" class="outline-2">
+<h2 id="org6674518">挂载和卸载加密镜像</h2>
+<div class="outline-text-2" id="text-org6674518">
 <p>
 首先当然是创建挂载点了:
 </p>

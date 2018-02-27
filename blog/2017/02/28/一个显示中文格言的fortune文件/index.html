@@ -19,33 +19,23 @@
 </head>
 
   <body><div class="container">
-<div>
-  <header class="masthead">
-    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
-    <p>=============&gt;随便,谢谢</p>
-    <nav class="site-nav">
-      <div class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
-          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
-          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
-        </svg>
-      </div>
-      <ul class="trigger">
-        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="https://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
-      </ul>
-    </nav>
-    <form method="get" id="searchform" action="http://www.google.com/search">
-      <input type="text" class="field" name="q" id="s" placeholder="Search">
-      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
-    </form>
-  </header>
-</div>
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
 
 <div>
 <div class="post">
@@ -54,11 +44,11 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3aa98b5">使用方法</a></li>
-<li><a href="#orgbdb2eba">实现</a>
+<li><a href="#orgdf39c55">使用方法</a></li>
+<li><a href="#org33777ed">实现</a>
 <ul>
-<li><a href="#orgedba617">数据来源</a></li>
-<li><a href="#orgbd14391">fortune文件格式</a></li>
+<li><a href="#orga9b5ade">数据来源</a></li>
+<li><a href="#orgb995cbe">fortune文件格式</a></li>
 </ul>
 </li>
 </ul>
@@ -72,9 +62,9 @@
 fortune文件可以从这里下载:<a href="https://raw.githubusercontent.com/lujun9972/proverb-fortune/master/proverbs">proverbs</a>
 </p>
 
-<div id="outline-container-org3aa98b5" class="outline-2">
-<h2 id="org3aa98b5">使用方法</h2>
-<div class="outline-text-2" id="text-org3aa98b5">
+<div id="outline-container-orgdf39c55" class="outline-2">
+<h2 id="orgdf39c55">使用方法</h2>
+<div class="outline-text-2" id="text-orgdf39c55">
 <ol class="org-ol">
 <li><p>
 要让fortune能够使用该fortune文件,还需要先用 <code>strfile</code> 来产生一个索引文件 <code>proverbs.dat</code>
@@ -108,13 +98,13 @@ fortune文件可以从这里下载:<a href="https://raw.githubusercontent.com/lu
 </div>
 
 
-<div id="outline-container-orgbdb2eba" class="outline-2">
-<h2 id="orgbdb2eba">实现</h2>
-<div class="outline-text-2" id="text-orgbdb2eba">
+<div id="outline-container-org33777ed" class="outline-2">
+<h2 id="org33777ed">实现</h2>
+<div class="outline-text-2" id="text-org33777ed">
 </div>
-<div id="outline-container-orgedba617" class="outline-3">
-<h3 id="orgedba617">数据来源</h3>
-<div class="outline-text-3" id="text-orgedba617">
+<div id="outline-container-orga9b5ade" class="outline-3">
+<h3 id="orga9b5ade">数据来源</h3>
+<div class="outline-text-3" id="text-orga9b5ade">
 <p>
 为了搜索格言,我先尝试在baidu上搜索了一下"格言",结果发现baidu除了显示出相关网页链接之外,还显示了一个小窗口里面列出了大量的格言:
 </p>
@@ -193,9 +183,9 @@ URL中的 <code>%E6%A0%BC%E8%A8%80</code> 就是格言的转义结果.
 </div>
 </div>
 
-<div id="outline-container-orgbd14391" class="outline-3">
-<h3 id="orgbd14391">fortune文件格式</h3>
-<div class="outline-text-3" id="text-orgbd14391">
+<div id="outline-container-orgb995cbe" class="outline-3">
+<h3 id="orgb995cbe">fortune文件格式</h3>
+<div class="outline-text-3" id="text-orgb995cbe">
 <p>
 fortune文件格式蛮简单的,只需要用 <b>只包含%的行</b> 将各格言内容分开就行了. 
 </p>

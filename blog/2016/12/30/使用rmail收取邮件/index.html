@@ -19,33 +19,23 @@
 </head>
 
   <body><div class="container">
-<div>
-  <header class="masthead">
-    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
-    <p>=============&gt;随便,谢谢</p>
-    <nav class="site-nav">
-      <div class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
-          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
-          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
-        </svg>
-      </div>
-      <ul class="trigger">
-        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="https://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
-      </ul>
-    </nav>
-    <form method="get" id="searchform" action="http://www.google.com/search">
-      <input type="text" class="field" name="q" id="s" placeholder="Search">
-      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
-    </form>
-  </header>
-</div>
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
 
 <div>
 <div class="post">
@@ -54,30 +44,30 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga5a3122">配置</a></li>
-<li><a href="#org2c63130">阅读邮件</a></li>
-<li><a href="#orgf2edc62">修改邮件</a></li>
-<li><a href="#org973e185">删除邮件</a></li>
-<li><a href="#orgf9ca4f7">保存邮件</a></li>
-<li><a href="#org3ccda5d">回复邮件</a></li>
-<li><a href="#org1c357f3">邮件标签</a>
+<li><a href="#org81d9012">配置</a></li>
+<li><a href="#org2d1e7bc">阅读邮件</a></li>
+<li><a href="#org67f8653">修改邮件</a></li>
+<li><a href="#org4bf120e">删除邮件</a></li>
+<li><a href="#org9069b00">保存邮件</a></li>
+<li><a href="#orga7eef31">回复邮件</a></li>
+<li><a href="#orge7cd055">邮件标签</a>
 <ul>
-<li><a href="#orgb99ee1b">邮件属性</a></li>
+<li><a href="#orge26b073">邮件属性</a></li>
 </ul>
 </li>
-<li><a href="#org58971c7">邮件概览</a>
+<li><a href="#org3075867">邮件概览</a>
 <ul>
-<li><a href="#orgafce922">进入Summary buffer</a></li>
-<li><a href="#org42ba0ba">Summary buffer的操作</a></li>
+<li><a href="#org238bb6f">进入Summary buffer</a></li>
+<li><a href="#org0d9cfef">Summary buffer的操作</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orga5a3122" class="outline-2">
-<h2 id="orga5a3122">配置</h2>
-<div class="outline-text-2" id="text-orga5a3122">
+<div id="outline-container-org81d9012" class="outline-2">
+<h2 id="org81d9012">配置</h2>
+<div class="outline-text-2" id="text-org81d9012">
 <p>
 Rmail启动时会调用 <code>movemail</code> 这个程序来从各个inbox中获取新邮件并合并到一个所谓的 <code>primary Rmail file</code> 中,然后读取其中的第一个未读邮件.
 </p>
@@ -145,9 +135,9 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 </div>
 </div>
 
-<div id="outline-container-org2c63130" class="outline-2">
-<h2 id="org2c63130">阅读邮件</h2>
-<div class="outline-text-2" id="text-org2c63130">
+<div id="outline-container-org2d1e7bc" class="outline-2">
+<h2 id="org2d1e7bc">阅读邮件</h2>
+<div class="outline-text-2" id="text-org2d1e7bc">
 <p>
 设置完之后就可以直接运行 <code>M-x rmail</code> 了,rmail会从自动进入Rmail文件中第一个未读的邮件中.
 </p>
@@ -174,9 +164,9 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 </div>
 </div>
 
-<div id="outline-container-orgf2edc62" class="outline-2">
-<h2 id="orgf2edc62">修改邮件</h2>
-<div class="outline-text-2" id="text-orgf2edc62">
+<div id="outline-container-org67f8653" class="outline-2">
+<h2 id="org67f8653">修改邮件</h2>
+<div class="outline-text-2" id="text-org67f8653">
 <p>
 默认情况下Rmail阅读邮件时是只读的. 但是你可以通过 <code>e (rmail-edit-current-message)</code> 编辑当前邮件.
 </p>
@@ -191,9 +181,9 @@ PROTO://[USER[:PASSWORD]@]HOST-OR-FILE-NAME
 </div>
 </div>
 
-<div id="outline-container-org973e185" class="outline-2">
-<h2 id="org973e185">删除邮件</h2>
-<div class="outline-text-2" id="text-org973e185">
+<div id="outline-container-org4bf120e" class="outline-2">
+<h2 id="org4bf120e">删除邮件</h2>
+<div class="outline-text-2" id="text-org4bf120e">
 <p>
 有两种删除邮件的方法:
 </p>
@@ -216,9 +206,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-orgf9ca4f7" class="outline-2">
-<h2 id="orgf9ca4f7">保存邮件</h2>
-<div class="outline-text-2" id="text-orgf9ca4f7">
+<div id="outline-container-org9069b00" class="outline-2">
+<h2 id="org9069b00">保存邮件</h2>
+<div class="outline-text-2" id="text-org9069b00">
 <p>
 以下命令可以将邮件保存到其他文件:
 </p>
@@ -231,9 +221,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-org3ccda5d" class="outline-2">
-<h2 id="org3ccda5d">回复邮件</h2>
-<div class="outline-text-2" id="text-org3ccda5d">
+<div id="outline-container-orga7eef31" class="outline-2">
+<h2 id="orga7eef31">回复邮件</h2>
+<div class="outline-text-2" id="text-orga7eef31">
 <p>
 除了 <code>C-x m</code> 之外,Rmail还提供了以下快捷键帮你发送邮件:
 </p>
@@ -257,9 +247,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-org1c357f3" class="outline-2">
-<h2 id="org1c357f3">邮件标签</h2>
-<div class="outline-text-2" id="text-org1c357f3">
+<div id="outline-container-orge7cd055" class="outline-2">
+<h2 id="orge7cd055">邮件标签</h2>
+<div class="outline-text-2" id="text-orge7cd055">
 <p>
 你可以为邮件添加各式的标签并以此作为邮件分类的一种方法:
 </p>
@@ -273,9 +263,9 @@ Rmail提供了如下命令来删除邮件:
 </dl>
 </div>
 
-<div id="outline-container-orgb99ee1b" class="outline-3">
-<h3 id="orgb99ee1b">邮件属性</h3>
-<div class="outline-text-3" id="text-orgb99ee1b">
+<div id="outline-container-orge26b073" class="outline-3">
+<h3 id="orge26b073">邮件属性</h3>
+<div class="outline-text-3" id="text-orge26b073">
 <p>
 某些特定的标签有其特定的意义,这些标签被称之为属性,一般由Rmail自己维护:
 </p>
@@ -294,9 +284,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-org58971c7" class="outline-2">
-<h2 id="org58971c7">邮件概览</h2>
-<div class="outline-text-2" id="text-org58971c7">
+<div id="outline-container-org3075867" class="outline-2">
+<h2 id="org3075867">邮件概览</h2>
+<div class="outline-text-2" id="text-org3075867">
 <p>
 你可以以概览的方式浏览所有的邮件,这时buffer中的每一行都代表一个邮件,并列出了该邮件的编号,日期,发送者,行数,标签以及标题.
 若觉得邮件的总行数显示了也没有意义,可以设置变量 <code>rmail-summary-line-count-flag</code> 为 <code>nil</code>. 这样在概览信息中就不会显示邮件的总行数了.
@@ -311,9 +301,9 @@ Rmail提供了如下命令来删除邮件:
 </p>
 </div>
 
-<div id="outline-container-orgafce922" class="outline-3">
-<h3 id="orgafce922">进入Summary buffer</h3>
-<div class="outline-text-3" id="text-orgafce922">
+<div id="outline-container-org238bb6f" class="outline-3">
+<h3 id="org238bb6f">进入Summary buffer</h3>
+<div class="outline-text-3" id="text-org238bb6f">
 <p>
 概览buffer中的信息会随着Rmail文件的改变而自动更新.
 </p>
@@ -329,9 +319,9 @@ Rmail提供了如下命令来删除邮件:
 </div>
 </div>
 
-<div id="outline-container-org42ba0ba" class="outline-3">
-<h3 id="org42ba0ba">Summary buffer的操作</h3>
-<div class="outline-text-3" id="text-org42ba0ba">
+<div id="outline-container-org0d9cfef" class="outline-3">
+<h3 id="org0d9cfef">Summary buffer的操作</h3>
+<div class="outline-text-3" id="text-org0d9cfef">
 <p>
 在概览buffer中,可以使用几乎所有的Rmail命令,这些命令会作用于光标所在行的邮件上. 例如
 </p>

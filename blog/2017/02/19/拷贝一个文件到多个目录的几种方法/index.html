@@ -19,33 +19,23 @@
 </head>
 
   <body><div class="container">
-<div>
-  <header class="masthead">
-    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
-    <p>=============&gt;随便,谢谢</p>
-    <nav class="site-nav">
-      <div class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
-          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
-          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
-        </svg>
-      </div>
-      <ul class="trigger">
-        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="https://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
-      </ul>
-    </nav>
-    <form method="get" id="searchform" action="http://www.google.com/search">
-      <input type="text" class="field" name="q" id="s" placeholder="Search">
-      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
-    </form>
-  </header>
-</div>
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
 
 <div>
 <div class="post">
@@ -54,11 +44,11 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3618753">使用xargs</a></li>
-<li><a href="#org2487165">使用parallel</a></li>
-<li><a href="#orgb34e02f">使用tee</a></li>
-<li><a href="#org276e618">使用find</a></li>
-<li><a href="#orga4f24a1">使用for循环</a></li>
+<li><a href="#org5d02869">使用xargs</a></li>
+<li><a href="#orga64eb45">使用parallel</a></li>
+<li><a href="#org236724d">使用tee</a></li>
+<li><a href="#org6b25fab">使用find</a></li>
+<li><a href="#org9e4e62b">使用for循环</a></li>
 </ul>
 </div>
 </div>
@@ -66,9 +56,9 @@
 从 <a href="https://www.cyberciti.biz/faq/linux-unix-copy-a-file-to-multiple-directories-using-cp-command/">https://www.cyberciti.biz/faq/linux-unix-copy-a-file-to-multiple-directories-using-cp-command/</a> 上看到的:
 </p>
 
-<div id="outline-container-org3618753" class="outline-2">
-<h2 id="org3618753">使用xargs</h2>
-<div class="outline-text-2" id="text-org3618753">
+<div id="outline-container-org5d02869" class="outline-2">
+<h2 id="org5d02869">使用xargs</h2>
+<div class="outline-text-2" id="text-org5d02869">
 <div class="org-src-container">
 <pre class="src src-shell">xargs -n <span style="color: #a45bad;">1</span> cp -v filename&lt;&lt;&lt;<span style="color: #2d9574;">"/dir1/ /dir2/ /dir3/"</span> 
 <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#25110;</span>
@@ -78,9 +68,9 @@
 </div>
 </div>
 
-<div id="outline-container-org2487165" class="outline-2">
-<h2 id="org2487165">使用parallel</h2>
-<div class="outline-text-2" id="text-org2487165">
+<div id="outline-container-orga64eb45" class="outline-2">
+<h2 id="orga64eb45">使用parallel</h2>
+<div class="outline-text-2" id="text-orga64eb45">
 <div class="org-src-container">
 <pre class="src src-shell">parallel cp fileNameHere ::: /dir1/ /dir2/ /dir3/
 </pre>
@@ -88,9 +78,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgb34e02f" class="outline-2">
-<h2 id="orgb34e02f">使用tee</h2>
-<div class="outline-text-2" id="text-orgb34e02f">
+<div id="outline-container-org236724d" class="outline-2">
+<h2 id="org236724d">使用tee</h2>
+<div class="outline-text-2" id="text-org236724d">
 <div class="org-src-container">
 <pre class="src src-shell">tee /dir1/file /dir2/file /dir3/file &lt;file &gt;/dev/null
 </pre>
@@ -98,9 +88,9 @@
 </div>
 </div>
 
-<div id="outline-container-org276e618" class="outline-2">
-<h2 id="org276e618">使用find</h2>
-<div class="outline-text-2" id="text-org276e618">
+<div id="outline-container-org6b25fab" class="outline-2">
+<h2 id="org6b25fab">使用find</h2>
+<div class="outline-text-2" id="text-org6b25fab">
 <div class="org-src-container">
 <pre class="src src-shell">find /dir1/ /dir2/ /dir3/ -maxdepth <span style="color: #a45bad;">0</span> -exec cp filename <span style="color: #4f97d7;">{}</span> <span style="color: #2d9574;">\;</span>
 </pre>
@@ -108,9 +98,9 @@
 </div>
 </div>
 
-<div id="outline-container-orga4f24a1" class="outline-2">
-<h2 id="orga4f24a1">使用for循环</h2>
-<div class="outline-text-2" id="text-orga4f24a1">
+<div id="outline-container-org9e4e62b" class="outline-2">
+<h2 id="org9e4e62b">使用for循环</h2>
+<div class="outline-text-2" id="text-org9e4e62b">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">for</span> dest<span style="color: #4f97d7; font-weight: bold;"> in</span> /dir1/ /dir2/ /dir3/ ; <span style="color: #4f97d7; font-weight: bold;">do</span> cp -v file <span style="color: #2d9574;">"$dest"</span> ; <span style="color: #4f97d7; font-weight: bold;">done</span>
 </pre>

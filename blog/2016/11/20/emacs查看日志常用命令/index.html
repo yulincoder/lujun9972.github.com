@@ -18,33 +18,23 @@
 </head>
 
   <body><div class="container">
-<div>
-  <header class="masthead">
-    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
-    <p>=============&gt;随便,谢谢</p>
-    <nav class="site-nav">
-      <div class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
-          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
-          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
-        </svg>
-      </div>
-      <ul class="trigger">
-        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="https://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
-      </ul>
-    </nav>
-    <form method="get" id="searchform" action="http://www.google.com/search">
-      <input type="text" class="field" name="q" id="s" placeholder="Search">
-      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
-    </form>
-  </header>
-</div>
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
 
 <div>
 <div class="post">
@@ -53,17 +43,17 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org5ad17f4">1. Tramp</a></li>
-<li><a href="#org0f29ecf">2. read-only-mode</a></li>
-<li><a href="#org333732b">3. keep-lines/flush-lines</a></li>
-<li><a href="#org2f4a95f">4. Highlights</a></li>
-<li><a href="#org53ae307">5. auto-revert</a></li>
+<li><a href="#orgfd0a550">1. Tramp</a></li>
+<li><a href="#org5404505">2. read-only-mode</a></li>
+<li><a href="#org1e3cd01">3. keep-lines/flush-lines</a></li>
+<li><a href="#org973bbd4">4. Highlights</a></li>
+<li><a href="#org534b4d9">5. auto-revert</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5ad17f4" class="outline-2">
-<h2 id="org5ad17f4"><span class="section-number-2">1</span> Tramp</h2>
+<div id="outline-container-orgfd0a550" class="outline-2">
+<h2 id="orgfd0a550"><span class="section-number-2">1</span> Tramp</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Emacs提供了tramp可以让你直接访问远程主机上的日志文件. 
@@ -83,8 +73,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </div>
 </div>
 
-<div id="outline-container-org0f29ecf" class="outline-2">
-<h2 id="org0f29ecf"><span class="section-number-2">2</span> read-only-mode</h2>
+<div id="outline-container-org5404505" class="outline-2">
+<h2 id="org5404505"><span class="section-number-2">2</span> read-only-mode</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 若怕查看日志文件时不小心对它进行了修改,那么就可以进入只读模式,方法是执行 <code>M-x read-only-mode</code>.
@@ -100,8 +90,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </div>
 </div>
 
-<div id="outline-container-org333732b" class="outline-2">
-<h2 id="org333732b"><span class="section-number-2">3</span> keep-lines/flush-lines</h2>
+<div id="outline-container-org1e3cd01" class="outline-2">
+<h2 id="org1e3cd01"><span class="section-number-2">3</span> keep-lines/flush-lines</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 有时日志中的内容太多了,为了凸出重点就需要用 <code>keep-lines</code> 或 <code>flush-lines</code> 来删除掉不用关注的内容.
@@ -222,8 +212,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </div>
 </div>
 
-<div id="outline-container-org2f4a95f" class="outline-2">
-<h2 id="org2f4a95f"><span class="section-number-2">4</span> Highlights</h2>
+<div id="outline-container-org973bbd4" class="outline-2">
+<h2 id="org973bbd4"><span class="section-number-2">4</span> Highlights</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 我们还可以让Emacs依据某种条件高亮显示日志中的某些内容. 常用的高亮命令有以下几个
@@ -286,8 +276,8 @@ tramp标示文件的语法为: <code>/[protocol]:[user@]hostname[#port]:path-to-
 </p>
 </div>
 </div>
-<div id="outline-container-org53ae307" class="outline-2">
-<h2 id="org53ae307"><span class="section-number-2">5</span> auto-revert</h2>
+<div id="outline-container-org534b4d9" class="outline-2">
+<h2 id="org534b4d9"><span class="section-number-2">5</span> auto-revert</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 在服务不停止的情况下,会不断往日志文件中加入新的内容. 若希望Emacs自动反映出这些改动那么就可以使用 <code>M-x auto-revert-mode</code> 与 <code>M-x auto-revert-tail-mode</code> 了.
