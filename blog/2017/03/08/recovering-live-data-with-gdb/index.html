@@ -44,8 +44,8 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd811eb5">Buffered Output Review</a></li>
-<li><a href="#orgac905a9">Debugger to the Rescue</a></li>
+<li><a href="#org4cb3704">Buffered Output Review</a></li>
+<li><a href="#org5b38522">Debugger to the Rescue</a></li>
 </ul>
 </div>
 </div>
@@ -83,9 +83,9 @@
 </pre>
 </div>
 
-<div id="outline-container-orgd811eb5" class="outline-2">
-<h2 id="orgd811eb5">Buffered Output Review</h2>
-<div class="outline-text-2" id="text-orgd811eb5">
+<div id="outline-container-org4cb3704" class="outline-2">
+<h2 id="org4cb3704">Buffered Output Review</h2>
+<div class="outline-text-2" id="text-org4cb3704">
 <p>
 <code>printf</code> and <code>putchar</code> 这两个C库函数,都会以某种方式来缓存输出的内容. 这意味着不是每次调用这些函数都会实际输出数据.
 另一方面, POSIX定义的函数 <code>read</code> 和 <code>write</code> 则是不带buffer的系统调用.
@@ -120,9 +120,9 @@ $ ./a.out &gt; output.txt
 </div>
 </div>
 
-<div id="outline-container-orgac905a9" class="outline-2">
-<h2 id="orgac905a9">Debugger to the Rescue</h2>
-<div class="outline-text-2" id="text-orgac905a9">
+<div id="outline-container-org5b38522" class="outline-2">
+<h2 id="org5b38522">Debugger to the Rescue</h2>
+<div class="outline-text-2" id="text-org5b38522">
 <p>
 幸运的是,有一个东西可以暂停正在运行的程序并帮我们维护程序的状态:那就是调试器.
 </p>

@@ -43,21 +43,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf9ff144">1. 实际ID,有效ID与保存的设置ID</a></li>
-<li><a href="#org879e1da">2. 更改用户/组ID函数</a>
+<li><a href="#org523fcbc">1. 实际ID,有效ID与保存的设置ID</a></li>
+<li><a href="#orge34f93e">2. 更改用户/组ID函数</a>
 <ul>
-<li><a href="#org692a492">2.1. 关于设置用户ID的规则说明</a></li>
-<li><a href="#org859f183">2.2. 关于设置组ID的规则说明</a></li>
+<li><a href="#org0a46374">2.1. 关于设置用户ID的规则说明</a></li>
+<li><a href="#org0fe7e9b">2.2. 关于设置组ID的规则说明</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf9ff144" class="outline-2">
-<h2 id="orgf9ff144"><span class="section-number-2">1</span> 实际ID,有效ID与保存的设置ID</h2>
+<div id="outline-container-org523fcbc" class="outline-2">
+<h2 id="org523fcbc"><span class="section-number-2">1</span> 实际ID,有效ID与保存的设置ID</h2>
 </div>
-<div id="outline-container-org879e1da" class="outline-2">
-<h2 id="org879e1da"><span class="section-number-2">2</span> 更改用户/组ID函数</h2>
+<div id="outline-container-orge34f93e" class="outline-2">
+<h2 id="orge34f93e"><span class="section-number-2">2</span> 更改用户/组ID函数</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -81,8 +81,8 @@
 <li>若上面条件都不满足,则将errno设置为EPERM,并返回-1</li>
 </ol>
 </div>
-<div id="outline-container-org692a492" class="outline-3">
-<h3 id="org692a492"><span class="section-number-3">2.1</span> 关于设置用户ID的规则说明</h3>
+<div id="outline-container-org0a46374" class="outline-3">
+<h3 id="org0a46374"><span class="section-number-3">2.1</span> 关于设置用户ID的规则说明</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li>只有超级用户进程可以更改实际用户ID</li>
@@ -93,8 +93,8 @@
 </ol>
 </div>
 </div>
-<div id="outline-container-org859f183" class="outline-3">
-<h3 id="org859f183"><span class="section-number-3">2.2</span> 关于设置组ID的规则说明</h3>
+<div id="outline-container-org0fe7e9b" class="outline-3">
+<h3 id="org0fe7e9b"><span class="section-number-3">2.2</span> 关于设置组ID的规则说明</h3>
 <div class="outline-text-3" id="text-2-2">
 <ol class="org-ol">
 <li>组ID的规则类似用户ID的规则</li>

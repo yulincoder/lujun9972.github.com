@@ -44,23 +44,23 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8042005">元类(metaclass)</a></li>
-<li><a href="#org541b4c9">Metaclass的工作原理</a>
+<li><a href="#org063fd00">元类(metaclass)</a></li>
+<li><a href="#org7b55a00">Metaclass的工作原理</a>
 <ul>
-<li><a href="#org0bfda82">查看对象的类型</a></li>
-<li><a href="#orgcc987db">查看类的类型</a></li>
-<li><a href="#org91610c8">type的类型又是什么呢</a></li>
-<li><a href="#orgf3054c9">元类中的那些特殊方法</a></li>
+<li><a href="#orgf799e75">查看对象的类型</a></li>
+<li><a href="#orgef5ed90">查看类的类型</a></li>
+<li><a href="#orgbc8c39d">type的类型又是什么呢</a></li>
+<li><a href="#org26dba4f">元类中的那些特殊方法</a></li>
 </ul>
 </li>
-<li><a href="#org8f232c8">class语法的实质是什么</a></li>
+<li><a href="#org0fdbc0c">class语法的实质是什么</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8042005" class="outline-2">
-<h2 id="org8042005">元类(metaclass)</h2>
-<div class="outline-text-2" id="text-org8042005">
+<div id="outline-container-org063fd00" class="outline-2">
+<h2 id="org063fd00">元类(metaclass)</h2>
+<div class="outline-text-2" id="text-org063fd00">
 <p>
 Python元编程依赖于一种特别的类，叫做元类(metaclass). 根据 <a href="https://en.wikipedia.org/wiki/Metaclass">Wikipedia</a> 的说法: "面向对象中的元类就是实例为类的类"
 </p>
@@ -114,17 +114,17 @@ greeter.hello<span style="color: #4f97d7;">()</span>
 </div>
 </div>
 
-<div id="outline-container-org541b4c9" class="outline-2">
-<h2 id="org541b4c9">Metaclass的工作原理</h2>
-<div class="outline-text-2" id="text-org541b4c9">
+<div id="outline-container-org7b55a00" class="outline-2">
+<h2 id="org7b55a00">Metaclass的工作原理</h2>
+<div class="outline-text-2" id="text-org7b55a00">
 <p>
 在了解Metaclass的工作原理之前先需要了解Python中的类型(type).
 </p>
 </div>
 
-<div id="outline-container-org0bfda82" class="outline-3">
-<h3 id="org0bfda82">查看对象的类型</h3>
-<div class="outline-text-3" id="text-org0bfda82">
+<div id="outline-container-orgf799e75" class="outline-3">
+<h3 id="orgf799e75">查看对象的类型</h3>
+<div class="outline-text-3" id="text-orgf799e75">
 <p>
 我们可以使用 <code>type(object)</code> 来查看 <code>object</code> 的类型
 </p>
@@ -144,9 +144,9 @@ greeter.hello<span style="color: #4f97d7;">()</span>
 </div>
 </div>
 
-<div id="outline-container-orgcc987db" class="outline-3">
-<h3 id="orgcc987db">查看类的类型</h3>
-<div class="outline-text-3" id="text-orgcc987db">
+<div id="outline-container-orgef5ed90" class="outline-3">
+<h3 id="orgef5ed90">查看类的类型</h3>
+<div class="outline-text-3" id="text-orgef5ed90">
 <p>
 上面可以看出变量 <code>obj</code> 的类型(type)为 <code>str</code> 类(class),那么 <code>str</code> 类本身的类型又是什么呢？让我们来看一下
 </p>
@@ -169,9 +169,9 @@ greeter.hello<span style="color: #4f97d7;">()</span>
 </div>
 </div>
 
-<div id="outline-container-org91610c8" class="outline-3">
-<h3 id="org91610c8">type的类型又是什么呢</h3>
-<div class="outline-text-3" id="text-org91610c8">
+<div id="outline-container-orgbc8c39d" class="outline-3">
+<h3 id="orgbc8c39d">type的类型又是什么呢</h3>
+<div class="outline-text-3" id="text-orgbc8c39d">
 <p>
 那么你一定很好奇， <code>type</code> 的类似又是什么呢？让我们来看一下
 </p>
@@ -198,9 +198,9 @@ greeter.hello<span style="color: #4f97d7;">()</span>
 </div>
 </div>
 
-<div id="outline-container-orgf3054c9" class="outline-3">
-<h3 id="orgf3054c9">元类中的那些特殊方法</h3>
-<div class="outline-text-3" id="text-orgf3054c9">
+<div id="outline-container-org26dba4f" class="outline-3">
+<h3 id="org26dba4f">元类中的那些特殊方法</h3>
+<div class="outline-text-3" id="text-org26dba4f">
 <p>
 <code>type</code> 类，作为Python中所有类（包括type本身）的默认元类，定义了一些特殊方法，可供自定义的元类覆盖，以完成特定的行为。
 </p>
@@ -256,9 +256,9 @@ __call__() from NewMeta () {}
 </div>
 
 
-<div id="outline-container-org8f232c8" class="outline-2">
-<h2 id="org8f232c8">class语法的实质是什么</h2>
-<div class="outline-text-2" id="text-org8f232c8">
+<div id="outline-container-org0fdbc0c" class="outline-2">
+<h2 id="org0fdbc0c">class语法的实质是什么</h2>
+<div class="outline-text-2" id="text-org0fdbc0c">
 <p>
 要了解class语法的实质，首先要明白，python中的类其实也就是对象，只不过这个对象具有创建其他对象的能力而已。
 </p>

@@ -44,60 +44,60 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4fba179">获取随机数的方式</a></li>
-<li><a href="#org23100b3">变量内容的截取</a></li>
-<li><a href="#org2440fd7">bash中的数组操作</a>
+<li><a href="#orgab78b18">获取随机数的方式</a></li>
+<li><a href="#orga985065">变量内容的截取</a></li>
+<li><a href="#orgc18a38d">bash中的数组操作</a>
 <ul>
-<li><a href="#orge7debe8">定义数组</a></li>
-<li><a href="#org502f7d6">修改数组</a></li>
-<li><a href="#org4a73729">读取数组</a></li>
-<li><a href="#org713d36f">获取数组长度</a></li>
-<li><a href="#orgfb7c15f">删除数组</a></li>
+<li><a href="#org35f118e">定义数组</a></li>
+<li><a href="#org37e712c">修改数组</a></li>
+<li><a href="#orga792e50">读取数组</a></li>
+<li><a href="#orgf9845c2">获取数组长度</a></li>
+<li><a href="#org38da0d6">删除数组</a></li>
 </ul>
 </li>
-<li><a href="#org3bf2d37">read</a></li>
-<li><a href="#org43da6f4">脚本</a>
+<li><a href="#orgcda24c4">read</a></li>
+<li><a href="#org2280c82">脚本</a>
 <ul>
-<li><a href="#org5b5f297">定义游戏参数</a></li>
-<li><a href="#orgbb48a88">定义初始内容</a></li>
-<li><a href="#orgb292ee3">生成随机的字符</a></li>
-<li><a href="#orgd93c442">显示界面</a></li>
-<li><a href="#org071f3e8">读取输入的字符</a></li>
-<li><a href="#orgbce0cf9">消除匹配的字符</a></li>
-<li><a href="#org51db921">屏幕下移</a></li>
-<li><a href="#org7cb82df">整合起来</a></li>
+<li><a href="#orga1e0b62">定义游戏参数</a></li>
+<li><a href="#orgff3836c">定义初始内容</a></li>
+<li><a href="#org2692257">生成随机的字符</a></li>
+<li><a href="#org97b009a">显示界面</a></li>
+<li><a href="#org255f831">读取输入的字符</a></li>
+<li><a href="#orgdfc3dbf">消除匹配的字符</a></li>
+<li><a href="#org7177e64">屏幕下移</a></li>
+<li><a href="#org7addf50">整合起来</a></li>
 </ul>
 </li>
-<li><a href="#orgd0c09f6">注意要点:</a></li>
+<li><a href="#orgc3786d1">注意要点:</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org4fba179" class="outline-2">
-<h2 id="org4fba179">获取随机数的方式</h2>
-<div class="outline-text-2" id="text-org4fba179">
+<div id="outline-container-orgab78b18" class="outline-2">
+<h2 id="orgab78b18">获取随机数的方式</h2>
+<div class="outline-text-2" id="text-orgab78b18">
 <p>
 $RANDOM
 </p>
 </div>
 </div>
 
-<div id="outline-container-org23100b3" class="outline-2">
-<h2 id="org23100b3">变量内容的截取</h2>
-<div class="outline-text-2" id="text-org23100b3">
+<div id="outline-container-orga985065" class="outline-2">
+<h2 id="orga985065">变量内容的截取</h2>
+<div class="outline-text-2" id="text-orga985065">
 <p>
 ${variable:position:length}
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2440fd7" class="outline-2">
-<h2 id="org2440fd7">bash中的数组操作</h2>
-<div class="outline-text-2" id="text-org2440fd7">
+<div id="outline-container-orgc18a38d" class="outline-2">
+<h2 id="orgc18a38d">bash中的数组操作</h2>
+<div class="outline-text-2" id="text-orgc18a38d">
 </div>
-<div id="outline-container-orge7debe8" class="outline-3">
-<h3 id="orge7debe8">定义数组</h3>
-<div class="outline-text-3" id="text-orge7debe8">
+<div id="outline-container-org35f118e" class="outline-3">
+<h3 id="org35f118e">定义数组</h3>
+<div class="outline-text-3" id="text-org35f118e">
 <p>
 array_name=(value0 value1 value2 value3)
 </p>
@@ -107,9 +107,9 @@ declare -a array_name
 </p>
 </div>
 </div>
-<div id="outline-container-org502f7d6" class="outline-3">
-<h3 id="org502f7d6">修改数组</h3>
-<div class="outline-text-3" id="text-org502f7d6">
+<div id="outline-container-org37e712c" class="outline-3">
+<h3 id="org37e712c">修改数组</h3>
+<div class="outline-text-3" id="text-org37e712c">
 <p>
 array_name[0]=value0
 array_name[1]=value1
@@ -117,25 +117,25 @@ array_name[n]=valuen
 </p>
 </div>
 </div>
-<div id="outline-container-org4a73729" class="outline-3">
-<h3 id="org4a73729">读取数组</h3>
-<div class="outline-text-3" id="text-org4a73729">
+<div id="outline-container-orga792e50" class="outline-3">
+<h3 id="orga792e50">读取数组</h3>
+<div class="outline-text-3" id="text-orga792e50">
 <p>
 valuen=${array_name[n]}
 </p>
 </div>
 </div>
-<div id="outline-container-org713d36f" class="outline-3">
-<h3 id="org713d36f">获取数组长度</h3>
-<div class="outline-text-3" id="text-org713d36f">
+<div id="outline-container-orgf9845c2" class="outline-3">
+<h3 id="orgf9845c2">获取数组长度</h3>
+<div class="outline-text-3" id="text-orgf9845c2">
 <p>
 length=${#array_name[@]}
 </p>
 </div>
 </div>
-<div id="outline-container-orgfb7c15f" class="outline-3">
-<h3 id="orgfb7c15f">删除数组</h3>
-<div class="outline-text-3" id="text-orgfb7c15f">
+<div id="outline-container-org38da0d6" class="outline-3">
+<h3 id="org38da0d6">删除数组</h3>
+<div class="outline-text-3" id="text-org38da0d6">
 <p>
 unset array[1] # 删除数组中第一个元素
 unset array # 删除整个数组
@@ -143,22 +143,22 @@ unset array # 删除整个数组
 </div>
 </div>
 </div>
-<div id="outline-container-org3bf2d37" class="outline-2">
-<h2 id="org3bf2d37">read</h2>
-<div class="outline-text-2" id="text-org3bf2d37">
+<div id="outline-container-orgcda24c4" class="outline-2">
+<h2 id="orgcda24c4">read</h2>
+<div class="outline-text-2" id="text-orgcda24c4">
 <p>
 read -n 1 -t 2
 </p>
 </div>
 </div>
-<div id="outline-container-org43da6f4" class="outline-2">
-<h2 id="org43da6f4">脚本</h2>
-<div class="outline-text-2" id="text-org43da6f4">
+<div id="outline-container-org2280c82" class="outline-2">
+<h2 id="org2280c82">脚本</h2>
+<div class="outline-text-2" id="text-org2280c82">
 </div>
 
-<div id="outline-container-org5b5f297" class="outline-3">
-<h3 id="org5b5f297">定义游戏参数</h3>
-<div class="outline-text-3" id="text-org5b5f297">
+<div id="outline-container-orga1e0b62" class="outline-3">
+<h3 id="orga1e0b62">定义游戏参数</h3>
+<div class="outline-text-3" id="text-orga1e0b62">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #7590db;">width</span>=<span style="color: #a45bad;">70</span>
 <span style="color: #7590db;">height</span>=<span style="color: #a45bad;">10</span>
@@ -188,9 +188,9 @@ read -n 1 -t 2
 </div>
 </div>
 
-<div id="outline-container-orgbb48a88" class="outline-3">
-<h3 id="orgbb48a88">定义初始内容</h3>
-<div class="outline-text-3" id="text-orgbb48a88">
+<div id="outline-container-orgff3836c" class="outline-3">
+<h3 id="orgff3836c">定义初始内容</h3>
+<div class="outline-text-3" id="text-orgff3836c">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span> <span style="color: #7590db;">i</span>=<span style="color: #a45bad;">0</span>;i&lt;$<span style="color: #7590db;">width</span>;i++ <span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
 <span style="color: #4f97d7; font-weight: bold;">do</span>
@@ -205,9 +205,9 @@ read -n 1 -t 2
 </div>
 </div>
 </div>
-<div id="outline-container-orgb292ee3" class="outline-3">
-<h3 id="orgb292ee3">生成随机的字符</h3>
-<div class="outline-text-3" id="text-orgb292ee3">
+<div id="outline-container-org2692257" class="outline-3">
+<h3 id="org2692257">生成随机的字符</h3>
+<div class="outline-text-3" id="text-org2692257">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">generate_random_char</span><span style="color: #4f97d7;">()</span>
 <span style="color: #4f97d7;">{</span>
@@ -239,9 +239,9 @@ read -n 1 -t 2
 </div>
 </div>
 
-<div id="outline-container-orgd93c442" class="outline-3">
-<h3 id="orgd93c442">显示界面</h3>
-<div class="outline-text-3" id="text-orgd93c442">
+<div id="outline-container-org97b009a" class="outline-3">
+<h3 id="org97b009a">显示界面</h3>
+<div class="outline-text-3" id="text-org97b009a">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">refresh_ui</span><span style="color: #4f97d7;">()</span>
 <span style="color: #4f97d7;">{</span>
@@ -255,9 +255,9 @@ read -n 1 -t 2
 </div>
 </div>
 </div>
-<div id="outline-container-org071f3e8" class="outline-3">
-<h3 id="org071f3e8">读取输入的字符</h3>
-<div class="outline-text-3" id="text-org071f3e8">
+<div id="outline-container-org255f831" class="outline-3">
+<h3 id="org255f831">读取输入的字符</h3>
+<div class="outline-text-3" id="text-org255f831">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">get_input</span><span style="color: #4f97d7;">()</span>
 <span style="color: #4f97d7;">{</span>
@@ -269,9 +269,9 @@ read -n 1 -t 2
 </div>
 </div>
 </div>
-<div id="outline-container-orgbce0cf9" class="outline-3">
-<h3 id="orgbce0cf9">消除匹配的字符</h3>
-<div class="outline-text-3" id="text-orgbce0cf9">
+<div id="outline-container-orgdfc3dbf" class="outline-3">
+<h3 id="orgdfc3dbf">消除匹配的字符</h3>
+<div class="outline-text-3" id="text-orgdfc3dbf">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">remove_input_char</span><span style="color: #4f97d7;">()</span> 
 <span style="color: #4f97d7;">{</span>
@@ -288,9 +288,9 @@ read -n 1 -t 2
 </div>
 </div>
 </div>
-<div id="outline-container-org51db921" class="outline-3">
-<h3 id="org51db921">屏幕下移</h3>
-<div class="outline-text-3" id="text-org51db921">
+<div id="outline-container-org7177e64" class="outline-3">
+<h3 id="org7177e64">屏幕下移</h3>
+<div class="outline-text-3" id="text-org7177e64">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #4f97d7; font-weight: bold;">function</span> <span style="color: #bc6ec5; font-weight: bold;">screen_down</span><span style="color: #4f97d7;">()</span>
 <span style="color: #4f97d7;">{</span>
@@ -305,9 +305,9 @@ read -n 1 -t 2
 </div>
 </div>
 </div>
-<div id="outline-container-org7cb82df" class="outline-3">
-<h3 id="org7cb82df">整合起来</h3>
-<div class="outline-text-3" id="text-org7cb82df">
+<div id="outline-container-org7addf50" class="outline-3">
+<h3 id="org7addf50">整合起来</h3>
+<div class="outline-text-3" id="text-org7addf50">
 <div class="org-src-container">
 <pre class="src src-shell">refresh_ui
 <span style="color: #4f97d7; font-weight: bold;">while</span> :
@@ -328,9 +328,9 @@ read -n 1 -t 2
 </div>
 </div>
 </div>
-<div id="outline-container-orgd0c09f6" class="outline-2">
-<h2 id="orgd0c09f6">注意要点:</h2>
-<div class="outline-text-2" id="text-orgd0c09f6">
+<div id="outline-container-orgc3786d1" class="outline-2">
+<h2 id="orgc3786d1">注意要点:</h2>
+<div class="outline-text-2" id="text-orgc3786d1">
 <ol class="org-ol">
 <li>读取数组元素的语法是${array[0]}而不能写成$array[0]</li>
 <li>字符串变量作为参数时,请一定记得放在""里面,否则前面的空格会丢失</li>

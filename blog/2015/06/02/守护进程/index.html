@@ -43,15 +43,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org59dff6c">1. 守护进程的特点</a></li>
-<li><a href="#org571511e">2. 编写守护进程的基本规则</a></li>
-<li><a href="#orgc82d7f9">3. 编写守护进程的惯例</a></li>
+<li><a href="#org9bd8c61">1. 守护进程的特点</a></li>
+<li><a href="#org8153bcf">2. 编写守护进程的基本规则</a></li>
+<li><a href="#orga1f65f2">3. 编写守护进程的惯例</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org59dff6c" class="outline-2">
-<h2 id="org59dff6c"><span class="section-number-2">1</span> 守护进程的特点</h2>
+<div id="outline-container-org9bd8c61" class="outline-2">
+<h2 id="org9bd8c61"><span class="section-number-2">1</span> 守护进程的特点</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li><b>大多数</b> 守护进程以超级用户特权运行</li>
@@ -62,8 +62,8 @@
 </div>
 </div>
 
-<div id="outline-container-org571511e" class="outline-2">
-<h2 id="org571511e"><span class="section-number-2">2</span> 编写守护进程的基本规则</h2>
+<div id="outline-container-org8153bcf" class="outline-2">
+<h2 id="org8153bcf"><span class="section-number-2">2</span> 编写守护进程的基本规则</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 编写守护进程需要遵循一些基本规则,以防止产生并不需要的交互作用.
@@ -122,8 +122,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgc82d7f9" class="outline-2">
-<h2 id="orgc82d7f9"><span class="section-number-2">3</span> 编写守护进程的惯例</h2>
+<div id="outline-container-orga1f65f2" class="outline-2">
+<h2 id="orga1f65f2"><span class="section-number-2">3</span> 编写守护进程的惯例</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>若守护进程使用锁文件(<b>可以保证只有一个守护进程副本运行</b>),那么该文件通常存放在`/var/run'目录下,且名称通常为`守护进程或服务名称.pid'. 例如cron守护进程额锁文件为`/var/run/crond.pid'</li>

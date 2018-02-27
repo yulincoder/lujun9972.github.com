@@ -44,10 +44,10 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org39b5587">解析url</a></li>
-<li><a href="#orge9d845e">组建URL</a></li>
-<li><a href="#orgc3f4869">相对路径转换绝对路径</a></li>
-<li><a href="#org4ffc130">查询参数的构造和解析</a></li>
+<li><a href="#orga266719">解析url</a></li>
+<li><a href="#org1c586ba">组建URL</a></li>
+<li><a href="#orgba80e0b">相对路径转换绝对路径</a></li>
+<li><a href="#orga6ad0e7">查询参数的构造和解析</a></li>
 </ul>
 </div>
 </div>
@@ -55,9 +55,9 @@
 python中的urllib.parse module提供了很多解析和组建URL的函数。
 </p>
 
-<div id="outline-container-org39b5587" class="outline-2">
-<h2 id="org39b5587">解析url</h2>
-<div class="outline-text-2" id="text-org39b5587">
+<div id="outline-container-orga266719" class="outline-2">
+<h2 id="orga266719">解析url</h2>
+<div class="outline-text-2" id="text-orga266719">
 <p>
 <code>urlparse()</code> 函数可以将url解析成 <code>ParseResult</code> 对象. 对象中包含了六个元素,分别为：
 </p>
@@ -208,9 +208,9 @@ fragment: fragment
 </div>
 </div>
 
-<div id="outline-container-orge9d845e" class="outline-2">
-<h2 id="orge9d845e">组建URL</h2>
-<div class="outline-text-2" id="text-orge9d845e">
+<div id="outline-container-org1c586ba" class="outline-2">
+<h2 id="org1c586ba">组建URL</h2>
+<div class="outline-text-2" id="text-org1c586ba">
 <p>
 ParsedResult对象和SplitResult对象都有一个 <code>geturl()</code> 方法，可以返回一个完整的URL字符串
 </p>
@@ -249,9 +249,9 @@ ParsedResult对象和SplitResult对象都有一个 <code>geturl()</code> 方法�
 </div>
 </div>
 
-<div id="outline-container-orgc3f4869" class="outline-2">
-<h2 id="orgc3f4869">相对路径转换绝对路径</h2>
-<div class="outline-text-2" id="text-orgc3f4869">
+<div id="outline-container-orgba80e0b" class="outline-2">
+<h2 id="orgba80e0b">相对路径转换绝对路径</h2>
+<div class="outline-text-2" id="text-orgba80e0b">
 <p>
 除此之外，urllib.parse 还提供了一个 <code>urljoin()</code> 函数，来将相对路径转换成绝对路径的URL
 </p>
@@ -278,9 +278,9 @@ ParsedResult对象和SplitResult对象都有一个 <code>geturl()</code> 方法�
 </div>
 </div>
 
-<div id="outline-container-org4ffc130" class="outline-2">
-<h2 id="org4ffc130">查询参数的构造和解析</h2>
-<div class="outline-text-2" id="text-org4ffc130">
+<div id="outline-container-orga6ad0e7" class="outline-2">
+<h2 id="orga6ad0e7">查询参数的构造和解析</h2>
+<div class="outline-text-2" id="text-orga6ad0e7">
 <p>
 使用 <code>urlencode()</code> 函数可以将一个dict转换成合法的查询参数:
 </p>

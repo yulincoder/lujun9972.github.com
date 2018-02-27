@@ -44,48 +44,48 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org38162ff">Length of line</a></li>
-<li><a href="#org9cd67f8">Indentation</a></li>
-<li><a href="#org19efcf9">Comments</a>
+<li><a href="#orgb1bf1cb">Length of line</a></li>
+<li><a href="#orga3294b0">Indentation</a></li>
+<li><a href="#org5c97405">Comments</a>
 <ul>
-<li><a href="#org348d465">Introductory comments in files</a></li>
-<li><a href="#org95bd8d6">Line end comments</a></li>
-<li><a href="#org3d75be7">Section comments</a></li>
-<li><a href="#org09fc6d4">Function comments</a></li>
-<li><a href="#org3e33820">Commenting style</a></li>
+<li><a href="#orga6d1a52">Introductory comments in files</a></li>
+<li><a href="#orga0a69c8">Line end comments</a></li>
+<li><a href="#org3b53070">Section comments</a></li>
+<li><a href="#org40a0f0d">Function comments</a></li>
+<li><a href="#orgb645b36">Commenting style</a></li>
 </ul>
 </li>
-<li><a href="#org28aa4e5">Variables and constants</a>
+<li><a href="#org363929d">Variables and constants</a>
 <ul>
-<li><a href="#org9f523da">Use of variables</a></li>
-<li><a href="#orgfcd2346">Use of constants</a></li>
+<li><a href="#org11ca016">Use of variables</a></li>
+<li><a href="#org18729d1">Use of constants</a></li>
 </ul>
 </li>
-<li><a href="#orgf376d54">Success verification</a>
+<li><a href="#org80af1ec">Success verification</a>
 <ul>
-<li><a href="#org20721f4">Command line options</a></li>
-<li><a href="#orgd51c396">Variables, commands and functions</a></li>
-<li><a href="#org4e79ce4">Execution and summary reports</a></li>
+<li><a href="#orga6601df">Command line options</a></li>
+<li><a href="#orged1e7f9">Variables, commands and functions</a></li>
+<li><a href="#org91a6e83">Execution and summary reports</a></li>
 </ul>
 </li>
-<li><a href="#org1814459">Files</a></li>
-<li><a href="#orge74f60c">Command line options</a></li>
-<li><a href="#orgced2e38">Use of Shell Builtin Commands</a></li>
-<li><a href="#orgf86ffc0">Portability</a></li>
-<li><a href="#orgcd88cac">SUID/SGID-Scripts</a></li>
-<li><a href="#orgc6875ef">Testing</a>
+<li><a href="#org7d4123e">Files</a></li>
+<li><a href="#orgf6d9c49">Command line options</a></li>
+<li><a href="#org54a9b3b">Use of Shell Builtin Commands</a></li>
+<li><a href="#org0a53e35">Portability</a></li>
+<li><a href="#org3cc76a6">SUID/SGID-Scripts</a></li>
+<li><a href="#orgac793ff">Testing</a>
 <ul>
-<li><a href="#org1084d59">Syntax check</a></li>
-<li><a href="#org4da1920">Test scope</a></li>
-<li><a href="#org1ff374d">Use of echo</a></li>
-<li><a href="#org2d465c4">Testing using Bash options</a></li>
-<li><a href="#org1843df3">The use of PS4</a></li>
-<li><a href="#org88a8254">Testing by means of trap</a></li>
-<li><a href="#org26ba558">The debugger bashdb</a></li>
+<li><a href="#org1a09247">Syntax check</a></li>
+<li><a href="#org061c2bc">Test scope</a></li>
+<li><a href="#org31b14de">Use of echo</a></li>
+<li><a href="#org47d178c">Testing using Bash options</a></li>
+<li><a href="#orgfbf8ab2">The use of PS4</a></li>
+<li><a href="#org9ccce48">Testing by means of trap</a></li>
+<li><a href="#org6f46102">The debugger bashdb</a></li>
 </ul>
 </li>
-<li><a href="#org3258310">Further sources of information</a></li>
-<li><a href="#org08d193c">References</a></li>
+<li><a href="#org9c0f4e6">Further sources of information</a></li>
+<li><a href="#org7eca2fc">References</a></li>
 </ul>
 </div>
 </div>
@@ -99,9 +99,9 @@
 本指南的主要目的就是让你能写出易懂,可维护的代码.
 </p>
 
-<div id="outline-container-org38162ff" class="outline-2">
-<h2 id="org38162ff">Length of line</h2>
-<div class="outline-text-2" id="text-org38162ff">
+<div id="outline-container-orgb1bf1cb" class="outline-2">
+<h2 id="orgb1bf1cb">Length of line</h2>
+<div class="outline-text-2" id="text-orgb1bf1cb">
 <p>
 一行不能超过80个字符长度(包括注释). 这样在搜索的时候就不用左右拖动，而且在打印文件时也可以直接打印到平常宽度的纸上而不会导致代码行被截断或者换行.
 为此，可能需要将一行命令或文本拆成多行来写.
@@ -109,9 +109,9 @@
 </div>
 </div>
 
-<div id="outline-container-org9cd67f8" class="outline-2">
-<h2 id="org9cd67f8">Indentation</h2>
-<div class="outline-text-2" id="text-org9cd67f8">
+<div id="outline-container-orga3294b0" class="outline-2">
+<h2 id="orga3294b0">Indentation</h2>
+<div class="outline-text-2" id="text-orga3294b0">
 <p>
 程序结构的缩进必须能体现程序逻辑层次.
 一步缩进的步进通常与所用编辑器的制表符的步进一致. 通常为2,4或者8.
@@ -119,13 +119,13 @@
 </div>
 </div>
 
-<div id="outline-container-org19efcf9" class="outline-2">
-<h2 id="org19efcf9">Comments</h2>
-<div class="outline-text-2" id="text-org19efcf9">
+<div id="outline-container-org5c97405" class="outline-2">
+<h2 id="org5c97405">Comments</h2>
+<div class="outline-text-2" id="text-org5c97405">
 </div>
-<div id="outline-container-org348d465" class="outline-3">
-<h3 id="org348d465">Introductory comments in files</h3>
-<div class="outline-text-3" id="text-org348d465">
+<div id="outline-container-orga6d1a52" class="outline-3">
+<h3 id="orga6d1a52">Introductory comments in files</h3>
+<div class="outline-text-3" id="text-orga6d1a52">
 <p>
 每个文件都需要有一份介绍性的说明,这份说明提供文件名称及其内容的相关信息.
 </p>
@@ -161,9 +161,9 @@
 </div>
 </div>
 
-<div id="outline-container-org95bd8d6" class="outline-3">
-<h3 id="org95bd8d6">Line end comments</h3>
-<div class="outline-text-3" id="text-org95bd8d6">
+<div id="outline-container-orga0a69c8" class="outline-3">
+<h3 id="orga0a69c8">Line end comments</h3>
+<div class="outline-text-3" id="text-orga0a69c8">
 <p>
 单行注释与代码在统一行. 在注释符 <code>#</code> 后应该跟一个空格,这样可以很容易地区分出单词的头部.
 </p>
@@ -176,9 +176,9 @@
 </div>
 </div>
 
-<div id="outline-container-org3d75be7" class="outline-3">
-<h3 id="org3d75be7">Section comments</h3>
-<div class="outline-text-3" id="text-org3d75be7">
+<div id="outline-container-org3b53070" class="outline-3">
+<h3 id="org3b53070">Section comments</h3>
+<div class="outline-text-3" id="text-org3b53070">
 <p>
 如果多行逻辑上构成一个段,那么就应该为段添上段注释.
 </p>
@@ -201,9 +201,9 @@
 </div>
 </div>
 
-<div id="outline-container-org09fc6d4" class="outline-3">
-<h3 id="org09fc6d4">Function comments</h3>
-<div class="outline-text-3" id="text-org09fc6d4">
+<div id="outline-container-org40a0f0d" class="outline-3">
+<h3 id="org40a0f0d">Function comments</h3>
+<div class="outline-text-3" id="text-org40a0f0d">
 <p>
 每个函数都应该有一个介绍性的注释. 其中包括函数名，函数的简单说明以及函数参数的说明(如果有的话).
 如果后续对该函数有所修改的话，应该把修改人和修改日期也加进来.
@@ -219,9 +219,9 @@
 </div>
 </div>
 
-<div id="outline-container-org3e33820" class="outline-3">
-<h3 id="org3e33820">Commenting style</h3>
-<div class="outline-text-3" id="text-org3e33820">
+<div id="outline-container-orgb645b36" class="outline-3">
+<h3 id="orgb645b36">Commenting style</h3>
+<div class="outline-text-3" id="text-orgb645b36">
 <p>
 注释风格应该遵循如下原则:
 </p>
@@ -256,13 +256,13 @@
 </div>
 </div>
 
-<div id="outline-container-org28aa4e5" class="outline-2">
-<h2 id="org28aa4e5">Variables and constants</h2>
-<div class="outline-text-2" id="text-org28aa4e5">
+<div id="outline-container-org363929d" class="outline-2">
+<h2 id="org363929d">Variables and constants</h2>
+<div class="outline-text-2" id="text-org363929d">
 </div>
-<div id="outline-container-org9f523da" class="outline-3">
-<h3 id="org9f523da">Use of variables</h3>
-<div class="outline-text-3" id="text-org9f523da">
+<div id="outline-container-org11ca016" class="outline-3">
+<h3 id="org11ca016">Use of variables</h3>
+<div class="outline-text-3" id="text-org11ca016">
 <p>
 变量名应该是有意义的，需要能够望名知意(比如inputfile). 
 变量名中前31个字符不能重复. 
@@ -275,9 +275,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgfcd2346" class="outline-3">
-<h3 id="orgfcd2346">Use of constants</h3>
-<div class="outline-text-3" id="text-orgfcd2346">
+<div id="outline-container-org18729d1" class="outline-3">
+<h3 id="org18729d1">Use of constants</h3>
+<div class="outline-text-3" id="text-org18729d1">
 <p>
 Principally, the following applies for all programming languages: <b>No constants must be included in the program text !</b>
 In particular numeral constants do not have another immediate meaning apart from their value. 
@@ -326,13 +326,13 @@ Global constants and texts (e.g. file names, replacement values for call paramet
 </div>
 </div>
 
-<div id="outline-container-orgf376d54" class="outline-2">
-<h2 id="orgf376d54">Success verification</h2>
-<div class="outline-text-2" id="text-orgf376d54">
+<div id="outline-container-org80af1ec" class="outline-2">
+<h2 id="org80af1ec">Success verification</h2>
+<div class="outline-text-2" id="text-org80af1ec">
 </div>
-<div id="outline-container-org20721f4" class="outline-3">
-<h3 id="org20721f4">Command line options</h3>
-<div class="outline-text-3" id="text-org20721f4">
+<div id="outline-container-orga6601df" class="outline-3">
+<h3 id="orga6601df">Command line options</h3>
+<div class="outline-text-3" id="text-orga6601df">
 <p>
 若对参数个数有要求，那么就应该在脚本中对参数个数进行校验. 当调用参数有误时，脚本可以终止运行并返回错误信息或/并说明需要调用的参数是什么.
 </p>
@@ -343,9 +343,9 @@ Global constants and texts (e.g. file names, replacement values for call paramet
 </div>
 </div>
 
-<div id="outline-container-orgd51c396" class="outline-3">
-<h3 id="orgd51c396">Variables, commands and functions</h3>
-<div class="outline-text-3" id="text-orgd51c396">
+<div id="outline-container-orged1e7f9" class="outline-3">
+<h3 id="orged1e7f9">Variables, commands and functions</h3>
+<div class="outline-text-3" id="text-orged1e7f9">
 <p>
 变量在使用前必须先为之设置一个有意义的初始值. 像这样:
 </p>
@@ -375,9 +375,9 @@ Global constants and texts (e.g. file names, replacement values for call paramet
 </div>
 </div>
 
-<div id="outline-container-org4e79ce4" class="outline-3">
-<h3 id="org4e79ce4">Execution and summary reports</h3>
-<div class="outline-text-3" id="text-org4e79ce4">
+<div id="outline-container-org91a6e83" class="outline-3">
+<h3 id="org91a6e83">Execution and summary reports</h3>
+<div class="outline-text-3" id="text-org91a6e83">
 <p>
 交互式应用的脚本应该要显示一份汇总报告. 从这份报告中可以判断脚本是否运行正常，还能用于检查结果的可信度,例如.
 </p>
@@ -403,9 +403,9 @@ Global constants and texts (e.g. file names, replacement values for call paramet
 </div>
 </div>
 
-<div id="outline-container-org1814459" class="outline-2">
-<h2 id="org1814459">Files</h2>
-<div class="outline-text-2" id="text-org1814459">
+<div id="outline-container-org7d4123e" class="outline-2">
+<h2 id="org7d4123e">Files</h2>
+<div class="outline-text-2" id="text-org7d4123e">
 <ul class="org-ul">
 <li><p>
 文件名
@@ -481,9 +481,9 @@ mv logfile logfile.$<span style="color: #7590db;">timestamp</span>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge74f60c" class="outline-2">
-<h2 id="orge74f60c">Command line options</h2>
-<div class="outline-text-2" id="text-orge74f60c">
+<div id="outline-container-orgf6d9c49" class="outline-2">
+<h2 id="orgf6d9c49">Command line options</h2>
+<div class="outline-text-2" id="text-orgf6d9c49">
 <ul class="org-ul">
 <li><p>
 调用外部程序
@@ -518,9 +518,9 @@ GNU风格的参数一般都很能表达出参数的意义，因此有助于理�
 </div>
 </div>
 
-<div id="outline-container-orgced2e38" class="outline-2">
-<h2 id="orgced2e38">Use of Shell Builtin Commands</h2>
-<div class="outline-text-2" id="text-orgced2e38">
+<div id="outline-container-org54a9b3b" class="outline-2">
+<h2 id="org54a9b3b">Use of Shell Builtin Commands</h2>
+<div class="outline-text-2" id="text-org54a9b3b">
 <p>
 尽可能使用shell内建命令而不是外部程序. 因为每次调用 <code>sed</code> , <code>awk</code> , <code>cut</code> 等外部命令都会产生一个新的进程. 
 若在循环语句中反复调用会显著地增加运行所需要的时间. 
@@ -556,9 +556,9 @@ GNU风格的参数一般都很能表达出参数的意义，因此有助于理�
 </div>
 </div>
 
-<div id="outline-container-orgf86ffc0" class="outline-2">
-<h2 id="orgf86ffc0">Portability</h2>
-<div class="outline-text-2" id="text-orgf86ffc0">
+<div id="outline-container-org0a53e35" class="outline-2">
+<h2 id="org0a53e35">Portability</h2>
+<div class="outline-text-2" id="text-org0a53e35">
 <p>
 使用 <code>dash-shell</code> (Debian Almquist Shell) 通常能够保证脚本满足 POSIX 兼容性([POS13]). 
 你也可以在 [Bas13] 中找到那些不可移植的结构及其对应的可移植的替代. 
@@ -566,9 +566,9 @@ GNU风格的参数一般都很能表达出参数的意义，因此有助于理�
 </div>
 </div>
 
-<div id="outline-container-orgcd88cac" class="outline-2">
-<h2 id="orgcd88cac">SUID/SGID-Scripts</h2>
-<div class="outline-text-2" id="text-orgcd88cac">
+<div id="outline-container-org3cc76a6" class="outline-2">
+<h2 id="org3cc76a6">SUID/SGID-Scripts</h2>
+<div class="outline-text-2" id="text-org3cc76a6">
 <p>
 shell脚本受到用户输入，进程环境，初始化文件，所使用的系统工具等等各方面的影响. 
 Shell语言不适合用来写与安全有关的脚本，因为上面所有这些因素 (当然还有其他没列出来的) 都可能用于攻击你的系统. 
@@ -595,13 +595,13 @@ Utilities may be vulnerable themselves.
 </div>
 </div>
 
-<div id="outline-container-orgc6875ef" class="outline-2">
-<h2 id="orgc6875ef">Testing</h2>
-<div class="outline-text-2" id="text-orgc6875ef">
+<div id="outline-container-orgac793ff" class="outline-2">
+<h2 id="orgac793ff">Testing</h2>
+<div class="outline-text-2" id="text-orgac793ff">
 </div>
-<div id="outline-container-org1084d59" class="outline-3">
-<h3 id="org1084d59">Syntax check</h3>
-<div class="outline-text-3" id="text-org1084d59">
+<div id="outline-container-org1a09247" class="outline-3">
+<h3 id="org1a09247">Syntax check</h3>
+<div class="outline-text-3" id="text-org1a09247">
 <p>
 使用 <code>Bash</code> 加上 <code>-n</code> 参数来执行脚本, 则只会读取脚本命令而不会真正去执行他:
 </p>
@@ -617,9 +617,9 @@ Utilities may be vulnerable themselves.
 </div>
 </div>
 
-<div id="outline-container-org4da1920" class="outline-3">
-<h3 id="org4da1920">Test scope</h3>
-<div class="outline-text-3" id="text-org4da1920">
+<div id="outline-container-org061c2bc" class="outline-3">
+<h3 id="org061c2bc">Test scope</h3>
+<div class="outline-text-3" id="text-org061c2bc">
 <p>
 在开发阶段就有必要准备好测试环境,包括准备测试文件或者测试数据. 不过这些测试数据不需要太过复杂. 
 这会增加脚本开发的速度，并且减少无意中改动重要数据的风险.
@@ -627,9 +627,9 @@ Utilities may be vulnerable themselves.
 </div>
 </div>
 
-<div id="outline-container-org1ff374d" class="outline-3">
-<h3 id="org1ff374d">Use of echo</h3>
-<div class="outline-text-3" id="text-org1ff374d">
+<div id="outline-container-org31b14de" class="outline-3">
+<h3 id="org31b14de">Use of echo</h3>
+<div class="outline-text-3" id="text-org31b14de">
 <p>
 会影响系统变更的命令(比如删除或者重命名文件)在测试时，应该先用 <code>echo</code> 将之输出并进行检查.  
 这点很重要，尤其当处理对象中包含通配符或者递归目录进行处理的时候. 
@@ -664,9 +664,9 @@ Utilities may be vulnerable themselves.
 </div>
 </div>
 
-<div id="outline-container-org2d465c4" class="outline-3">
-<h3 id="org2d465c4">Testing using Bash options</h3>
-<div class="outline-text-3" id="text-org2d465c4">
+<div id="outline-container-org47d178c" class="outline-3">
+<h3 id="org47d178c">Testing using Bash options</h3>
+<div class="outline-text-3" id="text-org47d178c">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -756,9 +756,9 @@ rm --force $TMPFILE
 </div>
 </div>
 
-<div id="outline-container-org1843df3" class="outline-3">
-<h3 id="org1843df3">The use of PS4</h3>
-<div class="outline-text-3" id="text-org1843df3">
+<div id="outline-container-orgfbf8ab2" class="outline-3">
+<h3 id="orgfbf8ab2">The use of PS4</h3>
+<div class="outline-text-3" id="text-orgfbf8ab2">
 <p>
 上一小节中， 由 <code>-x</code> 生成的前缀是由变量 <code>PS4</code> 所决定的,默认值为 <code>’+’</code>. 
 在需要的时候，会重复字符串中的第一个字符以标识调用深度. 
@@ -803,9 +803,9 @@ rm --force $TMPFILE
 </div>
 </div>
 
-<div id="outline-container-org88a8254" class="outline-3">
-<h3 id="org88a8254">Testing by means of trap</h3>
-<div class="outline-text-3" id="text-org88a8254">
+<div id="outline-container-org9ccce48" class="outline-3">
+<h3 id="org9ccce48">Testing by means of trap</h3>
+<div class="outline-text-3" id="text-org9ccce48">
 <p>
 <code>Bash</code> 提供了两种仿真信号,可以为这两种仿真信号设置各自的处理行为.
 </p>
@@ -886,9 +886,9 @@ On exit : act_dir = <span style="color: #2d9574;">"/home"</span>
 </div>
 </div>
 
-<div id="outline-container-org26ba558" class="outline-3">
-<h3 id="org26ba558">The debugger bashdb</h3>
-<div class="outline-text-3" id="text-org26ba558">
+<div id="outline-container-org6f46102" class="outline-3">
+<h3 id="org6f46102">The debugger bashdb</h3>
+<div class="outline-text-3" id="text-org6f46102">
 <p>
 调试器 <code>bashdb</code> 从3.0版本开始支持 <code>Bash</code>. 可以很容易地通过源代码来安装. 它还能够很好地与图形调试器前端 <code>ddd</code> 配合使用.
 </p>
@@ -896,9 +896,9 @@ On exit : act_dir = <span style="color: #2d9574;">"/home"</span>
 </div>
 </div>
 
-<div id="outline-container-org3258310" class="outline-2">
-<h2 id="org3258310">Further sources of information</h2>
-<div class="outline-text-2" id="text-org3258310">
+<div id="outline-container-org9c0f4e6" class="outline-2">
+<h2 id="org9c0f4e6">Further sources of information</h2>
+<div class="outline-text-2" id="text-org9c0f4e6">
 <p>
 已安装的shell和系统工具的手册是我们最重要的信息来源.
 </p>
@@ -912,9 +912,9 @@ On exit : act_dir = <span style="color: #2d9574;">"/home"</span>
 </div>
 </div>
 
-<div id="outline-container-org08d193c" class="outline-2">
-<h2 id="org08d193c">References</h2>
-<div class="outline-text-2" id="text-org08d193c">
+<div id="outline-container-org7eca2fc" class="outline-2">
+<h2 id="org7eca2fc">References</h2>
+<div class="outline-text-2" id="text-org7eca2fc">
 <p>
 [Bas13] The Bash-Hackers Wiki. <a href="http://wiki.bash-hackers.org/scripting/nonportable">http://wiki.bash-hackers.org/scripting/nonportable</a> , 2013
 [Bur04] Burtch , Ken O.: Linux Shell Scripting with Bash (Developer's Library). Sams, 2004.  -ISBN 0672326426. - As PDF freely available from the publisher.
