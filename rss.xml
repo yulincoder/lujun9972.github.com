@@ -4,10 +4,31 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 01 3月 2018 23:20:32 CST</pubDate>
-    <lastBuildDate>四, 01 3月 2018 23:20:32 CST</lastBuildDate>
+    <pubDate>五, 02 3月 2018 07:27:10 CST</pubDate>
+    <lastBuildDate>五, 02 3月 2018 07:27:10 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>使用CDPATH简化cd命令中的路径</title>
+<link>https://lujun9972.github.io/blog/2018/03/02/使用cdpath简化cd命令中的路径/</link>
+<description>No Description</description>
+<pubDate>2018-03-02</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/02/使用cdpath简化cd命令中的路径/</guid>
+</item>
+<item>
+<title>在shell中快速跳转到常用目录</title>
+<link>https://lujun9972.github.io/blog/2017/04/10/在shell中快速跳转到常用目录/</link>
+<description>No Description</description>
+<pubDate>2018-03-02</pubDate>
+<guid>https://lujun9972.github.io/blog/2017/04/10/在shell中快速跳转到常用目录/</guid>
+</item>
+<item>
+<title>如何禁用bash中的history</title>
+<link>https://lujun9972.github.io/blog/2018/01/31/如何禁用bash中的history/</link>
+<description>No Description</description>
+<pubDate>2018-03-02</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/01/31/如何禁用bash中的history/</guid>
+</item>
 <item>
 <title>funny-manpages</title>
 <link>https://lujun9972.github.io/blog/2018/03/01/funny-manpages/</link>
@@ -56,27 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-03-01</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/02/26/将orangepilite打造成bt下载服务器/</guid>
-</item>
-<item>
-<title>把Orange Pi Lite打造成ubuntu server</title>
-<link>https://lujun9972.github.io/blog/2018/02/21/把orange-pi-lite打造成ubuntu-server/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/02/21/把orange-pi-lite打造成ubuntu-server/</guid>
-</item>
-<item>
-<title>把Orange Pi打造成git服务器</title>
-<link>https://lujun9972.github.io/blog/2018/02/28/把orange-pi打造成git服务器/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/02/28/把orange-pi打造成git服务器/</guid>
-</item>
-<item>
-<title>把Orangepipc2打造成shadowsocks服务器</title>
-<link>https://lujun9972.github.io/blog/2018/02/26/把orangepipc2打造成shadowsocks服务器/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/02/26/把orangepipc2打造成shadowsocks服务器/</guid>
 </item>
 </channel>
 </rss>
