@@ -54,19 +54,28 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgdc571b6">安装官方的ubuntu server</a></li>
-<li><a href="#orgf77b52f">配置wifi</a></li>
-<li><a href="#org2012372">使用国内源</a></li>
-<li><a href="#org03a129e">更改时区</a></li>
-<li><a href="#org0c19f67">修正无法apt update的问题</a></li>
-<li><a href="#org68b8a1d">升级Ubuntu Server 16.04(虽然可以升级，但是升级后重启貌似就无法登陆了)</a></li>
+<li><a href="#orgdd352e7">写在前面的话</a></li>
+<li><a href="#org150245a">安装官方的ubuntu server</a></li>
+<li><a href="#orgf44bdbe">配置wifi</a></li>
+<li><a href="#org89f08f8">使用国内源</a></li>
+<li><a href="#org8262fe7">更改时区</a></li>
+<li><a href="#org4339ca5">修正无法apt update的问题</a></li>
+<li><a href="#org20fd8fc">升级Ubuntu Server 16.04(虽然可以升级，但是升级后重启貌似就无法登陆了)</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgdc571b6" class="outline-2">
-<h2 id="orgdc571b6">安装官方的ubuntu server</h2>
-<div class="outline-text-2" id="text-orgdc571b6">
+<div id="outline-container-orgdd352e7" class="outline-2">
+<h2 id="orgdd352e7">写在前面的话</h2>
+<div class="outline-text-2" id="text-orgdd352e7">
+<p>
+官方的Ubuntu Server镜像就是个坑货，还是刷 <a href="https://www.armbian.com/">Armbian</a> 省心～～
+</p>
+</div>
+</div>
+<div id="outline-container-org150245a" class="outline-2">
+<h2 id="org150245a">安装官方的ubuntu server</h2>
+<div class="outline-text-2" id="text-org150245a">
 <p>
 Orange Pi官方有为Orange Pi Lite准备官方的Ubuntu Server镜像，下载下来用 <code>dd</code> 拷贝到TF卡上就行。
 </p>
@@ -139,9 +148,9 @@ Device     Boot  Start      End  Sectors  Size Id Type
 </div>
 </div>
 
-<div id="outline-container-orgf77b52f" class="outline-2">
-<h2 id="orgf77b52f">配置wifi</h2>
-<div class="outline-text-2" id="text-orgf77b52f">
+<div id="outline-container-orgf44bdbe" class="outline-2">
+<h2 id="orgf44bdbe">配置wifi</h2>
+<div class="outline-text-2" id="text-orgf44bdbe">
 <p>
 写入镜像到TF卡后，你会发现TF卡被分成了两个分区，一个是BOOT分区，一个是linux分区。
 </p>
@@ -245,9 +254,9 @@ sudo rm /usr/local/bin/fs_resize_warning
 </div>
 </div>
 
-<div id="outline-container-org2012372" class="outline-2">
-<h2 id="org2012372">使用国内源</h2>
-<div class="outline-text-2" id="text-org2012372">
+<div id="outline-container-org89f08f8" class="outline-2">
+<h2 id="org89f08f8">使用国内源</h2>
+<div class="outline-text-2" id="text-org89f08f8">
 <div class="org-src-container">
 <pre class="src src-shell">sed -i  <span style="color: #2d9574;">'s/ports.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/'</span> /etc/apt/sources.list
 </pre>
@@ -255,9 +264,9 @@ sudo rm /usr/local/bin/fs_resize_warning
 </div>
 </div>
 
-<div id="outline-container-org03a129e" class="outline-2">
-<h2 id="org03a129e">更改时区</h2>
-<div class="outline-text-2" id="text-org03a129e">
+<div id="outline-container-org8262fe7" class="outline-2">
+<h2 id="org8262fe7">更改时区</h2>
+<div class="outline-text-2" id="text-org8262fe7">
 <div class="org-src-container">
 <pre class="src src-shell">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 </pre>
@@ -266,9 +275,9 @@ sudo rm /usr/local/bin/fs_resize_warning
 </div>
 
 
-<div id="outline-container-org0c19f67" class="outline-2">
-<h2 id="org0c19f67">修正无法apt update的问题</h2>
-<div class="outline-text-2" id="text-org0c19f67">
+<div id="outline-container-org4339ca5" class="outline-2">
+<h2 id="org4339ca5">修正无法apt update的问题</h2>
+<div class="outline-text-2" id="text-org4339ca5">
 <p>
 刷完官网上的Ubuntu Server后你会发现无法运行apt update,总是提示
 </p>
@@ -310,9 +319,9 @@ apt-get dist-upgrade
 </div>
 </div>
 
-<div id="outline-container-org68b8a1d" class="outline-2">
-<h2 id="org68b8a1d">升级Ubuntu Server 16.04(虽然可以升级，但是升级后重启貌似就无法登陆了)</h2>
-<div class="outline-text-2" id="text-org68b8a1d">
+<div id="outline-container-org20fd8fc" class="outline-2">
+<h2 id="org20fd8fc">升级Ubuntu Server 16.04(虽然可以升级，但是升级后重启貌似就无法登陆了)</h2>
+<div class="outline-text-2" id="text-org20fd8fc">
 <ol class="org-ol">
 <li><p>
 安装更新管理器核心 <code>update-manager-core</code>

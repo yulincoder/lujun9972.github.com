@@ -4,10 +4,24 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 01 3月 2018 13:10:12 CST</pubDate>
-    <lastBuildDate>四, 01 3月 2018 13:10:12 CST</lastBuildDate>
+    <pubDate>四, 01 3月 2018 23:20:32 CST</pubDate>
+    <lastBuildDate>四, 01 3月 2018 23:20:32 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>funny-manpages</title>
+<link>https://lujun9972.github.io/blog/2018/03/01/funny-manpages/</link>
+<description>No Description</description>
+<pubDate>2018-03-01</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/01/funny-manpages/</guid>
+</item>
+<item>
+<title>为history加上时间戳</title>
+<link>https://lujun9972.github.io/blog/2018/03/01/为history加上时间戳/</link>
+<description>No Description</description>
+<pubDate>2018-03-01</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/01/为history加上时间戳/</guid>
+</item>
 <item>
 <title>使用jq组装JSON</title>
 <link>https://lujun9972.github.io/blog/2018/03/01/使用jq组装json/</link>
@@ -21,6 +35,13 @@
 <description>No Description</description>
 <pubDate>2018-03-01</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/01/创建uefi分区时的注意事项/</guid>
+</item>
+<item>
+<title>在archlinux上安装并使用snapd</title>
+<link>https://lujun9972.github.io/blog/2018/03/01/在archlinux上安装并使用snapd/</link>
+<description>No Description</description>
+<pubDate>2018-03-01</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/01/在archlinux上安装并使用snapd/</guid>
 </item>
 <item>
 <title>如何复制文件的权限和所属关系</title>
@@ -51,32 +72,11 @@
 <guid>https://lujun9972.github.io/blog/2018/02/28/把orange-pi打造成git服务器/</guid>
 </item>
 <item>
-<title>把OrangePiLite打造成shadowsocks服务器</title>
-<link>https://lujun9972.github.io/blog/2018/02/26/把orangepilite打造成shadowsocks服务器/</link>
+<title>把Orangepipc2打造成shadowsocks服务器</title>
+<link>https://lujun9972.github.io/blog/2018/02/26/把orangepipc2打造成shadowsocks服务器/</link>
 <description>No Description</description>
 <pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/02/26/把orangepilite打造成shadowsocks服务器/</guid>
-</item>
-<item>
-<title>解决orangepi lite刷官网ubuntu-server 不能apt update的方法</title>
-<link>https://lujun9972.github.io/blog/2018/02/06/解决orangepi-lite刷官网ubuntu-server-不能apt-update的方法/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/02/06/解决orangepi-lite刷官网ubuntu-server-不能apt-update的方法/</guid>
-</item>
-<item>
-<title>Python格式化字符串的几种方法</title>
-<link>https://lujun9972.github.io/blog/2017/03/24/python格式化字符串的几种方法/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2017/03/24/python格式化字符串的几种方法/</guid>
-</item>
-<item>
-<title>python3中的元类</title>
-<link>https://lujun9972.github.io/blog/2018/02/23/python3中的元类/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/02/23/python3中的元类/</guid>
+<guid>https://lujun9972.github.io/blog/2018/02/26/把orangepipc2打造成shadowsocks服务器/</guid>
 </item>
 </channel>
 </rss>
