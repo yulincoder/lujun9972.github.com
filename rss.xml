@@ -4,8 +4,8 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>五, 02 3月 2018 16:21:30 CST</pubDate>
-    <lastBuildDate>五, 02 3月 2018 16:21:30 CST</lastBuildDate>
+    <pubDate>五, 02 3月 2018 17:36:13 CST</pubDate>
+    <lastBuildDate>五, 02 3月 2018 17:36:13 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
@@ -14,6 +14,13 @@
 <description>No Description</description>
 <pubDate>2018-03-02</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/02/使用cdpath简化cd命令中的路径/</guid>
+</item>
+<item>
+<title>使用lshw读取硬件信息</title>
+<link>https://lujun9972.github.io/blog/2018/03/02/使用lshw读取硬件信息/</link>
+<description>No Description</description>
+<pubDate>2018-03-02</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/02/使用lshw读取硬件信息/</guid>
 </item>
 <item>
 <title>在shell中快速跳转到常用目录</title>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-03-01</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/01/在archlinux上安装并使用snapd/</guid>
-</item>
-<item>
-<title>如何复制文件的权限和所属关系</title>
-<link>https://lujun9972.github.io/blog/2018/02/28/如何复制文件的权限和所属关系/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/02/28/如何复制文件的权限和所属关系/</guid>
 </item>
 </channel>
 </rss>
