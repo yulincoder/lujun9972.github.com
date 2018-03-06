@@ -54,10 +54,10 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga1cd675">安装MiniDLNA</a></li>
-<li><a href="#orgf59ad4a">配置 /etc/minidlna.conf</a></li>
-<li><a href="#orgeeebd83">重启MiniDLNA</a></li>
-<li><a href="#orgcb74ec9">使用MiniDLNA</a></li>
+<li><a href="#org55ca909">安装MiniDLNA</a></li>
+<li><a href="#org216beac">配置 /etc/minidlna.conf</a></li>
+<li><a href="#org3a6a421">重启MiniDLNA</a></li>
+<li><a href="#orga7460fa">使用MiniDLNA</a></li>
 </ul>
 </div>
 </div>
@@ -65,9 +65,9 @@
 运用MiniDLNA这款软件，可以把Orange Pi变成一个家庭影音云存储设备，从而将电影、音乐分享给局域网中其他用户。
 </p>
 
-<div id="outline-container-orga1cd675" class="outline-2">
-<h2 id="orga1cd675">安装MiniDLNA</h2>
-<div class="outline-text-2" id="text-orga1cd675">
+<div id="outline-container-org55ca909" class="outline-2">
+<h2 id="org55ca909">安装MiniDLNA</h2>
+<div class="outline-text-2" id="text-org55ca909">
 <div class="org-src-container">
 <pre class="src src-shell">sudo apt install -y minidlna
 </pre>
@@ -75,9 +75,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgf59ad4a" class="outline-2">
-<h2 id="orgf59ad4a">配置 /etc/minidlna.conf</h2>
-<div class="outline-text-2" id="text-orgf59ad4a">
+<div id="outline-container-org216beac" class="outline-2">
+<h2 id="org216beac">配置 /etc/minidlna.conf</h2>
+<div class="outline-text-2" id="text-org216beac">
 <div class="org-src-container">
 <pre class="src src-conf"><span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#23186;&#20307;&#25991;&#20214;&#30446;&#24405;</span>
 <span style="color: #7590db;">media_dir</span>=/media/usb0
@@ -87,14 +87,16 @@
 <span style="color: #7590db;">port</span>=8200
 <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">DLNA&#26381;&#21153;&#21517;&#31216;,&#40664;&#35748;&#20026;minidlna</span>
 <span style="color: #7590db;">friendly_name</span>=minidlna
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#33258;&#21160;&#21457;&#29616;media_dir&#20013;&#30340;&#26032;&#23186;&#20307;</span>
+<span style="color: #7590db;">inotify</span>=yes
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgeeebd83" class="outline-2">
-<h2 id="orgeeebd83">重启MiniDLNA</h2>
-<div class="outline-text-2" id="text-orgeeebd83">
+<div id="outline-container-org3a6a421" class="outline-2">
+<h2 id="org3a6a421">重启MiniDLNA</h2>
+<div class="outline-text-2" id="text-org3a6a421">
 <div class="org-src-container">
 <pre class="src src-shell">sudo systemctl restart minidlna
 </pre>
@@ -102,11 +104,19 @@
 </div>
 </div>
 
-<div id="outline-container-orgcb74ec9" class="outline-2">
-<h2 id="orgcb74ec9">使用MiniDLNA</h2>
-<div class="outline-text-2" id="text-orgcb74ec9">
+<div id="outline-container-orga7460fa" class="outline-2">
+<h2 id="orga7460fa">使用MiniDLNA</h2>
+<div class="outline-text-2" id="text-orga7460fa">
 <p>
 在Pad上查看UPNP/DLNA Media Servers就能看到一个名为 <code>orangepipc2:minidlna</code> 的服务器了。
+</p>
+
+<p>
+当更新了服务器上的媒体文件后，可以通过命令 <code>sudo systemctl force-reload minidlna.service</code> 来刷新媒体库
+</p>
+
+<p>
+刷新媒体库后可以访问 <code>http://orangepipc2:8200</code> 来查看MiniDLNA中共享的各类资源数量
 </p>
 </div>
 </div>
