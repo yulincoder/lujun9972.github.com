@@ -4,8 +4,8 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 06 3月 2018 10:33:06 CST</pubDate>
-    <lastBuildDate>二, 06 3月 2018 10:33:06 CST</lastBuildDate>
+    <pubDate>二, 06 3月 2018 16:33:44 CST</pubDate>
+    <lastBuildDate>二, 06 3月 2018 16:33:44 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
@@ -28,6 +28,13 @@
 <description>No Description</description>
 <pubDate>2018-03-06</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/02/26/把orangepipc2打造成shadowsocks服务器/</guid>
+</item>
+<item>
+<title>RLO字符让可执行文件看起来无害</title>
+<link>https://lujun9972.github.io/blog/2018/03/06/rlo字符让可执行文件看起来无害/</link>
+<description>No Description</description>
+<pubDate>2018-03-06</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/06/rlo字符让可执行文件看起来无害/</guid>
 </item>
 <item>
 <title>使用CDPATH简化cd命令中的路径</title>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-03-01</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/01/为history加上时间戳/</guid>
-</item>
-<item>
-<title>使用jq组装JSON</title>
-<link>https://lujun9972.github.io/blog/2018/03/01/使用jq组装json/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/01/使用jq组装json/</guid>
 </item>
 </channel>
 </rss>
