@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 06 3月 2018 16:33:44 CST</pubDate>
-    <lastBuildDate>二, 06 3月 2018 16:33:44 CST</lastBuildDate>
+    <pubDate>二, 06 3月 2018 18:13:05 CST</pubDate>
+    <lastBuildDate>二, 06 3月 2018 18:13:05 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>将Emacs插件库同步到本地来安装</title>
+<link>https://lujun9972.github.io/blog/2018/03/06/将emacs插件库同步到本地来安装/</link>
+<description>No Description</description>
+<pubDate>2018-03-06</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/06/将emacs插件库同步到本地来安装/</guid>
+</item>
 <item>
 <title>为OpenSSH开启双因素认证</title>
 <link>https://lujun9972.github.io/blog/2018/03/06/为openssh开启双因素认证/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-03-01</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/01/funny-manpages/</guid>
-</item>
-<item>
-<title>为history加上时间戳</title>
-<link>https://lujun9972.github.io/blog/2018/03/01/为history加上时间戳/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/01/为history加上时间戳/</guid>
 </item>
 </channel>
 </rss>
