@@ -4,23 +4,37 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>五, 02 3月 2018 17:36:13 CST</pubDate>
-    <lastBuildDate>五, 02 3月 2018 17:36:13 CST</lastBuildDate>
+    <pubDate>二, 06 3月 2018 10:33:06 CST</pubDate>
+    <lastBuildDate>二, 06 3月 2018 10:33:06 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>为OpenSSH开启双因素认证</title>
+<link>https://lujun9972.github.io/blog/2018/03/06/为openssh开启双因素认证/</link>
+<description>No Description</description>
+<pubDate>2018-03-06</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/06/为openssh开启双因素认证/</guid>
+</item>
+<item>
+<title>使用lshw读取硬件信息</title>
+<link>https://lujun9972.github.io/blog/2018/03/02/使用lshw读取硬件信息/</link>
+<description>No Description</description>
+<pubDate>2018-03-06</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/02/使用lshw读取硬件信息/</guid>
+</item>
+<item>
+<title>把Orangepipc2打造成shadowsocks服务器</title>
+<link>https://lujun9972.github.io/blog/2018/02/26/把orangepipc2打造成shadowsocks服务器/</link>
+<description>No Description</description>
+<pubDate>2018-03-06</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/26/把orangepipc2打造成shadowsocks服务器/</guid>
+</item>
 <item>
 <title>使用CDPATH简化cd命令中的路径</title>
 <link>https://lujun9972.github.io/blog/2018/03/02/使用cdpath简化cd命令中的路径/</link>
 <description>No Description</description>
 <pubDate>2018-03-02</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/02/使用cdpath简化cd命令中的路径/</guid>
-</item>
-<item>
-<title>使用lshw读取硬件信息</title>
-<link>https://lujun9972.github.io/blog/2018/03/02/使用lshw读取硬件信息/</link>
-<description>No Description</description>
-<pubDate>2018-03-02</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/02/使用lshw读取硬件信息/</guid>
 </item>
 <item>
 <title>在shell中快速跳转到常用目录</title>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-03-01</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/01/使用jq组装json/</guid>
-</item>
-<item>
-<title>创建UEFI分区时的注意事项</title>
-<link>https://lujun9972.github.io/blog/2018/03/01/创建uefi分区时的注意事项/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/01/创建uefi分区时的注意事项/</guid>
-</item>
-<item>
-<title>在archlinux上安装并使用snapd</title>
-<link>https://lujun9972.github.io/blog/2018/03/01/在archlinux上安装并使用snapd/</link>
-<description>No Description</description>
-<pubDate>2018-03-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/01/在archlinux上安装并使用snapd/</guid>
 </item>
 </channel>
 </rss>

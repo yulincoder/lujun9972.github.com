@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>把Orangepipc2打造成shadowsocks服务器 - 暗无天日</title>
+  <title>为OpenSSH开启双因素认证 - 暗无天日</title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <meta name="author" content="lujun9972" />
-  <meta name="keywords" content="linux和它的小伙伴,orangepi,shadowsocks" />
+  <meta name="keywords" content="linux和它的小伙伴,sshd" />
   <style>
    #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
    #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
@@ -39,106 +39,78 @@
 
 <div>
 <div class="post">
-<h1 class="title">把Orangepipc2打造成shadowsocks服务器</h1>
-<ol class="org-ol">
-<li><p>
-安装pip
+<h1 class="title">为OpenSSH开启双因素认证</h1>
+<p>
+至OpenSSH 6.2开始，就多了一个配置项 <code>AuthenticationMethods</code> 能够用来实现多因素认证。
 </p>
-<div class="org-src-container">
-<pre class="src src-shell">sudo apt install python-pip
-</pre>
-</div></li>
 
-<li><p>
-安装shadowsocks
+<p>
+该配置项可以指定一个或多个认证方式，只有所有认证方式都通过后才会被认为是认证成功。
 </p>
+
+<p>
+比如，要指定账户必须拥有指定的密钥和正确的密码才能登陆，则可以这样配置:
+</p>
+
 <div class="org-src-container">
-<pre class="src src-shell">sudo pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U
+<pre class="src src-conf"><span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#19981;&#35201;&#24536;&#20102;&#24320;&#21551;&#36825;&#20123;&#35748;&#35777;&#26041;&#24335;</span>
+PubkeyAuthentication yes
+PasswordAuthentication yes
+AuthenticationMethods publickey,password
 </pre>
 </div>
 
 <p>
-会在 <code>/usr/local/bin</code> 下创建两个文件: <code>sslocal</code> 和 <code>ssserver</code>
-</p></li>
-
-<li><p>
-安装libsodium
-</p>
-<div class="org-src-container">
-<pre class="src src-shell">wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.15.tar.gz
-tar xvzf libsodium-1.0.15.tar.gz
-<span style="color: #4f97d7;">cd</span> libsodium-1.0.15
-./configure
-make
-make install
-<span style="color: #4f97d7;">cd</span> ..
-
-<span style="color: #4f97d7;">echo</span> /usr/local/lib &gt; /etc/ld.so.conf.d/usr_local_lib.conf
-ldconfig
-</pre>
-</div></li>
-
-<li><p>
-创建Shadowsocks配置文件
-</p>
-<div class="org-src-container">
-<pre class="src src-json"><span style="color: #4f97d7;">{</span>
-    <span style="color: #4f97d7; font-weight: bold;">"server"</span>: "jp<span style="color: #a45bad;">1</span>-sta9.<span style="color: #a45bad;">27dzn</span>.site",
-    <span style="color: #4f97d7; font-weight: bold;">"server_port"</span>: <span style="color: #a45bad;">17588</span>,
-    <span style="color: #4f97d7; font-weight: bold;">"local_address"</span>: "<span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">0</span>",
-    <span style="color: #4f97d7; font-weight: bold;">"local_port"</span>:<span style="color: #a45bad;">1080</span>,
-    <span style="color: #4f97d7; font-weight: bold;">"password"</span>:<span style="color: #2d9574;">"&#23494;&#30721;"</span>,
-    <span style="color: #4f97d7; font-weight: bold;">"timeout"</span>:<span style="color: #a45bad;">300</span>,
-    <span style="color: #4f97d7; font-weight: bold;">"method"</span>: <span style="color: #2d9574;">"chacha20-ietf-poly1305"</span>,
-    <span style="color: #4f97d7; font-weight: bold;">"fast_open"</span>: <span style="color: #a45bad;">false</span>,
-    <span style="color: #4f97d7; font-weight: bold;">"workers"</span>: <span style="color: #a45bad;">1</span>
-<span style="color: #4f97d7;">}</span>
-</pre>
-</div></li>
-
-<li><p>
-启动服务
-</p>
-<div class="org-src-container">
-<pre class="src src-shell">nohup ssserver -c /etc/shadowsocks.json &amp;
-</pre>
-</div></li>
-
-<li><p>
-设置自动启动服务
+这里多个认证方式之间用 <code>,</code> 分隔开来。
 </p>
 
 <p>
-新建文件 <code>/etc/systemd/system/shadowsocks.service</code> ，然后输入以下内容
+你也可以设置多组多因素认证，只要每组认证用空格分隔开就行。
+</p>
+
+<p>
+比如，你要设置，登陆用户必须有合适的密钥，然后若是用户来自于授信主机，则让他直接登陆，否则还需要输入密码才能登陆，则可以这样：
 </p>
 <div class="org-src-container">
-<pre class="src src-conf">[<span style="color: #ce537a; font-weight: bold;">Unit</span>]
-<span style="color: #7590db;">Description</span>=ShadowSocks
-<span style="color: #7590db;">After</span>=syslog.target
-<span style="color: #7590db;">After</span>=network.target
-
-[<span style="color: #ce537a; font-weight: bold;">Service</span>]
-<span style="color: #7590db;">Type</span>=simple
-<span style="color: #7590db;">User</span>=root
-<span style="color: #7590db;">Group</span>=root
-<span style="color: #7590db;">WorkingDirectory</span>=/root
-<span style="color: #7590db;">ExecStart</span>=/usr/local/bin/ssserver /etc/shadowsocks.json
-<span style="color: #7590db;">Restart</span>=always
-<span style="color: #7590db;">Environment</span>=USER=root HOME=/root
-
-[<span style="color: #ce537a; font-weight: bold;">Install</span>]
-<span style="color: #7590db;">WantedBy</span>=multi-user.target
+<pre class="src src-conf">AuthenticationMethods publickey,password publickey,hostbased
 </pre>
-</div></li>
-</ol>
+</div>
+
+<p>
+开启多因素认证有一个不好的地方就是对自动化脚本很不友好。因此一般来说多因素认证会跟 <code>Match User</code> 或 <code>Match Group</code> 一起连用，用来限制某些用户开启或者不开启双因素认证。
+</p>
+
+<p>
+比如，一个比较常见的场景可能就是为有管理权限的用户设置多因素认证
+</p>
+<div class="org-src-container">
+<pre class="src src-conf">PubkeyAuthentication yes
+PasswordAuthentication yes
+
+Match Group wheel
+  AuthenticationMethods publickey,password
+</pre>
+</div>
+
+<p>
+当然，你也可以为一般用户都开启多因素认证，但提供某些密钥认证的用户来给自动化脚本使用：
+</p>
+<div class="org-src-container">
+<pre class="src src-conf">AuthenticationMethods publickey,password
+
+Match User git
+    AuthenticationMethods publickey
+    ForceCommand /usr/bin/git-shell -c <span style="color: #2d9574;">"$SSH_ORIGINAL_COMMAND"</span>
+</pre>
+</div>
 
 </div>
 </div>
 <div>
         <div class="post-meta">
-            <span title="post date" class="post-info">2018-02-26</span>
+            <span title="post date" class="post-info">2018-03-06</span>
             <span title="last modification date" class="post-info">2018-03-06</span>
-            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/orangepi">orangepi</a> : <a href="https://lujun9972.github.io/tags/shadowsocks">shadowsocks</a>:</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/sshd">sshd</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
@@ -151,8 +123,8 @@ ldconfig
         <script type="text/javascript">
          //var disqus_developer = 1;
          var preempt_signal=false;
-         var disqus_identifier = "/blog/2018/02/26/把orangepipc2打造成shadowsocks服务器/";
-         var disqus_url = "https://lujun9972.github.io/blog/2018/02/26/把orangepipc2打造成shadowsocks服务器/";
+         var disqus_identifier = "/blog/2018/03/06/为openssh开启双因素认证/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/03/06/为openssh开启双因素认证/";
          var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {

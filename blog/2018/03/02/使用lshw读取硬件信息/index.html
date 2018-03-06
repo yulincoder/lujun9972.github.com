@@ -44,14 +44,14 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4a6f32c">安装lshw</a></li>
-<li><a href="#org5518752">使用lshw</a>
+<li><a href="#org854b047">安装lshw</a></li>
+<li><a href="#org468405f">使用lshw</a>
 <ul>
-<li><a href="#org52862ad">列出硬件信息</a></li>
-<li><a href="#org53e4e53">让lshw现实SCSI，USB，IDE和PCI设备的信息</a></li>
-<li><a href="#org2207396">指定lshw输出信息的格式</a></li>
-<li><a href="#org4fb3825">让lshw显示出敏感信息</a></li>
-<li><a href="#org9504fa2">获取帮助</a></li>
+<li><a href="#org9b3cf7d">列出硬件信息</a></li>
+<li><a href="#orga8c182a">让lshw现实SCSI，USB，IDE和PCI设备的信息</a></li>
+<li><a href="#org2356a6a">指定lshw输出信息的格式</a></li>
+<li><a href="#orga44f5c0">让lshw显示出敏感信息</a></li>
+<li><a href="#org02d1b78">获取帮助</a></li>
 </ul>
 </li>
 </ul>
@@ -61,30 +61,30 @@
 lshw是一个读取硬件信息的命令行工具。
 </p>
 
-<div id="outline-container-org4a6f32c" class="outline-2">
-<h2 id="org4a6f32c">安装lshw</h2>
-<div class="outline-text-2" id="text-org4a6f32c">
+<div id="outline-container-org854b047" class="outline-2">
+<h2 id="org854b047">安装lshw</h2>
+<div class="outline-text-2" id="text-org854b047">
 <p>
 archlinux默认并没有安装 <code>lshw</code>,你需要手工安装
 </p>
 <div class="org-src-container">
-<pre class="src src-shell">
+<pre class="src src-shell">sudo pacman -S lshw
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5518752" class="outline-2">
-<h2 id="org5518752">使用lshw</h2>
-<div class="outline-text-2" id="text-org5518752">
+<div id="outline-container-org468405f" class="outline-2">
+<h2 id="org468405f">使用lshw</h2>
+<div class="outline-text-2" id="text-org468405f">
 <p>
 注意： <b>由于lshw需要读取硬件信息，因此需要使用root权限</b>
 </p>
 </div>
 
-<div id="outline-container-org52862ad" class="outline-3">
-<h3 id="org52862ad">列出硬件信息</h3>
-<div class="outline-text-3" id="text-org52862ad">
+<div id="outline-container-org9b3cf7d" class="outline-3">
+<h3 id="org9b3cf7d">列出硬件信息</h3>
+<div class="outline-text-3" id="text-org9b3cf7d">
 <p>
 直接运行lshw就能列出本机上的硬件信息了：
 </p>
@@ -622,15 +622,15 @@ archlinux默认并没有安装 <code>lshw</code>,你需要手工安装
 
 
 <div class="figure">
-<p><img src="https://lujun9972.github.io/assets/blog/2018/03/02/使用lshw读取硬件信息/screenshot-01.png" alt="screenshot-01.png" />
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/02/使用lshw读取硬件信息/screenshot-16.png" alt="screenshot-16.png" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org53e4e53" class="outline-3">
-<h3 id="org53e4e53">让lshw现实SCSI，USB，IDE和PCI设备的信息</h3>
-<div class="outline-text-3" id="text-org53e4e53">
+<div id="outline-container-orga8c182a" class="outline-3">
+<h3 id="orga8c182a">让lshw现实SCSI，USB，IDE和PCI设备的信息</h3>
+<div class="outline-text-3" id="text-orga8c182a">
 <p>
 通过 <code>-businfo</code> 可以获取主线信息
 </p>
@@ -700,9 +700,9 @@ usb@2:1           wlp0s29f7u1  network     Wireless interface
 </div>
 </div>
 
-<div id="outline-container-org2207396" class="outline-3">
-<h3 id="org2207396">指定lshw输出信息的格式</h3>
-<div class="outline-text-3" id="text-org2207396">
+<div id="outline-container-org2356a6a" class="outline-3">
+<h3 id="org2356a6a">指定lshw输出信息的格式</h3>
+<div class="outline-text-3" id="text-org2356a6a">
 <p>
 lshw可以将信息以html，xml或json的格式进行输出：
 </p>
@@ -1903,9 +1903,9 @@ lshw -json
 </div>
 </div>
 
-<div id="outline-container-org4fb3825" class="outline-3">
-<h3 id="org4fb3825">让lshw显示出敏感信息</h3>
-<div class="outline-text-3" id="text-org4fb3825">
+<div id="outline-container-orga44f5c0" class="outline-3">
+<h3 id="orga44f5c0">让lshw显示出敏感信息</h3>
+<div class="outline-text-3" id="text-orga44f5c0">
 <p>
 默认情况下，lshw会隐藏IP地址、serial number之类的敏感信息，若你希望把这类信息也显示出来，则可以执行
 </p>
@@ -1916,9 +1916,9 @@ lshw -json
 </div>
 </div>
 
-<div id="outline-container-org9504fa2" class="outline-3">
-<h3 id="org9504fa2">获取帮助</h3>
-<div class="outline-text-3" id="text-org9504fa2">
+<div id="outline-container-org02d1b78" class="outline-3">
+<h3 id="org02d1b78">获取帮助</h3>
+<div class="outline-text-3" id="text-org02d1b78">
 <div class="org-src-container">
 <pre class="src src-shell">lshw -help
 </pre>
@@ -1964,7 +1964,7 @@ options can be
 <div>
         <div class="post-meta">
             <span title="post date" class="post-info">2018-03-02</span>
-            <span title="last modification date" class="post-info">2018-03-02</span>
+            <span title="last modification date" class="post-info">2018-03-06</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/hardware">hardware</a> : <a href="https://lujun9972.github.io/tags/lshw">lshw</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">lujun9972</a></span>
         </div>
