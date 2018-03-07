@@ -4,8 +4,8 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>三, 07 3月 2018 18:38:02 CST</pubDate>
-    <lastBuildDate>三, 07 3月 2018 18:38:02 CST</lastBuildDate>
+    <pubDate>三, 07 3月 2018 22:44:20 CST</pubDate>
+    <lastBuildDate>三, 07 3月 2018 22:44:20 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
@@ -14,6 +14,13 @@
 <description>No Description</description>
 <pubDate>2018-03-07</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/07/在ubuntu上安装rpm包/</guid>
+</item>
+<item>
+<title>把Orange Pi打造成多功能下载机</title>
+<link>https://lujun9972.github.io/blog/2018/03/07/把orange-pi打造成多功能下载机/</link>
+<description>No Description</description>
+<pubDate>2018-03-07</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/07/把orange-pi打造成多功能下载机/</guid>
 </item>
 <item>
 <title>将Emacs插件库同步到本地来安装</title>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-03-02</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/02/使用cdpath简化cd命令中的路径/</guid>
-</item>
-<item>
-<title>在shell中快速跳转到常用目录</title>
-<link>https://lujun9972.github.io/blog/2017/04/10/在shell中快速跳转到常用目录/</link>
-<description>No Description</description>
-<pubDate>2018-03-02</pubDate>
-<guid>https://lujun9972.github.io/blog/2017/04/10/在shell中快速跳转到常用目录/</guid>
 </item>
 </channel>
 </rss>
