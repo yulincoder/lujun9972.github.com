@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>使用partclone备份磁盘分区 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴,backup" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+<div>
+  <header class="masthead">
+    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
+    <p>=============&gt;随便,谢谢</p>
+    <nav class="site-nav">
+      <div class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
+          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
+          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
+        </svg>
+      </div>
+      <ul class="trigger">
+        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+        <li><a href="https://lujun9972.github.io/about/">About</a></li>
+        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+      </ul>
+    </nav>
+    <form method="get" id="searchform" action="http://www.google.com/search">
+      <input type="text" class="field" name="q" id="s" placeholder="Search">
+      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+    </form>
+  </header>
+</div>
+
+<div>
+<div class="post">
+<h1 class="title">使用partclone备份磁盘分区</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgf424896">安装partclone</a></li>
+<li><a href="#org70e0242">备份磁盘分区</a></li>
+<li><a href="#org57ba512">从备份还原</a></li>
+</ul>
+</div>
+</div>
+<p>
+在linux中，最常用的 <code>block level</code> 备份工具应该非 <code>dd</code> 莫属了。 然而用 <code>dd</code> 做磁盘备份有一个不好的地方就是太费空间，磁盘多大，生成的备份文件就有多大。
+</p>
+
+<p>
+partclone 跟 <code>dd</code> 类似，也是一款 <code>block level</code> 的备份工具，因此使用它你无需担心会破坏磁盘中 <code>acls</code> 或 <code>selinux labels</code> 这一类特殊的文件权限。
+</p>
+
+<p>
+但是跟 <code>dd</code> 相比， <code>partclone</code> 能够识别大多数常见的文件类型，只备份磁盘中用到的那些block，从而大大减少备份所耗的空间。
+</p>
+
+<p>
+目前 <code>partclone</code> 支持的文件系统格式包括ext2, ext3, ext4, hfs+, reiserfs, xfs, jfs, ntfs, fat(12/16/32), exfat。
+</p>
+
+<p>
+对每种文件系统 <code>partclone</code> 都提供了对应的 <code>partclone.&lt;fs&gt;</code> 对应。比如备份 <code>ext4</code> 文件系统则使用 <code>parclone.ext4</code> 进行备份。
+对于不支持的文件系统， <code>partclone</code> 也提供了 <code>partclone.dd</code> 来备份。
+</p>
+
+<div id="outline-container-orgf424896" class="outline-2">
+<h2 id="orgf424896">安装partclone</h2>
+<div class="outline-text-2" id="text-orgf424896">
+<p>
+archlinux上可以直接使用pacman来安装：
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S partclone --noconfirm
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org70e0242" class="outline-2">
+<h2 id="org70e0242">备份磁盘分区</h2>
+<div class="outline-text-2" id="text-org70e0242">
+<p>
+在备份磁盘分区之前，请先确保被备份的分区需要先卸载。不过如果你是用的 <code>lvm</code> ，那么可以创建一个逻辑卷的 live snapshot,因此可以不受此限制。
+</p>
+
+<p>
+下面这个例子，我把安装好的orangepilite做个备份。
+</p>
+
+<p>
+将orangepilite断电后，推出TF卡，然后插入读卡器中，插入电脑的USB接口。然后执行
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo partclone.ext4 -c -s /dev/sdb1 -o /mnt/orangepilite.pcl
+</pre>
+</div>
+
+<p>
+其中：
+</p>
+
+<dl class="org-dl">
+<dt>-c</dt><dd>表示clone一个备份</dd>
+<dt>-s</dt><dd>指定clone的源</dd>
+<dt>-o</dt><dd>指定保存的镜像文件</dd>
+</dl>
+
+<p>
+你会发现，虽然TF卡是8G，但是产生的orangepilite.pcl只有1.3G
+</p>
+<pre class="example">
+[lujun9972@T520 lujun9972]$ ls -lh /mnt/orangepilite.pcl 
+-rw------- 1 root root 1.3G 3月   8 21:23 /mnt/orangepilite.pcl
+</pre>
+
+<p>
+不过更多的时候，我们会对镜像文件压缩存储，我们可以让 <code>partclone</code> 与 <code>gzip</code> 连用实现这一点
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo bash -c <span style="color: #2d9574;">"partclone.ext4 -c -s /dev/sdb1 |gzip -c -9 &gt;/mnt/orangepilite.pcl.gz"</span>
+</pre>
+</div>
+
+<p>
+最后产生的备份文件只有454M
+</p>
+<pre class="example">
+[lujun9972@T520 lujun9972]$ ls -lh /mnt/orangepilite.pcl.gz 
+-rw-r--r-- 1 root root 454M 3月   8 21:34 /mnt/orangepilite.pcl.gz
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org57ba512" class="outline-2">
+<h2 id="org57ba512">从备份还原</h2>
+<div class="outline-text-2" id="text-org57ba512">
+<p>
+从备份还原很简单
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo partclone.ext4 -r -s /mnt/orangepilite.pcl -o /dev/sdb1
+</pre>
+</div>
+
+<p>
+这里 <code>-r</code> 表示还原(restore),然后把上面备份的 <code>-s</code> 和 <code>-o</code> 参数值反过来就是了。
+</p>
+
+<p>
+若备份的是压缩过的文件，则只需要运行
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo bash -c <span style="color: #2d9574;">"gzip -c -d /mnt/orangepilite.pcl.gz | partclone.ext4 -r -o /dev/sdb1"</span>
+</pre>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-03-08</span>
+            <span title="last modification date" class="post-info">2018-03-08</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/backup">backup</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/03/08/使用partclone备份磁盘分区/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/03/08/使用partclone备份磁盘分区/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>

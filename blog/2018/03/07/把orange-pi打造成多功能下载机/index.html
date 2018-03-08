@@ -54,22 +54,23 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfe3a1b6">安装 aria2</a></li>
-<li><a href="#orgba2599d">配置aria2.conf</a></li>
-<li><a href="#org259cf60">安装aria2 web前端</a>
+<li><a href="#orgf435699">安装 aria2</a></li>
+<li><a href="#org41ee821">配置aria2.conf</a></li>
+<li><a href="#org3efda7d">安装aria2 web前端</a>
 <ul>
-<li><a href="#orga55d6ef">安装apache</a></li>
-<li><a href="#org571a8d0">安装中文YAAW</a></li>
-<li><a href="#org17083c5">使用YAAW</a></li>
+<li><a href="#org11867eb">安装apache</a></li>
+<li><a href="#org62d763c">安装中文YAAW</a></li>
+<li><a href="#orgf41468d">使用YAAW</a></li>
 </ul>
 </li>
+<li><a href="#org7999856">配置aria2自启动</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgfe3a1b6" class="outline-2">
-<h2 id="orgfe3a1b6">安装 aria2</h2>
-<div class="outline-text-2" id="text-orgfe3a1b6">
+<div id="outline-container-orgf435699" class="outline-2">
+<h2 id="orgf435699">安装 aria2</h2>
+<div class="outline-text-2" id="text-orgf435699">
 <div class="org-src-container">
 <pre class="src src-shell">sudo apt install aria2 -y
 </pre>
@@ -77,9 +78,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgba2599d" class="outline-2">
-<h2 id="orgba2599d">配置aria2.conf</h2>
-<div class="outline-text-2" id="text-orgba2599d">
+<div id="outline-container-org41ee821" class="outline-2">
+<h2 id="org41ee821">配置aria2.conf</h2>
+<div class="outline-text-2" id="text-org41ee821">
 <p>
 我们假设下载文件放在 <code>/media/Downloads</code> 目录中
 </p>
@@ -243,31 +244,31 @@ ln -s /etc/aria2.conf ~/.aria2/aria2.conf
 </div>
 </div>
 
-<div id="outline-container-org259cf60" class="outline-2">
-<h2 id="org259cf60">安装aria2 web前端</h2>
-<div class="outline-text-2" id="text-org259cf60">
+<div id="outline-container-org3efda7d" class="outline-2">
+<h2 id="org3efda7d">安装aria2 web前端</h2>
+<div class="outline-text-2" id="text-org3efda7d">
 </div>
-<div id="outline-container-orga55d6ef" class="outline-3">
-<h3 id="orga55d6ef">安装apache</h3>
-<div class="outline-text-3" id="text-orga55d6ef">
+<div id="outline-container-org11867eb" class="outline-3">
+<h3 id="org11867eb">安装apache</h3>
+<div class="outline-text-3" id="text-org11867eb">
 <div class="org-src-container">
 <pre class="src src-shell">sudo apt install apache2 -y
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org571a8d0" class="outline-3">
-<h3 id="org571a8d0">安装中文YAAW</h3>
-<div class="outline-text-3" id="text-org571a8d0">
+<div id="outline-container-org62d763c" class="outline-3">
+<h3 id="org62d763c">安装中文YAAW</h3>
+<div class="outline-text-3" id="text-org62d763c">
 <div class="org-src-container">
 <pre class="src src-shell">git clone https://github.com/aa65535/yaaw-zh-hans /var/www/html/yaaw
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org17083c5" class="outline-3">
-<h3 id="org17083c5">使用YAAW</h3>
-<div class="outline-text-3" id="text-org17083c5">
+<div id="outline-container-orgf41468d" class="outline-3">
+<h3 id="orgf41468d">使用YAAW</h3>
+<div class="outline-text-3" id="text-orgf41468d">
 <p>
 访问 <code>http://orangepipc2/yaaw</code>, 然后点击右边刷新 <b>旁边</b> 的配置按钮，在 <code>JSON-RPC Path</code> 中填入 <a href="http://orangepipc2:6800/jsonrpc">http://orangepipc2:6800/jsonrpc</a>. 
 </p>
@@ -275,6 +276,33 @@ ln -s /etc/aria2.conf ~/.aria2/aria2.conf
 <p>
 其中 <code>orangepipc2</code> 是OrangePi的IP地址
 </p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7999856" class="outline-2">
+<h2 id="org7999856">配置aria2自启动</h2>
+<div class="outline-text-2" id="text-org7999856">
+<p>
+新建文件 <code>/etc/systemd/system/aria2.service</code> ，然后输入以下内容
+</p>
+<div class="org-src-container">
+<pre class="src src-conf">[<span style="color: #ce537a; font-weight: bold;">Unit</span>]
+<span style="color: #7590db;">Description</span>=Aria2
+<span style="color: #7590db;">After</span>=syslog.target
+<span style="color: #7590db;">After</span>=network.target
+
+[<span style="color: #ce537a; font-weight: bold;">Service</span>]
+<span style="color: #7590db;">Type</span>=simple
+<span style="color: #7590db;">User</span>=root
+<span style="color: #7590db;">Group</span>=root
+<span style="color: #7590db;">WorkingDirectory</span>=/root
+<span style="color: #7590db;">ExecStart</span>=/usr/bin/aria2c  --conf-path=<span style="color: #2d9574;">"/etc/aria2.conf -D</span>
+<span style="color: #2d9574;"># Restart=always</span>
+<span style="color: #2d9574;">Environment=USER=root HOME=/root</span>
+
+<span style="color: #2d9574;">[Install]</span>
+<span style="color: #2d9574;">WantedBy=multi-user.target</span>
+</pre>
 </div>
 </div>
 </div>
