@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>使用partclone备份磁盘分区 - 暗无天日</title>
+  <title>连接Android手机到ArchLinux上 - 暗无天日</title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <meta name="author" content="lujun9972" />
-  <meta name="keywords" content="linux和它的小伙伴,backup" />
+  <meta name="keywords" content="linux和它的小伙伴,android,archlinux" />
   <style>
    #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
    #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
@@ -49,141 +49,72 @@
 
 <div>
 <div class="post">
-<h1 class="title">使用partclone备份磁盘分区</h1>
+<h1 class="title">连接Android手机到ArchLinux上</h1>
 <div id="table-of-contents">
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9ac9dde">安装partclone</a></li>
-<li><a href="#org70b5031">备份磁盘分区</a></li>
-<li><a href="#org1b743ad">从备份还原</a></li>
+<li><a href="#orga96fc69">启用MTP支持</a></li>
+<li><a href="#org6ee6502">将MTP整合进文件管理器</a></li>
 </ul>
 </div>
 </div>
-<p>
-在linux中，最常用的 <code>block level</code> 备份工具应该非 <code>dd</code> 莫属了。 然而用 <code>dd</code> 做磁盘备份有一个不好的地方就是太费空间，磁盘多大，生成的备份文件就有多大。
-</p>
 
+<div id="outline-container-orga96fc69" class="outline-2">
+<h2 id="orga96fc69">启用MTP支持</h2>
+<div class="outline-text-2" id="text-orga96fc69">
 <p>
-partclone 跟 <code>dd</code> 类似，也是一款 <code>block level</code> 的备份工具，因此使用它你无需担心会破坏磁盘中 <code>acls</code> 或 <code>selinux labels</code> 这一类特殊的文件权限。
-</p>
-
-<p>
-但是跟 <code>dd</code> 相比， <code>partclone</code> 能够识别大多数常见的文件类型，只备份磁盘中用到的那些block，从而大大减少备份所耗的空间。
-</p>
-
-<p>
-目前 <code>partclone</code> 支持的文件系统格式包括ext2, ext3, ext4, hfs+, reiserfs, xfs, jfs, ntfs, fat(12/16/32), exfat。
-</p>
-
-<p>
-对每种文件系统 <code>partclone</code> 都提供了对应的 <code>partclone.&lt;fs&gt;</code> 对应。比如备份 <code>ext4</code> 文件系统则使用 <code>parclone.ext4</code> 进行备份。
-对于不支持的文件系统， <code>partclone</code> 也提供了 <code>partclone.dd</code> 来备份。
-</p>
-
-<div id="outline-container-org9ac9dde" class="outline-2">
-<h2 id="org9ac9dde">安装partclone</h2>
-<div class="outline-text-2" id="text-org9ac9dde">
-<p>
-archlinux上可以直接使用pacman来安装：
+要让archlinux支持MTP协议，需要安装 <code>mtpfs</code>
 </p>
 <div class="org-src-container">
-<pre class="src src-shell">sudo pacman -S partclone --noconfirm
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org70b5031" class="outline-2">
-<h2 id="org70b5031">备份磁盘分区</h2>
-<div class="outline-text-2" id="text-org70b5031">
-<p>
-在备份磁盘分区之前，请先确保被备份的分区需要先卸载。不过如果你是用的 <code>lvm</code> ，那么可以创建一个逻辑卷的 live snapshot,因此可以不受此限制。
-</p>
-
-<p>
-下面这个例子，我把安装好的orangepilite做个备份。
-</p>
-
-<p>
-将orangepilite断电后，推出TF卡，然后插入读卡器中，插入电脑的USB接口。然后执行
-</p>
-<div class="org-src-container">
-<pre class="src src-shell">sudo partclone.ext4 -c -s /dev/sdb1 -o /mnt/orangepilite.pcl
+<pre class="src src-shell">sudo pacman -S mtpfs --noconfirm
 </pre>
 </div>
 
 <p>
-其中：
+但对于Android 4+的设备，光有 <code>mtpfs</code> 还不够，还需要安装 <code>jmtpfs</code>, 而 <code>jmtpfs</code> 是在AUR中的：
 </p>
-
-<dl class="org-dl">
-<dt>-c</dt><dd>表示clone一个备份</dd>
-<dt>-s</dt><dd>指定clone的源</dd>
-<dt>-o</dt><dd>指定保存的镜像文件</dd>
-</dl>
+<div class="org-src-container">
+<pre class="src src-shell">yaourt -S jmtpfs
+</pre>
+</div>
 
 <p>
-你会发现，虽然TF卡是8G，但是产生的orangepilite.pcl只有1.3G
+之后，只需要运行 <code>jmtpfs 挂载点</code> 就能将手机挂载到 <code>挂载点了</code>
 </p>
 <pre class="example">
-[lujun9972@T520 lujun9972]$ ls -lh /mnt/orangepilite.pcl 
--rw------- 1 root root 1.3G 3月   8 21:23 /mnt/orangepilite.pcl
-</pre>
-
-<p>
-不过更多的时候，我们会对镜像文件压缩存储，我们可以让 <code>partclone</code> 与 <code>gzip</code> 连用实现这一点
-</p>
-
-<div class="org-src-container">
-<pre class="src src-shell">sudo bash -c <span style="color: #2d9574;">"partclone.ext4 -c -s /dev/sdb1 |gzip -c -9 &gt;/mnt/orangepilite.pcl.gz"</span>
-</pre>
-</div>
-
-<p>
-最后产生的备份文件只有454M
-</p>
-<pre class="example">
-[lujun9972@T520 lujun9972]$ ls -lh /mnt/orangepilite.pcl.gz 
--rw-r--r-- 1 root root 454M 3月   8 21:34 /mnt/orangepilite.pcl.gz
-</pre>
-
-<p>
-相比之下，用 <code>dd</code> 备份后压缩的大小为5.4G!
-</p>
-<pre class="example">
-[lujun9972@T520 mnt]$ sudo bash -c "dd if=/dev/sdb1 | gzip -c -9 &gt;/mnt/orangepilite.dd.gz"
-记录了15205152+0 的读入
-记录了15205152+0 的写出
-7785037824 bytes (7.8 GB, 7.3 GiB) copied, 601.261 s, 12.9 MB/s
-[lujun9972@T520 mnt]$ ls -l /mnt/orangepilite.dd.gz 
--rw-r--r-- 1 root root 5791589654 3月   8 21:49 /mnt/orangepilite.dd.gz
-[lujun9972@T520 mnt]$ ls -lh /mnt/orangepilite.dd.gz 
--rw-r--r-- 1 root root 5.4G 3月   8 21:49 /mnt/orangepilite.dd.gz
+[lujun9972@T520 ~]$ jmtpfs ~/mnt
+Device 0 (VID=2717 and PID=ff40) is a Xiaomi Mi-2s (id2) (MTP).
+Android device detected, assigning default bug flags
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org1b743ad" class="outline-2">
-<h2 id="org1b743ad">从备份还原</h2>
-<div class="outline-text-2" id="text-org1b743ad">
+<div id="outline-container-org6ee6502" class="outline-2">
+<h2 id="org6ee6502">将MTP整合进文件管理器</h2>
+<div class="outline-text-2" id="text-org6ee6502">
 <p>
-从备份还原很简单
+用命令行挂载手机是意见很麻烦的事情。
+</p>
+
+<p>
+不过通过 <code>gvfs-mtp</code> ，打开 <code>thunar</code>, 或 <code>nautilus</code> 就能在文件管理器左边看到连接上电脑的手机了。
 </p>
 <div class="org-src-container">
-<pre class="src src-shell">sudo partclone.ext4 -r -s /mnt/orangepilite.pcl -o /dev/sdb1
+<pre class="src src-shell">sudo pacman -Sy gvfs-mtp
 </pre>
 </div>
 
-<p>
-这里 <code>-r</code> 表示还原(restore),然后把上面备份的 <code>-s</code> 和 <code>-o</code> 参数值反过来就是了。
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/09/连接android手机到archlinux上/screenshot-17.png" alt="screenshot-17.png" />
 </p>
+</div>
 
 <p>
-若备份的是压缩过的文件，则只需要运行
+还可以通过 <code>gvfs-gphoto2</code> 来将PTP整合进行文件管理器中
 </p>
 <div class="org-src-container">
-<pre class="src src-shell">sudo bash -c <span style="color: #2d9574;">"gzip -c -d /mnt/orangepilite.pcl.gz | partclone.ext4 -r -o /dev/sdb1"</span>
+<pre class="src src-shell">sudo pacman -Sy gvfs-gphoto2 --noconfirm
 </pre>
 </div>
 </div>
@@ -193,9 +124,9 @@ archlinux上可以直接使用pacman来安装：
 </div>
 <div>
         <div class="post-meta">
-            <span title="post date" class="post-info">2018-03-08</span>
-            <span title="last modification date" class="post-info">2018-03-08</span>
-            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/backup">backup</a>:</span>
+            <span title="post date" class="post-info">2018-03-09</span>
+            <span title="last modification date" class="post-info">2018-03-09</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/android">android</a> : <a href="https://lujun9972.github.io/tags/archlinux">archlinux</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
@@ -208,8 +139,8 @@ archlinux上可以直接使用pacman来安装：
         <script type="text/javascript">
          //var disqus_developer = 1;
          var preempt_signal=false;
-         var disqus_identifier = "/blog/2018/03/08/使用partclone备份磁盘分区/";
-         var disqus_url = "https://lujun9972.github.io/blog/2018/03/08/使用partclone备份磁盘分区/";
+         var disqus_identifier = "/blog/2018/03/09/连接android手机到archlinux上/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/03/09/连接android手机到archlinux上/";
          var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
