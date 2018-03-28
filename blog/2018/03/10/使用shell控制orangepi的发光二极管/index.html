@@ -19,33 +19,23 @@
 </head>
 
   <body><div class="container">
-<div>
-  <header class="masthead">
-    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
-    <p>=============&gt;随便,谢谢</p>
-    <nav class="site-nav">
-      <div class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
-          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
-          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
-        </svg>
-      </div>
-      <ul class="trigger">
-        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="https://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
-      </ul>
-    </nav>
-    <form method="get" id="searchform" action="http://www.google.com/search">
-      <input type="text" class="field" name="q" id="s" placeholder="Search">
-      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
-    </form>
-  </header>
-</div>
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
 
 <div>
 <div class="post">
@@ -54,8 +44,8 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org70c525d">触发LED的条件(trigger)</a></li>
-<li><a href="#org517bc9e">点亮/熄灭LED灯</a></li>
+<li><a href="#org12d1b08">触发LED的条件(trigger)</a></li>
+<li><a href="#org57d55a5">点亮/熄灭LED灯</a></li>
 </ul>
 </div>
 </div>
@@ -87,14 +77,30 @@
 </pre>
 </div>
 
-<div id="outline-container-org70c525d" class="outline-2">
-<h2 id="org70c525d">触发LED的条件(trigger)</h2>
-<div class="outline-text-2" id="text-org70c525d">
+<p>
+结果为:
+</p>
+<div class="org-src-container">
+<pre class="src src-org">brightness  device@  max_brightness  power/  subsystem@  trigger  uevent
+</pre>
+</div>
+
+<div id="outline-container-org12d1b08" class="outline-2">
+<h2 id="org12d1b08">触发LED的条件(trigger)</h2>
+<div class="outline-text-2" id="text-org12d1b08">
 <p>
 我们可以使用LED灯来表现各种事件，通过查看 <code>trigger</code> 文件能够看到哪些事件可以用来出发LED闪亮：
 </p>
 <div class="org-src-container">
 <pre class="src src-shell">cat /sys/class/leds/orangepi:green:pwr/trigger
+</pre>
+</div>
+
+<p>
+结果为:
+</p>
+<div class="org-src-container">
+<pre class="src src-org">[none] kbd-scrolllock kbd-numlock kbd-capslock kbd-kanalock kbd-shiftlock kbd-altgrlock kbd-ctrllock kbd-altlock kbd-shiftllock kbd-shiftrlock kbd-ctrlllock kbd-ctrlrlock usbport usb-gadget usb-host mmc0 heartbeat cpu cpu0 cpu1 cpu2 cpu3 rc-feedback 0.2:01:1Gbps 0.2:01:100Mbps 0.2:01:10Mbps 
 </pre>
 </div>
 
@@ -109,9 +115,9 @@
 </div>
 
 
-<div id="outline-container-org517bc9e" class="outline-2">
-<h2 id="org517bc9e">点亮/熄灭LED灯</h2>
-<div class="outline-text-2" id="text-org517bc9e">
+<div id="outline-container-org57d55a5" class="outline-2">
+<h2 id="org57d55a5">点亮/熄灭LED灯</h2>
+<div class="outline-text-2" id="text-org57d55a5">
 <p>
 在LED灯目录中，还有一个 <code>brightness</code> 的文件，用来表示LED灯的亮度。其中0表示完全熄灭，255表示最大亮度。
 </p>
@@ -156,7 +162,7 @@
 <div>
         <div class="post-meta">
             <span title="post date" class="post-info">2018-03-10</span>
-            <span title="last modification date" class="post-info">2018-03-10</span>
+            <span title="last modification date" class="post-info">2018-03-27</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/orangepi">OrangePi</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
         </div>

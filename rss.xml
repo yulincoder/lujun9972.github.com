@@ -4,79 +4,79 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>三, 14 3月 2018 22:11:54 CST</pubDate>
-    <lastBuildDate>三, 14 3月 2018 22:11:54 CST</lastBuildDate>
+    <pubDate>三, 28 3月 2018 18:57:22 CST</pubDate>
+    <lastBuildDate>三, 28 3月 2018 18:57:22 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
-<title>如何在Linux上查看RAM信息</title>
-<link>https://lujun9972.github.io/blog/2018/03/12/如何在linux上查看ram信息/</link>
+<title>利用linux清空Windows登陆密码</title>
+<link>https://lujun9972.github.io/blog/2018/03/28/利用linux清空windows登陆密码/</link>
 <description>No Description</description>
-<pubDate>2018-03-14</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/12/如何在linux上查看ram信息/</guid>
+<pubDate>2018-03-28</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/28/利用linux清空windows登陆密码/</guid>
 </item>
 <item>
-<title>如何编写bash completion script</title>
-<link>https://lujun9972.github.io/blog/2018/03/13/如何编写bash-completion-script/</link>
+<title>[译]DOSBox安装与基本配置</title>
+<link>https://lujun9972.github.io/blog/2017/10/14/[译]dosbox安装与基本配置/</link>
 <description>No Description</description>
-<pubDate>2018-03-13</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/13/如何编写bash-completion-script/</guid>
+<pubDate>2018-03-27</pubDate>
+<guid>https://lujun9972.github.io/blog/2017/10/14/[译]dosbox安装与基本配置/</guid>
 </item>
 <item>
-<title>使用lshw读取硬件信息</title>
-<link>https://lujun9972.github.io/blog/2018/03/02/使用lshw读取硬件信息/</link>
+<title>GLOBIGNORE变量的意义</title>
+<link>https://lujun9972.github.io/blog/2017/06/04/globignore变量的意义/</link>
 <description>No Description</description>
-<pubDate>2018-03-12</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/02/使用lshw读取硬件信息/</guid>
+<pubDate>2018-03-27</pubDate>
+<guid>https://lujun9972.github.io/blog/2017/06/04/globignore变量的意义/</guid>
 </item>
 <item>
-<title>使用mypy对python程序进行静态检查</title>
-<link>https://lujun9972.github.io/blog/2018/03/12/使用mypy对python程序进行静态检查/</link>
+<title>cdspell帮你自动更正cd命令中的错误目录</title>
+<link>https://lujun9972.github.io/blog/2018/02/09/cdspell帮你自动更正cd命令中的错误目录/</link>
 <description>No Description</description>
-<pubDate>2018-03-12</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/12/使用mypy对python程序进行静态检查/</guid>
+<pubDate>2018-03-27</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/09/cdspell帮你自动更正cd命令中的错误目录/</guid>
 </item>
 <item>
-<title>使用Exodus在不同linux之间迁移程序</title>
-<link>https://lujun9972.github.io/blog/2018/03/10/使用exodus在不同linux之间迁移程序/</link>
+<title>deb文件的格式</title>
+<link>https://lujun9972.github.io/blog/2017/03/10/deb文件的格式/</link>
 <description>No Description</description>
-<pubDate>2018-03-10</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/10/使用exodus在不同linux之间迁移程序/</guid>
+<pubDate>2018-03-27</pubDate>
+<guid>https://lujun9972.github.io/blog/2017/03/10/deb文件的格式/</guid>
+</item>
+<item>
+<title>funny-manpages</title>
+<link>https://lujun9972.github.io/blog/2018/03/01/funny-manpages/</link>
+<description>No Description</description>
+<pubDate>2018-03-27</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/01/funny-manpages/</guid>
+</item>
+<item>
+<title>pacman中的Pac-Man</title>
+<link>https://lujun9972.github.io/blog/2018/02/02/pacman中的pac-man/</link>
+<description>No Description</description>
+<pubDate>2018-03-27</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/02/02/pacman中的pac-man/</guid>
 </item>
 <item>
 <title>使用shell控制OrangePi的发光二极管</title>
 <link>https://lujun9972.github.io/blog/2018/03/10/使用shell控制orangepi的发光二极管/</link>
 <description>No Description</description>
-<pubDate>2018-03-10</pubDate>
+<pubDate>2018-03-27</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/03/10/使用shell控制orangepi的发光二极管/</guid>
 </item>
 <item>
-<title>让pacman无处不在</title>
-<link>https://lujun9972.github.io/blog/2018/03/09/让pacman无处不在/</link>
+<title>配置SFTP Server</title>
+<link>https://lujun9972.github.io/blog/2018/03/27/配置sftp-server/</link>
 <description>No Description</description>
-<pubDate>2018-03-10</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/09/让pacman无处不在/</guid>
+<pubDate>2018-03-27</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/27/配置sftp-server/</guid>
 </item>
 <item>
-<title>连接Android手机到ArchLinux上</title>
-<link>https://lujun9972.github.io/blog/2018/03/09/连接android手机到archlinux上/</link>
+<title>使用shell察看OrangePi的温度</title>
+<link>https://lujun9972.github.io/blog/2018/03/21/使用shell察看orangepi的温度/</link>
 <description>No Description</description>
-<pubDate>2018-03-09</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/09/连接android手机到archlinux上/</guid>
-</item>
-<item>
-<title>使用foremost恢复已删除文件</title>
-<link>https://lujun9972.github.io/blog/2018/03/08/使用foremost恢复已删除文件/</link>
-<description>No Description</description>
-<pubDate>2018-03-08</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/08/使用foremost恢复已删除文件/</guid>
-</item>
-<item>
-<title>使用partclone备份磁盘分区</title>
-<link>https://lujun9972.github.io/blog/2018/03/08/使用partclone备份磁盘分区/</link>
-<description>No Description</description>
-<pubDate>2018-03-08</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/08/使用partclone备份磁盘分区/</guid>
+<pubDate>2018-03-21</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/03/21/使用shell察看orangepi的温度/</guid>
 </item>
 </channel>
 </rss>
