@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>在OrangePi上运行DOS程序 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">在OrangePi上运行DOS程序</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orga7b1ff6">下载FreeDOS安装文件</a></li>
+<li><a href="#orge5e7822">安装QEMU</a></li>
+<li><a href="#org55e442d">创建硬盘镜像</a></li>
+<li><a href="#org9e2fda8">启动虚拟机安装FreeDOS</a></li>
+<li><a href="#org0da2f6a">与外部系统交换文件</a></li>
+<li><a href="#org4efdb90">为什么不用VirtualBox？</a></li>
+<li><a href="#org6773f47">为什么不用DOSBOX？</a></li>
+</ul>
+</div>
+</div>
+<p>
+从 <a href="https://opensource.com/article/18/3/can-you-run-dos-raspberry-pi">https://opensource.com/article/18/3/can-you-run-dos-raspberry-pi</a> 这里学到的。
+</p>
+
+<p>
+通过QEMU可以在OrangePi上创建一个轻量的虚拟机，并通过在其上面安装<a href="http://www.freedos.org/">FreeDOS</a>来达到支持运行DOS程序的目的。
+</p>
+
+<div id="outline-container-orga7b1ff6" class="outline-2">
+<h2 id="orga7b1ff6">下载FreeDOS安装文件</h2>
+<div class="outline-text-2" id="text-orga7b1ff6">
+<p>
+FreeDOS是一个完全免费的与MS-DOS兼容的操作系统，你可以通过它来运行DOS游戏和那些老旧的DOS软件。
+</p>
+
+<p>
+FreeDOS提供CD-ROM镜像下载：你可以从<a href="http://www.freedos.org/download/">这里</a>下载FreeDOS，目前最新版本为1.2版
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">wget http://www.freedos.org/download/download/FD12CD.iso
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge5e7822" class="outline-2">
+<h2 id="orge5e7822">安装QEMU</h2>
+<div class="outline-text-2" id="text-orge5e7822">
+<div class="org-src-container">
+<pre class="src src-shell">sudo apt install qemu -y
+</pre>
+</div>
+
+<p>
+至于为什么不安装 <code>qemu-kvm</code> 加速器，是因为我的CPU根本不支持虚拟化啊
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">grep Features /proc/cpuinfo |uniq
+</pre>
+</div>
+
+<p>
+若你的CPU支持虚拟化，则可以安装 <code>qemu-kvm</code> 再通过 <code>-enable-kvm</code> 选项让QEMU运行在KVM模式中，这样能够提升虚拟机的速度。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55e442d" class="outline-2">
+<h2 id="org55e442d">创建硬盘镜像</h2>
+<div class="outline-text-2" id="text-org55e442d">
+<p>
+硬盘镜像是一个文件,用来存储虚拟机硬盘上的内容。
+</p>
+
+<p>
+QEMU有两种硬盘镜像:一种是 raw镜像(默认值), 它和客户机器上看到的内容一模一样，主机上占用的空间客户机上的大小一样。这个方式 I/O 效率最高，但是因为客户机器上没使用的空间也被占用，所以有点浪费空间。
+</p>
+
+<p>
+另外一种方式是qcow2 格式，仅当客户系统实际写入内容的时候，才会分配镜像空间。对客户机器来说，硬盘大小是完整大小，但是在主机系统上实际仅占用和很小的空间。使用这种方式会影响效率.
+</p>
+
+<p>
+QEMU 中使用 qemu-img命令来创建硬盘镜像
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">qemu-img create -f qcow2 dos.img <span style="color: #a45bad;">300M</span>
+</pre>
+</div>
+
+<p>
+这就创建了一个300M的虚拟硬盘。300M按现在的标准来安很小，但是对于DOS来说已经是很大的硬盘空间了。
+</p>
+
+<p>
+我们可以看看 <code>dos.img</code> 实际占用的空间
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">ls -lh dos.img
+</pre>
+</div>
+
+<p>
+你会发现，实际上只占用了 <code>193K</code> 大小而已。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9e2fda8" class="outline-2">
+<h2 id="org9e2fda8">启动虚拟机安装FreeDOS</h2>
+<div class="outline-text-2" id="text-org9e2fda8">
+<p>
+跟VirtuaBox，VMWare等虚拟软件不同，QEMU没有提供一个图形化的管理界面来创建虚拟机，你需要通过命令来构建出虚拟机的每个组建。
+</p>
+
+<p>
+QEMU使用 <code>qemu-system-*</code> 程序来启动虚拟机，这里的 <code>*</code> 指定了虚拟机的架构。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">qemu-system-i386 -m <span style="color: #a45bad;">16</span> -k en-us -rtc <span style="color: #7590db;">base</span>=localtime -soundhw sb16,adlib,pcspk -device cirrus-vga -hda dos.img -cdrom FD12CD.iso -boot <span style="color: #7590db;">order</span>=d
+</pre>
+</div>
+
+<p>
+这里解释一下：
+</p>
+
+<dl class="org-dl">
+<dt>qemu-system-i386</dt><dd>说明虚拟机的架构为i386</dd>
+<dt>-m 16</dt><dd>表示虚拟机有16M的内存，这对DOS来说已经足够了</dd>
+<dt>-k en-us</dt><dd>指定键盘布局，如果省略的话则使用你实际键盘的布局</dd>
+<dt>-rtc base=localtime</dt><dd>设置虚拟机的real time clock（RTC）与我们的本地时间相匹配</dd>
+<dt>-soundhw sb16,adlib,pcspk</dt><dd>设置声卡为SoundBlaster16,并且支持AdLib Music，同时模拟出PC扬声器，使用 <code>qemu-system-i386 --soundhw ?</code> 可以列出所有可用声卡。</dd>
+<dt>-device cirrus-vga</dt><dd>模拟显卡</dd>
+<dt>-hda dos.img</dt><dd>指定dos.img为第一块硬盘，也就是c:</dd>
+<dt>-cdrom FD12CD.iso</dt><dd>指定FD12CD.iso挂载为CD-ROM，也就是d:</dd>
+<dt>-boot order=d</dt><dd>指定从d盘启动</dd>
+</dl>
+
+<p>
+然后我们跟着指令一步一步的安装FreeDOS就行了
+</p>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-18.png" alt="screenshot-18.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-19.png" alt="screenshot-19.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-20.png" alt="screenshot-20.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-21.png" alt="screenshot-21.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-22.png" alt="screenshot-22.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-23.png" alt="screenshot-23.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-24.png" alt="screenshot-24.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-25.png" alt="screenshot-25.png" />
+</p>
+</div>
+
+<p>
+不过，由于microSD卡IO很慢，因此安装过程会花很长的时间。
+</p>
+
+<p>
+安装好后，通过修改上面命令中的 <code>-boot order=d</code> 为 <code>-boot order=c</code> 来指定从c盘启动，就能进入DOS了
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">qemu-system-i386 -m <span style="color: #a45bad;">16</span> -k en-us -rtc <span style="color: #7590db;">base</span>=localtime -soundhw sb16,adlib,pcspk -device cirrus-vga -hda dos.img -cdrom FD12CD.iso -boot <span style="color: #7590db;">order</span>=c
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-26.png" alt="screenshot-26.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-27.png" alt="screenshot-27.png" />
+</p>
+</div>
+
+<p>
+FeeDOS包含很多游戏和应用，可以通过 <code>FDIMPLES</code> 来安装
+</p>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-28.png" alt="screenshot-28.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0da2f6a" class="outline-2">
+<h2 id="org0da2f6a">与外部系统交换文件</h2>
+<div class="outline-text-2" id="text-org0da2f6a">
+<p>
+使用 <code>-drive</code> 选项可以很方便地把外部系统的一个目录挂载成虚拟机中的一块磁盘。
+</p>
+
+<p>
+比如通过在启动命令后加入 <code>-drive file=fat:rw:dosfiles</code> 就能把 <code>dosfiles</code> 目录挂载成虚拟机中的一块FAT格式的磁盘。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">qemu-system-i386 -m <span style="color: #a45bad;">16</span> -k en-us -rtc <span style="color: #7590db;">base</span>=localtime -soundhw sb16,adlib,pcspk -device cirrus-vga -hda dos.img -drive <span style="color: #7590db;">file</span>=fat:rw:dosfiles/ -boot <span style="color: #7590db;">order</span>=c
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4efdb90" class="outline-2">
+<h2 id="org4efdb90">为什么不用VirtualBox？</h2>
+<div class="outline-text-2" id="text-org4efdb90">
+<p>
+因为Armbian上根本就没有VirtualBox啊～～
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6773f47" class="outline-2">
+<h2 id="org6773f47">为什么不用DOSBOX？</h2>
+<div class="outline-text-2" id="text-org6773f47">
+<p>
+如果你只是想玩DOS游戏的话，那么DOSBOX会是个不错的选择。但是它对DOS应用程序的支持就没那么好了。
+</p>
+
+<p>
+而且相对来说在虚拟机中安装完整的DOS环境能提供比DOSBOX多得多的自由度。
+</p>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-03-30</span>
+            <span title="last modification date" class="post-info">2018-03-31</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/03/30/在orangepi上运行dos程序/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/03/30/在orangepi上运行dos程序/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>
