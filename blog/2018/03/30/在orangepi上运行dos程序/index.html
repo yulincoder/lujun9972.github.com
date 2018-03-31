@@ -7,7 +7,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <meta name="author" content="lujun9972" />
-  <meta name="keywords" content="linux和它的小伙伴" />
+  <meta name="keywords" content="linux和它的小伙伴,OrangePi,DOS" />
   <style>
    #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
    #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
@@ -44,13 +44,13 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga7b1ff6">下载FreeDOS安装文件</a></li>
-<li><a href="#orge5e7822">安装QEMU</a></li>
-<li><a href="#org55e442d">创建硬盘镜像</a></li>
-<li><a href="#org9e2fda8">启动虚拟机安装FreeDOS</a></li>
-<li><a href="#org0da2f6a">与外部系统交换文件</a></li>
-<li><a href="#org4efdb90">为什么不用VirtualBox？</a></li>
-<li><a href="#org6773f47">为什么不用DOSBOX？</a></li>
+<li><a href="#orgb1beb51">下载FreeDOS安装文件</a></li>
+<li><a href="#org24f2d1e">安装QEMU</a></li>
+<li><a href="#orgea4c198">创建硬盘镜像</a></li>
+<li><a href="#org0da3b99">启动虚拟机安装FreeDOS</a></li>
+<li><a href="#org8c58702">与外部系统交换文件</a></li>
+<li><a href="#org5b04eb1">为什么不用VirtualBox？</a></li>
+<li><a href="#orge1a6b1d">为什么不用DOSBOX？</a></li>
 </ul>
 </div>
 </div>
@@ -62,9 +62,9 @@
 通过QEMU可以在OrangePi上创建一个轻量的虚拟机，并通过在其上面安装<a href="http://www.freedos.org/">FreeDOS</a>来达到支持运行DOS程序的目的。
 </p>
 
-<div id="outline-container-orga7b1ff6" class="outline-2">
-<h2 id="orga7b1ff6">下载FreeDOS安装文件</h2>
-<div class="outline-text-2" id="text-orga7b1ff6">
+<div id="outline-container-orgb1beb51" class="outline-2">
+<h2 id="orgb1beb51">下载FreeDOS安装文件</h2>
+<div class="outline-text-2" id="text-orgb1beb51">
 <p>
 FreeDOS是一个完全免费的与MS-DOS兼容的操作系统，你可以通过它来运行DOS游戏和那些老旧的DOS软件。
 </p>
@@ -79,9 +79,9 @@ FreeDOS提供CD-ROM镜像下载：你可以从<a href="http://www.freedos.org/do
 </div>
 </div>
 
-<div id="outline-container-orge5e7822" class="outline-2">
-<h2 id="orge5e7822">安装QEMU</h2>
-<div class="outline-text-2" id="text-orge5e7822">
+<div id="outline-container-org24f2d1e" class="outline-2">
+<h2 id="org24f2d1e">安装QEMU</h2>
+<div class="outline-text-2" id="text-org24f2d1e">
 <div class="org-src-container">
 <pre class="src src-shell">sudo apt install qemu -y
 </pre>
@@ -101,9 +101,9 @@ FreeDOS提供CD-ROM镜像下载：你可以从<a href="http://www.freedos.org/do
 </div>
 </div>
 
-<div id="outline-container-org55e442d" class="outline-2">
-<h2 id="org55e442d">创建硬盘镜像</h2>
-<div class="outline-text-2" id="text-org55e442d">
+<div id="outline-container-orgea4c198" class="outline-2">
+<h2 id="orgea4c198">创建硬盘镜像</h2>
+<div class="outline-text-2" id="text-orgea4c198">
 <p>
 硬盘镜像是一个文件,用来存储虚拟机硬盘上的内容。
 </p>
@@ -143,9 +143,9 @@ QEMU 中使用 qemu-img命令来创建硬盘镜像
 </div>
 </div>
 
-<div id="outline-container-org9e2fda8" class="outline-2">
-<h2 id="org9e2fda8">启动虚拟机安装FreeDOS</h2>
-<div class="outline-text-2" id="text-org9e2fda8">
+<div id="outline-container-org0da3b99" class="outline-2">
+<h2 id="org0da3b99">启动虚拟机安装FreeDOS</h2>
+<div class="outline-text-2" id="text-org0da3b99">
 <p>
 跟VirtuaBox，VMWare等虚拟软件不同，QEMU没有提供一个图形化的管理界面来创建虚拟机，你需要通过命令来构建出虚拟机的每个组建。
 </p>
@@ -261,12 +261,17 @@ FeeDOS包含很多游戏和应用，可以通过 <code>FDIMPLES</code> 来安装
 <p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-28.png" alt="screenshot-28.png" />
 </p>
 </div>
-</div>
-</div>
 
-<div id="outline-container-org0da2f6a" class="outline-2">
-<h2 id="org0da2f6a">与外部系统交换文件</h2>
-<div class="outline-text-2" id="text-org0da2f6a">
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/03/30/在orangepi上运行dos程序/screenshot-29.png" alt="screenshot-29.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8c58702" class="outline-2">
+<h2 id="org8c58702">与外部系统交换文件</h2>
+<div class="outline-text-2" id="text-org8c58702">
 <p>
 使用 <code>-drive</code> 选项可以很方便地把外部系统的一个目录挂载成虚拟机中的一块磁盘。
 </p>
@@ -281,18 +286,18 @@ FeeDOS包含很多游戏和应用，可以通过 <code>FDIMPLES</code> 来安装
 </div>
 </div>
 </div>
-<div id="outline-container-org4efdb90" class="outline-2">
-<h2 id="org4efdb90">为什么不用VirtualBox？</h2>
-<div class="outline-text-2" id="text-org4efdb90">
+<div id="outline-container-org5b04eb1" class="outline-2">
+<h2 id="org5b04eb1">为什么不用VirtualBox？</h2>
+<div class="outline-text-2" id="text-org5b04eb1">
 <p>
 因为Armbian上根本就没有VirtualBox啊～～
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6773f47" class="outline-2">
-<h2 id="org6773f47">为什么不用DOSBOX？</h2>
-<div class="outline-text-2" id="text-org6773f47">
+<div id="outline-container-orge1a6b1d" class="outline-2">
+<h2 id="orge1a6b1d">为什么不用DOSBOX？</h2>
+<div class="outline-text-2" id="text-orge1a6b1d">
 <p>
 如果你只是想玩DOS游戏的话，那么DOSBOX会是个不错的选择。但是它对DOS应用程序的支持就没那么好了。
 </p>
@@ -309,7 +314,7 @@ FeeDOS包含很多游戏和应用，可以通过 <code>FDIMPLES</code> 来安装
         <div class="post-meta">
             <span title="post date" class="post-info">2018-03-30</span>
             <span title="last modification date" class="post-info">2018-03-31</span>
-            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/orangepi">OrangePi</a> : <a href="https://lujun9972.github.io/tags/dos">DOS</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
