@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 03 4月 2018 10:21:54 CST</pubDate>
-    <lastBuildDate>二, 03 4月 2018 10:21:54 CST</lastBuildDate>
+    <pubDate>二, 03 4月 2018 15:03:18 CST</pubDate>
+    <lastBuildDate>二, 03 4月 2018 15:03:18 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>如何添加自己的org-mode easy template</title>
+<link>https://lujun9972.github.io/blog/2018/04/03/如何添加自己的org-mode-easy-template/</link>
+<description>No Description</description>
+<pubDate>2018-04-03</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/03/如何添加自己的org-mode-easy-template/</guid>
+</item>
 <item>
 <title>使用feh快速设置桌面壁纸</title>
 <link>https://lujun9972.github.io/blog/2018/04/03/使用feh快速设置桌面壁纸/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-03-27</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/02/02/pacman中的pac-man/</guid>
-</item>
-<item>
-<title>使用shell控制OrangePi的发光二极管</title>
-<link>https://lujun9972.github.io/blog/2018/03/10/使用shell控制orangepi的发光二极管/</link>
-<description>No Description</description>
-<pubDate>2018-03-27</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/03/10/使用shell控制orangepi的发光二极管/</guid>
 </item>
 </channel>
 </rss>
