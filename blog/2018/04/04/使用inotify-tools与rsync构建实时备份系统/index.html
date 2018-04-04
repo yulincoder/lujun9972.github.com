@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>使用inotify-tools与rsync构建实时备份系统 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">使用inotify-tools与rsync构建实时备份系统</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org46df5f8">使用inotifywait监控文件变动</a></li>
+<li><a href="#org340ae61">使用rsync同步变动</a></li>
+<li><a href="#org038672b">整合起来</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org46df5f8" class="outline-2">
+<h2 id="org46df5f8">使用inotifywait监控文件变动</h2>
+<div class="outline-text-2" id="text-org46df5f8">
+<p>
+inotifywait是 <code>inotify-tools</code> 包中提供的一个工具，它使用 <code>inotify</code> API 来监控文件/目录中的变动情况。
+</p>
+
+<p>
+在archlinux上，我们可以使用下面命令来安装
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S --noconfirm inotify-tools
+</pre>
+</div>
+
+<p>
+平时 <code>inotifywait</code> 会挂起在那里，直到文件/目录发生了要引起关注的事件后，它会退出并输出事件发生的场所、事件的名称以及引起事件的文件（当事件发生在目录上时才会输出）.
+</p>
+
+<p>
+<code>inotifywait</code> 最常用的选项有两个，一个是 <code>-r</code> 一个是 <code>-e</code> ，其中：
+</p>
+
+<dl class="org-dl">
+<dt>-r</dt><dd>表示递归监控子目录中文件发生的事件</dd>
+<dt>-e</dt><dd>指定要监控的事件列表。对于备份系统来说，只需要监控 modify、create和delete三种事件就行了。</dd>
+</dl>
+
+<p>
+比如，我们运行
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">inotifywait -r -e modify,create,delete /tmp
+</pre>
+</div>
+
+<p>
+表示监控 <code>/tmp</code> 目录及其子目录中文件修改、文件创建和文件删除三种事件。
+</p>
+
+<p>
+这时程序一直在挂起状态
+</p>
+<pre class="example">
+[lujun9972@X61 ~]$ inotifywait -r -e modify,create,delete /tmp
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+</pre>
+
+<p>
+这时在 <code>/tmp</code> 目录下新建一个文件
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">touch /tmp/newFile
+</pre>
+</div>
+
+<p>
+则 <code>inotifywait</code> 进程退出，并输出如下信息
+</p>
+<pre class="example">
+/tmp/ CREATE newFile
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org340ae61" class="outline-2">
+<h2 id="org340ae61">使用rsync同步变动</h2>
+<div class="outline-text-2" id="text-org340ae61">
+<p>
+rsync是一款快速增量备份工具。它的具有以下几个特点使得它很适合用作做备份的工具：
+</p>
+
+<ul class="org-ul">
+<li>增量备份,只会传输修改过的内容</li>
+<li>可以在传输过程中实时解压缩，减少带宽消耗</li>
+<li>可以保持原来文件的权限、事件、软硬链接</li>
+<li>即支持本机复制，也支持远程复制</li>
+</ul>
+
+<p>
+rsync常用法为：
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">rsync -avz --delete  src/ foo:/data
+</pre>
+</div>
+
+<p>
+其中
+</p>
+<dl class="org-dl">
+<dt>-a</dt><dd>表示archive mode，即备份目录下的所有内容(包括子目录中的内容),并且保持软链接、文件属性、文件修改事件、文件的所有者和宿主信息不变，并且同步字符/块设备以及命名socket和fifo等特殊文件。</dd>
+<dt>-v</dt><dd>表示输出备份的详细信息</dd>
+<dt>-z</dt><dd>表示传输时进行压缩</dd>
+<dt>--delete</dt><dd>删除备份目的地里src中没有的文件</dd>
+<dt>src/</dt><dd>表示要备份的是src目录下的所有内容，注意这里最后的 <code>/</code> 不能去掉，否则会把src目录本身备份过去</dd>
+<dt>foo:/data</dt><dd>表示备份的目的地是foo主机下的 <code>/data/</code> 目录</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org038672b" class="outline-2">
+<h2 id="org038672b">整合起来</h2>
+<div class="outline-text-2" id="text-org038672b">
+<p>
+接下来我们只需要用个 <code>while</code> 死循环把两个工具整合起来就行了，非常简单
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">!/bin/</span><span style="color: #4f97d7; font-weight: bold;">bash</span>
+
+<span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">[</span><span style="color: #bc6ec5;">[</span> $<span style="color: #7590db;">#</span> -ne <span style="color: #a45bad;">2</span> <span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">]</span>;<span style="color: #4f97d7; font-weight: bold;">then</span>
+    cat&lt;&lt;EOF
+<span style="color: #ffff00; font-weight: bold;">Usage $(</span><span style="color: #fa8072;">basename</span><span style="color: #ffff00; font-weight: bold;"> $0) source_dir [host:]dest_dir</span>
+<span style="color: #ffff00; font-weight: bold;">EOF</span>
+    <span style="color: #4f97d7; font-weight: bold;">exit</span> <span style="color: #a45bad;">0</span>
+<span style="color: #4f97d7; font-weight: bold;">fi</span>
+
+<span style="color: #7590db;">source_dir</span>=$<span style="color: #a45bad;">1</span>
+<span style="color: #7590db;">dest_dir</span>=$<span style="color: #a45bad;">2</span>
+<span style="color: #4f97d7; font-weight: bold;">while</span> :
+<span style="color: #4f97d7; font-weight: bold;">do</span>
+    inotifywait -r -e modify,create,delete $<span style="color: #4f97d7;">{</span><span style="color: #7590db;">source_dir</span><span style="color: #4f97d7;">}</span> &amp;&amp; rsync -avz $<span style="color: #4f97d7;">{</span><span style="color: #7590db;">source_dir</span><span style="color: #4f97d7;">}</span>/ $<span style="color: #4f97d7;">{</span><span style="color: #7590db;">dest_dir</span><span style="color: #4f97d7;">}</span> --delete
+<span style="color: #4f97d7; font-weight: bold;">done</span>
+</pre>
+</div>
+
+<p>
+这里有必要说明的是，虽然用 <code>inotifywait</code> 能探测出文件具体做了什么改动，但实际上我们根本不需要知道具体的改变是什么。
+</p>
+
+<p>
+我们只需要知道有所改变了，然后具体改变了什么由 <code>rsync</code> 来自己处理就行了。
+</p>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-04-04</span>
+            <span title="last modification date" class="post-info">2018-04-04</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/04/04/使用inotify-tools与rsync构建实时备份系统/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/04/04/使用inotify-tools与rsync构建实时备份系统/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>
