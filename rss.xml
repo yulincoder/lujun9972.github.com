@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>四, 05 4月 2018 20:47:52 CST</pubDate>
-    <lastBuildDate>四, 05 4月 2018 20:47:52 CST</lastBuildDate>
+    <pubDate>六, 07 4月 2018 19:56:22 CST</pubDate>
+    <lastBuildDate>六, 07 4月 2018 19:56:22 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>创建无法用cat显示的文件</title>
+<link>https://lujun9972.github.io/blog/2018/04/07/创建无法用cat显示的文件/</link>
+<description>No Description</description>
+<pubDate>2018-04-07</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/07/创建无法用cat显示的文件/</guid>
+</item>
 <item>
 <title>rox-filer常用操作</title>
 <link>https://lujun9972.github.io/blog/2018/04/05/rox-filer常用操作/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-03-27</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/02/09/cdspell帮你自动更正cd命令中的错误目录/</guid>
-</item>
-<item>
-<title>deb文件的格式</title>
-<link>https://lujun9972.github.io/blog/2017/03/10/deb文件的格式/</link>
-<description>No Description</description>
-<pubDate>2018-03-27</pubDate>
-<guid>https://lujun9972.github.io/blog/2017/03/10/deb文件的格式/</guid>
 </item>
 </channel>
 </rss>
