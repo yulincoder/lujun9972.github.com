@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>日, 15 4月 2018 22:47:26 CST</pubDate>
-    <lastBuildDate>日, 15 4月 2018 22:47:26 CST</lastBuildDate>
+    <pubDate>一, 16 4月 2018 19:29:50 CST</pubDate>
+    <lastBuildDate>一, 16 4月 2018 19:29:50 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>z：目录跳转神器</title>
+<link>https://lujun9972.github.io/blog/2018/04/16/z：目录跳转神器/</link>
+<description>No Description</description>
+<pubDate>2018-04-16</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/16/z：目录跳转神器/</guid>
+</item>
 <item>
 <title>MBR与GPT分区表的简单说明</title>
 <link>https://lujun9972.github.io/blog/2018/04/14/mbr与gpt分区表的简单说明/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-04-07</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/07/创建无法用cat显示的文件/</guid>
-</item>
-<item>
-<title>rox-filer常用操作</title>
-<link>https://lujun9972.github.io/blog/2018/04/05/rox-filer常用操作/</link>
-<description>No Description</description>
-<pubDate>2018-04-05</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/05/rox-filer常用操作/</guid>
 </item>
 </channel>
 </rss>
