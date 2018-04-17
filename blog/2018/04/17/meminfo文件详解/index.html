@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>meminfo文件详解 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">meminfo文件详解</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge1068d5">MemTotal:        3814108 kB</a></li>
+<li><a href="#orgf8d11a8">MemFree:          110008 kB</a></li>
+<li><a href="#org0435630">MemAvailable:      60948 kB</a></li>
+<li><a href="#orgc83e5ec">Buffers:            3324 kB</a></li>
+<li><a href="#orgdbac415">Cached:           147476 kB</a></li>
+<li><a href="#orgffcfd2c">SwapCached:       114852 kB</a></li>
+<li><a href="#org9e99f7f">Active:           978684 kB</a></li>
+<li><a href="#org75b2777">Inactive:         357080 kB</a></li>
+<li><a href="#org75a5664">Active(anon):     927568 kB</a></li>
+<li><a href="#org5a072d6">Inactive(anon):   321440 kB</a></li>
+<li><a href="#org5f4cacd">Active(file):      51116 kB</a></li>
+<li><a href="#orga5c42f6">Inactive(file):    35640 kB</a></li>
+<li><a href="#org9f3212f">Unevictable:          32 kB</a></li>
+<li><a href="#org1e82c47">Mlocked:              32 kB</a></li>
+<li><a href="#org81b3fcc">SwapTotal:       8388604 kB</a></li>
+<li><a href="#org7c55c2d">SwapFree:        7211516 kB</a></li>
+<li><a href="#orgafb5acc">Dirty:                40 kB</a></li>
+<li><a href="#orgaa1646d">Writeback:             0 kB</a></li>
+<li><a href="#org9049195">AnonPages:       1164512 kB</a></li>
+<li><a href="#org0665e9b">Mapped:          2244604 kB</a></li>
+<li><a href="#org29f9b20">Shmem:             66852 kB</a></li>
+<li><a href="#org0cd0d49">Slab:             107728 kB</a></li>
+<li><a href="#org76ffd1e">SReclaimable:      50604 kB</a></li>
+<li><a href="#org88b9499">SUnreclaim:        57124 kB</a></li>
+<li><a href="#org68b7ddb">KernelStack:        8704 kB</a></li>
+<li><a href="#org65994df">PageTables:        28720 kB</a></li>
+<li><a href="#orgcde87a1">NFS_Unstable:          0 kB</a></li>
+<li><a href="#org3f90539">Bounce:                0 kB</a></li>
+<li><a href="#org3d49683">WritebackTmp:          0 kB</a></li>
+<li><a href="#org48e48ce">CommitLimit:    10295656 kB</a></li>
+<li><a href="#org19cb580">Committed_AS:    7566728 kB</a></li>
+<li><a href="#org2867f55">VmallocTotal:   34359738367 kB</a></li>
+<li><a href="#org483e049">VmallocUsed:           0 kB</a></li>
+<li><a href="#org73d5609">VmallocChunk:          0 kB</a></li>
+<li><a href="#orgb46384e">HardwareCorrupted:     0 kB</a></li>
+<li><a href="#orge0cd922">AnonHugePages:         0 kB</a></li>
+<li><a href="#org846e3c6">ShmemHugePages:        0 kB</a></li>
+<li><a href="#org038acac">ShmemPmdMapped:        0 kB</a></li>
+<li><a href="#orga4f6466">HugePages_Total:       0</a></li>
+<li><a href="#org15e6f9c">HugePages_Free:        0</a></li>
+<li><a href="#orgf994be9">HugePages_Rsvd:        0</a></li>
+<li><a href="#org6df434f">HugePages_Surp:        0</a></li>
+<li><a href="#org6fbdc25">Hugepagesize:       2048 kB</a></li>
+<li><a href="#orgc6f6586">DirectMap4k:      290432 kB</a></li>
+<li><a href="#orged15329">DirectMap2M:     3674112 kB</a></li>
+</ul>
+</div>
+</div>
+<p>
+一个 <code>/proc/meminfo</code> 的内容看起来是这样的：
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">cat /proc/meminfo |nl
+</pre>
+</div>
+
+<p>
+结果为:
+</p>
+<div class="org-src-container">
+<pre class="src src-org"> 1  MemTotal:        3814108 kB
+ 2  MemFree:          111908 kB
+ 3  MemAvailable:     394844 kB
+ 4  Buffers:           22976 kB
+ 5  Cached:           291436 kB
+ 6  SwapCached:        15480 kB
+ 7  Active:          1634948 kB
+ 8  Inactive:         784896 kB
+ 9  Active(anon):    1487400 kB
+10  Inactive(anon):   474008 kB
+11  Active(file):     147548 kB
+12  Inactive(file):   310888 kB
+13  Unevictable:           0 kB
+14  Mlocked:               0 kB
+15  SwapTotal:       8388604 kB
+16  SwapFree:        8238844 kB
+17  Dirty:             22280 kB
+18  Writeback:             0 kB
+19  AnonPages:       2103892 kB
+20  Mapped:          1262612 kB
+21  Shmem:             81684 kB
+22  Slab:              99048 kB
+23  SReclaimable:      53432 kB
+24  SUnreclaim:        45616 kB
+25  KernelStack:        8352 kB
+26  PageTables:        24152 kB
+27  NFS_Unstable:          0 kB
+28  Bounce:                0 kB
+29  WritebackTmp:          0 kB
+30  CommitLimit:    10295656 kB
+31  Committed_AS:    6235812 kB
+32  VmallocTotal:   34359738367 kB
+33  VmallocUsed:           0 kB
+34  VmallocChunk:          0 kB
+35  HardwareCorrupted:     0 kB
+36  AnonHugePages:         0 kB
+37  ShmemHugePages:        0 kB
+38  ShmemPmdMapped:        0 kB
+39  HugePages_Total:       0
+40  HugePages_Free:        0
+41  HugePages_Rsvd:        0
+42  HugePages_Surp:        0
+43  Hugepagesize:       2048 kB
+44  DirectMap4k:      106112 kB
+45  DirectMap2M:     3858432 kB
+</pre>
+</div>
+
+<p>
+下面就来尝试解释一下这些行的意义：
+</p>
+
+<div id="outline-container-orge1068d5" class="outline-2">
+<h2 id="orge1068d5">MemTotal:        3814108 kB</h2>
+</div>
+<div id="outline-container-orgf8d11a8" class="outline-2">
+<h2 id="orgf8d11a8">MemFree:          110008 kB</h2>
+</div>
+<div id="outline-container-org0435630" class="outline-2">
+<h2 id="org0435630">MemAvailable:      60948 kB</h2>
+</div>
+<div id="outline-container-orgc83e5ec" class="outline-2">
+<h2 id="orgc83e5ec">Buffers:            3324 kB</h2>
+</div>
+<div id="outline-container-orgdbac415" class="outline-2">
+<h2 id="orgdbac415">Cached:           147476 kB</h2>
+</div>
+<div id="outline-container-orgffcfd2c" class="outline-2">
+<h2 id="orgffcfd2c">SwapCached:       114852 kB</h2>
+</div>
+<div id="outline-container-org9e99f7f" class="outline-2">
+<h2 id="org9e99f7f">Active:           978684 kB</h2>
+</div>
+<div id="outline-container-org75b2777" class="outline-2">
+<h2 id="org75b2777">Inactive:         357080 kB</h2>
+</div>
+<div id="outline-container-org75a5664" class="outline-2">
+<h2 id="org75a5664">Active(anon):     927568 kB</h2>
+</div>
+<div id="outline-container-org5a072d6" class="outline-2">
+<h2 id="org5a072d6">Inactive(anon):   321440 kB</h2>
+</div>
+<div id="outline-container-org5f4cacd" class="outline-2">
+<h2 id="org5f4cacd">Active(file):      51116 kB</h2>
+</div>
+<div id="outline-container-orga5c42f6" class="outline-2">
+<h2 id="orga5c42f6">Inactive(file):    35640 kB</h2>
+</div>
+<div id="outline-container-org9f3212f" class="outline-2">
+<h2 id="org9f3212f">Unevictable:          32 kB</h2>
+</div>
+<div id="outline-container-org1e82c47" class="outline-2">
+<h2 id="org1e82c47">Mlocked:              32 kB</h2>
+</div>
+<div id="outline-container-org81b3fcc" class="outline-2">
+<h2 id="org81b3fcc">SwapTotal:       8388604 kB</h2>
+</div>
+<div id="outline-container-org7c55c2d" class="outline-2">
+<h2 id="org7c55c2d">SwapFree:        7211516 kB</h2>
+</div>
+<div id="outline-container-orgafb5acc" class="outline-2">
+<h2 id="orgafb5acc">Dirty:                40 kB</h2>
+</div>
+<div id="outline-container-orgaa1646d" class="outline-2">
+<h2 id="orgaa1646d">Writeback:             0 kB</h2>
+</div>
+<div id="outline-container-org9049195" class="outline-2">
+<h2 id="org9049195">AnonPages:       1164512 kB</h2>
+</div>
+<div id="outline-container-org0665e9b" class="outline-2">
+<h2 id="org0665e9b">Mapped:          2244604 kB</h2>
+</div>
+<div id="outline-container-org29f9b20" class="outline-2">
+<h2 id="org29f9b20">Shmem:             66852 kB</h2>
+</div>
+<div id="outline-container-org0cd0d49" class="outline-2">
+<h2 id="org0cd0d49">Slab:             107728 kB</h2>
+<div class="outline-text-2" id="text-org0cd0d49">
+<div class="org-src-container">
+<pre class="src src-shell">sudo cat /proc/slabinfo 
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org76ffd1e" class="outline-2">
+<h2 id="org76ffd1e">SReclaimable:      50604 kB</h2>
+</div>
+<div id="outline-container-org88b9499" class="outline-2">
+<h2 id="org88b9499">SUnreclaim:        57124 kB</h2>
+</div>
+<div id="outline-container-org68b7ddb" class="outline-2">
+<h2 id="org68b7ddb">KernelStack:        8704 kB</h2>
+</div>
+<div id="outline-container-org65994df" class="outline-2">
+<h2 id="org65994df">PageTables:        28720 kB</h2>
+</div>
+<div id="outline-container-orgcde87a1" class="outline-2">
+<h2 id="orgcde87a1">NFS_Unstable:          0 kB</h2>
+</div>
+<div id="outline-container-org3f90539" class="outline-2">
+<h2 id="org3f90539">Bounce:                0 kB</h2>
+</div>
+<div id="outline-container-org3d49683" class="outline-2">
+<h2 id="org3d49683">WritebackTmp:          0 kB</h2>
+</div>
+<div id="outline-container-org48e48ce" class="outline-2">
+<h2 id="org48e48ce">CommitLimit:    10295656 kB</h2>
+</div>
+<div id="outline-container-org19cb580" class="outline-2">
+<h2 id="org19cb580">Committed_AS:    7566728 kB</h2>
+</div>
+<div id="outline-container-org2867f55" class="outline-2">
+<h2 id="org2867f55">VmallocTotal:   34359738367 kB</h2>
+</div>
+<div id="outline-container-org483e049" class="outline-2">
+<h2 id="org483e049">VmallocUsed:           0 kB</h2>
+</div>
+<div id="outline-container-org73d5609" class="outline-2">
+<h2 id="org73d5609">VmallocChunk:          0 kB</h2>
+</div>
+<div id="outline-container-orgb46384e" class="outline-2">
+<h2 id="orgb46384e">HardwareCorrupted:     0 kB</h2>
+</div>
+<div id="outline-container-orge0cd922" class="outline-2">
+<h2 id="orge0cd922">AnonHugePages:         0 kB</h2>
+</div>
+<div id="outline-container-org846e3c6" class="outline-2">
+<h2 id="org846e3c6">ShmemHugePages:        0 kB</h2>
+</div>
+<div id="outline-container-org038acac" class="outline-2">
+<h2 id="org038acac">ShmemPmdMapped:        0 kB</h2>
+</div>
+<div id="outline-container-orga4f6466" class="outline-2">
+<h2 id="orga4f6466">HugePages_Total:       0</h2>
+</div>
+<div id="outline-container-org15e6f9c" class="outline-2">
+<h2 id="org15e6f9c">HugePages_Free:        0</h2>
+</div>
+<div id="outline-container-orgf994be9" class="outline-2">
+<h2 id="orgf994be9">HugePages_Rsvd:        0</h2>
+</div>
+<div id="outline-container-org6df434f" class="outline-2">
+<h2 id="org6df434f">HugePages_Surp:        0</h2>
+</div>
+<div id="outline-container-org6fbdc25" class="outline-2">
+<h2 id="org6fbdc25">Hugepagesize:       2048 kB</h2>
+</div>
+<div id="outline-container-orgc6f6586" class="outline-2">
+<h2 id="orgc6f6586">DirectMap4k:      290432 kB</h2>
+</div>
+<div id="outline-container-orged15329" class="outline-2">
+<h2 id="orged15329">DirectMap2M:     3674112 kB</h2>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-04-17</span>
+            <span title="last modification date" class="post-info">2018-04-17</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/04/17/meminfo文件详解/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/04/17/meminfo文件详解/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>
