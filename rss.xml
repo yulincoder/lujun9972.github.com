@@ -4,10 +4,24 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>三, 18 4月 2018 15:36:37 CST</pubDate>
-    <lastBuildDate>三, 18 4月 2018 15:36:37 CST</lastBuildDate>
+    <pubDate>四, 19 4月 2018 19:12:08 CST</pubDate>
+    <lastBuildDate>四, 19 4月 2018 19:12:08 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>linux内存的分配和释放</title>
+<link>https://lujun9972.github.io/blog/2018/04/18/linux内存的分配和释放/</link>
+<description>No Description</description>
+<pubDate>2018-04-19</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/18/linux内存的分配和释放/</guid>
+</item>
+<item>
+<title>使用anacron定期执行任务</title>
+<link>https://lujun9972.github.io/blog/2018/04/19/使用anacron定期执行任务/</link>
+<description>No Description</description>
+<pubDate>2018-04-19</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/19/使用anacron定期执行任务/</guid>
+</item>
 <item>
 <title>meminfo文件详解</title>
 <link>https://lujun9972.github.io/blog/2018/04/17/meminfo文件详解/</link>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-04-11</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/11/ssh端口转发说明/</guid>
-</item>
-<item>
-<title>Newsboat：一款终端RSS阅读器</title>
-<link>https://lujun9972.github.io/blog/2018/04/10/newsboat：一款终端rss阅读器/</link>
-<description>No Description</description>
-<pubDate>2018-04-10</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/10/newsboat：一款终端rss阅读器/</guid>
-</item>
-<item>
-<title>使用losetup帮你创建虚拟磁盘</title>
-<link>https://lujun9972.github.io/blog/2018/04/09/使用losetup帮你创建虚拟磁盘/</link>
-<description>No Description</description>
-<pubDate>2018-04-09</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/09/使用losetup帮你创建虚拟磁盘/</guid>
 </item>
 </channel>
 </rss>
