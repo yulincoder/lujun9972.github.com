@@ -19,33 +19,23 @@
 </head>
 
   <body><div class="container">
-<div>
-  <header class="masthead">
-    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
-    <p>=============&gt;随便,谢谢</p>
-    <nav class="site-nav">
-      <div class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
-          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
-          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
-        </svg>
-      </div>
-      <ul class="trigger">
-        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="https://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
-      </ul>
-    </nav>
-    <form method="get" id="searchform" action="http://www.google.com/search">
-      <input type="text" class="field" name="q" id="s" placeholder="Search">
-      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
-    </form>
-  </header>
-</div>
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
 
 <div>
 <div class="post">
@@ -54,9 +44,9 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9ac9dde">安装partclone</a></li>
-<li><a href="#org70b5031">备份磁盘分区</a></li>
-<li><a href="#org1b743ad">从备份还原</a></li>
+<li><a href="#org36b5907">安装partclone</a></li>
+<li><a href="#orgdccc0be">备份磁盘分区</a></li>
+<li><a href="#orgac596a3">从备份还原</a></li>
 </ul>
 </div>
 </div>
@@ -81,9 +71,9 @@ partclone 跟 <code>dd</code> 类似，也是一款 <code>block level</code> 的
 对于不支持的文件系统， <code>partclone</code> 也提供了 <code>partclone.dd</code> 来备份。
 </p>
 
-<div id="outline-container-org9ac9dde" class="outline-2">
-<h2 id="org9ac9dde">安装partclone</h2>
-<div class="outline-text-2" id="text-org9ac9dde">
+<div id="outline-container-org36b5907" class="outline-2">
+<h2 id="org36b5907">安装partclone</h2>
+<div class="outline-text-2" id="text-org36b5907">
 <p>
 archlinux上可以直接使用pacman来安装：
 </p>
@@ -94,9 +84,9 @@ archlinux上可以直接使用pacman来安装：
 </div>
 </div>
 
-<div id="outline-container-org70b5031" class="outline-2">
-<h2 id="org70b5031">备份磁盘分区</h2>
-<div class="outline-text-2" id="text-org70b5031">
+<div id="outline-container-orgdccc0be" class="outline-2">
+<h2 id="orgdccc0be">备份磁盘分区</h2>
+<div class="outline-text-2" id="text-orgdccc0be">
 <p>
 在备份磁盘分区之前，请先确保被备份的分区需要先卸载。不过如果你是用的 <code>lvm</code> ，那么可以创建一个逻辑卷的 live snapshot,因此可以不受此限制。
 </p>
@@ -164,9 +154,9 @@ archlinux上可以直接使用pacman来安装：
 </div>
 </div>
 
-<div id="outline-container-org1b743ad" class="outline-2">
-<h2 id="org1b743ad">从备份还原</h2>
-<div class="outline-text-2" id="text-org1b743ad">
+<div id="outline-container-orgac596a3" class="outline-2">
+<h2 id="orgac596a3">从备份还原</h2>
+<div class="outline-text-2" id="text-orgac596a3">
 <p>
 从备份还原很简单
 </p>
@@ -196,7 +186,7 @@ archlinux上可以直接使用pacman来安装：
             <span title="post date" class="post-info">2018-03-08</span>
             <span title="last modification date" class="post-info">2018-03-08</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/backup">backup</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -239,7 +229,7 @@ archlinux上可以直接使用pacman来安装：
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

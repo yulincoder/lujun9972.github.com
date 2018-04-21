@@ -19,33 +19,23 @@
 </head>
 
   <body><div class="container">
-<div>
-  <header class="masthead">
-    <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a></h1>
-    <p>=============&gt;随便,谢谢</p>
-    <nav class="site-nav">
-      <div class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
-          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
-          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
-        </svg>
-      </div>
-      <ul class="trigger">
-        <li><a href="https://lujun9972.github.io/years/">Years</a></li>
-        <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
-        <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
-        <li><a href="https://lujun9972.github.io/about/">About</a></li>
-        <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
-        <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
-      </ul>
-    </nav>
-    <form method="get" id="searchform" action="http://www.google.com/search">
-      <input type="text" class="field" name="q" id="s" placeholder="Search">
-      <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
-    </form>
-  </header>
-</div>
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
 
 <div>
 <div class="post">
@@ -54,10 +44,10 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org55ca909">安装MiniDLNA</a></li>
-<li><a href="#org216beac">配置 /etc/minidlna.conf</a></li>
-<li><a href="#org3a6a421">重启MiniDLNA</a></li>
-<li><a href="#orga7460fa">使用MiniDLNA</a></li>
+<li><a href="#orga103bed">安装MiniDLNA</a></li>
+<li><a href="#org0b66c0c">配置 /etc/minidlna.conf</a></li>
+<li><a href="#org2ad669d">重启MiniDLNA</a></li>
+<li><a href="#orgdd05e0f">使用MiniDLNA</a></li>
 </ul>
 </div>
 </div>
@@ -65,9 +55,9 @@
 运用MiniDLNA这款软件，可以把Orange Pi变成一个家庭影音云存储设备，从而将电影、音乐分享给局域网中其他用户。
 </p>
 
-<div id="outline-container-org55ca909" class="outline-2">
-<h2 id="org55ca909">安装MiniDLNA</h2>
-<div class="outline-text-2" id="text-org55ca909">
+<div id="outline-container-orga103bed" class="outline-2">
+<h2 id="orga103bed">安装MiniDLNA</h2>
+<div class="outline-text-2" id="text-orga103bed">
 <div class="org-src-container">
 <pre class="src src-shell">sudo apt install -y minidlna
 </pre>
@@ -75,9 +65,9 @@
 </div>
 </div>
 
-<div id="outline-container-org216beac" class="outline-2">
-<h2 id="org216beac">配置 /etc/minidlna.conf</h2>
-<div class="outline-text-2" id="text-org216beac">
+<div id="outline-container-org0b66c0c" class="outline-2">
+<h2 id="org0b66c0c">配置 /etc/minidlna.conf</h2>
+<div class="outline-text-2" id="text-org0b66c0c">
 <div class="org-src-container">
 <pre class="src src-conf"><span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#23186;&#20307;&#25991;&#20214;&#30446;&#24405;</span>
 <span style="color: #7590db;">media_dir</span>=/media/usb0
@@ -94,9 +84,9 @@
 </div>
 </div>
 
-<div id="outline-container-org3a6a421" class="outline-2">
-<h2 id="org3a6a421">重启MiniDLNA</h2>
-<div class="outline-text-2" id="text-org3a6a421">
+<div id="outline-container-org2ad669d" class="outline-2">
+<h2 id="org2ad669d">重启MiniDLNA</h2>
+<div class="outline-text-2" id="text-org2ad669d">
 <div class="org-src-container">
 <pre class="src src-shell">sudo systemctl restart minidlna
 </pre>
@@ -104,9 +94,9 @@
 </div>
 </div>
 
-<div id="outline-container-orga7460fa" class="outline-2">
-<h2 id="orga7460fa">使用MiniDLNA</h2>
-<div class="outline-text-2" id="text-orga7460fa">
+<div id="outline-container-orgdd05e0f" class="outline-2">
+<h2 id="orgdd05e0f">使用MiniDLNA</h2>
+<div class="outline-text-2" id="text-orgdd05e0f">
 <p>
 在Pad上查看UPNP/DLNA Media Servers就能看到一个名为 <code>orangepipc2:minidlna</code> 的服务器了。
 </p>
@@ -128,7 +118,7 @@
             <span title="post date" class="post-info">2018-03-06</span>
             <span title="last modification date" class="post-info">2018-03-06</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/dlna">DLNA</a> : <a href="https://lujun9972.github.io/tags/orangepi">OrangePi</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -171,7 +161,7 @@
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

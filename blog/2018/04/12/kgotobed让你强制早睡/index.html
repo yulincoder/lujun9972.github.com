@@ -44,9 +44,9 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7f4cc09">安装Kgotobed</a></li>
-<li><a href="#orgb00b7e2">使用Kgotobed</a></li>
-<li><a href="#org69be762">删除kgotobed</a></li>
+<li><a href="#org6ffbf1b">安装Kgotobed</a></li>
+<li><a href="#org52b4b07">使用Kgotobed</a></li>
+<li><a href="#orgf8cc054">删除kgotobed</a></li>
 </ul>
 </div>
 </div>
@@ -54,9 +54,9 @@
 Kgotobed是一个很变态的Kernel Module。它会强制linux在特定时间关闭，而你却毫无办法(即使你是root用户)
 </p>
 
-<div id="outline-container-org7f4cc09" class="outline-2">
-<h2 id="org7f4cc09">安装Kgotobed</h2>
-<div class="outline-text-2" id="text-org7f4cc09">
+<div id="outline-container-org6ffbf1b" class="outline-2">
+<h2 id="org6ffbf1b">安装Kgotobed</h2>
+<div class="outline-text-2" id="text-org6ffbf1b">
 <p>
 在archlinux上要安装 <code>kgotobed</code>,首先需要安装 <code>dkms</code> 和 <code>linux</code> 这两个包
 </p>
@@ -140,9 +140,9 @@ systemctl start kgotobed.service
 </div>
 </div>
 
-<div id="outline-container-orgb00b7e2" class="outline-2">
-<h2 id="orgb00b7e2">使用Kgotobed</h2>
-<div class="outline-text-2" id="text-orgb00b7e2">
+<div id="outline-container-org52b4b07" class="outline-2">
+<h2 id="org52b4b07">使用Kgotobed</h2>
+<div class="outline-text-2" id="text-org52b4b07">
 <p>
 直接运行 <code>gotobed</code> 就能看到设置的强行关机的时间：
 </p>
@@ -202,9 +202,9 @@ Current bedtime is 2018-04-13 02:00:00
 </pre>
 </div>
 </div>
-<div id="outline-container-org69be762" class="outline-2">
-<h2 id="org69be762">删除kgotobed</h2>
-<div class="outline-text-2" id="text-org69be762">
+<div id="outline-container-orgf8cc054" class="outline-2">
+<h2 id="orgf8cc054">删除kgotobed</h2>
+<div class="outline-text-2" id="text-orgf8cc054">
 <p>
 要逃脱强制关机的命运，几乎唯一的办法就是卸载kgotobed了，执行 <code>make uninstall</code> 卸载
 </p>

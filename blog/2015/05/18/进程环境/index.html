@@ -43,32 +43,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgec3cbe7">1. 进程的中止</a>
+<li><a href="#orgcafdf46">1. 进程的中止</a>
 <ul>
-<li><a href="#org77500fc">1.1. 中止的方式</a></li>
-<li><a href="#orgea3d370">1.2. exit函数</a></li>
-<li><a href="#org4cb1fe7">1.3. atexit函数</a></li>
+<li><a href="#orge1f1b0c">1.1. 中止的方式</a></li>
+<li><a href="#org068d059">1.2. exit函数</a></li>
+<li><a href="#orgd7bb4c3">1.3. atexit函数</a></li>
 </ul>
 </li>
-<li><a href="#orgf309306">2. 环境变量表</a>
+<li><a href="#orgff50959">2. 环境变量表</a>
 <ul>
-<li><a href="#org75b37c2">2.1. 获取环境变量值</a></li>
-<li><a href="#orgac9dc46">2.2. 修改函数变量值</a></li>
+<li><a href="#org58791a0">2.1. 获取环境变量值</a></li>
+<li><a href="#orgcfe1f51">2.2. 修改函数变量值</a></li>
 </ul>
 </li>
-<li><a href="#orgd3b2012">3. 存储器分配</a></li>
-<li><a href="#org50e0f8a">4. setjmp和longjump</a></li>
-<li><a href="#org9a2fdcc">5. 资源限制</a></li>
+<li><a href="#orge6d1ace">3. 存储器分配</a></li>
+<li><a href="#org019bbab">4. setjmp和longjump</a></li>
+<li><a href="#org5db501e">5. 资源限制</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgec3cbe7" class="outline-2">
-<h2 id="orgec3cbe7"><span class="section-number-2">1</span> 进程的中止</h2>
+<div id="outline-container-orgcafdf46" class="outline-2">
+<h2 id="orgcafdf46"><span class="section-number-2">1</span> 进程的中止</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org77500fc" class="outline-3">
-<h3 id="org77500fc"><span class="section-number-3">1.1</span> 中止的方式</h3>
+<div id="outline-container-orge1f1b0c" class="outline-3">
+<h3 id="orge1f1b0c"><span class="section-number-3">1.1</span> 中止的方式</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 有5种方式正常终止
@@ -91,8 +91,8 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgea3d370" class="outline-3">
-<h3 id="orgea3d370"><span class="section-number-3">1.2</span> exit函数</h3>
+<div id="outline-container-org068d059" class="outline-3">
+<h3 id="org068d059"><span class="section-number-3">1.2</span> exit函数</h3>
 <div class="outline-text-3" id="text-1-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdlib.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -120,8 +120,8 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org4cb1fe7" class="outline-3">
-<h3 id="org4cb1fe7"><span class="section-number-3">1.3</span> atexit函数</h3>
+<div id="outline-container-orgd7bb4c3" class="outline-3">
+<h3 id="orgd7bb4c3"><span class="section-number-3">1.3</span> atexit函数</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 进程退出时,可以注册至少32个函数由exit函数自动调用,这些函数被称为终止处理函数. 
@@ -145,8 +145,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgf309306" class="outline-2">
-<h2 id="orgf309306"><span class="section-number-2">2</span> 环境变量表</h2>
+<div id="outline-container-orgff50959" class="outline-2">
+<h2 id="orgff50959"><span class="section-number-2">2</span> 环境变量表</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 每个进程都有一个字符指针数组,指向一张存储了环境变量的列表. 
@@ -165,8 +165,8 @@
 <li>我们通常不直接使用environ变量,而是使用getenv和putenv函数来访问/设置指定的环境变量</li>
 </ul>
 </div>
-<div id="outline-container-org75b37c2" class="outline-3">
-<h3 id="org75b37c2"><span class="section-number-3">2.1</span> 获取环境变量值</h3>
+<div id="outline-container-org58791a0" class="outline-3">
+<h3 id="org58791a0"><span class="section-number-3">2.1</span> 获取环境变量值</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdlib.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -179,8 +179,8 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgac9dc46" class="outline-3">
-<h3 id="orgac9dc46"><span class="section-number-3">2.2</span> 修改函数变量值</h3>
+<div id="outline-container-orgcfe1f51" class="outline-3">
+<h3 id="orgcfe1f51"><span class="section-number-3">2.2</span> 修改函数变量值</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">stdlib.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -246,8 +246,8 @@
 </div>
 
 
-<div id="outline-container-orgd3b2012" class="outline-2">
-<h2 id="orgd3b2012"><span class="section-number-2">3</span> 存储器分配</h2>
+<div id="outline-container-orge6d1ace" class="outline-2">
+<h2 id="orge6d1ace"><span class="section-number-2">3</span> 存储器分配</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 有三个用于存储空间动态分配的函数
@@ -272,8 +272,8 @@
 </div>
 </div>
 
-<div id="outline-container-org50e0f8a" class="outline-2">
-<h2 id="org50e0f8a"><span class="section-number-2">4</span> setjmp和longjump</h2>
+<div id="outline-container-org019bbab" class="outline-2">
+<h2 id="org019bbab"><span class="section-number-2">4</span> setjmp和longjump</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 C中的goto是不能跨越函数的,要跨越函数的跳转只能通过`setjmp'和`longjmp'来实现.
@@ -382,8 +382,8 @@ longjmp函数跳转回setjmp函数处时, <b>并不确定是否回滚自动变�
 </div>
 </div>
 
-<div id="outline-container-org9a2fdcc" class="outline-2">
-<h2 id="org9a2fdcc"><span class="section-number-2">5</span> 资源限制</h2>
+<div id="outline-container-org5db501e" class="outline-2">
+<h2 id="org5db501e"><span class="section-number-2">5</span> 资源限制</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 每个进程都有一组资源限制,其中一些可以使用getrlimit和setrlimit函数来查询或更改
@@ -418,7 +418,7 @@ longjmp函数跳转回setjmp函数处时, <b>并不确定是否回滚自动变�
             <span title="post date" class="post-info">2015-05-18</span>
             <span title="last modification date" class="post-info">2016-10-24</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">DarkSun</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -461,7 +461,7 @@ longjmp函数跳转回setjmp函数处时, <b>并不确定是否回滚自动变�
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; F31">DarkSun</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

@@ -44,16 +44,16 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org46df5f8">使用inotifywait监控文件变动</a></li>
-<li><a href="#org340ae61">使用rsync同步变动</a></li>
-<li><a href="#org038672b">整合起来</a></li>
+<li><a href="#org47583ae">使用inotifywait监控文件变动</a></li>
+<li><a href="#org547cdaf">使用rsync同步变动</a></li>
+<li><a href="#org156d567">整合起来</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org46df5f8" class="outline-2">
-<h2 id="org46df5f8">使用inotifywait监控文件变动</h2>
-<div class="outline-text-2" id="text-org46df5f8">
+<div id="outline-container-org47583ae" class="outline-2">
+<h2 id="org47583ae">使用inotifywait监控文件变动</h2>
+<div class="outline-text-2" id="text-org47583ae">
 <p>
 inotifywait是 <code>inotify-tools</code> 包中提供的一个工具，它使用 <code>inotify</code> API 来监控文件/目录中的变动情况。
 </p>
@@ -117,9 +117,9 @@ Watches established.
 </div>
 </div>
 
-<div id="outline-container-org340ae61" class="outline-2">
-<h2 id="org340ae61">使用rsync同步变动</h2>
-<div class="outline-text-2" id="text-org340ae61">
+<div id="outline-container-org547cdaf" class="outline-2">
+<h2 id="org547cdaf">使用rsync同步变动</h2>
+<div class="outline-text-2" id="text-org547cdaf">
 <p>
 rsync是一款快速增量备份工具。它的具有以下几个特点使得它很适合用作做备份的工具：
 </p>
@@ -153,9 +153,9 @@ rsync常用法为：
 </div>
 </div>
 
-<div id="outline-container-org038672b" class="outline-2">
-<h2 id="org038672b">整合起来</h2>
-<div class="outline-text-2" id="text-org038672b">
+<div id="outline-container-org156d567" class="outline-2">
+<h2 id="org156d567">整合起来</h2>
+<div class="outline-text-2" id="text-org156d567">
 <p>
 接下来我们只需要用个 <code>while</code> 死循环把两个工具整合起来就行了，非常简单
 </p>

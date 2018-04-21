@@ -43,30 +43,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org2b53435">1. passwd文件</a></li>
-<li><a href="#orgc5d5948">2. shadow文件</a></li>
-<li><a href="#org2f17168">3. group文件</a></li>
-<li><a href="#org23cc7d6">4. 其他数据文件</a>
+<li><a href="#orgd761fb0">1. passwd文件</a></li>
+<li><a href="#org2d74dce">2. shadow文件</a></li>
+<li><a href="#orgc041b9c">3. group文件</a></li>
+<li><a href="#orgfd9cc8b">4. 其他数据文件</a>
 <ul>
-<li><a href="#org8f85687">4.1. hosts文件</a></li>
-<li><a href="#org59bed67">4.2. networks文件</a></li>
-<li><a href="#org2e2ff87">4.3. protocols文件</a></li>
-<li><a href="#org73f5bc5">4.4. services文件</a></li>
+<li><a href="#org2404a25">4.1. hosts文件</a></li>
+<li><a href="#orgfad8912">4.2. networks文件</a></li>
+<li><a href="#org0c84339">4.3. protocols文件</a></li>
+<li><a href="#org1031b72">4.4. services文件</a></li>
 </ul>
 </li>
-<li><a href="#org63ba4d9">5. 登录账户记录</a></li>
-<li><a href="#orge44a102">6. 系统标识</a>
+<li><a href="#orgd511ade">5. 登录账户记录</a></li>
+<li><a href="#org73008ed">6. 系统标识</a>
 <ul>
-<li><a href="#org7ed1b30">6.1. uname函数:获取当前主机与操作系统相关信息</a></li>
-<li><a href="#org1b9333d">6.2. gethostname函数:只返回主机名</a></li>
+<li><a href="#org1e9b612">6.1. uname函数:获取当前主机与操作系统相关信息</a></li>
+<li><a href="#org3599d47">6.2. gethostname函数:只返回主机名</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org2b53435" class="outline-2">
-<h2 id="org2b53435"><span class="section-number-2">1</span> passwd文件</h2>
+<div id="outline-container-orgd761fb0" class="outline-2">
+<h2 id="orgd761fb0"><span class="section-number-2">1</span> passwd文件</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 &lt;pwd.h&gt;中定义了passwd结构体,并提供了获取指定passwd项的函数
@@ -120,8 +120,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgc5d5948" class="outline-2">
-<h2 id="orgc5d5948"><span class="section-number-2">2</span> shadow文件</h2>
+<div id="outline-container-org2d74dce" class="outline-2">
+<h2 id="org2d74dce"><span class="section-number-2">2</span> shadow文件</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 类似passwd相关函数
@@ -155,8 +155,8 @@
 </div>
 </div>
 
-<div id="outline-container-org2f17168" class="outline-2">
-<h2 id="org2f17168"><span class="section-number-2">3</span> group文件</h2>
+<div id="outline-container-orgc041b9c" class="outline-2">
+<h2 id="orgc041b9c"><span class="section-number-2">3</span> group文件</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">grp.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -208,8 +208,8 @@
 </div>
 
 
-<div id="outline-container-org23cc7d6" class="outline-2">
-<h2 id="org23cc7d6"><span class="section-number-2">4</span> 其他数据文件</h2>
+<div id="outline-container-orgfd9cc8b" class="outline-2">
+<h2 id="orgfd9cc8b"><span class="section-number-2">4</span> 其他数据文件</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 对于hosts,networks,protocols,services等系统文件,UNIX也提供了与passwd类似的函数.
@@ -310,8 +310,8 @@ end函数
 </ul>
 </div>
 
-<div id="outline-container-org8f85687" class="outline-3">
-<h3 id="org8f85687"><span class="section-number-3">4.1</span> hosts文件</h3>
+<div id="outline-container-org2404a25" class="outline-3">
+<h3 id="org2404a25"><span class="section-number-3">4.1</span> hosts文件</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 本机信息存放在/etc/hosts中,可以通过调用gethostent查找本机主机信息
@@ -388,8 +388,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-org59bed67" class="outline-3">
-<h3 id="org59bed67"><span class="section-number-3">4.2</span> networks文件</h3>
+<div id="outline-container-orgfad8912" class="outline-3">
+<h3 id="orgfad8912"><span class="section-number-3">4.2</span> networks文件</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 我们使用以下函数获得网络名字和网络编号
@@ -420,8 +420,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-org2e2ff87" class="outline-3">
-<h3 id="org2e2ff87"><span class="section-number-3">4.3</span> protocols文件</h3>
+<div id="outline-container-org0c84339" class="outline-3">
+<h3 id="org0c84339"><span class="section-number-3">4.3</span> protocols文件</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 我们可以使用以下函数在协议名字和协议编号之间进行映射
@@ -451,8 +451,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-org73f5bc5" class="outline-3">
-<h3 id="org73f5bc5"><span class="section-number-3">4.4</span> services文件</h3>
+<div id="outline-container-org1031b72" class="outline-3">
+<h3 id="org1031b72"><span class="section-number-3">4.4</span> services文件</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 服务由地址的端口号部分表示,每个服务由一个唯一的总所周知的端口号来表示
@@ -482,8 +482,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 </div>
-<div id="outline-container-org63ba4d9" class="outline-2">
-<h2 id="org63ba4d9"><span class="section-number-2">5</span> 登录账户记录</h2>
+<div id="outline-container-orgd511ade" class="outline-2">
+<h2 id="orgd511ade"><span class="section-number-2">5</span> 登录账户记录</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 大多数UNIX系统都提供下面两个数据文件:
@@ -507,12 +507,12 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-orge44a102" class="outline-2">
-<h2 id="orge44a102"><span class="section-number-2">6</span> 系统标识</h2>
+<div id="outline-container-org73008ed" class="outline-2">
+<h2 id="org73008ed"><span class="section-number-2">6</span> 系统标识</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org7ed1b30" class="outline-3">
-<h3 id="org7ed1b30"><span class="section-number-3">6.1</span> uname函数:获取当前主机与操作系统相关信息</h3>
+<div id="outline-container-org1e9b612" class="outline-3">
+<h3 id="org1e9b612"><span class="section-number-3">6.1</span> uname函数:获取当前主机与操作系统相关信息</h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/utsname.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -531,8 +531,8 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
 </div>
 </div>
 
-<div id="outline-container-org1b9333d" class="outline-3">
-<h3 id="org1b9333d"><span class="section-number-3">6.2</span> gethostname函数:只返回主机名</h3>
+<div id="outline-container-org3599d47" class="outline-3">
+<h3 id="org3599d47"><span class="section-number-3">6.2</span> gethostname函数:只返回主机名</h3>
 <div class="outline-text-3" id="text-6-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">unistd.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -554,7 +554,7 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
             <span title="post date" class="post-info">2015-05-16</span>
             <span title="last modification date" class="post-info">2016-10-24</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; F31">DarkSun</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -597,7 +597,7 @@ gethostent返回/etc/hosts文件中的下一个条目, <b>若文件没打开,get
     <div class="footer">
         <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; F31">DarkSun</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
