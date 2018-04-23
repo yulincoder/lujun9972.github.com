@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>一, 23 4月 2018 22:33:21 CST</pubDate>
-    <lastBuildDate>一, 23 4月 2018 22:33:21 CST</lastBuildDate>
+    <pubDate>二, 24 4月 2018 07:09:18 CST</pubDate>
+    <lastBuildDate>二, 24 4月 2018 07:09:18 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>peek:一款简易的gif录屏软件</title>
+<link>https://lujun9972.github.io/blog/2018/04/24/peek-一款简易的gif录屏软件/</link>
+<description>No Description</description>
+<pubDate>2018-04-24</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/24/peek-一款简易的gif录屏软件/</guid>
+</item>
 <item>
 <title>使用docker轻松体验多个版本Emacs</title>
 <link>https://lujun9972.github.io/blog/2018/04/23/使用docker轻松体验多个版本emacs/</link>
@@ -70,13 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-04-17</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/16/目录跳转神器z的实现原理和使用方法/</guid>
-</item>
-<item>
-<title>MBR与GPT分区表的简单说明</title>
-<link>https://lujun9972.github.io/blog/2018/04/14/mbr与gpt分区表的简单说明/</link>
-<description>No Description</description>
-<pubDate>2018-04-15</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/14/mbr与gpt分区表的简单说明/</guid>
 </item>
 </channel>
 </rss>
