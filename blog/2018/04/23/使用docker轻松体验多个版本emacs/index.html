@@ -40,6 +40,120 @@
 <div>
 <div class="post">
 <h1 class="title">使用docker轻松体验多个版本Emacs</h1>
+<p>
+想体验一下最新版的Emacs？或者想测试一下插件在多个版本Emacs上是否能正常工作？
+如果一次性在电脑上编译多个版本的Emacs不仅麻烦，而且管理起来还很麻烦，尤其是当需要为不同版本的Emacs定义不同配置文件的时候。
+不过还好，我们有Docker。
+</p>
+
+<p>
+<a href="https://github.com/Silex/docker-emacs">Silex/docker-emacs</a>可以让你在Docker容器中运行Emacs。
+而且这个项目提供了多个版本的Emacs Docker镜像。
+</p>
+
+<p>
+不同Emacs版本用Tag来划分，这些tag包括：
+</p>
+
+<ul class="org-ul">
+<li>master (master/xenial/Dockerfile)</li>
+<li>master-dev (master/xenial/dev/Dockerfile)</li>
+<li>master-alpine (master/alpine/Dockerfile)</li>
+<li>26.0, 26 (26.0/xenial/Dockerfile)</li>
+<li>26.0-dev, 26-dev (26.0/xenial/dev/Dockerfile)</li>
+<li>26.0-alpine, 26-alpine (26.0/alpine/Dockerfile)</li>
+<li>25.3, 25, latest (25.3/xenial/Dockerfile)</li>
+<li>25.3-dev, 25-dev, dev (25.3/xenial/dev/Dockerfile)</li>
+<li>25.3-alpine, 25-alpine, alpine (25.3/alpine/Dockerfile)</li>
+<li>25.2 (25.2/xenial/Dockerfile)</li>
+<li>25.2-dev (25.2/xenial/dev/Dockerfile)</li>
+<li>25.2-alpine (25.2/alpine/Dockerfile)</li>
+<li>25.1 (25.1/xenial/Dockerfile)</li>
+<li>25.1-dev (25.1/xenial/dev/Dockerfile)</li>
+<li>24.5, 24 (24.5/xenial/Dockerfile)</li>
+<li>24.5-dev, 24-dev (24.5/xenial/dev/Dockerfile)</li>
+<li>24.4 (24.4/precise/autogen/Dockerfile)</li>
+<li>24.4-dev (24.4/precise/autogen/dev/Dockerfile)</li>
+<li>24.3 (24.3/precise/autogen/Dockerfile)</li>
+<li>24.3-dev (24.3/precise/autogen/dev/Dockerfile)</li>
+<li>23.4, 23 (23.4/precise/bootstrap/Dockerfile)</li>
+<li>23.4-dev, 23-dev (23.4/precise/bootstrap/dev/Dockerfile)</li>
+</ul>
+
+<p>
+其中以 <code>dev</code> 结尾的docker镜像包含多Cast，git，Python这些开发工具，另外相关Emacs代码也存在 <code>/opt/emacs</code> 中没有被删掉，因此容量会比较大。
+</p>
+
+<p>
+而 <code>alpine</code> 结尾的docker镜像表示它是基于 <code>Alpine Linux</code> 创建的镜像，因此容量比较小。
+</p>
+
+<p>
+<code>master</code> 版本只得是最新版的Emacs，目前为止就是 <code>27.0</code> 版。
+</p>
+
+<p>
+因此，若我想体验一下最新版的Emacs，只需要执行
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">docker pull silex/emacs:master
+</pre>
+</div>
+
+<p>
+然后只需要执行
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">docker run -it --rm silex/emacs:master
+</pre>
+</div>
+
+<p>
+就能进入27.0版本的Emacs了。
+<img src="https://lujun9972.github.io/assets/blog/2018/04/23/使用docker轻松体验多个版本emacs/screenshot-03.png" alt="screenshot-03.png" />
+</p>
+
+<p>
+不过由于没有XServer，进入的是Emacs文本界面。
+</p>
+
+<p>
+如果要进入Emacs图像界面也很简单，让容器共享主机的XServer就好了，具体方法如下：
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">xhost +local:                         <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#20801;&#35768;&#26412;&#22320;&#35775;&#38382;Xserver</span>
+docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix silex/emacs:master <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">&#20849;&#20139;&#20027;&#26426;&#30340;Xserver</span>
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/04/23/使用docker轻松体验多个版本emacs/screenshot-04.png" alt="screenshot-04.png" />
+</p>
+</div>
+
+<p>
+你也可以将自己的配置挂载到容器中去:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/.emacs.d:/root/.emacs.d -v ~/.spacemacs.d:/root/.spacemacs.d silex/emacs:master
+</pre>
+</div>
+
+<p>
+或者为了方便直接将HOME目录挂载上去
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">docker run -it --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v ~:/root/ silex/emacs:master
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/04/23/使用docker轻松体验多个版本emacs/screenshot-12.png" alt="screenshot-12.png" />
+</p>
+</div>
 
 </div>
 </div>
