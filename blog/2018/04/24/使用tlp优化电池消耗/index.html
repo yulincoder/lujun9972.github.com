@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>使用tlp优化电池消耗 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">使用tlp优化电池消耗</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org8aada0b">安装TLP</a></li>
+<li><a href="#org3508226">启动TLP服务</a></li>
+<li><a href="#orgf4beeb6">使用TLP</a>
+<ul>
+<li><a href="#org60dd710">tlp: 应用笔记本的节能设置。</a></li>
+<li><a href="#org8c09916">tlp-stat: 显示当前的节能设置</a></li>
+<li><a href="#org3a9b30b">wifi: 手动启动/关闭wifi</a></li>
+<li><a href="#org4afb27f">bluetooth: 手动启动/关闭蓝牙</a></li>
+<li><a href="#orgaa63c76">wwan: 手动启动/关闭wwlan(3G/4G)设备</a></li>
+</ul>
+</li>
+<li><a href="#org837c3e7">配置TLP</a></li>
+</ul>
+</div>
+</div>
+<p>
+TLP是一款linux上的基于文本界面的高级电源管理工具。TLP默认提供了一套针对电池使用进行优化的配置,使用这套配置能够显著降低对电池的消耗。
+此外TLP也具有很高的可配置性，能够让你充分的配置以满足特殊需求。
+</p>
+
+<div id="outline-container-org8aada0b" class="outline-2">
+<h2 id="org8aada0b">安装TLP</h2>
+<div class="outline-text-2" id="text-org8aada0b">
+<p>
+在archlinux上通过下面命令来安装：
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S tlp tlp-rdw --noconfirm
+</pre>
+</div>
+
+<p>
+如果你用的是 <code>Thikpad</code> 的笔记本则还可以安装
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S tp_smapi acpi_call --noconfirm
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3508226" class="outline-2">
+<h2 id="org3508226">启动TLP服务</h2>
+<div class="outline-text-2" id="text-org3508226">
+<p>
+TLP默认会启动 <code>NetworkManager.service</code>,然而我使用的是 <code>netctl</code> 来管理网络，因此还需要修改一下 <code>tlp.service</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo cp /usr/lib/systemd/system/tlp.service /etc/systemd/system/
+sudo sed -i <span style="color: #2d9574;">'/Wants/ s/NetworkManager.service//'</span> /etc/systemd/system/tlp.service
+</pre>
+</div>
+
+<p>
+我们希望由TLP来管理无线设备，因此还需要mask <code>systemd-rfkill.service</code> 和 <code>systemd-rfkill.socket</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo systemctl mask systemd-rfkill.service
+sudo systemctl mask systemd-rfkill.socket
+</pre>
+</div>
+
+<p>
+启动TLP服务
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo systemctl start tlp.service
+sudo systemctl enable tlp.service
+sudo systemctl start tlp-sleep.service
+sudo systemctl enable tlp-sleep.service
+</pre>
+</div>
+
+<p>
+我们可以通过 <code>tlp-stat</code> 来检查TLP是否已经启动
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo tlp-stat -s
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">--- TLP 1.1 --------------------------------------------
+
+<span style="text-decoration: line-through;">+++</span> System Info
+System         = LENOVO ThinkPad X61 7673A98
+BIOS           = 7NET29WW (1.10 )
+Kernel         = 4.16.3-1-ARCH #1 SMP PREEMPT Thu Apr 19 09:17:56 UTC 2018 x86_64
+/proc/cmdline  = BOOT_IMAGE=/boot/vmlinuz-linux root=UUID=8011a945-7d06-4735-9eb1-7c7d9f10febf rw quiet
+Init system    = systemd 
+Boot mode      = BIOS (CSM, Legacy)
+
+<span style="text-decoration: line-through;">+++</span> TLP Status
+State          = enabled
+Last run       = 11:08:28 PM,    441 sec(s) ago
+Mode           = AC
+Power source   = AC
+
+</pre>
+</div>
+
+<p>
+如果TLP没有启动的话，可以执行手工启动TLP
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo tlp start
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">TLP started in AC mode.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf4beeb6" class="outline-2">
+<h2 id="orgf4beeb6">使用TLP</h2>
+<div class="outline-text-2" id="text-orgf4beeb6">
+<p>
+TLP中最常用的命令有这么几个：
+</p>
+</div>
+
+<div id="outline-container-org60dd710" class="outline-3">
+<h3 id="org60dd710">tlp: 应用笔记本的节能设置。</h3>
+<div class="outline-text-3" id="text-org60dd710">
+<dl class="org-dl">
+<dt>sudo tlp start</dt><dd>根据实际情况是使用交流电还是电池，来应用对应的节能设置</dd>
+<dt>sudo tlp ac</dt><dd>强制切换到交流电对应的节能设置</dd>
+<dt>sudo tlp bat</dt><dd>强制切换到电池的节能设置</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org8c09916" class="outline-3">
+<h3 id="org8c09916">tlp-stat: 显示当前的节能设置</h3>
+<div class="outline-text-3" id="text-org8c09916">
+<dl class="org-dl">
+<dt>sudo tlp-stat -b</dt><dd>显示电池的相关信息</dd>
+<dt>tlp-stat -c</dt><dd>显示tlp当前的配置信息</dd>
+<dt>sudo tlp-stat -d</dt><dd>显示磁盘的信息</dd>
+<dt>sudo tlp-stat -e</dt><dd>显示PCIE信息</dd>
+<dt>sudo tlp-stat -g</dt><dd>显示显卡的相关信息</dd>
+<dt>tlp-stat -r</dt><dd>显示无线设备的相关信息</dd>
+<dt>tlp-stat -s</dt><dd>显示系统相关信息</dd>
+<dt>tlp-stat -t</dt><dd>显示温度和磁盘转速</dd>
+<dt>tlp</dt><dd>显示上面的所有信息</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org3a9b30b" class="outline-3">
+<h3 id="org3a9b30b">wifi: 手动启动/关闭wifi</h3>
+<div class="outline-text-3" id="text-org3a9b30b">
+<dl class="org-dl">
+<dt>sudo wifi on</dt><dd>手动启动wifi</dd>
+<dt>sudo wifi off</dt><dd>手动关闭wifi</dd>
+<dt>sudo wifi toggle</dt><dd>手动切换wifi状态</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org4afb27f" class="outline-3">
+<h3 id="org4afb27f">bluetooth: 手动启动/关闭蓝牙</h3>
+<div class="outline-text-3" id="text-org4afb27f">
+<dl class="org-dl">
+<dt>sudo bluetooth on</dt><dd>手动启动蓝牙</dd>
+<dt>sudo bluetooth off</dt><dd>手动关闭蓝牙</dd>
+<dt>sudo bluetooth toggle</dt><dd>手动切换蓝牙状态</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgaa63c76" class="outline-3">
+<h3 id="orgaa63c76">wwan: 手动启动/关闭wwlan(3G/4G)设备</h3>
+<div class="outline-text-3" id="text-orgaa63c76">
+<dl class="org-dl">
+<dt>sudo wwan on</dt><dd>手动启动wwlan设备</dd>
+<dt>sudo wwan off</dt><dd>手动关闭wwlan设备</dd>
+<dt>sudo wwan toggle</dt><dd>手动切换蓝牙wwlan设备状态</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-org837c3e7" class="outline-2">
+<h2 id="org837c3e7">配置TLP</h2>
+<div class="outline-text-2" id="text-org837c3e7">
+<p>
+TLP的配置文件放在 <code>/etc/default/tlp</code> 中，详细的配置方法请参见<a href="http://linrunner.de/en/tlp/docs/tlp-configuration.html">官网上的说明</a>
+</p>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-04-24</span>
+            <span title="last modification date" class="post-info">2018-04-24</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/04/24/使用tlp优化电池消耗/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/04/24/使用tlp优化电池消耗/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>

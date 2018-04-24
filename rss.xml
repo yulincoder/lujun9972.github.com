@@ -4,10 +4,17 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 24 4月 2018 13:11:07 CST</pubDate>
-    <lastBuildDate>二, 24 4月 2018 13:11:07 CST</lastBuildDate>
+    <pubDate>三, 25 4月 2018 07:23:09 CST</pubDate>
+    <lastBuildDate>三, 25 4月 2018 07:23:09 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>docker容器中跑GUI的最简单方法</title>
+<link>https://lujun9972.github.io/blog/2018/04/24/docker容器中跑gui的最简单方法/</link>
+<description>No Description</description>
+<pubDate>2018-04-24</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/24/docker容器中跑gui的最简单方法/</guid>
+</item>
 <item>
 <title>peek:一款简易的gif录屏软件</title>
 <link>https://lujun9972.github.io/blog/2018/04/24/peek-一款简易的gif录屏软件/</link>
@@ -21,6 +28,13 @@
 <description>No Description</description>
 <pubDate>2018-04-24</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/24/使用bash随机更换壁纸/</guid>
+</item>
+<item>
+<title>使用tlp优化电池消耗</title>
+<link>https://lujun9972.github.io/blog/2018/04/24/使用tlp优化电池消耗/</link>
+<description>No Description</description>
+<pubDate>2018-04-24</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/24/使用tlp优化电池消耗/</guid>
 </item>
 <item>
 <title>程序员使用的gedit配置</title>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-04-19</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/18/linux内存的分配和释放/</guid>
-</item>
-<item>
-<title>使用anacron定期执行任务</title>
-<link>https://lujun9972.github.io/blog/2018/04/19/使用anacron定期执行任务/</link>
-<description>No Description</description>
-<pubDate>2018-04-19</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/19/使用anacron定期执行任务/</guid>
-</item>
-<item>
-<title>meminfo文件详解</title>
-<link>https://lujun9972.github.io/blog/2018/04/17/meminfo文件详解/</link>
-<description>No Description</description>
-<pubDate>2018-04-18</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/17/meminfo文件详解/</guid>
 </item>
 </channel>
 </rss>
