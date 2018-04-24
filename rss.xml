@@ -4,8 +4,8 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>二, 24 4月 2018 07:09:18 CST</pubDate>
-    <lastBuildDate>二, 24 4月 2018 07:09:18 CST</lastBuildDate>
+    <pubDate>二, 24 4月 2018 13:07:50 CST</pubDate>
+    <lastBuildDate>二, 24 4月 2018 13:07:50 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
 <item>
@@ -14,6 +14,20 @@
 <description>No Description</description>
 <pubDate>2018-04-24</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/24/peek-一款简易的gif录屏软件/</guid>
+</item>
+<item>
+<title>使用bash随机更换壁纸</title>
+<link>https://lujun9972.github.io/blog/2018/04/24/使用bash随机更换壁纸/</link>
+<description>No Description</description>
+<pubDate>2018-04-24</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/24/使用bash随机更换壁纸/</guid>
+</item>
+<item>
+<title>程序员使用的gedit配置</title>
+<link>https://lujun9972.github.io/blog/2018/04/23/程序员使用的gedit配置/</link>
+<description>No Description</description>
+<pubDate>2018-04-24</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/23/程序员使用的gedit配置/</guid>
 </item>
 <item>
 <title>使用docker轻松体验多个版本Emacs</title>
@@ -63,20 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-04-18</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/17/meminfo文件详解/</guid>
-</item>
-<item>
-<title>如何通过指向成员的指针获取包含它的结构体的地址</title>
-<link>https://lujun9972.github.io/blog/2018/04/18/如何通过指向成员的指针获取包含它的结构体的地址/</link>
-<description>No Description</description>
-<pubDate>2018-04-18</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/18/如何通过指向成员的指针获取包含它的结构体的地址/</guid>
-</item>
-<item>
-<title>目录跳转神器z的实现原理和使用方法</title>
-<link>https://lujun9972.github.io/blog/2018/04/16/目录跳转神器z的实现原理和使用方法/</link>
-<description>No Description</description>
-<pubDate>2018-04-17</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/16/目录跳转神器z的实现原理和使用方法/</guid>
 </item>
 </channel>
 </rss>
