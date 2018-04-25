@@ -4,10 +4,38 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>三, 25 4月 2018 07:23:09 CST</pubDate>
-    <lastBuildDate>三, 25 4月 2018 07:23:09 CST</lastBuildDate>
+    <pubDate>三, 25 4月 2018 21:46:48 CST</pubDate>
+    <lastBuildDate>三, 25 4月 2018 21:46:48 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>linux内存的分配和释放</title>
+<link>https://lujun9972.github.io/blog/2018/04/18/linux内存的分配和释放/</link>
+<description>No Description</description>
+<pubDate>2018-04-25</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/18/linux内存的分配和释放/</guid>
+</item>
+<item>
+<title>linux重要日志说明</title>
+<link>https://lujun9972.github.io/blog/2018/04/25/linux重要日志说明/</link>
+<description>No Description</description>
+<pubDate>2018-04-25</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/25/linux重要日志说明/</guid>
+</item>
+<item>
+<title>pamac:让你轻松管理软件包</title>
+<link>https://lujun9972.github.io/blog/2018/04/25/pamac-让你轻松管理软件包/</link>
+<description>No Description</description>
+<pubDate>2018-04-25</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/25/pamac-让你轻松管理软件包/</guid>
+</item>
+<item>
+<title>使用bash随机更换壁纸</title>
+<link>https://lujun9972.github.io/blog/2018/04/24/使用bash随机更换壁纸/</link>
+<description>No Description</description>
+<pubDate>2018-04-25</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/24/使用bash随机更换壁纸/</guid>
+</item>
 <item>
 <title>docker容器中跑GUI的最简单方法</title>
 <link>https://lujun9972.github.io/blog/2018/04/24/docker容器中跑gui的最简单方法/</link>
@@ -21,13 +49,6 @@
 <description>No Description</description>
 <pubDate>2018-04-24</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/24/peek-一款简易的gif录屏软件/</guid>
-</item>
-<item>
-<title>使用bash随机更换壁纸</title>
-<link>https://lujun9972.github.io/blog/2018/04/24/使用bash随机更换壁纸/</link>
-<description>No Description</description>
-<pubDate>2018-04-24</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/24/使用bash随机更换壁纸/</guid>
 </item>
 <item>
 <title>使用tlp优化电池消耗</title>
@@ -56,27 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-04-22</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/22/借助you-get在emacs中看youku视频/</guid>
-</item>
-<item>
-<title>ext4 tips三则</title>
-<link>https://lujun9972.github.io/blog/2018/04/21/ext4-tips三则/</link>
-<description>No Description</description>
-<pubDate>2018-04-21</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/21/ext4-tips三则/</guid>
-</item>
-<item>
-<title>nohup,setsid与disown的不同之处</title>
-<link>https://lujun9972.github.io/blog/2018/04/20/nohup,setsid与disown的不同之处/</link>
-<description>No Description</description>
-<pubDate>2018-04-21</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/20/nohup,setsid与disown的不同之处/</guid>
-</item>
-<item>
-<title>linux内存的分配和释放</title>
-<link>https://lujun9972.github.io/blog/2018/04/18/linux内存的分配和释放/</link>
-<description>No Description</description>
-<pubDate>2018-04-19</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/18/linux内存的分配和释放/</guid>
 </item>
 </channel>
 </rss>

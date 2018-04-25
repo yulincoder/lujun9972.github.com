@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>pamac:让你轻松管理软件包 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">pamac:让你轻松管理软件包</h1>
+<p>
+Archlinux上，我们一般使用pacman来安装软件包，但是pacman是基于终端文本的包管理器，用起来不是那么直观。
+</p>
+
+<p>
+如果你比较喜欢GUI的话，那么<a href="https://aur.archlinux.org/packages/pamac-aur/">pamac</a>是一款不错的替代品。
+</p>
+
+<p>
+需要说明的是，pamac并不是对pacman的GUI封装，它是libalpm的GUI前端(相比之下，pacman也是libalpm的前端).
+</p>
+
+<p>
+Archlinux默认的仓库中并没有pamac，你需要使用yaourt从AUR中安装
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">yaourt -S pamac-aur
+</pre>
+</div>
+
+<p>
+不过，若你添加了archlinuxcn仓库的话，则其中包含了pamac
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S pamac-aur --noconfirm
+</pre>
+</div>
+
+<p>
+关于添加archlinxcn仓库的方法，请查看<a href="https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/">这里</a>
+</p>
+
+<p>
+安装好后，执行 <code>pamac-manager</code> 就能启动pamac了
+</p>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/04/25/pamac-让你轻松管理软件包/screenshot-49.png" alt="screenshot-49.png" />
+</p>
+</div>
+
+<p>
+你可以按类别来查找软件
+<img src="https://lujun9972.github.io/assets/blog/2018/04/25/pamac-让你轻松管理软件包/screenshot-50.png" alt="screenshot-50.png" />
+</p>
+
+<p>
+也可以按组来分类
+<img src="https://lujun9972.github.io/assets/blog/2018/04/25/pamac-让你轻松管理软件包/screenshot-51.png" alt="screenshot-51.png" />
+</p>
+
+<p>
+还可以按仓库来分类
+<img src="https://lujun9972.github.io/assets/blog/2018/04/25/pamac-让你轻松管理软件包/screenshot-52.png" alt="screenshot-52.png" />
+</p>
+
+<p>
+当然也可以根据关键字来查找
+<img src="https://lujun9972.github.io/assets/blog/2018/04/25/pamac-让你轻松管理软件包/screenshot-53.png" alt="screenshot-53.png" />
+</p>
+
+<p>
+确实是太方便了！
+</p>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-04-25</span>
+            <span title="last modification date" class="post-info">2018-04-25</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/04/25/pamac-让你轻松管理软件包/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/04/25/pamac-让你轻松管理软件包/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>

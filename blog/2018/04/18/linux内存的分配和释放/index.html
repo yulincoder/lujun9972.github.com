@@ -44,16 +44,16 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9c0455a">了解内存分配机制(共享映射与请求分页)</a></li>
-<li><a href="#org41cca5c">了解内存释放机制</a></li>
+<li><a href="#orgd0e04d4">了解内存分配机制(共享映射与请求分页)</a></li>
+<li><a href="#org1360850">了解内存释放机制</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org9c0455a" class="outline-2">
-<h2 id="org9c0455a">了解内存分配机制(共享映射与请求分页)</h2>
-<div class="outline-text-2" id="text-org9c0455a">
+<div id="outline-container-orgd0e04d4" class="outline-2">
+<h2 id="orgd0e04d4">了解内存分配机制(共享映射与请求分页)</h2>
+<div class="outline-text-2" id="text-orgd0e04d4">
 <p>
 通过 <code>pmap</code> 命令，可以获取用户进程逻辑地址空间中映射的内存信息：
 </p>
@@ -94,6 +94,12 @@
 当出现多个程序共同使用相同的文件映射(共享库)时，它们可以共享磁盘高速缓存中的同一空间，从而节省物理内存的使用量，这种技术就是"共享映射"技术。
 </p>
 
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/04/18/linux内存的分配和释放/linux_memory_alloc.jpg" alt="linux_memory_alloc.jpg" />
+</p>
+</div>
+
 <p>
 除了共享库外，进程的fork也使用了共享映射技术。
 当父进程fork子进程时，Linux内核并不对内存中的内容进行实际上的复制，而是将映射到父进程逻辑地址空间内的那部分内容原封不动地共享映射到子进程的逻辑地址空间内。
@@ -110,12 +116,18 @@
 </div>
 </div>
 
-<div id="outline-container-org41cca5c" class="outline-2">
-<h2 id="org41cca5c">了解内存释放机制</h2>
-<div class="outline-text-2" id="text-org41cca5c">
+<div id="outline-container-org1360850" class="outline-2">
+<h2 id="org1360850">了解内存释放机制</h2>
+<div class="outline-text-2" id="text-org1360850">
 <p>
 当其他进程需要新的物理内存时，就涉及到如何将尚有数据残余的物理内存释放或换出来的问题了。
 </p>
+
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/04/18/linux内存的分配和释放/linux_memory_free.jpg" alt="linux_memory_free.jpg" />
+</p>
+</div>
 
 <p>
 当需要新物理内存时，会优先释放Inactive(file)和Active(file)中记录的内存页，只需要将脏数据写入文件中再释放内存页即可。
@@ -240,7 +252,7 @@ nonvoluntary_ctxt_switches: 21641
 <div>
         <div class="post-meta">
             <span title="post date" class="post-info">2018-04-18</span>
-            <span title="last modification date" class="post-info">2018-04-19</span>
+            <span title="last modification date" class="post-info">2018-04-25</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
         </div>
