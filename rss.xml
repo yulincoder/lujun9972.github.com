@@ -4,10 +4,38 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>三, 25 4月 2018 21:46:48 CST</pubDate>
-    <lastBuildDate>三, 25 4月 2018 21:46:48 CST</lastBuildDate>
+    <pubDate>五, 27 4月 2018 19:01:40 CST</pubDate>
+    <lastBuildDate>五, 27 4月 2018 19:01:40 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>小议bash中的COPROC</title>
+<link>https://lujun9972.github.io/blog/2018/04/26/小议bash中的coproc/</link>
+<description>No Description</description>
+<pubDate>2018-04-27</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/26/小议bash中的coproc/</guid>
+</item>
+<item>
+<title>README</title>
+<link>https://lujun9972.github.io/blog/2018/04/27/readme/</link>
+<description>No Description</description>
+<pubDate>2018-04-26</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/27/readme/</guid>
+</item>
+<item>
+<title>kile编译时提示[ViewPDF]failed to start的解决方法</title>
+<link>https://lujun9972.github.io/blog/2017/09/06/kile编译时提示[viewpdf]failed-to-start的解决方法/</link>
+<description>No Description</description>
+<pubDate>2018-04-26</pubDate>
+<guid>https://lujun9972.github.io/blog/2017/09/06/kile编译时提示[viewpdf]failed-to-start的解决方法/</guid>
+</item>
+<item>
+<title>如何在bash脚本中判断输入输出是否被重定向到文件</title>
+<link>https://lujun9972.github.io/blog/2018/04/26/如何在bash脚本中判断输入输出是否被重定向到文件/</link>
+<description>No Description</description>
+<pubDate>2018-04-26</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/04/26/如何在bash脚本中判断输入输出是否被重定向到文件/</guid>
+</item>
 <item>
 <title>linux内存的分配和释放</title>
 <link>https://lujun9972.github.io/blog/2018/04/18/linux内存的分配和释放/</link>
@@ -49,34 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-04-24</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/04/24/peek-一款简易的gif录屏软件/</guid>
-</item>
-<item>
-<title>使用tlp优化电池消耗</title>
-<link>https://lujun9972.github.io/blog/2018/04/24/使用tlp优化电池消耗/</link>
-<description>No Description</description>
-<pubDate>2018-04-24</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/24/使用tlp优化电池消耗/</guid>
-</item>
-<item>
-<title>程序员使用的gedit配置</title>
-<link>https://lujun9972.github.io/blog/2018/04/23/程序员使用的gedit配置/</link>
-<description>No Description</description>
-<pubDate>2018-04-24</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/23/程序员使用的gedit配置/</guid>
-</item>
-<item>
-<title>使用docker轻松体验多个版本Emacs</title>
-<link>https://lujun9972.github.io/blog/2018/04/23/使用docker轻松体验多个版本emacs/</link>
-<description>No Description</description>
-<pubDate>2018-04-23</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/23/使用docker轻松体验多个版本emacs/</guid>
-</item>
-<item>
-<title>借助you-get在Emacs中看youku视频</title>
-<link>https://lujun9972.github.io/blog/2018/04/22/借助you-get在emacs中看youku视频/</link>
-<description>No Description</description>
-<pubDate>2018-04-22</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/04/22/借助you-get在emacs中看youku视频/</guid>
 </item>
 </channel>
 </rss>
