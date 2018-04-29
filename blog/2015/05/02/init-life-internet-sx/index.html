@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>init-life-internet-sx - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="DarkSun" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">init-life-internet-sx</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgfbd02ff">1. 安装Stack Exchange for Emacs</a></li>
+<li><a href="#org0fa962c">2. 使用</a>
+<ul>
+<li><a href="#orge56cb7d">2.1. 授权</a></li>
+<li><a href="#orgc53d57f">2.2. 查看问题</a></li>
+<li><a href="#org06b0904">2.3. sx-question-list-mode</a></li>
+</ul>
+</li>
+<li><a href="#org20dac32">3. provide feature</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfbd02ff" class="outline-2">
+<h2 id="orgfbd02ff"><span class="section-number-2">1</span> 安装Stack Exchange for Emacs</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+SX使得可以在Emacs中直接访问StackExchange系列网站
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span>package-install-new 'sx<span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0fa962c" class="outline-2">
+<h2 id="org0fa962c"><span class="section-number-2">2</span> 使用</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orge56cb7d" class="outline-3">
+<h3 id="orge56cb7d"><span class="section-number-3">2.1</span> 授权</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+若要开放提问,回答,评论,投票功能,则需要使用`sx-authenticate'命令先对SX进行授权.
+</p>
+
+<p>
+授权时输入的token会保存到`~/.emacs.d/.sx/auth.el'中,若发现因为输入token错误而无法正常查看问题,则只需要删掉该文件即可.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc53d57f" class="outline-3">
+<h3 id="orgc53d57f"><span class="section-number-3">2.2</span> 查看问题</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+使用`sx-tab-xxx'系列命令来查看问题. 这些命令的功能相当于你点击官方网站上的xxx tab. 
+</p>
+
+<p>
+目前实现的tab有:
+</p>
+<dl class="org-dl">
+<dt>sx-tab-all-questions</dt><dd>所有问题</dd>
+<dt>sx-tab-unanswered</dt><dd>未回答的问题</dd>
+<dt>sx-tab-unanswered-my-tags</dt><dd>你follow的tag中,未回答的问题</dd>
+<dt>sx-tab-featured</dt><dd>featured questions</dd>
+<dt>sx-tab-starred</dt><dd>你提出的问题</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org06b0904" class="outline-3">
+<h3 id="org06b0904"><span class="section-number-3">2.3</span> sx-question-list-mode</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+`sx-tab-xxx'系列命令会列出一系列的问题,并进入`sx-question-list-mode'. 在这里可以进行以下操作:
+</p>
+
+<dl class="org-dl">
+<dt>o</dt><dd>定义问题列表的排序方式(实验没有反应&#x2026;)</dd>
+<dt>S</dt><dd>关键字查询</dd>
+<dt>n/p</dt><dd>下一个/上一个问题</dd>
+<dt>j/k</dt><dd>浏览问题时,在另一个buffer中同时显示问题的内容</dd>
+<dt>v</dt><dd>使用浏览器打开光标所在的问题</dd>
+<dt>u/d</dt><dd>投赞成/不赞成票</dd>
+<dt>RET</dt><dd>显示问题内容</dd>
+<dt>a</dt><dd>提出问题</dd>
+<dt>g</dt><dd>刷新</dd>
+<dt>h</dt><dd>隐藏该问题</dd>
+<dt>q</dt><dd>退出</dd>
+<dt>m</dt><dd>标记为已读</dd>
+<dt>t</dt><dd>切换问题tab</dd>
+<dt>*</dt><dd>收藏</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-org20dac32" class="outline-2">
+<h2 id="org20dac32"><span class="section-number-2">3</span> provide feature</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">provide</span> '<span style="color: #a45bad;">init-life-internet-sx</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2015-05-02</span>
+            <span title="last modification date" class="post-info">2018-04-29</span>
+            <span title="tags" class="post-info">:N/A:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2015/05/02/init-life-internet-sx/";
+         var disqus_url = "https://lujun9972.github.io/blog/2015/05/02/init-life-internet-sx/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>

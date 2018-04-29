@@ -44,14 +44,14 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgb453bb6">COPROC语法</a>
+<li><a href="#org4de47e8">COPROC语法</a>
 <ul>
-<li><a href="#org6db6f80">COPROC基本语法</a></li>
-<li><a href="#org0581b2d">COPROC的扩展语法</a></li>
-<li><a href="#orgfdad823">关闭不需要的管道</a></li>
+<li><a href="#orga48627d">COPROC基本语法</a></li>
+<li><a href="#org22c9bbc">COPROC的扩展语法</a></li>
+<li><a href="#orgc345806">关闭不需要的管道</a></li>
 </ul>
 </li>
-<li><a href="#org164a62f">注意事项</a></li>
+<li><a href="#org9cde3e4">注意事项</a></li>
 </ul>
 </div>
 </div>
@@ -64,7 +64,7 @@
 </div>
 
 <p>
-但是使用匿名管道最大的一个问题是，数据的传输是单项的，即commandB只能从commandA的输出中读取数据，然后commandB的输出只能被commandC读取。
+但是使用匿名管道最大的一个问题是，数据的传输是单向的，即commandB只能从commandA的输出中读取数据，然后commandB的输出只能被commandC读取。
 </p>
 
 <p>
@@ -93,9 +93,9 @@ cmd &lt;in &gt;out &amp;
 有点类似于C中的 <code>FILE * popen ( const char * command , const char * type );</code> 函数,只不过它同时产生输入和输出两个句柄。
 </p>
 
-<div id="outline-container-orgb453bb6" class="outline-2">
-<h2 id="orgb453bb6">COPROC语法</h2>
-<div class="outline-text-2" id="text-orgb453bb6">
+<div id="outline-container-org4de47e8" class="outline-2">
+<h2 id="org4de47e8">COPROC语法</h2>
+<div class="outline-text-2" id="text-org4de47e8">
 <p>
 根据bash manual的说法，coprocess的语法为
 </p>
@@ -116,9 +116,9 @@ cmd &lt;in &gt;out &amp;
 </p>
 </div>
 
-<div id="outline-container-org6db6f80" class="outline-3">
-<h3 id="org6db6f80">COPROC基本语法</h3>
-<div class="outline-text-3" id="text-org6db6f80">
+<div id="outline-container-orga48627d" class="outline-3">
+<h3 id="orga48627d">COPROC基本语法</h3>
+<div class="outline-text-3" id="text-orga48627d">
 <p>
 COPROC的基本语法适用于当只需要有一个coprocess的情况，它的语法为
 </p>
@@ -138,9 +138,9 @@ COPROC的基本语法适用于当只需要有一个coprocess的情况，它的�
 </div>
 </div>
 
-<div id="outline-container-org0581b2d" class="outline-3">
-<h3 id="org0581b2d">COPROC的扩展语法</h3>
-<div class="outline-text-3" id="text-org0581b2d">
+<div id="outline-container-org22c9bbc" class="outline-3">
+<h3 id="org22c9bbc">COPROC的扩展语法</h3>
+<div class="outline-text-3" id="text-org22c9bbc">
 <p>
 当需要创建多个coprocess时，你就需要使用coproc的扩展语法了，因为它允许你为coprocess命名。
 </p>
@@ -164,9 +164,9 @@ COPROC的基本语法适用于当只需要有一个coprocess的情况，它的�
 </div>
 </div>
 
-<div id="outline-container-orgfdad823" class="outline-3">
-<h3 id="orgfdad823">关闭不需要的管道</h3>
-<div class="outline-text-3" id="text-orgfdad823">
+<div id="outline-container-orgc345806" class="outline-3">
+<h3 id="orgc345806">关闭不需要的管道</h3>
+<div class="outline-text-3" id="text-orgc345806">
 <p>
 若coprocess只需要输入句柄或输出句柄，则可以使用 <code>exec</code> 来关闭不需要的文件句柄
 </p>
@@ -179,9 +179,9 @@ COPROC的基本语法适用于当只需要有一个coprocess的情况，它的�
 </div>
 </div>
 
-<div id="outline-container-org164a62f" class="outline-2">
-<h2 id="org164a62f">注意事项</h2>
-<div class="outline-text-2" id="text-org164a62f">
+<div id="outline-container-org9cde3e4" class="outline-2">
+<h2 id="org9cde3e4">注意事项</h2>
+<div class="outline-text-2" id="text-org9cde3e4">
 <p>
 使用coprocess虽然方便,但要当心coprocess由于输出缓存而导致的卡死。
 </p>
@@ -203,7 +203,7 @@ COPROC的基本语法适用于当只需要有一个coprocess的情况，它的�
 
 <p>
 因此创建coprocess时一定小心，只能使用那些不会缓存输出的命令。
-也正因为此，coprocess的使用范围其实也很首先，真要用来跟其他进程做交互的话，还是推荐使用 <code>expert</code> 比较好。
+也正因为此，coprocess的使用范围其实也很受限，真要用来跟其他进程做交互的话，还是推荐使用 <code>expert</code> 比较好。
 </p>
 </div>
 </div>
