@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>使用Emacs ediff作为git merge工具 - 暗无天日</title>
+  <title>删除文件时发生了些什么事情 - 暗无天日</title>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <meta name="author" content="lujun9972" />
-  <meta name="description" content="使用Emacs ediff作为git diff工具" />
-  <meta name="keywords" content="emacs, ediff, git, mergetool" />
+  <meta name="keywords" content="linux和它的小伙伴" />
   <style>
    #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
    #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
@@ -40,67 +39,38 @@
 
 <div>
 <div class="post">
-<h1 class="title">使用Emacs ediff作为git merge工具</h1>
+<h1 class="title">删除文件时发生了些什么事情</h1>
 <p>
-之前讲了<span class="ego_link"><a href="https://lujun9972.github.io/Emacs之怒/2016/10/27/使用emacs-ediff作为git-diff工具/ Or /Emacs之怒/使用emacs-ediff作为git-diff工具/">使用Emacs Ediff作为git diff工具</a></span>，现在来说说如何用Emacs ediff作为git merge工具
+当删除文件时，直观上能看到的就是文件名从目录中消失了，但是这一现象下，系统内部实际上做了很多事情。
+</p>
+
+<p>
+具体的实现，根据文件系统的不同而有所不同。在ext3/4下，大致会发生下面几件事情
 </p>
 
 <ol class="org-ol">
-<li><p>
-创建一个脚本来帮助你调用Ediff进行文件比较。
-</p>
-<div class="org-src-container">
-<pre class="src src-sh"><span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">!/bin/</span><span style="color: #4f97d7; font-weight: bold;">bash</span>
+<li>当文件被删除时，存有该文件名和i节点号的目录项会被标注成未使用。
+一般情况下是把索引号设置为0,这样文件名不再与任何文件信息相关联了。</li>
 
-<span style="color: #7590db;">base</span>=$<span style="color: #a45bad;">1</span>
-<span style="color: #7590db;">local</span>=$<span style="color: #a45bad;">2</span>
-<span style="color: #7590db;">remote</span>=$<span style="color: #a45bad;">3</span>
-<span style="color: #7590db;">merged</span>=$<span style="color: #a45bad;">4</span>
+<li>由于目录项被更新，因此会更新父目录本身的最后读取时间、最后修改时间和最后状态变更时间.</li>
 
-<span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">[</span> -r $<span style="color: #7590db;">base</span> <span style="color: #4f97d7;">]</span>;<span style="color: #4f97d7; font-weight: bold;">then</span>
-    emacsclient -a <span style="color: #2d9574;">""</span> -c -n --eval <span style="color: #2d9574;">"(require 'ediff)"</span> --eval <span style="color: #2d9574;">"(ediff-merge-with-ancestor \"$local\" \"$remote\" \"$base\" nil \"$merged\")"</span>
-<span style="color: #4f97d7; font-weight: bold;">else</span>
-    emacsclient -a <span style="color: #2d9574;">""</span> -c -n --eval <span style="color: #2d9574;">"(require 'ediff)"</span> --eval <span style="color: #2d9574;">"(ediff-merge \"$local\" \"$remote\" nil \"$merged\")"</span>
-<span style="color: #4f97d7; font-weight: bold;">fi</span>
-</pre>
-</div>
+<li>i节点中的引用数减1,若i节点号的引用数降为0,则i节点在分配表中标记为未使用.
+i节点中的文件size,uid,gid,指向数据块的指针(Direct,Indirect,Double indirect,Triple Indirect Block Pointers)都会被清为0.</li>
 
-<p>
-注意我这里使用了emacsclient ，避免每次都要打开一个Emacs进程。
-</p>
+<li>若有进程打开了该文件而没有关闭，则该被删除的文件依然处于使用状态。
+这时真正删除文件的状态会被延迟到文件不再使用后进行。
+处于这个状态下的文件还可以通过 <code>/proc/$进程ID/$文件描述符</code> 来找到</li>
 
-<p>
-emacsclient后面的 <code>-a</code> 参数表示如果没有启动Emacs daemon的话，则自动启动一个。 所以你无需事先启动Emacs daemon。
-</p></li>
-
-<li><p>
-用git config配置mergetool
-</p>
-
-<p>
-这里假设上一步创建的脚本为 <code>~/bin/ediff_merge.sh</code>,那么可以这么配置
-</p>
-
-<div class="org-src-container">
-<pre class="src src-sh">git config --global merge.tool ediff
-git config --global mergetool.ediff.cmd <span style="color: #2d9574;">'~/bin/ediff_merge.sh "$BASE" "$LOCAL" "$REMOTE" "$MERGED"'</span>
-git config --global mergetool.prompt false
-<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">git config --global mergetool.ediff.trustExitCode true</span>
-</pre>
-</div></li>
+<li>被删除文件的数据块在数据块的分配表中标记为未使用状态，但它的内容被保留了下来。</li>
 </ol>
-
-<p>
-OK，这就搞定了，试试运行 <code>git mergetool</code> 看看效果吧。
-</p>
 
 </div>
 </div>
 <div>
         <div class="post-meta">
-            <span title="post date" class="post-info">2016-10-31</span>
-            <span title="last modification date" class="post-info">2018-04-30</span>
-            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/emacs">emacs</a> : <a href="https://lujun9972.github.io/tags/ediff">ediff</a> : <a href="https://lujun9972.github.io/tags/git">git</a> : <a href="https://lujun9972.github.io/tags/mergetool">mergetool</a>:</span>
+            <span title="post date" class="post-info">2018-05-01</span>
+            <span title="last modification date" class="post-info">2018-05-01</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
@@ -113,8 +83,8 @@ OK，这就搞定了，试试运行 <code>git mergetool</code> 看看效果吧�
         <script type="text/javascript">
          //var disqus_developer = 1;
          var preempt_signal=false;
-         var disqus_identifier = "/Emacs之怒/2016/10/31/使用emacs-ediff作为git-merge工具/ Or /Emacs之怒/使用emacs-ediff作为git-merge工具/";
-         var disqus_url = "https://lujun9972.github.io/Emacs之怒/2016/10/31/使用emacs-ediff作为git-merge工具/ Or /Emacs之怒/使用emacs-ediff作为git-merge工具/";
+         var disqus_identifier = "/blog/2018/05/01/删除文件时发生了些什么事情/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/05/01/删除文件时发生了些什么事情/";
          var disqus_shortname = 'lujun9972';
          /* * * DON'T EDIT BELOW THIS LINE * * */
          (function() {
