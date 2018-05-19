@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>使用blueman连接蓝牙设备 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">使用blueman连接蓝牙设备</h1>
+<p>
+之前写过<span class="ego_link"><a href="https://lujun9972.github.io/blog/2017/07/18/在archlinux中使用蓝牙耳机/">一篇博客介绍如何通过命令行来连接蓝牙耳机</a></span>,但是这个过程显得很繁琐。
+</p>
+
+<p>
+事实上, <code>blueman</code> 给我们提供了一个GUI界面来方便地让我们连接蓝牙设备。
+</p>
+
+<ol class="org-ol">
+<li><p>
+查看蓝牙状态
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo rfkill
+</pre>
+</div>
+
+<p>
+确定 <code>bluetooth</code> 中 <code>SOFT</code> 和 <code>HARD</code> 都是 <code>unblocked</code>
+</p>
+
+<p>
+若不是，则执行
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo rfkill unblock bluetooth
+</pre>
+</div></li>
+</ol>
+
+
+<ol class="org-ol">
+<li><p>
+安装blueman
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S blueman --noconfirm
+</pre>
+</div></li>
+
+<li><p>
+检查bluetooth service是否启动
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo systemctl status bluetooth.service
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">&#9679; bluetooth.service - Bluetooth service
+   Loaded: loaded (/usr/lib/systemd/system/bluetooth.service; disabled; vendor preset: disabled)
+   Active: active (running) since Sat 2018-05-19 07:57:38 CST; 19min ago
+     Docs: man:bluetoothd(8)
+ Main PID: 28874 (bluetoothd)
+   Status: "Running"
+    Tasks: 1 (limit: 4636)
+   Memory: 1.8M
+   CGroup: /system.slice/bluetooth.service
+           &#9492;&#9472;28874 /usr/lib/bluetooth/bluetoothd
+
+May 19 07:57:37 X61 systemd[1]: Starting Bluetooth service...
+May 19 07:57:37 X61 bluetoothd[28874]: Bluetooth daemon 5.49
+May 19 07:57:38 X61 systemd[1]: Started Bluetooth service.
+May 19 07:57:38 X61 bluetoothd[28874]: Starting SDP server
+May 19 07:57:38 X61 bluetoothd[28874]: Bluetooth management interface 1.14 &#8230;ized
+Hint: Some lines were ellipsized, use -l to show in full.
+</pre>
+</div>
+
+<p>
+若bluetooth.service没有启动，则启动它
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo systemctl start bluetooth.service
+</pre>
+</div></li>
+
+<li><p>
+启动blueman
+</p>
+
+<p>
+在终端执行
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">blueman-applet
+</pre>
+</div>
+
+<p>
+就会发现任务栏上出现一个蓝牙的图标了
+<img src="https://lujun9972.github.io/assets/blog/2018/05/19/使用blueman连接蓝牙设备/screenshot-60.png" alt="screenshot-60.png" />
+</p>
+
+<p>
+点击蓝牙图表之后选择 <code>设备</code> 就能搜索蓝牙设备了
+<img src="https://lujun9972.github.io/assets/blog/2018/05/19/使用blueman连接蓝牙设备/screenshot-61.png" alt="screenshot-61.png" />
+</p></li>
+</ol>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-05-19</span>
+            <span title="last modification date" class="post-info">2018-05-19</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/05/19/使用blueman连接蓝牙设备/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/05/19/使用blueman连接蓝牙设备/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>
