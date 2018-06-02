@@ -44,16 +44,16 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6e98759">启动编辑器</a></li>
-<li><a href="#org66e2b55">控制屏幕</a></li>
-<li><a href="#org3884a35">光标的移动</a></li>
-<li><a href="#org1eb057b">删除命令行内容</a></li>
-<li><a href="#org4fd40fa">命令行内容转换大小写</a></li>
-<li><a href="#org2f38d1a">命令行字符交换</a></li>
-<li><a href="#org31fa2c2">搜索bash history</a></li>
-<li><a href="#org35ff7ef">进程管理</a></li>
-<li><a href="#org4caaf1b">!命令</a></li>
-<li><a href="#org5ff612a">查看更多快捷键</a></li>
+<li><a href="#orga31d759">启动编辑器</a></li>
+<li><a href="#org5803e0f">控制屏幕</a></li>
+<li><a href="#orgc1437a7">光标的移动</a></li>
+<li><a href="#orgc245d46">删除命令行内容</a></li>
+<li><a href="#org2122d89">命令行内容转换大小写</a></li>
+<li><a href="#org9d37c34">命令行字符交换</a></li>
+<li><a href="#org44f8536">搜索bash history</a></li>
+<li><a href="#org71644d6">进程管理</a></li>
+<li><a href="#orge9d6349">!命令</a></li>
+<li><a href="#org87b1793">查看更多快捷键</a></li>
 </ul>
 </div>
 </div>
@@ -65,18 +65,18 @@
 <b>注意，下面这些快捷键都是在Emacs keymap的情况下有用</b>
 </p>
 
-<div id="outline-container-org6e98759" class="outline-2">
-<h2 id="org6e98759">启动编辑器</h2>
-<div class="outline-text-2" id="text-org6e98759">
+<div id="outline-container-orga31d759" class="outline-2">
+<h2 id="orga31d759">启动编辑器</h2>
+<div class="outline-text-2" id="text-orga31d759">
 <dl class="org-dl">
 <dt>C-x C-e</dt><dd>根据 <code>$FCEDIT</code> 或 <code>$EDITOR</code> 环境变量打开对应的编辑器,若这两个变量都为空，则运行emacs</dd>
 </dl>
 </div>
 </div>
 
-<div id="outline-container-org66e2b55" class="outline-2">
-<h2 id="org66e2b55">控制屏幕</h2>
-<div class="outline-text-2" id="text-org66e2b55">
+<div id="outline-container-org5803e0f" class="outline-2">
+<h2 id="org5803e0f">控制屏幕</h2>
+<div class="outline-text-2" id="text-org5803e0f">
 <dl class="org-dl">
 <dt>C-l</dt><dd>清屏，相当于执行clear命令</dd>
 <dt>C-s</dt><dd>暂停屏幕输出</dd>
@@ -85,9 +85,9 @@
 </div>
 </div>
 
-<div id="outline-container-org3884a35" class="outline-2">
-<h2 id="org3884a35">光标的移动</h2>
-<div class="outline-text-2" id="text-org3884a35">
+<div id="outline-container-orgc1437a7" class="outline-2">
+<h2 id="orgc1437a7">光标的移动</h2>
+<div class="outline-text-2" id="text-orgc1437a7">
 <dl class="org-dl">
 <dt>C-a / Home</dt><dd>移动光标道行首</dd>
 <dt>C-e / End</dt><dd>移动光标到行未</dd>
@@ -99,9 +99,9 @@
 </div>
 </div>
 
-<div id="outline-container-org1eb057b" class="outline-2">
-<h2 id="org1eb057b">删除命令行内容</h2>
-<div class="outline-text-2" id="text-org1eb057b">
+<div id="outline-container-orgc245d46" class="outline-2">
+<h2 id="orgc245d46">删除命令行内容</h2>
+<div class="outline-text-2" id="text-orgc245d46">
 <dl class="org-dl">
 <dt>C-d / Delete</dt><dd>删除光标所在的字符</dd>
 <dt>C-x  Backspace</dt><dd>删除光标到行首的所有内容</dd>
@@ -110,9 +110,9 @@
 </div>
 </div>
 
-<div id="outline-container-org4fd40fa" class="outline-2">
-<h2 id="org4fd40fa">命令行内容转换大小写</h2>
-<div class="outline-text-2" id="text-org4fd40fa">
+<div id="outline-container-org2122d89" class="outline-2">
+<h2 id="org2122d89">命令行内容转换大小写</h2>
+<div class="outline-text-2" id="text-org2122d89">
 <dl class="org-dl">
 <dt>Esc u</dt><dd>光标到单词末尾的内容全部变大写</dd>
 <dt>Esc l</dt><dd>光标到单词末尾的内容全部变小写</dd>
@@ -121,18 +121,18 @@
 </div>
 </div>
 
-<div id="outline-container-org2f38d1a" class="outline-2">
-<h2 id="org2f38d1a">命令行字符交换</h2>
-<div class="outline-text-2" id="text-org2f38d1a">
+<div id="outline-container-org9d37c34" class="outline-2">
+<h2 id="org9d37c34">命令行字符交换</h2>
+<div class="outline-text-2" id="text-org9d37c34">
 <dl class="org-dl">
 <dt>C-t</dt><dd>将光标所在字符与前面一个字符进行交换</dd>
 </dl>
 </div>
 </div>
 
-<div id="outline-container-org31fa2c2" class="outline-2">
-<h2 id="org31fa2c2">搜索bash history</h2>
-<div class="outline-text-2" id="text-org31fa2c2">
+<div id="outline-container-org44f8536" class="outline-2">
+<h2 id="org44f8536">搜索bash history</h2>
+<div class="outline-text-2" id="text-org44f8536">
 <dl class="org-dl">
 <dt>上箭头 / C-p</dt><dd>上一条命令</dd>
 <dt>下箭头 / C-n</dt><dd>下一条命令</dd>
@@ -142,9 +142,9 @@
 </div>
 </div>
 
-<div id="outline-container-org35ff7ef" class="outline-2">
-<h2 id="org35ff7ef">进程管理</h2>
-<div class="outline-text-2" id="text-org35ff7ef">
+<div id="outline-container-org71644d6" class="outline-2">
+<h2 id="org71644d6">进程管理</h2>
+<div class="outline-text-2" id="text-org71644d6">
 <dl class="org-dl">
 <dt>C-z</dt><dd>发送SIGTSTP信号，挂起当前进程</dd>
 <dt>C-c</dt><dd>发送SIGINT信号退出当前进程</dd>
@@ -153,9 +153,9 @@
 </div>
 </div>
 
-<div id="outline-container-org4caaf1b" class="outline-2">
-<h2 id="org4caaf1b">!命令</h2>
-<div class="outline-text-2" id="text-org4caaf1b">
+<div id="outline-container-orge9d6349" class="outline-2">
+<h2 id="orge9d6349">!命令</h2>
+<div class="outline-text-2" id="text-orge9d6349">
 <dl class="org-dl">
 <dt>!!</dt><dd>执行上一个命令</dd>
 <dt>!top</dt><dd>执行最近哪个以top开头的命令</dd>
@@ -166,9 +166,9 @@
 </div>
 </div>
 
-<div id="outline-container-org5ff612a" class="outline-2">
-<h2 id="org5ff612a">查看更多快捷键</h2>
-<div class="outline-text-2" id="text-org5ff612a">
+<div id="outline-container-org87b1793" class="outline-2">
+<h2 id="org87b1793">查看更多快捷键</h2>
+<div class="outline-text-2" id="text-org87b1793">
 <div class="org-src-container">
 <pre class="src src-shell"><span style="color: #4f97d7;">bind</span> -p
 </pre>
@@ -681,9 +681,9 @@
 <div>
         <div class="post-meta">
             <span title="post date" class="post-info">2018-05-23</span>
-            <span title="last modification date" class="post-info">2018-05-26</span>
+            <span title="last modification date" class="post-info">2018-05-31</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -724,9 +724,9 @@
         </section>
     <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
