@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>使用lynis进行linux漏洞扫描 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">使用lynis进行linux漏洞扫描</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org3e5c1a5">安装lynis</a></li>
+<li><a href="#orgc8a9d4b">使用lynis进行主机扫描</a>
+<ul>
+<li><a href="#orge19c86f">查看详细说明</a></li>
+<li><a href="#org6e5b960">查看日志文件</a></li>
+</ul>
+</li>
+<li><a href="#org246eef6">检查更新</a></li>
+<li><a href="#org433fe12">自定义lynis安全审计策略</a></li>
+</ul>
+</div>
+</div>
+<p>
+lynis 是一款运行在 Unix/Linux 平台上的基于主机的、开源的安全审计软件。
+</p>
+
+<div id="outline-container-org3e5c1a5" class="outline-2">
+<h2 id="org3e5c1a5">安装lynis</h2>
+<div class="outline-text-2" id="text-org3e5c1a5">
+<p>
+在 archlinux 上可以直接通过 pacman 来安装
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S lynis --noconfirm
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">resolving dependencies...
+looking for conflicting packages...
+
+<span style="color: #000000; background-color: #ff00ff;">Packages</span> (1) lynis-2.6.4-1
+
+Total Installed Size:  1.35 MiB
+Net Upgrade Size:      0.00 MiB
+
+:: Proceed with installation? [Y/n] 
+(0/1) checking keys in keyring                     [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) checking keys in keyring                     [######################] 100%
+(0/1) checking package integrity                   [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) checking package integrity                   [######################] 100%
+(0/1) loading package files                        [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) loading package files                        [######################] 100%
+(0/1) checking for file conflicts                  [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) checking for file conflicts                  [######################] 100%
+(0/1) checking available disk space                [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) checking available disk space                [######################] 100%
+:: Processing package changes...
+(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) reinstalling lynis                           [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) reinstalling lynis                           [######################] 100%
+:: Running post-transaction hooks...
+(1/2) Reloading system manager configuration...
+(2/<span style="color: #000000; background-color: #ff00ff;">2</span>) Arming ConditionNeedsUpdate...
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc8a9d4b" class="outline-2">
+<h2 id="orgc8a9d4b">使用lynis进行主机扫描</h2>
+<div class="outline-text-2" id="text-orgc8a9d4b">
+<p>
+首先让我们不带任何参数运行 lynis, 这会列出 lynis 支持的那些参数
+</p>
+<pre class="example">
+[lujun9972@T520 linux和它的小伙伴]$ lynis
+
+[ Lynis 2.6.4 ]
+
+################################################################################
+  Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+  welcome to redistribute it under the terms of the GNU General Public License.
+  See the LICENSE file for details about using this software.
+
+  2007-2018, CISOfy - https://cisofy.com/lynis/
+  Enterprise support available (compliance, plugins, interface and tools)
+################################################################################
+
+
+[+] Initializing program
+------------------------------------
+
+
+  Usage: lynis command [options]
+
+
+  Command:
+
+    audit
+        audit system                  : Perform local security scan
+        audit system remote &lt;host&gt;    : Remote security scan
+        audit dockerfile &lt;file&gt;       : Analyze Dockerfile
+
+    show
+        show                          : Show all commands
+        show version                  : Show Lynis version
+        show help                     : Show help
+
+    update
+        update info                   : Show update details
+
+
+  Options:
+
+    --no-log                          : Don't create a log file
+    --pentest                         : Non-privileged scan (useful for pentest)
+    --profile &lt;profile&gt;               : Scan the system with the given profile file
+    --quick (-Q)                      : Quick mode, don't wait for user input
+
+    Layout options
+    --no-colors                       : Don't use colors in output
+    --quiet (-q)                      : No output
+    --reverse-colors                  : Optimize color display for light backgrounds
+
+    Misc options
+    --debug                           : Debug logging to screen
+    --view-manpage (--man)            : View man page
+    --verbose                         : Show more details on screen
+    --version (-V)                    : Display version number and quit
+
+    Enterprise options
+    --plugindir &lt;path&gt;                : Define path of available plugins
+    --upload                          : Upload data to central node
+
+    More options available. Run '/usr/bin/lynis show options', or use the man page.
+
+  No command provided. Exiting..
+</pre>
+
+<p>
+从上面可以看出，使用 lynis 进行主机扫描很简单，只需要带上参数 <code>audit system</code> 即可。
+Lynis在审计的过程中,会进行多种类似的测试,在审计过程中会将各种测试结果、调试信息、和对系统的加固建议都被写到 stdin 。
+我们可以执行下面命令来跳过检查过程,直接截取最后的扫描建议来看。
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo lynis audit system |sed <span style="color: #2d9574;">'1,/Results/d'</span>
+</pre>
+</div>
+
+<p>
+lynis将扫描的内容分成几大类，可以通过 <code>show groups</code> 参数来获取类别
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">lynis show groups
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">accounting
+authentication
+banners
+boot_services
+containers
+crypto
+databases
+dns
+file_integrity
+file_permissions
+filesystems
+firewalls
+hardening
+homedirs
+insecure_services
+kernel
+kernel_hardening
+ldap
+logging
+mac_frameworks
+mail_messaging
+malware
+memory_processes
+nameservices
+networking
+php
+ports_packages
+printers_spools
+scheduling
+shells
+snmp
+squid
+ssh
+storage
+storage_nfs
+system_integrity
+time
+tooling
+usb
+virtualization
+webservers
+
+</pre>
+</div>
+
+<p>
+若指向扫描某几类的内容，则可以通过 <code>--tests-from-group</code> 参数来指定。
+</p>
+
+<p>
+比如我只想扫描 shells 和 networking 方面的内容，则可以执行
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo lynis --tests-from-group <span style="color: #2d9574;">"shells networking"</span> --no-colors
+</pre>
+</div>
+</div>
+<div id="outline-container-orge19c86f" class="outline-3">
+<h3 id="orge19c86f">查看详细说明</h3>
+<div class="outline-text-3" id="text-orge19c86f">
+<p>
+在查看审计结果时,你可以通过 <code>show details</code> 参数来获取关于某条警告/建议的详细说明。其对应的命令形式为:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">lynis show details $<span style="color: #4f97d7;">{</span><span style="color: #7590db;">test_id</span><span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+<p>
+比如，上面图中有一个建议
+</p>
+<pre class="example">
+* Consider running ARP monitoring software (arpwatch,arpon) [NETW-3032] 
+</pre>
+
+<p>
+我们可以运行命令：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">sudo lynis show details NETW-3032 
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 Performing test ID NETW-3032 (Checking for ARP monitoring software)
+2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 IsRunning: process 'arpwatch' not found
+2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 IsRunning: process 'arpon' not found
+2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 Suggestion: Consider running ARP monitoring software (arpwatch,arpon) [test:NETW-3032] [details:-] [solution:-]
+2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 Checking permissions of /usr/share/lynis/include/tests_printers_spools
+2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 File permissions are OK
+2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 <span style="color: #4f97d7;">===</span>---------------------------------------------------------------<span style="color: #4f97d7;">===</span>
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org6e5b960" class="outline-3">
+<h3 id="org6e5b960">查看日志文件</h3>
+<div class="outline-text-3" id="text-org6e5b960">
+<p>
+lynis在审计完成后会将详细的信息记录在 <code>/var/log/lynis.log</code> 中.
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo tail /var/log/lynis.log
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">2018-06-08 17:59:46 <span style="color: #4f97d7;">================================================================================</span>
+2018-06-08 17:59:46 Lynis 2.6.4
+2018-06-08 17:59:46 2007-2018, CISOfy - <span style="color: #2aa1ae; text-decoration: underline;"><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></span>
+2018-06-08 17:59:46 Enterprise support available (compliance, plugins, interface and tools)
+2018-06-08 17:59:46 Program ended successfully
+2018-06-08 17:59:46 <span style="color: #4f97d7;">================================================================================</span>
+2018-06-08 17:59:46 PID file removed (/var/run/lynis.pid)
+2018-06-08 17:59:46 Temporary files:  /tmp/lynis.sGxCR0hSPz
+2018-06-08 17:59:46 Action: removing temporary file /tmp/lynis.sGxCR0hSPz
+2018-06-08 17:59:46 Lynis ended successfully.
+</pre>
+</div>
+
+<p>
+同时将报告数据被保存到 <code>/var/log/lynis-report.dat</code> 中.
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo tail /var/log/lynis-report.dat
+</pre>
+</div>
+
+<p>
+另外需要注意的是，每次审计都会覆盖原日志文件.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org246eef6" class="outline-2">
+<h2 id="org246eef6">检查更新</h2>
+<div class="outline-text-2" id="text-org246eef6">
+<p>
+审计软件需要随时进行更新从而得到最新的建议和信息，我们可以使用 <code>update info</code> 参数来检查更新:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">lynis update info --no-colors
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">
+ <span style="color: #4f97d7;">== &#27;[1;37mLynis&#27;[0m ==</span>
+
+  Version            : 2.6.4
+  Status             : &#27;[1;32mUp-to-date&#27;[0m
+  Release date       : 2018-05-02
+  Update location    : <span style="color: #2aa1ae; text-decoration: underline;"><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></span>
+
+
+2007-2018, CISOfy - <span style="color: #2aa1ae; text-decoration: underline;"><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></span>
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org433fe12" class="outline-2">
+<h2 id="org433fe12">自定义lynis安全审计策略</h2>
+<div class="outline-text-2" id="text-org433fe12">
+<p>
+lynis的配置信息以 <code>.prf</code> 文件的格式保存在 <code>/etc/lynis</code> 目录中。
+其中，默认lynis自带一个名为 <code>default.prf</code> 的默认配置文件。
+</p>
+
+<p>
+不过我们无需直接修改这个默认的配置文件，只需要新增一个 <code>custom.prf</code> 文件将自定义的信息加入其中就可以了。
+</p>
+
+<p>
+关于配置文件中各配置项的意义，在 <code>default.prf</code> 中都有相应的注释说明,这里就不详述了。
+</p>
+
+<p>
+想了解lynis的更多信息，可以访问<a href="https://cisofy.com/documentation/lynis/">它的官网.</a>
+</p>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-06-08</span>
+            <span title="last modification date" class="post-info">2018-06-08</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/06/08/使用lynis进行linux漏洞扫描/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/06/08/使用lynis进行linux漏洞扫描/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>

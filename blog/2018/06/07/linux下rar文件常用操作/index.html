@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>linux下rar文件常用操作 - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="linux和它的小伙伴" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">linux下rar文件常用操作</h1>
+<div id="table-of-contents">
+<h2>&#30446;&#24405;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org1cb9e8f">安装rar命令</a></li>
+<li><a href="#orge8a20b2">rar命令常见操作</a>
+<ul>
+<li><a href="#org453546c">创建rar压缩包</a></li>
+<li><a href="#orge09fc46">查看压缩包的内容</a></li>
+<li><a href="#org3deb68c">压缩包解压</a></li>
+<li><a href="#org127400b">关于密码</a></li>
+<li><a href="#orgcf4fbcb">设置压缩级别</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1cb9e8f" class="outline-2">
+<h2 id="org1cb9e8f">安装rar命令</h2>
+<div class="outline-text-2" id="text-org1cb9e8f">
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S rar --noconfirm
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge8a20b2" class="outline-2">
+<h2 id="orge8a20b2">rar命令常见操作</h2>
+<div class="outline-text-2" id="text-orge8a20b2">
+<p>
+直接运行 <code>rar</code> 命令就会列出所有可用的操作及其说明
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">rar
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">
+RAR 5.50   Copyright (c) 1993-2017 Alexander Roshal   11 Aug 2017
+Trial version             Type 'rar -?' for help
+
+Usage:     rar &lt;command&gt; -&lt;switch 1&gt; -&lt;switch N&gt; &lt;archive&gt; &lt;files...&gt;
+               &lt;@listfiles...&gt; &lt;path_to_extract\&gt;
+
+&lt;Commands&gt;
+  a             Add files to archive
+  c             Add archive comment
+  ch            Change archive parameters
+  cw            Write archive comment to file
+  d             Delete files from archive
+  e             Extract files without archived paths
+  f             Freshen files in archive
+  i[par]=&lt;str&gt;  Find string in archives
+  k             Lock archive
+  l[t[a],b]     List archive contents [technical[all], bare]
+  m[f]          Move to archive [files only]
+  p             Print file to stdout
+  r             Repair archive
+  rc            Reconstruct missing volumes
+  rn            Rename archived files
+  rr[N]         Add data recovery record
+  rv[N]         Create recovery volumes
+  s[name|-]     Convert archive to or from SFX
+  t             Test archive files
+  u             Update files in archive
+  v[t[a],b]     Verbosely list archive contents [technical[all],bare]
+  x             Extract files with full path
+
+&lt;Switches&gt;
+  -             Stop switches scanning
+  @[+]          Disable [enable] file lists
+  ad            Append archive name to destination path
+  ag[format]    Generate archive name using the current date
+  ai            Ignore file attributes
+  ap&lt;path&gt;      Set path inside archive
+  as            Synchronize archive contents
+  c-            Disable comments show
+  cfg-          Disable read configuration
+  cl            Convert names to lower case
+  cu            Convert names to upper case
+  df            Delete files after archiving
+  dh            Open shared files
+  ds            Disable name sort for solid archive
+  dw            Wipe files after archiving
+  e[+]&lt;attr&gt;    Set file exclude and include attributes
+  ed            Do not add empty directories
+  en            Do not put 'end of archive' block
+  ep            Exclude paths from names
+  ep1           Exclude base directory from names
+  ep3           Expand paths to full including the drive letter
+  f             Freshen files
+  hp[password]  Encrypt both file data and headers
+  ht[b|c]       Select hash type [BLAKE2,CRC32] for file checksum
+  id[c,d,p,q]   Disable messages
+  ierr          Send all messages to stderr
+  ilog[name]    Log errors to file (registered versions only)
+  inul          Disable all messages
+  isnd          Enable sound
+  iver          Display the version number
+  k             Lock archive
+  kb            Keep broken extracted files
+  log[f][=name] Write names to log file
+  m&lt;0..5&gt;       Set compression level (0-store...3-default...5-maximal)
+  ma[4|5]       Specify a version of archiving format
+  mc&lt;par&gt;       Set advanced compression parameters
+  md&lt;n&gt;[k,m,g]  Dictionary size in KB, MB or GB
+  ms[ext;<span style="color: #000000; background-color: #ff00ff;">ext</span>]   Specify file types to store
+  mt&lt;threads&gt;   Set the number of threads
+  n&lt;file&gt;       Additionally filter included files
+  n@            Read additional filter masks from stdin
+  n@&lt;list&gt;      Read additional filter masks from list file
+  o[+|-]        Set the overwrite mode
+  oh            Save hard links as the link instead of the file
+  oi[0-4][:min] Save identical files as references
+  ol[a]         Process symbolic links as the link [absolute paths]
+  or            Rename files automatically
+  ow            Save or restore file owner and group
+  p[password]   Set password
+  p-            Do not query password
+  qo[-|+]       Add quick open information [none|force]
+  r             Recurse subdirectories
+  r-            Disable recursion
+  r0            Recurse subdirectories for wildcard names only
+  rr[N]         Add data recovery record
+  rv[N]         Create recovery volumes
+  s[&lt;N&gt;,v[-],e] Create solid archive
+  s-            Disable solid archiving
+  sc&lt;chr&gt;[obj]  Specify the character set
+  sfx[name]     Create SFX archive
+  si[name]      Read data from standard input (stdin)
+  sl&lt;size&gt;      Process files with size less than specified
+  sm&lt;size&gt;      Process files with size more than specified
+  t             Test files after archiving
+  ta&lt;date&gt;      Process files modified after &lt;date&gt; in YYYYMMDDHHMMSS format
+  tb&lt;date&gt;      Process files modified before &lt;date&gt; in YYYYMMDDHHMMSS format
+  tk            Keep original archive time
+  tl            Set archive time to latest file
+  tn&lt;time&gt;      Process files newer than &lt;time&gt;
+  to&lt;time&gt;      Process files older than &lt;time&gt;
+  ts[m|c|a]     Save or restore file time (modification, creation, access)
+  u             Update files
+  v&lt;size&gt;[k,b]  Create volumes with size=&lt;<span style="color: #000000; background-color: #ff00ff;">size</span>&gt;*1000 [*1024, *1]
+  ver[n]        File version control
+  vn            Use the old style volume naming scheme
+  vp            Pause before each volume
+  w&lt;path&gt;       Assign work directory
+  x&lt;file&gt;       Exclude specified file
+  x@            Read file names to exclude from stdin
+  x@&lt;list&gt;      Exclude files listed in specified list file
+  y             Assume Yes on all queries
+  z[file]       Read archive comment from file
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org453546c" class="outline-3">
+<h3 id="org453546c">创建rar压缩包</h3>
+<div class="outline-text-3" id="text-org453546c">
+<p>
+使用 <code>a</code> 子命令来生成rar压缩包，其语法为(注意不要在a前面加上"-")
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">rar a $<span style="color: #4f97d7;">{</span><span style="color: #7590db;">rar_file</span><span style="color: #4f97d7;">}</span> $<span style="color: #4f97d7;">{</span><span style="color: #7590db;">files_or_folds</span><span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge09fc46" class="outline-3">
+<h3 id="orge09fc46">查看压缩包的内容</h3>
+<div class="outline-text-3" id="text-orge09fc46">
+<p>
+使用 <code>l</code> 子命令可以查看rar压缩包中的内容，其语法为
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">rar l $<span style="color: #4f97d7;">{</span><span style="color: #7590db;">rar_file</span><span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3deb68c" class="outline-3">
+<h3 id="org3deb68c">压缩包解压</h3>
+<div class="outline-text-3" id="text-org3deb68c">
+<p>
+使用 <code>x</code> 子命令可以将压缩包内容解压到当前目录中，比如
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #4f97d7;">cd</span> /tmp/
+rar x ~/$<span style="color: #4f97d7;">{</span><span style="color: #7590db;">rar_file</span><span style="color: #4f97d7;">}</span>
+ls -l
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org127400b" class="outline-3">
+<h3 id="org127400b">关于密码</h3>
+<div class="outline-text-3" id="text-org127400b">
+<p>
+当想创建带密码保护的压缩包或需要解压带密码保护的压缩包时，就需要在 <code>a</code> / <code>x</code> 子命令后再接上 <code>-p</code> 选项
+</p>
+
+<p>
+你可以直接使用 <code>-p&lt;password&gt;</code> 的方式来直接指定密码，也可以只使用 <code>-p</code> ，这种情况下rar会提示用户手工输入密码
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf4fbcb" class="outline-3">
+<h3 id="orgcf4fbcb">设置压缩级别</h3>
+<div class="outline-text-3" id="text-orgcf4fbcb">
+<p>
+使用 <code>-m0</code> 到 <code>-m5</code> 来设置压缩级别，其中0级表示只打包不压缩,这种压缩速度很快,而5表示最大级别的压缩，但压缩速度会很慢,默认为3级
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-06-07</span>
+            <span title="last modification date" class="post-info">2018-06-07</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/06/07/linux下rar文件常用操作/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/06/07/linux下rar文件常用操作/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>
