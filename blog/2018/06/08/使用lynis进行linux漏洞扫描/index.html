@@ -44,15 +44,15 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3e5c1a5">安装lynis</a></li>
-<li><a href="#orgc8a9d4b">使用lynis进行主机扫描</a>
+<li><a href="#orga8601ff">安装lynis</a></li>
+<li><a href="#orgffae319">使用lynis进行主机扫描</a>
 <ul>
-<li><a href="#orge19c86f">查看详细说明</a></li>
-<li><a href="#org6e5b960">查看日志文件</a></li>
+<li><a href="#org12290f2">查看详细说明</a></li>
+<li><a href="#org2693a06">查看日志文件</a></li>
 </ul>
 </li>
-<li><a href="#org246eef6">检查更新</a></li>
-<li><a href="#org433fe12">自定义lynis安全审计策略</a></li>
+<li><a href="#org90a963d">检查更新</a></li>
+<li><a href="#org2f44d51">自定义lynis安全审计策略</a></li>
 </ul>
 </div>
 </div>
@@ -60,9 +60,9 @@
 lynis 是一款运行在 Unix/Linux 平台上的基于主机的、开源的安全审计软件。
 </p>
 
-<div id="outline-container-org3e5c1a5" class="outline-2">
-<h2 id="org3e5c1a5">安装lynis</h2>
-<div class="outline-text-2" id="text-org3e5c1a5">
+<div id="outline-container-orga8601ff" class="outline-2">
+<h2 id="orga8601ff">安装lynis</h2>
+<div class="outline-text-2" id="text-orga8601ff">
 <p>
 在 archlinux 上可以直接通过 pacman 来安装
 </p>
@@ -96,9 +96,9 @@ Net Upgrade Size:      0.00 MiB
 </div>
 </div>
 
-<div id="outline-container-orgc8a9d4b" class="outline-2">
-<h2 id="orgc8a9d4b">使用lynis进行主机扫描</h2>
-<div class="outline-text-2" id="text-orgc8a9d4b">
+<div id="outline-container-orgffae319" class="outline-2">
+<h2 id="orgffae319">使用lynis进行主机扫描</h2>
+<div class="outline-text-2" id="text-orgffae319">
 <p>
 首先让我们不带任何参数运行 lynis, 这会列出 lynis 支持的那些参数
 </p>
@@ -242,10 +242,151 @@ webservers
 <pre class="src src-shell">sudo lynis --tests-from-group <span style="color: #2d9574;">"shells networking"</span> --no-colors
 </pre>
 </div>
+
+<div class="org-src-container">
+<pre class="src src-org">
+[ Lynis 2.6.4 ]
+
+################################################################################
+  Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+  welcome to redistribute it under the terms of the GNU General Public License.
+  See the LICENSE file for details about using this software.
+
+  2007-2018, CISOfy - <span style="color: #2aa1ae; text-decoration: underline;"><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></span>
+  Enterprise support available (compliance, plugins, interface and tools)
+################################################################################
+
+
+[+] Initializing program
+------------------------------------
+&#27;[2C- Detecting OS... &#27;[41C [ DONE ]
+&#27;[2C- Checking profiles...&#27;[37C [ DONE ]
+&#27;[2C- Detecting language and localization&#27;[22C [ zh ]
+&#27;[4CNotice: no language file found for 'zh' (tried: /usr/share/lynis/db/languages/zh)&#27;[0C
+
+  ---------------------------------------------------
+  Program version:           2.6.4
+  Operating system:          Linux
+  Operating system name:     Arch Linux
+  Operating system version:  Rolling release
+  Kernel version:            4.16.13
+  Hardware platform:         x86_64
+  Hostname:                  T520
+  ---------------------------------------------------
+  Profiles:                  /etc/lynis/default.prf
+  Log file:                  /var/log/lynis.log
+  Report file:               /var/log/lynis-report.dat
+  Report version:            1.0
+  Plugin directory:          /usr/share/lynis/plugins
+  ---------------------------------------------------
+  Auditor:                   [Not Specified]
+  Language:                  zh
+  Test category:             all
+  Test group:                shells networking
+  ---------------------------------------------------
+&#27;[2C- Program update status... &#27;[32C [ NO UPDATE ]
+
+[+] System Tools
+------------------------------------
+&#27;[2C- Scanning available tools...&#27;[30C
+&#27;[2C- Checking system binaries...&#27;[30C
+
+[+] Plugins (phase 1)
+------------------------------------
+&#27;[0CNote: plugins have more extensive tests and may take <span style="color: #a52a2a; background-color: #ffffff;">several</span> minutes to complete&#27;[0C
+&#27;[<span style="color: #000000; background-color: #ff00ff;">0C</span> &#27;[0C
+&#27;[2C- Plugins enabled&#27;[42C [ NONE ]
+
+[+] Shells
+------------------------------------
+&#27;[2C- Checking shells from /etc/shells&#27;[25C
+&#27;[4CResult: found 5 shells (valid shells: 5).&#27;[16C
+&#27;[4C- Session timeout settings/tools&#27;[25C [ NONE ]
+&#27;[2C- Checking default umask values&#27;[28C
+&#27;[4C- Checking default umask in /etc/bash.bashrc&#27;[13C [ NONE ]
+&#27;[4C- Checking default umask in /etc/profile&#27;[17C [ WEAK ]
+
+[+] Networking
+------------------------------------
+&#27;[2C- Checking IPv6 configuration&#27;[30C [ ENABLED ]
+&#27;[6CConfiguration method&#27;[35C [ AUTO ]
+&#27;[6CIPv6 only&#27;[46C [ NO ]
+&#27;[2C- Checking configured nameservers&#27;[26C
+&#27;[4C- Testing nameservers&#27;[36C
+&#27;[6CNameserver: 202.96.134.33&#27;[30C [ SKIPPED ]
+&#27;[6CNameserver: 202.96.128.86&#27;[30C [ SKIPPED ]
+&#27;[4C- Minimal of 2 responsive nameservers&#27;[20C [ SKIPPED ]
+&#27;[2C- Getting listening ports (TCP/UDP)&#27;[24C [ DONE ]
+&#27;[6C* Found 11 ports&#27;[39C
+&#27;[2C- Checking status DHCP client&#27;[30C [ RUNNING ]
+&#27;[2C- Checking for ARP monitoring software&#27;[21C [ NOT FOUND ]
+
+[+] Custom Tests
+------------------------------------
+&#27;[2C- Running custom tests... &#27;[33C [ NONE ]
+
+[+] Plugins (phase 2)
+------------------------------------
+
+<span style="color: #4f97d7;">================================================================================</span>
+
+  -[ Lynis 2.6.4 Results ]-
+
+  Great, no warnings
+
+  Suggestions (1):
+  ----------------------------
+  * Consider running ARP monitoring software (arpwatch,arpon) [NETW-3032] 
+      <span style="color: #2aa1ae; text-decoration: underline;"><a href="https://cisofy.com/controls/NETW-3032/">https://cisofy.com/controls/NETW-3032/</a></span>
+
+  Follow-up:
+  ----------------------------
+  - Show details of a test (lynis show details TEST-ID)
+  - Check the logfile for all details (less /var/log/lynis.log)
+  - Read security controls texts (<span style="color: #2aa1ae; text-decoration: underline;"><a href="https://cisofy.com">https://cisofy.com</a></span>)
+  - Use --upload to upload data to central system (Lynis Enterprise users)
+
+<span style="color: #4f97d7;">================================================================================</span>
+
+  Lynis security scan details:
+
+  Hardening index : 33 [######              ]
+  Tests performed : 13
+  Plugins enabled : 0
+
+  Components:
+  - Firewall               [X]
+  - Malware scanner        [X]
+
+  Lynis Modules:
+  - Compliance Status      [?]
+  - Security Audit         [V]
+  - Vulnerability Scan     [V]
+
+  Files:
+  - Test and debug information      : /var/log/lynis.log
+  - Report data                     : /var/log/lynis-report.dat
+
+<span style="color: #4f97d7;">================================================================================</span>
+
+  Lynis 2.6.4
+
+  Auditing, system hardening, and compliance for UNIX-based systems
+  (Linux, macOS, BSD, and others)
+
+  2007-2018, CISOfy - <span style="color: #2aa1ae; text-decoration: underline;"><a href="https://cisofy.com/lynis/">https://cisofy.com/lynis/</a></span>
+  Enterprise support available (compliance, plugins, interface and tools)
+
+<span style="color: #4f97d7;">================================================================================</span>
+
+  [TIP]: Enhance Lynis audits by adding your settings to custom.prf (see /etc/lynis/default.prf for all settings)
+
+</pre>
 </div>
-<div id="outline-container-orge19c86f" class="outline-3">
-<h3 id="orge19c86f">查看详细说明</h3>
-<div class="outline-text-3" id="text-orge19c86f">
+</div>
+<div id="outline-container-org12290f2" class="outline-3">
+<h3 id="org12290f2">查看详细说明</h3>
+<div class="outline-text-3" id="text-org12290f2">
 <p>
 在查看审计结果时,你可以通过 <code>show details</code> 参数来获取关于某条警告/建议的详细说明。其对应的命令形式为:
 </p>
@@ -285,9 +426,9 @@ webservers
 </div>
 
 
-<div id="outline-container-org6e5b960" class="outline-3">
-<h3 id="org6e5b960">查看日志文件</h3>
-<div class="outline-text-3" id="text-org6e5b960">
+<div id="outline-container-org2693a06" class="outline-3">
+<h3 id="org2693a06">查看日志文件</h3>
+<div class="outline-text-3" id="text-org2693a06">
 <p>
 lynis在审计完成后会将详细的信息记录在 <code>/var/log/lynis.log</code> 中.
 </p>
@@ -325,9 +466,9 @@ lynis在审计完成后会将详细的信息记录在 <code>/var/log/lynis.log</
 </div>
 </div>
 
-<div id="outline-container-org246eef6" class="outline-2">
-<h2 id="org246eef6">检查更新</h2>
-<div class="outline-text-2" id="text-org246eef6">
+<div id="outline-container-org90a963d" class="outline-2">
+<h2 id="org90a963d">检查更新</h2>
+<div class="outline-text-2" id="text-org90a963d">
 <p>
 审计软件需要随时进行更新从而得到最新的建议和信息，我们可以使用 <code>update info</code> 参数来检查更新:
 </p>
@@ -353,9 +494,9 @@ lynis在审计完成后会将详细的信息记录在 <code>/var/log/lynis.log</
 </div>
 </div>
 
-<div id="outline-container-org433fe12" class="outline-2">
-<h2 id="org433fe12">自定义lynis安全审计策略</h2>
-<div class="outline-text-2" id="text-org433fe12">
+<div id="outline-container-org2f44d51" class="outline-2">
+<h2 id="org2f44d51">自定义lynis安全审计策略</h2>
+<div class="outline-text-2" id="text-org2f44d51">
 <p>
 lynis的配置信息以 <code>.prf</code> 文件的格式保存在 <code>/etc/lynis</code> 目录中。
 其中，默认lynis自带一个名为 <code>default.prf</code> 的默认配置文件。
