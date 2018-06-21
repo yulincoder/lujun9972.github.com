@@ -4,10 +4,45 @@
     <title>暗无天日</title>
     <link>https://lujun9972.github.io</link>
     <description>=============&gt;随便,谢谢</description>
-    <pubDate>五, 08 6月 2018 21:56:38 CST</pubDate>
-    <lastBuildDate>五, 08 6月 2018 21:56:38 CST</lastBuildDate>
+    <pubDate>四, 21 6月 2018 22:33:30 CST</pubDate>
+    <lastBuildDate>四, 21 6月 2018 22:33:30 CST</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>ego static site generator (https://github.com/emacs-china/ego)</generator>
+<item>
+<title>linux定时休眠</title>
+<link>https://lujun9972.github.io/blog/2018/06/21/linux定时休眠/</link>
+<description>No Description</description>
+<pubDate>2018-06-21</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/06/21/linux定时休眠/</guid>
+</item>
+<item>
+<title>read读取到空值之迷</title>
+<link>https://lujun9972.github.io/blog/2018/06/20/read读取到空值之迷/</link>
+<description>No Description</description>
+<pubDate>2018-06-20</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/06/20/read读取到空值之迷/</guid>
+</item>
+<item>
+<title>lua中神奇的table</title>
+<link>https://lujun9972.github.io/blog/2018/06/17/lua中神奇的table/</link>
+<description>No Description</description>
+<pubDate>2018-06-18</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/06/17/lua中神奇的table/</guid>
+</item>
+<item>
+<title>手工生成Emacs Manual PDF</title>
+<link>https://lujun9972.github.io/blog/2018/06/09/手工生成emacs-manual-pdf/</link>
+<description>No Description</description>
+<pubDate>2018-06-10</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/06/09/手工生成emacs-manual-pdf/</guid>
+</item>
+<item>
+<title>AwesomeWM中的client</title>
+<link>https://lujun9972.github.io/blog/2018/06/10/awesomewm中的client/</link>
+<description>No Description</description>
+<pubDate>2018-06-10</pubDate>
+<guid>https://lujun9972.github.io/blog/2018/06/10/awesomewm中的client/</guid>
+</item>
 <item>
 <title>使用Emacs改进你的英文写作</title>
 <link>https://lujun9972.github.io/blog/2018/06/03/使用emacs改进你的英文写作/</link>
@@ -42,41 +77,6 @@
 <description>No Description</description>
 <pubDate>2018-06-07</pubDate>
 <guid>https://lujun9972.github.io/blog/2018/06/07/被误用的svn-checkout/</guid>
-</item>
-<item>
-<title>如何加载linux kernel module</title>
-<link>https://lujun9972.github.io/blog/2018/06/04/如何加载linux-kernel-module/</link>
-<description>No Description</description>
-<pubDate>2018-06-04</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/06/04/如何加载linux-kernel-module/</guid>
-</item>
-<item>
-<title>archlinux开启指纹登陆</title>
-<link>https://lujun9972.github.io/blog/2018/06/02/archlinux开启指纹登陆/</link>
-<description>No Description</description>
-<pubDate>2018-06-02</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/06/02/archlinux开启指纹登陆/</guid>
-</item>
-<item>
-<title>使用ffmpeg进行视频转码，剪切，合并与调速</title>
-<link>https://lujun9972.github.io/blog/2018/06/02/使用ffmpeg进行视频转码，剪切，合并与调速/</link>
-<description>No Description</description>
-<pubDate>2018-06-02</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/06/02/使用ffmpeg进行视频转码，剪切，合并与调速/</guid>
-</item>
-<item>
-<title>linux如何更改网卡MAC地址</title>
-<link>https://lujun9972.github.io/blog/2018/06/01/linux如何更改网卡mac地址/</link>
-<description>No Description</description>
-<pubDate>2018-06-01</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/06/01/linux如何更改网卡mac地址/</guid>
-</item>
-<item>
-<title>体验Emacs Systemd Daemon Unit</title>
-<link>https://lujun9972.github.io/blog/2018/05/30/体验emacs-systemd-daemon-unit/</link>
-<description>No Description</description>
-<pubDate>2018-05-31</pubDate>
-<guid>https://lujun9972.github.io/blog/2018/05/30/体验emacs-systemd-daemon-unit/</guid>
 </item>
 </channel>
 </rss>
