@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>手工生成Emacs Manual PDF - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="lujun9972" />
+  <meta name="keywords" content="Emacs之怒" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">手工生成Emacs Manual PDF</h1>
+<ol class="org-ol">
+<li><p>
+clone emacs源代码
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">git clone --branch $<span style="color: #4f97d7;">{</span><span style="color: #7590db;">branch</span><span style="color: #4f97d7;">}</span> --depth=<span style="color: #a45bad;">1</span> git://git.sv.gnu.org/emacs.git
+</pre>
+</div></li>
+
+<li><p>
+生成makefile文件
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #4f97d7;">cd</span> emacs
+./autogen.sh &amp;&amp; ./configure
+</pre>
+</div></li>
+
+<li><p>
+emacs文档资料存放在 <code>doc</code> 目录下
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">ls doc
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">emacs
+lispintro
+lispref
+man
+misc
+</pre>
+</div>
+
+<p>
+在每个目录中都有很多 <code>texi</code> 的文件
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">ls doc/emacs 
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-org">abbrevs.texi
+ack.texi
+anti.texi
+arevert-xtra.texi
+basic.texi
+buffers.texi
+building.texi
+calendar.texi
+cal-xtra.texi
+ChangeLog.1
+cmdargs.texi
+commands.texi
+custom.texi
+dired.texi
+dired-xtra.texi
+display.texi
+doclicense.texi
+docstyle.texi
+emacs.texi
+emacsver.texi
+emacsver.texi.in
+emacs-xtra.texi
+emerge-xtra.texi
+entering.texi
+files.texi
+fixit.texi
+fortran-xtra.texi
+frames.texi
+glossary.texi
+gnu.texi
+gpl.texi
+help.texi
+indent.texi
+killing.texi
+kmacro.texi
+macos.texi
+maintaining.texi
+Makefile
+<span style="color: #000000; background-color: #ff00ff;">Makefile</span>.in
+mark.texi
+mini.texi
+misc.texi
+modes.texi
+msdos.texi
+msdos-xtra.texi
+mule.texi
+m-x.texi
+package.texi
+picture-xtra.texi
+programs.texi
+regs.texi
+rmail.texi
+screen.texi
+search.texi
+sending.texi
+text.texi
+trouble.texi
+vc1-xtra.texi
+vc-xtra.texi
+windows.texi
+xresources.texi
+</pre>
+</div>
+
+<p>
+我们要做的就是通过这些 <code>texi</code> 文件生成对应的pdf文件,在这个过程中需要用到TeX，因此先要安装texlive
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">sudo pacman -S texlive-core --noconfirm
+</pre>
+</div></li>
+
+<li><p>
+make 生成想要的pdf
+</p>
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #4f97d7;">cd</span> doc/emacs &amp;&amp; make emacs.pdf
+<span style="color: #4f97d7;">cd</span> ../lispref &amp;&amp; make elisp.pdf
+<span style="color: #4f97d7;">cd</span> ../misc &amp;&amp; make calc.pdf
+</pre>
+</div></li>
+
+<li><p>
+将生成的PDF拷出来
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">find ./ -name <span style="color: #2d9574;">"*.pdf"</span> |xargs -I<span style="color: #4f97d7;">{}</span> mv <span style="color: #4f97d7;">{}</span> ~/Documents/
+</pre>
+</div>
+
+<div class="figure">
+<p><img src="https://lujun9972.github.io/assets/blog/2018/06/09/手工生成emacs-manual-pdf/screenshot-15.png" alt="screenshot-15.png" />
+</p>
+</div></li>
+</ol>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-06-09</span>
+            <span title="last modification date" class="post-info">2018-06-10</span>
+            <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/emacs之怒">Emacs之怒</a>:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/06/09/手工生成emacs-manual-pdf/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/06/09/手工生成emacs-manual-pdf/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T520">lujun9972</a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>
