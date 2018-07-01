@@ -44,13 +44,13 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org647bae9">休眠的类型</a></li>
-<li><a href="#org1f295a6">suspend 休眠</a></li>
-<li><a href="#org3dbd4b6">Hibernation 休眠</a></li>
-<li><a href="#org405e664">hybrid 休眠</a></li>
-<li><a href="#orge1ddbcb">Sleep Hooks</a></li>
-<li><a href="#orge982567">定时执行休眠</a></li>
-<li><a href="#org89a4afa">定时唤醒休眠的linux</a></li>
+<li><a href="#orgf1cdc3e">休眠的类型</a></li>
+<li><a href="#orgc2cd951">suspend 休眠</a></li>
+<li><a href="#org6ac4dbe">Hibernation 休眠</a></li>
+<li><a href="#org7fae3f4">hybrid 休眠</a></li>
+<li><a href="#orgf00ee2e">Sleep Hooks</a></li>
+<li><a href="#org9d3a2a1">定时执行休眠</a></li>
+<li><a href="#orgb4d87ac">定时唤醒休眠的linux</a></li>
 </ul>
 </div>
 </div>
@@ -58,9 +58,9 @@
 最近公司规定晚上走人后必须关闭电脑，但是像我们这样的人，经常会忘记了关闭电脑，而且关闭电脑之后再恢复工作环境也是件挺麻烦的事情，无奈之下只能折腾一下，让linux定时休眠了。
 </p>
 
-<div id="outline-container-org647bae9" class="outline-2">
-<h2 id="org647bae9">休眠的类型</h2>
-<div class="outline-text-2" id="text-org647bae9">
+<div id="outline-container-orgf1cdc3e" class="outline-2">
+<h2 id="orgf1cdc3e">休眠的类型</h2>
+<div class="outline-text-2" id="text-orgf1cdc3e">
 <p>
 目前大概由三种类型的休眠:
 </p>
@@ -77,9 +77,9 @@
 </div>
 </div>
 
-<div id="outline-container-org1f295a6" class="outline-2">
-<h2 id="org1f295a6">suspend 休眠</h2>
-<div class="outline-text-2" id="text-org1f295a6">
+<div id="outline-container-orgc2cd951" class="outline-2">
+<h2 id="orgc2cd951">suspend 休眠</h2>
+<div class="outline-text-2" id="text-orgc2cd951">
 <p>
 进入 suspend 特别简单，无需额外的配置,在 systemd 系统上直接执行 <code>systemctl suspend</code> 就行了。
 </p>
@@ -96,7 +96,7 @@
 <span style="color: #2aa1ae; background-color: #292e34;">#</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">This file is part of systemd.</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#</span>
-<span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #000000; background-color: #ff00ff;">systemd</span><span style="color: #2aa1ae; background-color: #292e34;"> is free software; you can redistribute it and/or modify it</span>
+<span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">systemd is free software; you can redistribute it and/or modify it</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">under the terms of the GNU Lesser General Public License as published by</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">the Free Software Foundation; either version 2.1 of the License, or</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">(at your option) any later version.</span>
@@ -110,16 +110,16 @@
 
 [<span style="color: #ce537a; font-weight: bold;">Service</span>]
 <span style="color: #7590db;">Type</span>=oneshot
-<span style="color: #7590db;">ExecStart</span>=/usr/lib/systemd/<span style="color: #000000; background-color: #ff00ff;">systemd</span>-sleep suspend
+<span style="color: #7590db;">ExecStart</span>=/usr/lib/systemd/systemd-sleep suspend
 </pre>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org3dbd4b6" class="outline-2">
-<h2 id="org3dbd4b6">Hibernation 休眠</h2>
-<div class="outline-text-2" id="text-org3dbd4b6">
+<div id="outline-container-org6ac4dbe" class="outline-2">
+<h2 id="org6ac4dbe">Hibernation 休眠</h2>
+<div class="outline-text-2" id="text-org6ac4dbe">
 <p>
 由于 hibernation 休眠要求将内存中的内容写入到交换空间中，因此你至少要有一个空间大于内存的交换分区或者交换文件。
 (其实若交换空间不够内存大也不是一定就无法进行hibernation休眠，可以尝试运行 <code>echo 0 |sudo tee /sys/power/image_size</code>, 这会让系统在写入交换空间时尽可能的进行压缩，但这种方法也无法保证一定能够休眠成功)
@@ -141,7 +141,7 @@ sudo cp /etc/fstab /etc/fstab.bak
 <div class="org-src-container">
 <pre class="src src-org">Setting up swapspace version 1, size = 5 GiB (5368705024 bytes)
 no label, UUID=d0f0c682-e1fa-416f-8fe2-b554b8ca363a
-/swapfile swap <span style="color: #000000; background-color: #ff00ff;">swap</span> default 0 <span style="color: #000000; background-color: #ff00ff;">0</span>
+/swapfile swap swap default 0 0
 </pre>
 </div>
 
@@ -216,7 +216,7 @@ no label, UUID=d0f0c682-e1fa-416f-8fe2-b554b8ca363a
 <pre class="src src-org">Filesystem type is: ef53
 File size of /swapfile is 5368709120 (1310720 blocks of 4096 bytes)
  ext:     logical_offset:        physical_offset: length:   expected: flags:
-   0:        <span style="color: #000000; background-color: #ff00ff;">0</span>..   32767:    4653056..   4685823:  32768:            
+   0:        0..   32767:    4653056..   4685823:  32768:            
    1:    32768..   65535:    4685824..   4718591:  32768:            
 </pre>
 </div>
@@ -312,7 +312,7 @@ File size of /swapfile is 5368709120 (1310720 blocks of 4096 bytes)
 <span style="color: #2aa1ae; background-color: #292e34;">#</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">This file is part of systemd.</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#</span>
-<span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #000000; background-color: #ff00ff;">systemd</span><span style="color: #2aa1ae; background-color: #292e34;"> is free software; you can redistribute it and/or modify it</span>
+<span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">systemd is free software; you can redistribute it and/or modify it</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">under the terms of the GNU Lesser General Public License as published by</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">the Free Software Foundation; either version 2.1 of the License, or</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">(at your option) any later version.</span>
@@ -326,15 +326,15 @@ File size of /swapfile is 5368709120 (1310720 blocks of 4096 bytes)
 
 [<span style="color: #ce537a; font-weight: bold;">Service</span>]
 <span style="color: #7590db;">Type</span>=oneshot
-<span style="color: #7590db;">ExecStart</span>=/usr/lib/systemd/<span style="color: #000000; background-color: #ff00ff;">systemd</span>-sleep hibernate
+<span style="color: #7590db;">ExecStart</span>=/usr/lib/systemd/systemd-sleep hibernate
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org405e664" class="outline-2">
-<h2 id="org405e664">hybrid 休眠</h2>
-<div class="outline-text-2" id="text-org405e664">
+<div id="outline-container-org7fae3f4" class="outline-2">
+<h2 id="org7fae3f4">hybrid 休眠</h2>
+<div class="outline-text-2" id="text-org7fae3f4">
 <p>
 在配置好 hibernate 休眠后，也就能正常进行 hybrid 休眠了，方法是执行
 </p>
@@ -351,7 +351,7 @@ File size of /swapfile is 5368709120 (1310720 blocks of 4096 bytes)
 <span style="color: #2aa1ae; background-color: #292e34;">#</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">This file is part of systemd.</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#</span>
-<span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #000000; background-color: #ff00ff;">systemd</span><span style="color: #2aa1ae; background-color: #292e34;"> is free software; you can redistribute it and/or modify it</span>
+<span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">systemd is free software; you can redistribute it and/or modify it</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">under the terms of the GNU Lesser General Public License as published by</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">the Free Software Foundation; either version 2.1 of the License, or</span>
 <span style="color: #2aa1ae; background-color: #292e34;">#  </span><span style="color: #2aa1ae; background-color: #292e34;">(at your option) any later version.</span>
@@ -365,15 +365,15 @@ File size of /swapfile is 5368709120 (1310720 blocks of 4096 bytes)
 
 [<span style="color: #ce537a; font-weight: bold;">Service</span>]
 <span style="color: #7590db;">Type</span>=oneshot
-<span style="color: #7590db;">ExecStart</span>=/usr/lib/systemd/<span style="color: #000000; background-color: #ff00ff;">systemd</span>-sleep hybrid-sleep
+<span style="color: #7590db;">ExecStart</span>=/usr/lib/systemd/systemd-sleep hybrid-sleep
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orge1ddbcb" class="outline-2">
-<h2 id="orge1ddbcb">Sleep Hooks</h2>
-<div class="outline-text-2" id="text-orge1ddbcb">
+<div id="outline-container-orgf00ee2e" class="outline-2">
+<h2 id="orgf00ee2e">Sleep Hooks</h2>
+<div class="outline-text-2" id="text-orgf00ee2e">
 <p>
 从上面的service文件中可以看出，不管是哪种类型的系统休眠，其内部实际调用的都是 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd-sleep.8">systemd-sleep</a>.
 </p>
@@ -399,11 +399,11 @@ SYNOPSIS
        /usr/lib/systemd/system-sleep
 
 DESCRIPTION
-       systemd-suspend.service is a system service that <span style="color: #bebebe; background-color: #ffffff;">is pulled</span> in by
+       systemd-suspend.service is a system service that is pulled in by
        suspend.target and is responsible for the actual system suspend.
-       Similarly, systemd-hibernate.service <span style="color: #bebebe; background-color: #ffffff;">is pulled</span> in by hibernate.target
+       Similarly, systemd-hibernate.service is pulled in by hibernate.target
        to execute the actual hibernation. Finally,
-       systemd-hybrid-sleep.service <span style="color: #bebebe; background-color: #ffffff;">is pulled</span> in by hybrid-sleep.target to
+       systemd-hybrid-sleep.service is pulled in by hybrid-sleep.target to
        execute hybrid hibernation with system suspend.
 
        Immediately before entering system suspend and/or hibernation
@@ -412,23 +412,23 @@ DESCRIPTION
        arguments to them. The first argument will be "pre", the second either
        "suspend", "hibernate", or "hybrid-sleep" depending on the chosen
        action. Immediately after leaving system suspend and/or hibernation the
-       same executables <span style="color: #bebebe; background-color: #ffffff;">are run</span>, but the first argument is now "post". All
-       executables in this directory <span style="color: #bebebe; background-color: #ffffff;">are executed</span> in parallel, and execution
+       same executables are run, but the first argument is now "post". All
+       executables in this directory are executed in parallel, and execution
        of the action is not continued until all executables have finished.
 
        Note that scripts or binaries dropped in <span style="font-style: italic;">/usr/lib/systemd/system-sleep/</span>
-       <span style="color: #bebebe; background-color: #ffffff;">are intended</span> for local use only and should <span style="color: #bebebe; background-color: #ffffff;">be considered</span> hacks. If
+       are intended for local use only and should be considered hacks. If
        applications want to react to system suspend/hibernation and resume,
        they should rather use the Inhibitor interface[1].
 
        Note that systemd-suspend.service, systemd-hibernate.service, and
-       systemd-hybrid-sleep.service should never <span style="color: #bebebe; background-color: #ffffff;">be executed</span> directly.
+       systemd-hybrid-sleep.service should never be executed directly.
        Instead, trigger system sleep states with a command such as "systemctl
        suspend" or similar.
 
        Internally, this service will echo a string like "mem" into
-       /sys/power/state, to trigger the actual system suspend. What exactly <span style="color: #bebebe; background-color: #ffffff;">is</span>
-<span style="color: #bebebe; background-color: #ffffff;">       written</span> where can <span style="color: #bebebe; background-color: #ffffff;">be configured</span> in the "[Sleep]" section of
+       /sys/power/state, to trigger the actual system suspend. What exactly is
+       written where can be configured in the "[Sleep]" section of
        /etc/systemd/sleep.conf or a sleep.conf.d file. See systemd-
        sleep.conf(5).
 
@@ -470,9 +470,9 @@ systemd 238                                         SYSTEMD-SUSPEND.SERVICE(8)
 </div>
 </div>
 
-<div id="outline-container-orge982567" class="outline-2">
-<h2 id="orge982567">定时执行休眠</h2>
-<div class="outline-text-2" id="text-orge982567">
+<div id="outline-container-org9d3a2a1" class="outline-2">
+<h2 id="org9d3a2a1">定时执行休眠</h2>
+<div class="outline-text-2" id="text-org9d3a2a1">
 <p>
 systemd 系统中的定时任务是由timer来实现的，而每个timer都与一个service相对应。 
 </p>
@@ -489,7 +489,7 @@ systemd 系统中的定时任务是由timer来实现的，而每个timer都与�
 <span style="color: #7590db;">Description</span>=Hibernate every 21:30:00
 
 [<span style="color: #ce537a; font-weight: bold;">Timer</span>]
-<span style="color: #7590db;">OnCalendar</span>=*-*-* 15:30:00
+<span style="color: #7590db;">OnCalendar</span>=*-*-* 21:30:00
 <span style="color: #7590db;">Persistent</span>=true
 <span style="color: #7590db;">Unit</span>=systemd-hibernate.service
 
@@ -500,9 +500,9 @@ systemd 系统中的定时任务是由timer来实现的，而每个timer都与�
 </div>
 </div>
 
-<div id="outline-container-org89a4afa" class="outline-2">
-<h2 id="org89a4afa">定时唤醒休眠的linux</h2>
-<div class="outline-text-2" id="text-org89a4afa">
+<div id="outline-container-orgb4d87ac" class="outline-2">
+<h2 id="orgb4d87ac">定时唤醒休眠的linux</h2>
+<div class="outline-text-2" id="text-orgb4d87ac">
 <p>
 使用 rtcwake 可以在给定的时间唤醒处于休眠状态的电脑
 </p>
@@ -550,7 +550,7 @@ sudo rtcwake -m $<span style="color: #4f97d7;">{</span><span style="color: #7590
 <div>
         <div class="post-meta">
             <span title="post date" class="post-info">2018-06-21</span>
-            <span title="last modification date" class="post-info">2018-06-21</span>
+            <span title="last modification date" class="post-info">2018-06-22</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
             <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a></span>
         </div>

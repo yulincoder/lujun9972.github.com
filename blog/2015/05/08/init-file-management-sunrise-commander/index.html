@@ -43,24 +43,24 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd63d43d">1. 增加elpa repository</a></li>
-<li><a href="#orgf011fd3">2. sunrise-commander</a></li>
-<li><a href="#org4609e8b">3. The Buttons Extension: making Sunrise a bit more like MC</a></li>
-<li><a href="#orge027476">4. The Mirror Extension: full read/write access to compressed archives</a></li>
-<li><a href="#orgf6bde36">5. The Loop Extension: copying and renaming files in the background</a></li>
-<li><a href="#orgfc8a03e">6. The PopViewer Extension: making the viewer window float</a></li>
-<li><a href="#org063a1cc">7. The Mode Line Extension: directory paths always in sight</a></li>
-<li><a href="#org63d8d7d">8. The Tabs Extension</a></li>
-<li><a href="#orgc7a65eb">9. The Tree Extension</a></li>
-<li><a href="#org463574c">10. The Checkpoint Extension</a></li>
-<li><a href="#orgbad966d">11. The Windows Add-ons Extension</a></li>
-<li><a href="#org845b482">12. provide feature</a></li>
+<li><a href="#orga80ae11">1. 增加elpa repository</a></li>
+<li><a href="#orgaca2611">2. sunrise-commander</a></li>
+<li><a href="#orgefa2e5b">3. The Buttons Extension: making Sunrise a bit more like MC</a></li>
+<li><a href="#org16e34dc">4. The Mirror Extension: full read/write access to compressed archives</a></li>
+<li><a href="#org32ba5fc">5. The Loop Extension: copying and renaming files in the background</a></li>
+<li><a href="#org11c548b">6. The PopViewer Extension: making the viewer window float</a></li>
+<li><a href="#org098cd53">7. The Mode Line Extension: directory paths always in sight</a></li>
+<li><a href="#org7e3fa69">8. The Tabs Extension</a></li>
+<li><a href="#orga284e20">9. The Tree Extension</a></li>
+<li><a href="#org942aeac">10. The Checkpoint Extension</a></li>
+<li><a href="#org1a3218e">11. The Windows Add-ons Extension</a></li>
+<li><a href="#org770b7b9">12. provide feature</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd63d43d" class="outline-2">
-<h2 id="orgd63d43d"><span class="section-number-2">1</span> 增加elpa repository</h2>
+<div id="outline-container-orga80ae11" class="outline-2">
+<h2 id="orga80ae11"><span class="section-number-2">1</span> 增加elpa repository</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span>add-to-list 'package-archives '<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"SC"</span>   . <span style="color: #2d9574;">"http://joseito.republika.pl/sunrise-commander/"</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span> <span style="color: #2aa1ae; background-color: #292e34;">;</span><span style="color: #2aa1ae; background-color: #292e34;">sunrise-commander&#30340;&#23433;&#35013;&#28304;</span>
@@ -71,8 +71,8 @@
 </div>
 
 
-<div id="outline-container-orgf011fd3" class="outline-2">
-<h2 id="orgf011fd3"><span class="section-number-2">2</span> sunrise-commander</h2>
+<div id="outline-container-orgaca2611" class="outline-2">
+<h2 id="orgaca2611"><span class="section-number-2">2</span> sunrise-commander</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span>package-install-new 'sunrise-commander<span style="color: #4f97d7;">)</span>
@@ -81,8 +81,8 @@
 </div>
 </div>
 
-<div id="outline-container-org4609e8b" class="outline-2">
-<h2 id="org4609e8b"><span class="section-number-2">3</span> The Buttons Extension: making Sunrise a bit more like MC</h2>
+<div id="outline-container-orgefa2e5b" class="outline-2">
+<h2 id="orgefa2e5b"><span class="section-number-2">3</span> The Buttons Extension: making Sunrise a bit more like MC</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 have written a small extension that may be of help to new users who want to get acquainted fast with the most frequent functions found in the Sunrise Commander and their keybindings. Once installed, it displays a panel with mouse clickable buttons that show some of the most useful actions performed by Sunrise and their respective bindings in the bottom window every time the main panels are invoked.
@@ -98,8 +98,8 @@ you can execute any of the functions by clicking the appropriate button, but the
 </div>
 </div>
 
-<div id="outline-container-orge027476" class="outline-2">
-<h2 id="orge027476"><span class="section-number-2">4</span> The Mirror Extension: full read/write access to compressed archives</h2>
+<div id="outline-container-org16e34dc" class="outline-2">
+<h2 id="org16e34dc"><span class="section-number-2">4</span> The Mirror Extension: full read/write access to compressed archives</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Unfortunately the access to compressed archives offered by AVFS is limited to read-only operations, so I have written an extension to the Sunrise Commander that provides seamless and effective manipulation of compressed archives in a virtual file system. It is called the Sunrise Mirror Extension and you can get a copy of it here:
@@ -133,8 +133,8 @@ All this means is that most probably this extension will work out-of-the-box on 
 </div>
 </div>
 
-<div id="outline-container-orgf6bde36" class="outline-2">
-<h2 id="orgf6bde36"><span class="section-number-2">5</span> The Loop Extension: copying and renaming files in the background</h2>
+<div id="outline-container-org32ba5fc" class="outline-2">
+<h2 id="org32ba5fc"><span class="section-number-2">5</span> The Loop Extension: copying and renaming files in the background</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Not long ago I read in some discussion board a quite nice comment regarding the Sunrise Commander, something on the lines of “beautiful stuff, but it will never be a real file manager as long as emacs remains single-threaded”. The answer any seasoned emacs user would give in such situation would be something like “you may have as many processes as you need - have you ever heard of openwith?” and, in the case of Sunrise, it is mostly right, but there was one small exception that already had had the chance to bug me a lot since I started using Sunrise as my default FM: copying and renaming files bigger than several hundred megabytes is a painful operation that can freeze your emacs for a looong time and toss you out of your flow without a good reason.
@@ -155,8 +155,8 @@ So I wrote a new extension to the Sunrise Commander that allows to execute async
 </div>
 </div>
 
-<div id="outline-container-orgfc8a03e" class="outline-2">
-<h2 id="orgfc8a03e"><span class="section-number-2">6</span> The PopViewer Extension: making the viewer window float</h2>
+<div id="outline-container-org11c548b" class="outline-2">
+<h2 id="org11c548b"><span class="section-number-2">6</span> The PopViewer Extension: making the viewer window float</h2>
 <div class="outline-text-2" id="text-6">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span>package-install-new 'sunrise-x-popviewer<span style="color: #4f97d7;">)</span>
@@ -165,8 +165,8 @@ So I wrote a new extension to the Sunrise Commander that allows to execute async
 </div>
 </div>
 
-<div id="outline-container-org063a1cc" class="outline-2">
-<h2 id="org063a1cc"><span class="section-number-2">7</span> The Mode Line Extension: directory paths always in sight</h2>
+<div id="outline-container-org098cd53" class="outline-2">
+<h2 id="org098cd53"><span class="section-number-2">7</span> The Mode Line Extension: directory paths always in sight</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Here is a new usability enhancement I’ve just released for the Sunrise Commander window manager: sunrise‐x‐modeline ‐‐ a minor mode that puts the directory path of each Sunrise pane on the mode line of its respective window, so it remains always visible. This spares the need to scroll up long sunrise buffers just to check where exactly you are in the file system.
@@ -182,8 +182,8 @@ Additionally, three small status icons are shown on the left side of the path. T
 </div>
 </div>
 
-<div id="outline-container-org63d8d7d" class="outline-2">
-<h2 id="org63d8d7d"><span class="section-number-2">8</span> The Tabs Extension</h2>
+<div id="outline-container-org7e3fa69" class="outline-2">
+<h2 id="org7e3fa69"><span class="section-number-2">8</span> The Tabs Extension</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 his extension brings tab‐based navigation to the Sunrise Commander. It adds to the list of optional mechanisms already available in Sunrise for moving around the file system (like regular bookmarks, checkpoints, history rings, materialized virtual buffers, navigable paths and file‐following) another way to maintain a list of selected locations one wants to return later on, or to compose “breadcrumb trails” for complex repetitive operations.
@@ -199,8 +199,8 @@ The main difference between tabs and other mechanisms is that once a buffer has 
 </div>
 </div>
 
-<div id="outline-container-orgc7a65eb" class="outline-2">
-<h2 id="orgc7a65eb"><span class="section-number-2">9</span> The Tree Extension</h2>
+<div id="outline-container-orga284e20" class="outline-2">
+<h2 id="orga284e20"><span class="section-number-2">9</span> The Tree Extension</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 This extension adds to Sunrise a tree view of directories that can be used for extremely fast navigation, as well as for several basic operations on files and directories. It uses the excellent “tree-widget.el” library written by David Ponce, does work in the console as well as in graphical environments and offers three different sets of key bindings (mouse centric, arrow keys and alphanumeric keys) to easily adapt to a wide variety of usage patterns.
@@ -216,8 +216,8 @@ Navigation inside compressed archives (via AVFS) is supported in tree views (pre
 </div>
 </div>
 
-<div id="outline-container-org463574c" class="outline-2">
-<h2 id="org463574c"><span class="section-number-2">10</span> The Checkpoint Extension</h2>
+<div id="outline-container-org942aeac" class="outline-2">
+<h2 id="org942aeac"><span class="section-number-2">10</span> The Checkpoint Extension</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Beginning with version 4 of the Sunrise Commander, checkpoints were redefined to be a special form of bookmarks. Unfortunately, the differences between the bookmarks frameworks in Emacs 22 and Emacs 23 are so big that including this code directly in the sunrise-commander script would make it incompatible with Emacs 22. For this reason both versions of checkpoints are now provided as dynamically loaded extensions, so that you can decide which of them to use. To be sure, this is the version I intend to further develop, as it has a richer set of functions and integrates more nicely to the rest of Emacs. The other one is deprecated and will eventually disappear once Emacs 23+ becomes the “stable” release.
@@ -229,8 +229,8 @@ Beginning with version 4 of the Sunrise Commander, checkpoints were redefined to
 </div>
 </div>
 
-<div id="outline-container-orgbad966d" class="outline-2">
-<h2 id="orgbad966d"><span class="section-number-2">11</span> The Windows Add-ons Extension</h2>
+<div id="outline-container-org1a3218e" class="outline-2">
+<h2 id="org1a3218e"><span class="section-number-2">11</span> The Windows Add-ons Extension</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 Not long ago, a user of the Sunrise Commander FM on MS Windows asked me if there are any facilities in SC that would give him easy access to the different drives and special folders in this OS. Since there weren’t any I wrote the Windows Add-ons Extension.
@@ -250,8 +250,8 @@ One caveat, though: this is only for Emacs ports that run directly on the Window
 </div>
 </div>
 </div>
-<div id="outline-container-org845b482" class="outline-2">
-<h2 id="org845b482"><span class="section-number-2">12</span> provide feature</h2>
+<div id="outline-container-org770b7b9" class="outline-2">
+<h2 id="org770b7b9"><span class="section-number-2">12</span> provide feature</h2>
 <div class="outline-text-2" id="text-12">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">provide</span> '<span style="color: #a45bad;">init-file-management-sunrise-commander</span><span style="color: #4f97d7;">)</span>
@@ -267,7 +267,7 @@ One caveat, though: this is only for Emacs ports that run directly on the Window
             <span title="post date" class="post-info">2015-05-08</span>
             <span title="last modification date" class="post-info">2018-04-29</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">DarkSun</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -308,9 +308,9 @@ One caveat, though: this is only for Emacs ports that run directly on the Window
         </section>
     <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">DarkSun</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

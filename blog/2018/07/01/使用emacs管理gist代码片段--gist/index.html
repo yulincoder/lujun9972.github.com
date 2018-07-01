@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>使用emacs管理gist代码片段--gist - 暗无天日</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="author" content="" />
+  <style>
+   #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
+   #ds-thread #ds-reset .ds-comment-body p a {color: #ff0;}
+   #ds-thread #ds-reset .ds-comment-body p a:hover {color: #0ff;}
+   #disqus_thread a {color: #00ffff;}
+  </style>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/main.css" type="text/css"/>
+  <link rel="stylesheet" href="https://lujun9972.github.io/media/css/comment.css" type="text/css"/>
+</head>
+
+  <body><div class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="https://lujun9972.github.io/">暗无天日</a> <span class="subtitle">=============&gt;随便,谢谢</span></h1>
+        <ul>
+          <li><a href="https://lujun9972.github.io/years/">Years</a></li>
+          <li><a href="https://lujun9972.github.io/authors/">Authors</a></li>
+          <li><a href="https://lujun9972.github.io/tags/">Tags</a></li>
+          <li><a href="https://lujun9972.github.io/about/">About</a></li>
+          <li><a href="https://github.com/lujun9972/lujun9972.github.com">Github</a></li>
+          <li><a href="https://lujun9972.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="lujun9972.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1 class="title">使用emacs管理gist代码片段--gist</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org497fcde">1. 安装gist库</a></li>
+<li><a href="#orge1d2ef1">2. 使用</a>
+<ul>
+<li><a href="#org478fdcb">2.1. 常用命令</a></li>
+<li><a href="#org8684465">2.2. gist-list buffer的操作</a></li>
+<li><a href="#org246d3ac">2.3. gist-file buffer操作</a></li>
+<li><a href="#org7b8de11">2.4. 与dired的整合</a></li>
+</ul>
+</li>
+<li><a href="#org2cd29f9">3. 配置</a></li>
+<li><a href="#org341c5af">4. provide feature</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org497fcde" class="outline-2">
+<h2 id="org497fcde"><span class="section-number-2">1</span> 安装gist库</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span>package-install-new 'gist<span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge1d2ef1" class="outline-2">
+<h2 id="orge1d2ef1"><span class="section-number-2">2</span> 使用</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org478fdcb" class="outline-3">
+<h3 id="org478fdcb"><span class="section-number-3">2.1</span> 常用命令</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><p>
+gist-list
+</p>
+
+<p>
+在新buffer中显示gist。 
+</p>
+
+<p>
+第一次使用时需要输入github的用户名和密码。
+</p>
+
+<p>
+在显示gist的buffer中可以使用方向键浏览gist，按RET在另外的buffer中显示gist的内容
+</p></li>
+
+<li><p>
+gist-region
+</p>
+
+<p>
+根据选中的region创建一个gist 同时将对应的URL保持到kill ring中
+</p>
+
+<p>
+若调用该命令前带了前缀参数，则表示创建一个私有gist
+</p></li>
+
+<li><p>
+gist-region-private
+</p>
+
+<p>
+相当于C-u M-x gist-region
+</p></li>
+
+<li><p>
+gist-buffer
+</p>
+
+<p>
+根据整个buffer的内容创建一个gist 同时将对应的URL保持到kill ring中
+</p>
+
+<p>
+若调用该命令前带了前缀参数，则表示创建一个私有gist
+</p></li>
+
+<li><p>
+gist-buffer-private
+</p>
+
+<p>
+相当于C-u M-x gist-buffer
+</p></li>
+
+<li><p>
+gist-region-or-buffer
+</p>
+
+<p>
+若选中了region，则等同于gist-region，否则等同于gist-buffer
+</p></li>
+
+<li><p>
+gist-region-or-buffer-private
+</p>
+
+<p>
+相当于C-u M-x gist-region-or-buffer
+</p></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8684465" class="outline-3">
+<h3 id="org8684465"><span class="section-number-3">2.2</span> gist-list buffer的操作</h3>
+<div class="outline-text-3" id="text-2-2">
+<dl class="org-dl">
+<dt>g</dt><dd>从server端重新刷新gist列表</dd>
+<dt>e</dt><dd>编辑当前gist的描述</dd>
+<dt>k</dt><dd>删除当前gist</dd>
+<dt>+</dt><dd>添加文件到当前gist</dd>
+<dt>-</dt><dd>从当前gist中删除文件</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org246d3ac" class="outline-3">
+<h3 id="org246d3ac"><span class="section-number-3">2.3</span> gist-file buffer操作</h3>
+<div class="outline-text-3" id="text-2-3">
+<dl class="org-dl">
+<dt>C-x C-s</dt><dd>保存gist</dd>
+<dt>C-x C-w</dt><dd>重命名文件</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org7b8de11" class="outline-3">
+<h3 id="org7b8de11"><span class="section-number-3">2.4</span> 与dired的整合</h3>
+<div class="outline-text-3" id="text-2-4">
+<dl class="org-dl">
+<dt>@</dt><dd>make a gist out of marked files (with a prefix, make it private)</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-org2cd29f9" class="outline-2">
+<h2 id="org2cd29f9"><span class="section-number-2">3</span> 配置</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><p>
+gist-view-gist
+</p>
+
+<p>
+若为非nil，则在创建gist后，会调用`browse-url'来访问该gist
+</p></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org341c5af" class="outline-2">
+<h2 id="org341c5af"><span class="section-number-2">4</span> provide feature</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">provide</span> '<span style="color: #a45bad;">init-program-gist</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+        <div class="post-meta">
+            <span title="post date" class="post-info">2018-07-01</span>
+            <span title="last modification date" class="post-info">2018-04-29</span>
+            <span title="tags" class="post-info">:N/A:</span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S"></a></span>
+        </div>
+    <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
+        <section>
+            <h1>Comments</h1>
+            <div id="comment-wrap">
+                    <a class="disqus_label">使用 Disqus 评论</a>
+    </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+         //var disqus_developer = 1;
+         var preempt_signal=false;
+         var disqus_identifier = "/blog/2018/07/01/使用emacs管理gist代码片段--gist/";
+         var disqus_url = "https://lujun9972.github.io/blog/2018/07/01/使用emacs管理gist代码片段--gist/";
+         var disqus_shortname = 'lujun9972';
+         /* * * DON'T EDIT BELOW THIS LINE * * */
+         (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+             $('#disqus_thread').css('display','none');
+         })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script>
+     /* comments */
+     var ego_disqus_thread=$('#disqus_thread');
+     var ego_ds_label=$('.ds-thread');
+     $('.disqus_label').click(function(){
+         ego_disqus_thread.show();
+         ego_ds_label.hide();
+     });
+     $('.ds-label').click(function(){
+         ego_disqus_thread.hide();
+         ego_ds_label.show();
+     });
+    </script>
+        </section>
+    <script src="https://lujun9972.github.io/media/js/main.js"></script>
+    <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S"></a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;
+            Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
+            <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>
+            <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+    </div>
+            </div>
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG">
+            </script>
+            <script type="text/x-mathjax-config">
+             MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
+            </script>
+</div>
+
+  </div></body>
+</html>

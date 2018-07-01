@@ -43,34 +43,34 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org37f436a">1. fork与vfork函数</a>
+<li><a href="#orga6026d7">1. fork与vfork函数</a>
 <ul>
-<li><a href="#orgd46cea9">1.1. fork出来的子进程有几点要注意:</a></li>
-<li><a href="#orgca20ece">1.2. fork与vfork的区别在于</a></li>
+<li><a href="#org7aa2c9a">1.1. fork出来的子进程有几点要注意:</a></li>
+<li><a href="#org5b689c0">1.2. fork与vfork的区别在于</a></li>
 </ul>
 </li>
-<li><a href="#org4534955">2. wait和waitpid函数</a>
+<li><a href="#org2b94a1a">2. wait和waitpid函数</a>
 <ul>
-<li><a href="#org363a8e9">2.1. 参数status说明</a></li>
-<li><a href="#orge32fc03">2.2. 参数pid的说明</a></li>
-<li><a href="#org7c9e6f8">2.3. 参数optioins说明</a></li>
+<li><a href="#orge6f8d21">2.1. 参数status说明</a></li>
+<li><a href="#orgac719a0">2.2. 参数pid的说明</a></li>
+<li><a href="#orgdad7ea6">2.3. 参数optioins说明</a></li>
 </ul>
 </li>
-<li><a href="#org4ca932e">3. waitid函数</a></li>
-<li><a href="#org1f6bdb0">4. exec系列函数</a>
+<li><a href="#org9c8f882">3. waitid函数</a></li>
+<li><a href="#orgea26b21">4. exec系列函数</a>
 <ul>
-<li><a href="#org869a2c1">4.1. exec系列函数的区分</a></li>
-<li><a href="#org9eed17d">4.2. exec后的新进程与原进程的关系</a></li>
-<li><a href="#org3212c34">4.3. 当exec调用一个带`#! 解析器程序 可选参数项'的脚本文件时:</a></li>
+<li><a href="#orgc713186">4.1. exec系列函数的区分</a></li>
+<li><a href="#org0bb7d15">4.2. exec后的新进程与原进程的关系</a></li>
+<li><a href="#org03793d4">4.3. 当exec调用一个带`#! 解析器程序 可选参数项'的脚本文件时:</a></li>
 </ul>
 </li>
-<li><a href="#orgce65a15">5. 进程会计</a></li>
-<li><a href="#org12fbb44">6. 进程时间</a></li>
+<li><a href="#org64f3943">5. 进程会计</a></li>
+<li><a href="#orge17156b">6. 进程时间</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org37f436a" class="outline-2">
-<h2 id="org37f436a"><span class="section-number-2">1</span> fork与vfork函数</h2>
+<div id="outline-container-orga6026d7" class="outline-2">
+<h2 id="orga6026d7"><span class="section-number-2">1</span> fork与vfork函数</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 UNIX提供了两个函数用于创建新进程
@@ -84,8 +84,8 @@ UNIX提供了两个函数用于创建新进程
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd46cea9" class="outline-3">
-<h3 id="orgd46cea9"><span class="section-number-3">1.1</span> fork出来的子进程有几点要注意:</h3>
+<div id="outline-container-org7aa2c9a" class="outline-3">
+<h3 id="org7aa2c9a"><span class="section-number-3">1.1</span> fork出来的子进程有几点要注意:</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>子进程与父进程分别持有相同的文件描述符,这些文件描述符共用核心中的同一个文件项</li>
@@ -97,8 +97,8 @@ UNIX提供了两个函数用于创建新进程
 </ul>
 </div>
 </div>
-<div id="outline-container-orgca20ece" class="outline-3">
-<h3 id="orgca20ece"><span class="section-number-3">1.2</span> fork与vfork的区别在于</h3>
+<div id="outline-container-org5b689c0" class="outline-3">
+<h3 id="org5b689c0"><span class="section-number-3">1.2</span> fork与vfork的区别在于</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>在子进程调用exec或exit之前,vfork并不会将父进程的地址空间复制到子进程中,即 <b>子进程在父进程的空间中运行,因此子进程运行的结果会影响到父进程!</b></li>
@@ -107,8 +107,8 @@ UNIX提供了两个函数用于创建新进程
 </div>
 </div>
 </div>
-<div id="outline-container-org4534955" class="outline-2">
-<h2 id="org4534955"><span class="section-number-2">2</span> wait和waitpid函数</h2>
+<div id="outline-container-org2b94a1a" class="outline-2">
+<h2 id="org2b94a1a"><span class="section-number-2">2</span> wait和waitpid函数</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">sys/wait.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -125,8 +125,8 @@ UNIX提供了两个函数用于创建新进程
 <li>waitpid可以通过设置选项,使得调用者不阻塞</li>
 </ul>
 </div>
-<div id="outline-container-org363a8e9" class="outline-3">
-<h3 id="org363a8e9"><span class="section-number-3">2.1</span> 参数status说明</h3>
+<div id="outline-container-orge6f8d21" class="outline-3">
+<h3 id="orge6f8d21"><span class="section-number-3">2.1</span> 参数status说明</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>参数status可以为空指针,表示不关心终止状态</li>
@@ -183,8 +183,8 @@ WIFCONTINUED(status)
 </ul>
 </div>
 </div>
-<div id="outline-container-orge32fc03" class="outline-3">
-<h3 id="orge32fc03"><span class="section-number-3">2.2</span> 参数pid的说明</h3>
+<div id="outline-container-orgac719a0" class="outline-3">
+<h3 id="orgac719a0"><span class="section-number-3">2.2</span> 参数pid的说明</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>pid == -1,等待任一子进程,此时waitpid与wait等效</li>
@@ -194,8 +194,8 @@ WIFCONTINUED(status)
 </ul>
 </div>
 </div>
-<div id="outline-container-org7c9e6f8" class="outline-3">
-<h3 id="org7c9e6f8"><span class="section-number-3">2.3</span> 参数optioins说明</h3>
+<div id="outline-container-orgdad7ea6" class="outline-3">
+<h3 id="orgdad7ea6"><span class="section-number-3">2.3</span> 参数optioins说明</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 通过设置options参数,waitpid不一定等到子进程退出来能获取子进程的状态. 也能在子进程处于stop或continue状态时返回子进程的状态.
@@ -228,8 +228,8 @@ WCONTINUED
 </div>
 </div>
 </div>
-<div id="outline-container-org4ca932e" class="outline-2">
-<h2 id="org4ca932e"><span class="section-number-2">3</span> waitid函数</h2>
+<div id="outline-container-org9c8f882" class="outline-2">
+<h2 id="org9c8f882"><span class="section-number-2">3</span> waitid函数</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 waitid可以指定要监控的子进程的哪些状态变化
@@ -270,15 +270,15 @@ waitid可以指定要监控的子进程的哪些状态变化
 </ul>
 </div>
 </div>
-<div id="outline-container-org1f6bdb0" class="outline-2">
-<h2 id="org1f6bdb0"><span class="section-number-2">4</span> exec系列函数</h2>
+<div id="outline-container-orgea26b21" class="outline-2">
+<h2 id="orgea26b21"><span class="section-number-2">4</span> exec系列函数</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>由于exec一个新程序后,信号处理函数的地址已经失效了,因此exec函数将原先设置为要捕获的信号都更改为它们的默认动作</li>
 </ul>
 </div>
-<div id="outline-container-org869a2c1" class="outline-3">
-<h3 id="org869a2c1"><span class="section-number-3">4.1</span> exec系列函数的区分</h3>
+<div id="outline-container-orgc713186" class="outline-3">
+<h3 id="orgc713186"><span class="section-number-3">4.1</span> exec系列函数的区分</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>字母p表示该函数可以为不带目录的文件名,则会从PATH环境变量中搜索可执行文件</li>
@@ -288,8 +288,8 @@ waitid可以指定要监控的子进程的哪些状态变化
 </ul>
 </div>
 </div>
-<div id="outline-container-org9eed17d" class="outline-3">
-<h3 id="org9eed17d"><span class="section-number-3">4.2</span> exec后的新进程与原进程的关系</h3>
+<div id="outline-container-org0bb7d15" class="outline-3">
+<h3 id="org0bb7d15"><span class="section-number-3">4.2</span> exec后的新进程与原进程的关系</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>新进程保持
@@ -320,8 +320,8 @@ waitid可以指定要监控的子进程的哪些状态变化
 </ul>
 </div>
 </div>
-<div id="outline-container-org3212c34" class="outline-3">
-<h3 id="org3212c34"><span class="section-number-3">4.3</span> 当exec调用一个带`#! 解析器程序 可选参数项'的脚本文件时:</h3>
+<div id="outline-container-org03793d4" class="outline-3">
+<h3 id="org03793d4"><span class="section-number-3">4.3</span> 当exec调用一个带`#! 解析器程序 可选参数项'的脚本文件时:</h3>
 <div class="outline-text-3" id="text-4-3">
 <ol class="org-ol">
 <li>exec实际执行的并不是该脚本文件,而是脚本文件第一行`#! 解析器程序 可选参数项'中的 <b>解析器程序</b></li>
@@ -346,8 +346,8 @@ exec传递给该解析器程序的参数顺序为,解析器地址,可选参数,�
 </div>
 </div>
 </div>
-<div id="outline-container-orgce65a15" class="outline-2">
-<h2 id="orgce65a15"><span class="section-number-2">5</span> 进程会计</h2>
+<div id="outline-container-org64f3943" class="outline-2">
+<h2 id="org64f3943"><span class="section-number-2">5</span> 进程会计</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 大多数UNIX系统都提供了一个选项以进行进程会计(process accounting)处理. 启用该选项后,每当进程结束时,内核就写一个会计记录.
@@ -366,8 +366,8 @@ root用户可以使用`accton 命令行'来对`命令行'开启进程会计选�
 </p>
 </div>
 </div>
-<div id="outline-container-org12fbb44" class="outline-2">
-<h2 id="org12fbb44"><span class="section-number-2">6</span> 进程时间</h2>
+<div id="outline-container-orge17156b" class="outline-2">
+<h2 id="orge17156b"><span class="section-number-2">6</span> 进程时间</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 任何进程都可以通过调用times函数获得自己的运行时间,用户态CPU时间和内核态CPU时间.
@@ -396,7 +396,7 @@ root用户可以使用`accton 命令行'来对`命令行'开启进程会计选�
             <span title="post date" class="post-info">2015-05-18</span>
             <span title="last modification date" class="post-info">2016-10-24</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">DarkSun</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -437,9 +437,9 @@ root用户可以使用`accton 命令行'来对`命令行'开启进程会计选�
         </section>
     <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">DarkSun</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

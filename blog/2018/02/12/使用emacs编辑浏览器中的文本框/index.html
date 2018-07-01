@@ -44,23 +44,23 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga300f5b">atomic-chrome</a>
+<li><a href="#org40fa0a7">atomic-chrome</a>
 <ul>
-<li><a href="#org78613d9">给浏览器安装GhostText插件</a></li>
-<li><a href="#orgde80204">在Emacs上安装atomic-chrome插件</a></li>
-<li><a href="#org5bb968b">使用</a></li>
-<li><a href="#org3a2bfdb">配置</a></li>
+<li><a href="#org812ac7e">给浏览器安装GhostText插件</a></li>
+<li><a href="#orgeeb05a7">在Emacs上安装atomic-chrome插件</a></li>
+<li><a href="#org779ca00">使用</a></li>
+<li><a href="#orgbd155d6">配置</a></li>
 </ul>
 </li>
-<li><a href="#org0ca47e6">emacs_chrome</a>
+<li><a href="#org9df7075">emacs_chrome</a>
 <ul>
-<li><a href="#orga8ecb82">给浏览器安装Edit-with-Emacs插件</a></li>
-<li><a href="#orgb9938be">在Emacs上安装edit-server</a></li>
-<li><a href="#org94b751a">使用</a></li>
-<li><a href="#orgc8afe10">配置</a></li>
+<li><a href="#org1f2dc6c">给浏览器安装Edit-with-Emacs插件</a></li>
+<li><a href="#orgc6203ca">在Emacs上安装edit-server</a></li>
+<li><a href="#org91c8156">使用</a></li>
+<li><a href="#org5400f83">配置</a></li>
 </ul>
 </li>
-<li><a href="#org204691c">atomic-chrome VS emacs_chrome</a></li>
+<li><a href="#org2a72461">atomic-chrome VS emacs_chrome</a></li>
 </ul>
 </div>
 </div>
@@ -73,13 +73,13 @@
 在github上搜索了一番，发现还真有两个插件可以做到这一点,一个是<a href="https://github.com/alpha22jp/atomic-chrome">atomic-chrome</a>，另一个是<a href="https://github.com/stsquad/emacs_chrome">emacs_chrome</a>。且两个插件都同时支持chrome和firefox
 </p>
 
-<div id="outline-container-orga300f5b" class="outline-2">
-<h2 id="orga300f5b">atomic-chrome</h2>
-<div class="outline-text-2" id="text-orga300f5b">
+<div id="outline-container-org40fa0a7" class="outline-2">
+<h2 id="org40fa0a7">atomic-chrome</h2>
+<div class="outline-text-2" id="text-org40fa0a7">
 </div>
-<div id="outline-container-org78613d9" class="outline-3">
-<h3 id="org78613d9">给浏览器安装GhostText插件</h3>
-<div class="outline-text-3" id="text-org78613d9">
+<div id="outline-container-org812ac7e" class="outline-3">
+<h3 id="org812ac7e">给浏览器安装GhostText插件</h3>
+<div class="outline-text-3" id="text-org812ac7e">
 <p>
 如果是firefox，点击<a href="https://addons.mozilla.org/en-US/firefox/addon/ghosttext/">这里</a>安装GhostText
 </p>
@@ -91,9 +91,9 @@
 </div>
 
 
-<div id="outline-container-orgde80204" class="outline-3">
-<h3 id="orgde80204">在Emacs上安装atomic-chrome插件</h3>
-<div class="outline-text-3" id="text-orgde80204">
+<div id="outline-container-orgeeb05a7" class="outline-3">
+<h3 id="orgeeb05a7">在Emacs上安装atomic-chrome插件</h3>
+<div class="outline-text-3" id="text-orgeeb05a7">
 <p>
 最简单的方法就是使用 <code>use-package</code> 
 </p>
@@ -110,9 +110,9 @@
 </div>
 </div>
 
-<div id="outline-container-org5bb968b" class="outline-3">
-<h3 id="org5bb968b">使用</h3>
-<div class="outline-text-3" id="text-org5bb968b">
+<div id="outline-container-org779ca00" class="outline-3">
+<h3 id="org779ca00">使用</h3>
+<div class="outline-text-3" id="text-org779ca00">
 <ol class="org-ol">
 <li>启动Emacs</li>
 <li>将光标放到浏览器中的文本框中</li>
@@ -123,9 +123,9 @@
 </div>
 </div>
 
-<div id="outline-container-org3a2bfdb" class="outline-3">
-<h3 id="org3a2bfdb">配置</h3>
-<div class="outline-text-3" id="text-org3a2bfdb">
+<div id="outline-container-orgbd155d6" class="outline-3">
+<h3 id="orgbd155d6">配置</h3>
+<div class="outline-text-3" id="text-orgbd155d6">
 <p>
 默认情况下Emacs打开的buffer处于 <code>text-mode</code>,不过你可以通过设置 <code>atomic-chrome-default-major-mode</code> 来修改它:
 </p>
@@ -158,13 +158,13 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org0ca47e6" class="outline-2">
-<h2 id="org0ca47e6">emacs_chrome</h2>
-<div class="outline-text-2" id="text-org0ca47e6">
+<div id="outline-container-org9df7075" class="outline-2">
+<h2 id="org9df7075">emacs_chrome</h2>
+<div class="outline-text-2" id="text-org9df7075">
 </div>
-<div id="outline-container-orga8ecb82" class="outline-3">
-<h3 id="orga8ecb82">给浏览器安装Edit-with-Emacs插件</h3>
-<div class="outline-text-3" id="text-orga8ecb82">
+<div id="outline-container-org1f2dc6c" class="outline-3">
+<h3 id="org1f2dc6c">给浏览器安装Edit-with-Emacs插件</h3>
+<div class="outline-text-3" id="text-org1f2dc6c">
 <p>
 如果是firefox，点击<a href="https://addons.mozilla.org/en-US/firefox/addon/edit-with-emacs1/">这里</a>安装
 </p>
@@ -182,9 +182,9 @@
 </p>
 </div>
 </div>
-<div id="outline-container-orgb9938be" class="outline-3">
-<h3 id="orgb9938be">在Emacs上安装edit-server</h3>
-<div class="outline-text-3" id="text-orgb9938be">
+<div id="outline-container-orgc6203ca" class="outline-3">
+<h3 id="orgc6203ca">在Emacs上安装edit-server</h3>
+<div class="outline-text-3" id="text-orgc6203ca">
 <p>
 我们依然使用use-package来安装
 </p>
@@ -200,9 +200,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org94b751a" class="outline-3">
-<h3 id="org94b751a">使用</h3>
-<div class="outline-text-3" id="text-org94b751a">
+<div id="outline-container-org91c8156" class="outline-3">
+<h3 id="org91c8156">使用</h3>
+<div class="outline-text-3" id="text-org91c8156">
 <ol class="org-ol">
 <li>启动Emacs，推荐将Emacs以daemon方式启动</li>
 <li>双击浏览器中的文本框，或者将光标放到文本框中后按下 <code>Alt-Enter</code>, 会弹出一个新Emacs窗口</li>
@@ -210,9 +210,9 @@
 </ol>
 </div>
 </div>
-<div id="outline-container-orgc8afe10" class="outline-3">
-<h3 id="orgc8afe10">配置</h3>
-<div class="outline-text-3" id="text-orgc8afe10">
+<div id="outline-container-org5400f83" class="outline-3">
+<h3 id="org5400f83">配置</h3>
+<div class="outline-text-3" id="text-org5400f83">
 <p>
 设置默认编辑buffer的major mode
 </p>
@@ -239,9 +239,9 @@ emacs_chrome要做到指定网站使用特定major-mode可以通过设置 <code>
 </div>
 </div>
 </div>
-<div id="outline-container-org204691c" class="outline-2">
-<h2 id="org204691c">atomic-chrome VS emacs_chrome</h2>
-<div class="outline-text-2" id="text-org204691c">
+<div id="outline-container-org2a72461" class="outline-2">
+<h2 id="org2a72461">atomic-chrome VS emacs_chrome</h2>
+<div class="outline-text-2" id="text-org2a72461">
 <p>
 atomic-chrome的特点在于它能够实时同步浏览器中文本框中的内容，也就是说你在文本框中所做的修改能放映到Emacs中，而在Emacs中所作的修改也能实时反映到文本框中，可谓酷极。
 <img src="https://github.com/alpha22jp/atomic-chrome/raw/master/images/screencast.gif" alt="screencast.gif" />
@@ -265,7 +265,7 @@ atomic-chrome的特点在于它能够实时同步浏览器中文本框中的内�
             <span title="post date" class="post-info">2018-02-12</span>
             <span title="last modification date" class="post-info">2018-02-13</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/emacs之怒">Emacs之怒</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -306,9 +306,9 @@ atomic-chrome的特点在于它能够实时同步浏览器中文本框中的内�
         </section>
     <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

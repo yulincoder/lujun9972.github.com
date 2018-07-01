@@ -43,125 +43,125 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfbd59f6">1. 线程的好处</a></li>
-<li><a href="#orge6fd574">2. 线程的组成部分</a>
+<li><a href="#orgeca8828">1. 线程的好处</a></li>
+<li><a href="#org78ec287">2. 线程的组成部分</a>
 <ul>
-<li><a href="#orgf382c76">2.1. 线程ID</a></li>
-<li><a href="#org221ce10">2.2. 一组寄存器值</a></li>
-<li><a href="#org70b1ac3">2.3. 栈</a></li>
-<li><a href="#org984bae6">2.4. 调度优先级</a></li>
-<li><a href="#orgcc214ed">2.5. 策略</a></li>
-<li><a href="#orgcfe3768">2.6. 信号屏蔽字</a></li>
-<li><a href="#org9fa29b3">2.7. errno变量</a></li>
-<li><a href="#orgee10454">2.8. 线程私有数据</a></li>
+<li><a href="#org733d10c">2.1. 线程ID</a></li>
+<li><a href="#org2410b6f">2.2. 一组寄存器值</a></li>
+<li><a href="#org5231755">2.3. 栈</a></li>
+<li><a href="#orgf374c83">2.4. 调度优先级</a></li>
+<li><a href="#orgbba1130">2.5. 策略</a></li>
+<li><a href="#org4d3982f">2.6. 信号屏蔽字</a></li>
+<li><a href="#org0e01103">2.7. errno变量</a></li>
+<li><a href="#org91dd5b9">2.8. 线程私有数据</a></li>
 </ul>
 </li>
-<li><a href="#org871a840">3. 线程的创建</a>
+<li><a href="#org7fa895f">3. 线程的创建</a>
 <ul>
-<li><a href="#orgb6e57d9">3.1. pthread_create</a></li>
+<li><a href="#org8d61029">3.1. pthread_create</a></li>
 </ul>
 </li>
-<li><a href="#org1b7176b">4. 线程终止</a>
+<li><a href="#orgf2cd678">4. 线程终止</a>
 <ul>
-<li><a href="#org111a2e3">4.1. pthread_exit函数说明</a></li>
-<li><a href="#orgad3f863">4.2. pthread_join函数说明</a></li>
-<li><a href="#org91c46e2">4.3. pthread_cancel</a></li>
-<li><a href="#org142d59d">4.4. 线程清理函数</a></li>
-<li><a href="#org69efbd2">4.5. pthread_detach(pthread_t tid)</a></li>
+<li><a href="#orgcdfe48c">4.1. pthread_exit函数说明</a></li>
+<li><a href="#org2f01a0f">4.2. pthread_join函数说明</a></li>
+<li><a href="#org8777830">4.3. pthread_cancel</a></li>
+<li><a href="#org8719035">4.4. 线程清理函数</a></li>
+<li><a href="#org3c42b33">4.5. pthread_detach(pthread_t tid)</a></li>
 </ul>
 </li>
-<li><a href="#org39fb804">5. 线程同步</a>
+<li><a href="#orgdea36db">5. 线程同步</a>
 <ul>
-<li><a href="#org80273b4">5.1. 互斥量</a>
+<li><a href="#orge90d117">5.1. 互斥量</a>
 <ul>
-<li><a href="#orgbeb3c52">5.1.1. 互斥量的初始化与销毁</a></li>
-<li><a href="#org1def743">5.1.2. 互斥量的加锁与解锁</a></li>
-<li><a href="#org9c83f94">5.1.3. 避免死锁</a></li>
-<li><a href="#org169d59c">5.1.4. 对互斥量的一个简单C++封装</a></li>
+<li><a href="#org636fdb2">5.1.1. 互斥量的初始化与销毁</a></li>
+<li><a href="#org60b8400">5.1.2. 互斥量的加锁与解锁</a></li>
+<li><a href="#org879bfb8">5.1.3. 避免死锁</a></li>
+<li><a href="#org3bed8b1">5.1.4. 对互斥量的一个简单C++封装</a></li>
 </ul>
 </li>
-<li><a href="#org44142a1">5.2. 读写锁(共享/独占锁)</a>
+<li><a href="#org4c6c5eb">5.2. 读写锁(共享/独占锁)</a>
 <ul>
-<li><a href="#orgfb7bfd3">5.2.1. 读写锁的初始化与销毁</a></li>
-<li><a href="#org28c6082">5.2.2. 读写锁的加锁与解锁</a></li>
+<li><a href="#org6e39086">5.2.1. 读写锁的初始化与销毁</a></li>
+<li><a href="#orged75d2c">5.2.2. 读写锁的加锁与解锁</a></li>
 </ul>
 </li>
-<li><a href="#orgd393995">5.3. 条件变量</a>
+<li><a href="#org4106fef">5.3. 条件变量</a>
 <ul>
-<li><a href="#orgc3c7ab5">5.3.1. 条件变量的初始化与销毁</a></li>
-<li><a href="#org4b2b5b3">5.3.2. 等待条件变量变为真</a></li>
-<li><a href="#org61b0572">5.3.3. 唤醒线程函数</a></li>
+<li><a href="#org0cb820f">5.3.1. 条件变量的初始化与销毁</a></li>
+<li><a href="#orge6024f1">5.3.2. 等待条件变量变为真</a></li>
+<li><a href="#orgdcf1a31">5.3.3. 唤醒线程函数</a></li>
 </ul>
 </li>
-<li><a href="#org3202c00">5.4. 使用pthread_once函数保证函数只执行一次</a></li>
+<li><a href="#org51a9236">5.4. 使用pthread_once函数保证函数只执行一次</a></li>
 </ul>
 </li>
-<li><a href="#orgf523acf">6. 线程限制</a></li>
-<li><a href="#org15d350d">7. 线程属性</a>
+<li><a href="#org8c03cec">6. 线程限制</a></li>
+<li><a href="#orgd434cac">7. 线程属性</a>
 <ul>
-<li><a href="#orgce40d76">7.1. 初始化/销毁线程属性</a></li>
-<li><a href="#org01f2f17">7.2. 线程属性的获取与修改</a>
+<li><a href="#org450f932">7.1. 初始化/销毁线程属性</a></li>
+<li><a href="#org92cf837">7.2. 线程属性的获取与修改</a>
 <ul>
-<li><a href="#org6bab115">7.2.1. detachstate(线程的分离状态属性)</a></li>
-<li><a href="#org6a0690e">7.2.2. statcsize(线程栈的大小)</a></li>
-<li><a href="#org3666e88">7.2.3. stackaddr(线程栈的最低地址)</a></li>
-<li><a href="#orgfa076e6">7.2.4. guardsize(线程栈末尾的警戒缓冲区大小)</a></li>
-<li><a href="#org3c635ee">7.2.5. 可取消状态</a></li>
-<li><a href="#org03a180f">7.2.6. 可取消类型</a></li>
-<li><a href="#orgca0b0d0">7.2.7. 并发度</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org474a0a4">8. 同步属性</a>
-<ul>
-<li><a href="#orgd09e2de">8.1. 互斥量属性</a>
-<ul>
-<li><a href="#orgd9a874d">8.1.1. 互斥量属性的初始化/销毁</a></li>
-<li><a href="#org3d4b255">8.1.2. 互斥量的共享属性</a></li>
-<li><a href="#org43cd902">8.1.3. 互斥量的类型属性</a></li>
-</ul>
-</li>
-<li><a href="#orgac6156a">8.2. 读写锁属性</a>
-<ul>
-<li><a href="#org3a29f65">8.2.1. 读写锁初始化/销毁</a></li>
-<li><a href="#org4c67be1">8.2.2. 进程共享属性</a></li>
-</ul>
-</li>
-<li><a href="#orge3ab5d2">8.3. 条件变量属性</a>
-<ul>
-<li><a href="#orgfe3bdc8">8.3.1. 条件变量初始化/销毁</a></li>
-<li><a href="#org8b75ef6">8.3.2. 进程共享属性</a></li>
+<li><a href="#org106ac3f">7.2.1. detachstate(线程的分离状态属性)</a></li>
+<li><a href="#org38ea197">7.2.2. statcsize(线程栈的大小)</a></li>
+<li><a href="#org8b120cf">7.2.3. stackaddr(线程栈的最低地址)</a></li>
+<li><a href="#org626e91f">7.2.4. guardsize(线程栈末尾的警戒缓冲区大小)</a></li>
+<li><a href="#orgecb2e76">7.2.5. 可取消状态</a></li>
+<li><a href="#orgadb4de4">7.2.6. 可取消类型</a></li>
+<li><a href="#org41eb8a2">7.2.7. 并发度</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org06e57fa">9. 多线程环境下的信号处理</a>
+<li><a href="#org5c757b5">8. 同步属性</a>
 <ul>
-<li><a href="#org840ac25">9.1. 多线程与进程中使用信号机制的区别.</a></li>
-<li><a href="#org41e7b10">9.2. 设置线程的信号屏蔽字</a></li>
-<li><a href="#org881f757">9.3. 线程等待信号发生</a></li>
-<li><a href="#org4946910">9.4. 发送信号給线程</a></li>
+<li><a href="#org06a6ba4">8.1. 互斥量属性</a>
+<ul>
+<li><a href="#org0d673ce">8.1.1. 互斥量属性的初始化/销毁</a></li>
+<li><a href="#org587ed5a">8.1.2. 互斥量的共享属性</a></li>
+<li><a href="#org61ba392">8.1.3. 互斥量的类型属性</a></li>
 </ul>
 </li>
-<li><a href="#orge9fe909">10. 多线程环境下的fork</a>
+<li><a href="#org69cc7e4">8.2. 读写锁属性</a>
 <ul>
-<li><a href="#org8120647">10.1. 多线程环境下fork的问题</a></li>
+<li><a href="#orgf520c55">8.2.1. 读写锁初始化/销毁</a></li>
+<li><a href="#org2b312db">8.2.2. 进程共享属性</a></li>
 </ul>
 </li>
-<li><a href="#org531802b">11. 线程的私有数据(Thread-specific Data)</a>
+<li><a href="#org1fa5b0e">8.3. 条件变量属性</a>
 <ul>
-<li><a href="#org253e356">11.1. pthread_key_create</a></li>
-<li><a href="#org3fb7048">11.2. pthread_key_delete</a></li>
-<li><a href="#orgcce9557">11.3. pthread_setspecific/pthread_getspecific</a></li>
+<li><a href="#org89fe229">8.3.1. 条件变量初始化/销毁</a></li>
+<li><a href="#org97be06d">8.3.2. 进程共享属性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga385946">9. 多线程环境下的信号处理</a>
+<ul>
+<li><a href="#orgaf14eb8">9.1. 多线程与进程中使用信号机制的区别.</a></li>
+<li><a href="#orge335b8a">9.2. 设置线程的信号屏蔽字</a></li>
+<li><a href="#org4b68582">9.3. 线程等待信号发生</a></li>
+<li><a href="#org7c7edf3">9.4. 发送信号給线程</a></li>
+</ul>
+</li>
+<li><a href="#orga407594">10. 多线程环境下的fork</a>
+<ul>
+<li><a href="#org0ce3ebd">10.1. 多线程环境下fork的问题</a></li>
+</ul>
+</li>
+<li><a href="#org6adc1ed">11. 线程的私有数据(Thread-specific Data)</a>
+<ul>
+<li><a href="#orgc68a084">11.1. pthread_key_create</a></li>
+<li><a href="#orgb02e2d7">11.2. pthread_key_delete</a></li>
+<li><a href="#org254ed72">11.3. pthread_setspecific/pthread_getspecific</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgfbd59f6" class="outline-2">
-<h2 id="orgfbd59f6"><span class="section-number-2">1</span> 线程的好处</h2>
+<div id="outline-container-orgeca8828" class="outline-2">
+<h2 id="orgeca8828"><span class="section-number-2">1</span> 线程的好处</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>通过为每个事件类型的处理分配单独的线程,能够简化处理异步事件的代码,同步编程模式比异步编程模式简单得多</li>
@@ -171,12 +171,12 @@
 </div>
 </div>
 
-<div id="outline-container-orge6fd574" class="outline-2">
-<h2 id="orge6fd574"><span class="section-number-2">2</span> 线程的组成部分</h2>
+<div id="outline-container-org78ec287" class="outline-2">
+<h2 id="org78ec287"><span class="section-number-2">2</span> 线程的组成部分</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgf382c76" class="outline-3">
-<h3 id="orgf382c76"><span class="section-number-3">2.1</span> 线程ID</h3>
+<div id="outline-container-org733d10c" class="outline-3">
+<h3 id="org733d10c"><span class="section-number-3">2.1</span> 线程ID</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 线程ID只在所属的进程环境中有效,其使用pthread_t数据类型来表示. 
@@ -208,34 +208,34 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org221ce10" class="outline-3">
-<h3 id="org221ce10"><span class="section-number-3">2.2</span> 一组寄存器值</h3>
+<div id="outline-container-org2410b6f" class="outline-3">
+<h3 id="org2410b6f"><span class="section-number-3">2.2</span> 一组寄存器值</h3>
 </div>
-<div id="outline-container-org70b1ac3" class="outline-3">
-<h3 id="org70b1ac3"><span class="section-number-3">2.3</span> 栈</h3>
+<div id="outline-container-org5231755" class="outline-3">
+<h3 id="org5231755"><span class="section-number-3">2.3</span> 栈</h3>
 </div>
-<div id="outline-container-org984bae6" class="outline-3">
-<h3 id="org984bae6"><span class="section-number-3">2.4</span> 调度优先级</h3>
+<div id="outline-container-orgf374c83" class="outline-3">
+<h3 id="orgf374c83"><span class="section-number-3">2.4</span> 调度优先级</h3>
 </div>
-<div id="outline-container-orgcc214ed" class="outline-3">
-<h3 id="orgcc214ed"><span class="section-number-3">2.5</span> 策略</h3>
+<div id="outline-container-orgbba1130" class="outline-3">
+<h3 id="orgbba1130"><span class="section-number-3">2.5</span> 策略</h3>
 </div>
-<div id="outline-container-orgcfe3768" class="outline-3">
-<h3 id="orgcfe3768"><span class="section-number-3">2.6</span> 信号屏蔽字</h3>
+<div id="outline-container-org4d3982f" class="outline-3">
+<h3 id="org4d3982f"><span class="section-number-3">2.6</span> 信号屏蔽字</h3>
 </div>
-<div id="outline-container-org9fa29b3" class="outline-3">
-<h3 id="org9fa29b3"><span class="section-number-3">2.7</span> errno变量</h3>
+<div id="outline-container-org0e01103" class="outline-3">
+<h3 id="org0e01103"><span class="section-number-3">2.7</span> errno变量</h3>
 </div>
-<div id="outline-container-orgee10454" class="outline-3">
-<h3 id="orgee10454"><span class="section-number-3">2.8</span> 线程私有数据</h3>
+<div id="outline-container-org91dd5b9" class="outline-3">
+<h3 id="org91dd5b9"><span class="section-number-3">2.8</span> 线程私有数据</h3>
 </div>
 </div>
-<div id="outline-container-org871a840" class="outline-2">
-<h2 id="org871a840"><span class="section-number-2">3</span> 线程的创建</h2>
+<div id="outline-container-org7fa895f" class="outline-2">
+<h2 id="org7fa895f"><span class="section-number-2">3</span> 线程的创建</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgb6e57d9" class="outline-3">
-<h3 id="orgb6e57d9"><span class="section-number-3">3.1</span> pthread_create</h3>
+<div id="outline-container-org8d61029" class="outline-3">
+<h3 id="org8d61029"><span class="section-number-3">3.1</span> pthread_create</h3>
 <div class="outline-text-3" id="text-3-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -254,8 +254,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org1b7176b" class="outline-2">
-<h2 id="org1b7176b"><span class="section-number-2">4</span> 线程终止</h2>
+<div id="outline-container-orgf2cd678" class="outline-2">
+<h2 id="orgf2cd678"><span class="section-number-2">4</span> 线程终止</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 线程终止有4种方法:
@@ -267,8 +267,8 @@
 <li>线程调用pthread_exit函数.</li>
 </ul>
 </div>
-<div id="outline-container-org111a2e3" class="outline-3">
-<h3 id="org111a2e3"><span class="section-number-3">4.1</span> pthread_exit函数说明</h3>
+<div id="outline-container-orgcdfe48c" class="outline-3">
+<h3 id="orgcdfe48c"><span class="section-number-3">4.1</span> pthread_exit函数说明</h3>
 <div class="outline-text-3" id="text-4-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -326,8 +326,8 @@ thread running. thread returns I am thread 2
 </div>
 </div>
 
-<div id="outline-container-orgad3f863" class="outline-3">
-<h3 id="orgad3f863"><span class="section-number-3">4.2</span> pthread_join函数说明</h3>
+<div id="outline-container-org2f01a0f" class="outline-3">
+<h3 id="org2f01a0f"><span class="section-number-3">4.2</span> pthread_join函数说明</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 默认情况下(非DETACH的情况下),线程终止后并不会自动释放线程所占用的资源,需要其他线程调用pthread_join函数来同步终止并释放资源(使指定线程变为DETACH状态).
@@ -351,8 +351,8 @@ pthread_join类似进程间的wait函数.
 </div>
 </div>
 
-<div id="outline-container-org91c46e2" class="outline-3">
-<h3 id="org91c46e2"><span class="section-number-3">4.3</span> pthread_cancel</h3>
+<div id="outline-container-org8777830" class="outline-3">
+<h3 id="org8777830"><span class="section-number-3">4.3</span> pthread_cancel</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 pthread_cancel函数用来 <b>请求(并不能强制)</b> 取消同一进程中的其他线程
@@ -418,8 +418,8 @@ thread runningthread returned PTHREAD_CANCELED
 </div>
 </div>
 </div>
-<div id="outline-container-org142d59d" class="outline-3">
-<h3 id="org142d59d"><span class="section-number-3">4.4</span> 线程清理函数</h3>
+<div id="outline-container-org8719035" class="outline-3">
+<h3 id="org8719035"><span class="section-number-3">4.4</span> 线程清理函数</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 类似进程,线程也可以安排它退出时要调用的函数. 这些类似atexit的函数被称为线程清理处理函数.
@@ -495,8 +495,8 @@ cleanup:thread second cleanup handler
 </div>
 </div>
 
-<div id="outline-container-org69efbd2" class="outline-3">
-<h3 id="org69efbd2"><span class="section-number-3">4.5</span> pthread_detach(pthread_t tid)</h3>
+<div id="outline-container-org3c42b33" class="outline-3">
+<h3 id="org3c42b33"><span class="section-number-3">4.5</span> pthread_detach(pthread_t tid)</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 pthread_detach可以让指定线程处于分离状态,若线程已经处于分离状态,则线程的低层存储资源会在线程终止时自动立即回收.
@@ -511,16 +511,16 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 </div>
 </div>
 </div>
-<div id="outline-container-org39fb804" class="outline-2">
-<h2 id="org39fb804"><span class="section-number-2">5</span> 线程同步</h2>
+<div id="outline-container-orgdea36db" class="outline-2">
+<h2 id="orgdea36db"><span class="section-number-2">5</span> 线程同步</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org80273b4" class="outline-3">
-<h3 id="org80273b4"><span class="section-number-3">5.1</span> 互斥量</h3>
+<div id="outline-container-orge90d117" class="outline-3">
+<h3 id="orge90d117"><span class="section-number-3">5.1</span> 互斥量</h3>
 <div class="outline-text-3" id="text-5-1">
 </div>
-<div id="outline-container-orgbeb3c52" class="outline-4">
-<h4 id="orgbeb3c52"><span class="section-number-4">5.1.1</span> 互斥量的初始化与销毁</h4>
+<div id="outline-container-org636fdb2" class="outline-4">
+<h4 id="org636fdb2"><span class="section-number-4">5.1.1</span> 互斥量的初始化与销毁</h4>
 <div class="outline-text-4" id="text-5-1-1">
 <p>
 互斥量用于保证同一时间是由一个线程访问数据. 互斥变量的数据类型为pthread_mutex_t
@@ -541,8 +541,8 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 </ul>
 </div>
 </div>
-<div id="outline-container-org1def743" class="outline-4">
-<h4 id="org1def743"><span class="section-number-4">5.1.2</span> 互斥量的加锁与解锁</h4>
+<div id="outline-container-org60b8400" class="outline-4">
+<h4 id="org60b8400"><span class="section-number-4">5.1.2</span> 互斥量的加锁与解锁</h4>
 <div class="outline-text-4" id="text-5-1-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -559,8 +559,8 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 </div>
 </div>
 </div>
-<div id="outline-container-org9c83f94" class="outline-4">
-<h4 id="org9c83f94"><span class="section-number-4">5.1.3</span> 避免死锁</h4>
+<div id="outline-container-org879bfb8" class="outline-4">
+<h4 id="org879bfb8"><span class="section-number-4">5.1.3</span> 避免死锁</h4>
 <div class="outline-text-4" id="text-5-1-3">
 <ul class="org-ul">
 <li>线程内不要对一个互斥量加锁两次</li>
@@ -569,8 +569,8 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 </ul>
 </div>
 </div>
-<div id="outline-container-org169d59c" class="outline-4">
-<h4 id="org169d59c"><span class="section-number-4">5.1.4</span> 对互斥量的一个简单C++封装</h4>
+<div id="outline-container-org3bed8b1" class="outline-4">
+<h4 id="org3bed8b1"><span class="section-number-4">5.1.4</span> 对互斥量的一个简单C++封装</h4>
 <div class="outline-text-4" id="text-5-1-4">
 <div class="org-src-container">
 <pre class="src src-C++"><span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">.h&#25991;&#20214;</span>
@@ -645,8 +645,8 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 </div>
 </div>
 </div>
-<div id="outline-container-org44142a1" class="outline-3">
-<h3 id="org44142a1"><span class="section-number-3">5.2</span> 读写锁(共享/独占锁)</h3>
+<div id="outline-container-org4c6c5eb" class="outline-3">
+<h3 id="org4c6c5eb"><span class="section-number-3">5.2</span> 读写锁(共享/独占锁)</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 读写锁有三个状态:加读锁,加写锁和不加锁.
@@ -665,8 +665,8 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 由于读写锁对读锁和写锁的这种处理,读写锁非常适合于对数据结构的读次数远大于写的情况.
 </p>
 </div>
-<div id="outline-container-orgfb7bfd3" class="outline-4">
-<h4 id="orgfb7bfd3"><span class="section-number-4">5.2.1</span> 读写锁的初始化与销毁</h4>
+<div id="outline-container-org6e39086" class="outline-4">
+<h4 id="org6e39086"><span class="section-number-4">5.2.1</span> 读写锁的初始化与销毁</h4>
 <div class="outline-text-4" id="text-5-2-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -681,8 +681,8 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 </ul>
 </div>
 </div>
-<div id="outline-container-org28c6082" class="outline-4">
-<h4 id="org28c6082"><span class="section-number-4">5.2.2</span> 读写锁的加锁与解锁</h4>
+<div id="outline-container-orged75d2c" class="outline-4">
+<h4 id="orged75d2c"><span class="section-number-4">5.2.2</span> 读写锁的加锁与解锁</h4>
 <div class="outline-text-4" id="text-5-2-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -708,8 +708,8 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 </div>
 </div>
 </div>
-<div id="outline-container-orgd393995" class="outline-3">
-<h3 id="orgd393995"><span class="section-number-3">5.3</span> 条件变量</h3>
+<div id="outline-container-org4106fef" class="outline-3">
+<h3 id="org4106fef"><span class="section-number-3">5.3</span> 条件变量</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 条件变量是利用线程间共享的全局变量进行同步的一种机制,主要包括两个动作:
@@ -731,8 +731,8 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 条件变量的数据类型为pthread_cond_t
 </p>
 </div>
-<div id="outline-container-orgc3c7ab5" class="outline-4">
-<h4 id="orgc3c7ab5"><span class="section-number-4">5.3.1</span> 条件变量的初始化与销毁</h4>
+<div id="outline-container-org0cb820f" class="outline-4">
+<h4 id="org0cb820f"><span class="section-number-4">5.3.1</span> 条件变量的初始化与销毁</h4>
 <div class="outline-text-4" id="text-5-3-1">
 <p>
 静态分配的条件变量可以直接赋值为常量PTHREAD_COND_INITIALIZER.
@@ -754,8 +754,8 @@ pthread_detach可以让指定线程处于分离状态,若线程已经处于分�
 </p>
 </div>
 </div>
-<div id="outline-container-org4b2b5b3" class="outline-4">
-<h4 id="org4b2b5b3"><span class="section-number-4">5.3.2</span> 等待条件变量变为真</h4>
+<div id="outline-container-orge6024f1" class="outline-4">
+<h4 id="orge6024f1"><span class="section-number-4">5.3.2</span> 等待条件变量变为真</h4>
 <div class="outline-text-4" id="text-5-3-2">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -792,8 +792,8 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </p>
 </div>
 </div>
-<div id="outline-container-org61b0572" class="outline-4">
-<h4 id="org61b0572"><span class="section-number-4">5.3.3</span> 唤醒线程函数</h4>
+<div id="outline-container-orgdcf1a31" class="outline-4">
+<h4 id="orgdcf1a31"><span class="section-number-4">5.3.3</span> 唤醒线程函数</h4>
 <div class="outline-text-4" id="text-5-3-3">
 <p>
 某线程改变条件状态后,需要再唤醒其他阻塞的线程,让它们重新计算一次条件是否变得满足要求.
@@ -814,8 +814,8 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </div>
 </div>
 </div>
-<div id="outline-container-org3202c00" class="outline-3">
-<h3 id="org3202c00"><span class="section-number-3">5.4</span> 使用pthread_once函数保证函数只执行一次</h3>
+<div id="outline-container-org51a9236" class="outline-3">
+<h3 id="org51a9236"><span class="section-number-3">5.4</span> 使用pthread_once函数保证函数只执行一次</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 若某个函数(多为初始化函数)在多个线程中都出现,但只需要在某个线程中执行一次即可,则可以使用`pthread_once'函数来保证.
@@ -839,8 +839,8 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </div>
 </div>
 
-<div id="outline-container-orgf523acf" class="outline-2">
-<h2 id="orgf523acf"><span class="section-number-2">6</span> 线程限制</h2>
+<div id="outline-container-org8c03cec" class="outline-2">
+<h2 id="org8c03cec"><span class="section-number-2">6</span> 线程限制</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 可以使用`sysconf'获取系统实现中线程相关的限制
@@ -862,15 +862,15 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </dl>
 </div>
 </div>
-<div id="outline-container-org15d350d" class="outline-2">
-<h2 id="org15d350d"><span class="section-number-2">7</span> 线程属性</h2>
+<div id="outline-container-orgd434cac" class="outline-2">
+<h2 id="orgd434cac"><span class="section-number-2">7</span> 线程属性</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 可以使用pthread_attr_t结构修改线程默认属性,并把这些属性与创建的线程联系起来.
 </p>
 </div>
-<div id="outline-container-orgce40d76" class="outline-3">
-<h3 id="orgce40d76"><span class="section-number-3">7.1</span> 初始化/销毁线程属性</h3>
+<div id="outline-container-org450f932" class="outline-3">
+<h3 id="org450f932"><span class="section-number-3">7.1</span> 初始化/销毁线程属性</h3>
 <div class="outline-text-3" id="text-7-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -885,12 +885,12 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </p>
 </div>
 </div>
-<div id="outline-container-org01f2f17" class="outline-3">
-<h3 id="org01f2f17"><span class="section-number-3">7.2</span> 线程属性的获取与修改</h3>
+<div id="outline-container-org92cf837" class="outline-3">
+<h3 id="org92cf837"><span class="section-number-3">7.2</span> 线程属性的获取与修改</h3>
 <div class="outline-text-3" id="text-7-2">
 </div>
-<div id="outline-container-org6bab115" class="outline-4">
-<h4 id="org6bab115"><span class="section-number-4">7.2.1</span> detachstate(线程的分离状态属性)</h4>
+<div id="outline-container-org106ac3f" class="outline-4">
+<h4 id="org106ac3f"><span class="section-number-4">7.2.1</span> detachstate(线程的分离状态属性)</h4>
 <div class="outline-text-4" id="text-7-2-1">
 <p>
 如果在创建线程时就知道不需要了解线程的终止状态,则可以修改pthread_attr_t结构中的detachstate线程属性,让线程以分离状态启动.
@@ -913,8 +913,8 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </dl>
 </div>
 </div>
-<div id="outline-container-org6a0690e" class="outline-4">
-<h4 id="org6a0690e"><span class="section-number-4">7.2.2</span> statcsize(线程栈的大小)</h4>
+<div id="outline-container-org38ea197" class="outline-4">
+<h4 id="org38ea197"><span class="section-number-4">7.2.2</span> statcsize(线程栈的大小)</h4>
 <div class="outline-text-4" id="text-7-2-2">
 <p>
 可以在编译期间查看是否定义_POSIX_THREAD_ATTR_STACKSIZE来判断系统是否支持该线程属性.
@@ -940,8 +940,8 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </p>
 </div>
 </div>
-<div id="outline-container-org3666e88" class="outline-4">
-<h4 id="org3666e88"><span class="section-number-4">7.2.3</span> stackaddr(线程栈的最低地址)</h4>
+<div id="outline-container-org8b120cf" class="outline-4">
+<h4 id="org8b120cf"><span class="section-number-4">7.2.3</span> stackaddr(线程栈的最低地址)</h4>
 <div class="outline-text-4" id="text-7-2-3">
 <p>
 可以在编译阶段使用是否定义了_POSIX_THREAD_ATTR_STACKADDR来判断系统是否支持该线程栈属性
@@ -967,8 +967,8 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfa076e6" class="outline-4">
-<h4 id="orgfa076e6"><span class="section-number-4">7.2.4</span> guardsize(线程栈末尾的警戒缓冲区大小)</h4>
+<div id="outline-container-org626e91f" class="outline-4">
+<h4 id="org626e91f"><span class="section-number-4">7.2.4</span> guardsize(线程栈末尾的警戒缓冲区大小)</h4>
 <div class="outline-text-4" id="text-7-2-4">
 <p>
 线程属性guardsize控制着线程栈末尾之后用以避免栈溢出的扩展内存的大小. 这个属性默认值为PAGESIZE.
@@ -995,8 +995,8 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </ul>
 </div>
 </div>
-<div id="outline-container-org3c635ee" class="outline-4">
-<h4 id="org3c635ee"><span class="section-number-4">7.2.5</span> 可取消状态</h4>
+<div id="outline-container-orgecb2e76" class="outline-4">
+<h4 id="orgecb2e76"><span class="section-number-4">7.2.5</span> 可取消状态</h4>
 <div class="outline-text-4" id="text-7-2-5">
 <p>
 可取消状态决定了线程在接收到`pthread_cancel'请求后是否退出.
@@ -1016,8 +1016,8 @@ pthread_cond_wait返回时,互斥量再次被锁定.
 </dl>
 </div>
 </div>
-<div id="outline-container-org03a180f" class="outline-4">
-<h4 id="org03a180f"><span class="section-number-4">7.2.6</span> 可取消类型</h4>
+<div id="outline-container-orgadb4de4" class="outline-4">
+<h4 id="orgadb4de4"><span class="section-number-4">7.2.6</span> 可取消类型</h4>
 <div class="outline-text-4" id="text-7-2-6">
 <p>
 可取消类型决定了对`pthread_cancel'请求做出响应后,什么时候退出. 
@@ -1041,8 +1041,8 @@ type参数可以为:
 </dl>
 </div>
 </div>
-<div id="outline-container-orgca0b0d0" class="outline-4">
-<h4 id="orgca0b0d0"><span class="section-number-4">7.2.7</span> 并发度</h4>
+<div id="outline-container-org41eb8a2" class="outline-4">
+<h4 id="org41eb8a2"><span class="section-number-4">7.2.7</span> 并发度</h4>
 <div class="outline-text-4" id="text-7-2-7">
 <p>
 并发度控制着用户级线程可以映射到内核线程或进程的数量. 因为有些操作系统让多个用户级线程映射为一个内核级线程/进程,这时增加给定时间内可运行的用户级线程数,可能会改善性能.
@@ -1064,16 +1064,16 @@ type参数可以为:
 </div>
 </div>
 </div>
-<div id="outline-container-org474a0a4" class="outline-2">
-<h2 id="org474a0a4"><span class="section-number-2">8</span> 同步属性</h2>
+<div id="outline-container-org5c757b5" class="outline-2">
+<h2 id="org5c757b5"><span class="section-number-2">8</span> 同步属性</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-orgd09e2de" class="outline-3">
-<h3 id="orgd09e2de"><span class="section-number-3">8.1</span> 互斥量属性</h3>
+<div id="outline-container-org06a6ba4" class="outline-3">
+<h3 id="org06a6ba4"><span class="section-number-3">8.1</span> 互斥量属性</h3>
 <div class="outline-text-3" id="text-8-1">
 </div>
-<div id="outline-container-orgd9a874d" class="outline-4">
-<h4 id="orgd9a874d"><span class="section-number-4">8.1.1</span> 互斥量属性的初始化/销毁</h4>
+<div id="outline-container-org0d673ce" class="outline-4">
+<h4 id="org0d673ce"><span class="section-number-4">8.1.1</span> 互斥量属性的初始化/销毁</h4>
 <div class="outline-text-4" id="text-8-1-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -1086,8 +1086,8 @@ type参数可以为:
 </div>
 </div>
 </div>
-<div id="outline-container-org3d4b255" class="outline-4">
-<h4 id="org3d4b255"><span class="section-number-4">8.1.2</span> 互斥量的共享属性</h4>
+<div id="outline-container-org587ed5a" class="outline-4">
+<h4 id="org587ed5a"><span class="section-number-4">8.1.2</span> 互斥量的共享属性</h4>
 <div class="outline-text-4" id="text-8-1-2">
 <p>
 默认情况下,mutex变量只能是同一进程的不同线程之间才能访问,这时互斥量的共享属性为默认的PTHREAD_PROCESS_PRIVATE
@@ -1106,8 +1106,8 @@ type参数可以为:
 </div>
 </div>
 </div>
-<div id="outline-container-org43cd902" class="outline-4">
-<h4 id="org43cd902"><span class="section-number-4">8.1.3</span> 互斥量的类型属性</h4>
+<div id="outline-container-org61ba392" class="outline-4">
+<h4 id="org61ba392"><span class="section-number-4">8.1.3</span> 互斥量的类型属性</h4>
 <div class="outline-text-4" id="text-8-1-3">
 <p>
 互斥量的类型属性控制着互斥量的特性. POSIX.1定义了四种类型的互斥量
@@ -1184,12 +1184,12 @@ type参数可以为:
 </div>
 </div>
 
-<div id="outline-container-orgac6156a" class="outline-3">
-<h3 id="orgac6156a"><span class="section-number-3">8.2</span> 读写锁属性</h3>
+<div id="outline-container-org69cc7e4" class="outline-3">
+<h3 id="org69cc7e4"><span class="section-number-3">8.2</span> 读写锁属性</h3>
 <div class="outline-text-3" id="text-8-2">
 </div>
-<div id="outline-container-org3a29f65" class="outline-4">
-<h4 id="org3a29f65"><span class="section-number-4">8.2.1</span> 读写锁初始化/销毁</h4>
+<div id="outline-container-orgf520c55" class="outline-4">
+<h4 id="orgf520c55"><span class="section-number-4">8.2.1</span> 读写锁初始化/销毁</h4>
 <div class="outline-text-4" id="text-8-2-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -1201,8 +1201,8 @@ type参数可以为:
 </div>
 </div>
 </div>
-<div id="outline-container-org4c67be1" class="outline-4">
-<h4 id="org4c67be1"><span class="section-number-4">8.2.2</span> 进程共享属性</h4>
+<div id="outline-container-org2b312db" class="outline-4">
+<h4 id="org2b312db"><span class="section-number-4">8.2.2</span> 进程共享属性</h4>
 <div class="outline-text-4" id="text-8-2-2">
 <p>
 类似互斥量的进程共享属性
@@ -1218,12 +1218,12 @@ type参数可以为:
 </div>
 </div>
 </div>
-<div id="outline-container-orge3ab5d2" class="outline-3">
-<h3 id="orge3ab5d2"><span class="section-number-3">8.3</span> 条件变量属性</h3>
+<div id="outline-container-org1fa5b0e" class="outline-3">
+<h3 id="org1fa5b0e"><span class="section-number-3">8.3</span> 条件变量属性</h3>
 <div class="outline-text-3" id="text-8-3">
 </div>
-<div id="outline-container-orgfe3bdc8" class="outline-4">
-<h4 id="orgfe3bdc8"><span class="section-number-4">8.3.1</span> 条件变量初始化/销毁</h4>
+<div id="outline-container-org89fe229" class="outline-4">
+<h4 id="org89fe229"><span class="section-number-4">8.3.1</span> 条件变量初始化/销毁</h4>
 <div class="outline-text-4" id="text-8-3-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">pthread.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -1235,8 +1235,8 @@ type参数可以为:
 </div>
 </div>
 </div>
-<div id="outline-container-org8b75ef6" class="outline-4">
-<h4 id="org8b75ef6"><span class="section-number-4">8.3.2</span> 进程共享属性</h4>
+<div id="outline-container-org97be06d" class="outline-4">
+<h4 id="org97be06d"><span class="section-number-4">8.3.2</span> 进程共享属性</h4>
 <div class="outline-text-4" id="text-8-3-2">
 <p>
 类似互斥量的进程共享属性
@@ -1253,8 +1253,8 @@ type参数可以为:
 </div>
 </div>
 </div>
-<div id="outline-container-org06e57fa" class="outline-2">
-<h2 id="org06e57fa"><span class="section-number-2">9</span> 多线程环境下的信号处理</h2>
+<div id="outline-container-orga385946" class="outline-2">
+<h2 id="orga385946"><span class="section-number-2">9</span> 多线程环境下的信号处理</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 每个线程都有自己的信号屏蔽字,但 <b>必须共享同一个信号处理函数</b>. 
@@ -1268,8 +1268,8 @@ type参数可以为:
 进程中产生的信号只能传递給某一个线程中,而无法一次性发送給多个线程. 如果信号与硬件或计时器超时有关,该信号就被发送到引起该事件的线程中去, <b>其他信号则发送到任意一个线程</b>.
 </p>
 </div>
-<div id="outline-container-org840ac25" class="outline-3">
-<h3 id="org840ac25"><span class="section-number-3">9.1</span> 多线程与进程中使用信号机制的区别.</h3>
+<div id="outline-container-orgaf14eb8" class="outline-3">
+<h3 id="orgaf14eb8"><span class="section-number-3">9.1</span> 多线程与进程中使用信号机制的区别.</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
 在进程环境中,使用信号的机制为先调用sigaction注册信号处理函数,当信号异步发生时,调用信号处理函数来处理信号,它是完全异步的.
@@ -1280,8 +1280,8 @@ type参数可以为:
 </p>
 </div>
 </div>
-<div id="outline-container-org41e7b10" class="outline-3">
-<h3 id="org41e7b10"><span class="section-number-3">9.2</span> 设置线程的信号屏蔽字</h3>
+<div id="outline-container-orge335b8a" class="outline-3">
+<h3 id="orge335b8a"><span class="section-number-3">9.2</span> 设置线程的信号屏蔽字</h3>
 <div class="outline-text-3" id="text-9-2">
 <p>
 进程用于设置信号屏蔽字的函数`sigprocmask'的行为在多线程环境中并未定义,多线程环境中必须使用`pthread_sigmask'代替
@@ -1298,8 +1298,8 @@ type参数可以为:
 </p>
 </div>
 </div>
-<div id="outline-container-org881f757" class="outline-3">
-<h3 id="org881f757"><span class="section-number-3">9.3</span> 线程等待信号发生</h3>
+<div id="outline-container-org4b68582" class="outline-3">
+<h3 id="org4b68582"><span class="section-number-3">9.3</span> 线程等待信号发生</h3>
 <div class="outline-text-3" id="text-9-3">
 <p>
 线程通过调用`sigwait'等待一个或多个信号发生
@@ -1330,8 +1330,8 @@ type参数可以为:
 </p>
 </div>
 </div>
-<div id="outline-container-org4946910" class="outline-3">
-<h3 id="org4946910"><span class="section-number-3">9.4</span> 发送信号給线程</h3>
+<div id="outline-container-org7c7edf3" class="outline-3">
+<h3 id="org7c7edf3"><span class="section-number-3">9.4</span> 发送信号給线程</h3>
 <div class="outline-text-3" id="text-9-4">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">signal.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -1348,8 +1348,8 @@ type参数可以为:
 </div>
 </div>
 </div>
-<div id="outline-container-orge9fe909" class="outline-2">
-<h2 id="orge9fe909"><span class="section-number-2">10</span> 多线程环境下的fork</h2>
+<div id="outline-container-orga407594" class="outline-2">
+<h2 id="orga407594"><span class="section-number-2">10</span> 多线程环境下的fork</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 父进程fork出的子进程会继承父进程的所有互斥量,读写锁和条件变量的状态,但是却只有线程,即父进程中调用fork的那个线程.
@@ -1455,8 +1455,8 @@ parent returned from fork
 <li>prepare处理函数的调用顺序与注册时的顺序相反</li>
 </ul>
 </div>
-<div id="outline-container-org8120647" class="outline-3">
-<h3 id="org8120647"><span class="section-number-3">10.1</span> 多线程环境下fork的问题</h3>
+<div id="outline-container-org0ce3ebd" class="outline-3">
+<h3 id="org0ce3ebd"><span class="section-number-3">10.1</span> 多线程环境下fork的问题</h3>
 <div class="outline-text-3" id="text-10-1">
 <ul class="org-ul">
 <li>虽然`pthread_atfork'函数可以用来注册清理锁状态,但是条件变量的清理动作却是未定义的,有的操作系统实现不需要清理条件变量,有的操作系统实现fork之后无法再使用条件变量.</li>
@@ -1465,8 +1465,8 @@ parent returned from fork
 </div>
 </div>
 </div>
-<div id="outline-container-org531802b" class="outline-2">
-<h2 id="org531802b"><span class="section-number-2">11</span> 线程的私有数据(Thread-specific Data)</h2>
+<div id="outline-container-org6adc1ed" class="outline-2">
+<h2 id="org6adc1ed"><span class="section-number-2">11</span> 线程的私有数据(Thread-specific Data)</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 线程私有数据常用于模拟线程私有的全局变量,即这个变量的值在不同线程中是不同,但可以被同一个线程中的多个函数所共享.
@@ -1476,8 +1476,8 @@ parent returned from fork
 关于线程私有数据(TSD)的一个明显例子就是errno,每个线程都有自己的errno的值,但线程内部的函数共享一个errno的值
 </p>
 </div>
-<div id="outline-container-org253e356" class="outline-3">
-<h3 id="org253e356"><span class="section-number-3">11.1</span> pthread_key_create</h3>
+<div id="outline-container-orgc68a084" class="outline-3">
+<h3 id="orgc68a084"><span class="section-number-3">11.1</span> pthread_key_create</h3>
 <div class="outline-text-3" id="text-11-1">
 <p>
 在分配线程私有数据之前,需要创建与该数据相关联的键. 这个键将用于获取对线程私有函数的访问权. 使用`pthread_key_create'创建一个键
@@ -1518,8 +1518,8 @@ parent returned from fork
 </ul>
 </div>
 </div>
-<div id="outline-container-org3fb7048" class="outline-3">
-<h3 id="org3fb7048"><span class="section-number-3">11.2</span> pthread_key_delete</h3>
+<div id="outline-container-orgb02e2d7" class="outline-3">
+<h3 id="orgb02e2d7"><span class="section-number-3">11.2</span> pthread_key_delete</h3>
 <div class="outline-text-3" id="text-11-2">
 <p>
 对所有的线程,都可以通过调用`pthread_key_delete'来取消key与线程私有数据的关联. 但需要注意的是: <b>调用`pthread_key_delete'并不会触发与之关联的析构函数</b>
@@ -1533,8 +1533,8 @@ parent returned from fork
 </div>
 </div>
 </div>
-<div id="outline-container-orgcce9557" class="outline-3">
-<h3 id="orgcce9557"><span class="section-number-3">11.3</span> pthread_setspecific/pthread_getspecific</h3>
+<div id="outline-container-org254ed72" class="outline-3">
+<h3 id="org254ed72"><span class="section-number-3">11.3</span> pthread_setspecific/pthread_getspecific</h3>
 <div class="outline-text-3" id="text-11-3">
 <p>
 键一旦创建,就可以
@@ -1562,7 +1562,7 @@ parent returned from fork
             <span title="post date" class="post-info">2015-05-28</span>
             <span title="last modification date" class="post-info">2016-10-24</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">DarkSun</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -1603,9 +1603,9 @@ parent returned from fork
         </section>
     <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">DarkSun</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

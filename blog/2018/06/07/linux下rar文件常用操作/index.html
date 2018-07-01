@@ -44,23 +44,23 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1cb9e8f">安装rar命令</a></li>
-<li><a href="#orge8a20b2">rar命令常见操作</a>
+<li><a href="#orga187fe9">安装rar命令</a></li>
+<li><a href="#org476f5a4">rar命令常见操作</a>
 <ul>
-<li><a href="#org453546c">创建rar压缩包</a></li>
-<li><a href="#orge09fc46">查看压缩包的内容</a></li>
-<li><a href="#org3deb68c">压缩包解压</a></li>
-<li><a href="#org127400b">关于密码</a></li>
-<li><a href="#orgcf4fbcb">设置压缩级别</a></li>
+<li><a href="#org0fe28e9">创建rar压缩包</a></li>
+<li><a href="#org68596c8">查看压缩包的内容</a></li>
+<li><a href="#orgb7bbef9">压缩包解压</a></li>
+<li><a href="#org6dff211">关于密码</a></li>
+<li><a href="#org8631c64">设置压缩级别</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1cb9e8f" class="outline-2">
-<h2 id="org1cb9e8f">安装rar命令</h2>
-<div class="outline-text-2" id="text-org1cb9e8f">
+<div id="outline-container-orga187fe9" class="outline-2">
+<h2 id="orga187fe9">安装rar命令</h2>
+<div class="outline-text-2" id="text-orga187fe9">
 <div class="org-src-container">
 <pre class="src src-shell">sudo pacman -S rar --noconfirm
 </pre>
@@ -68,9 +68,9 @@
 </div>
 </div>
 
-<div id="outline-container-orge8a20b2" class="outline-2">
-<h2 id="orge8a20b2">rar命令常见操作</h2>
-<div class="outline-text-2" id="text-orge8a20b2">
+<div id="outline-container-org476f5a4" class="outline-2">
+<h2 id="org476f5a4">rar命令常见操作</h2>
+<div class="outline-text-2" id="text-org476f5a4">
 <p>
 直接运行 <code>rar</code> 命令就会列出所有可用的操作及其说明
 </p>
@@ -149,7 +149,7 @@ Usage:     rar &lt;command&gt; -&lt;switch 1&gt; -&lt;switch N&gt; &lt;archive&g
   ma[4|5]       Specify a version of archiving format
   mc&lt;par&gt;       Set advanced compression parameters
   md&lt;n&gt;[k,m,g]  Dictionary size in KB, MB or GB
-  ms[ext;<span style="color: #000000; background-color: #ff00ff;">ext</span>]   Specify file types to store
+  ms[ext;ext]   Specify file types to store
   mt&lt;threads&gt;   Set the number of threads
   n&lt;file&gt;       Additionally filter included files
   n@            Read additional filter masks from stdin
@@ -184,7 +184,7 @@ Usage:     rar &lt;command&gt; -&lt;switch 1&gt; -&lt;switch N&gt; &lt;archive&g
   to&lt;time&gt;      Process files older than &lt;time&gt;
   ts[m|c|a]     Save or restore file time (modification, creation, access)
   u             Update files
-  v&lt;size&gt;[k,b]  Create volumes with size=&lt;<span style="color: #000000; background-color: #ff00ff;">size</span>&gt;*1000 [*1024, *1]
+  v&lt;size&gt;[k,b]  Create volumes with size=&lt;size&gt;*1000 [*1024, *1]
   ver[n]        File version control
   vn            Use the old style volume naming scheme
   vp            Pause before each volume
@@ -198,9 +198,9 @@ Usage:     rar &lt;command&gt; -&lt;switch 1&gt; -&lt;switch N&gt; &lt;archive&g
 </div>
 </div>
 
-<div id="outline-container-org453546c" class="outline-3">
-<h3 id="org453546c">创建rar压缩包</h3>
-<div class="outline-text-3" id="text-org453546c">
+<div id="outline-container-org0fe28e9" class="outline-3">
+<h3 id="org0fe28e9">创建rar压缩包</h3>
+<div class="outline-text-3" id="text-org0fe28e9">
 <p>
 使用 <code>a</code> 子命令来生成rar压缩包，其语法为(注意不要在a前面加上"-")
 </p>
@@ -211,9 +211,9 @@ Usage:     rar &lt;command&gt; -&lt;switch 1&gt; -&lt;switch N&gt; &lt;archive&g
 </div>
 </div>
 
-<div id="outline-container-orge09fc46" class="outline-3">
-<h3 id="orge09fc46">查看压缩包的内容</h3>
-<div class="outline-text-3" id="text-orge09fc46">
+<div id="outline-container-org68596c8" class="outline-3">
+<h3 id="org68596c8">查看压缩包的内容</h3>
+<div class="outline-text-3" id="text-org68596c8">
 <p>
 使用 <code>l</code> 子命令可以查看rar压缩包中的内容，其语法为
 </p>
@@ -224,9 +224,9 @@ Usage:     rar &lt;command&gt; -&lt;switch 1&gt; -&lt;switch N&gt; &lt;archive&g
 </div>
 </div>
 
-<div id="outline-container-org3deb68c" class="outline-3">
-<h3 id="org3deb68c">压缩包解压</h3>
-<div class="outline-text-3" id="text-org3deb68c">
+<div id="outline-container-orgb7bbef9" class="outline-3">
+<h3 id="orgb7bbef9">压缩包解压</h3>
+<div class="outline-text-3" id="text-orgb7bbef9">
 <p>
 使用 <code>x</code> 子命令可以将压缩包内容解压到当前目录中，比如
 </p>
@@ -239,9 +239,9 @@ ls -l
 </div>
 </div>
 
-<div id="outline-container-org127400b" class="outline-3">
-<h3 id="org127400b">关于密码</h3>
-<div class="outline-text-3" id="text-org127400b">
+<div id="outline-container-org6dff211" class="outline-3">
+<h3 id="org6dff211">关于密码</h3>
+<div class="outline-text-3" id="text-org6dff211">
 <p>
 当想创建带密码保护的压缩包或需要解压带密码保护的压缩包时，就需要在 <code>a</code> / <code>x</code> 子命令后再接上 <code>-p</code> 选项
 </p>
@@ -252,9 +252,9 @@ ls -l
 </div>
 </div>
 
-<div id="outline-container-orgcf4fbcb" class="outline-3">
-<h3 id="orgcf4fbcb">设置压缩级别</h3>
-<div class="outline-text-3" id="text-orgcf4fbcb">
+<div id="outline-container-org8631c64" class="outline-3">
+<h3 id="org8631c64">设置压缩级别</h3>
+<div class="outline-text-3" id="text-org8631c64">
 <p>
 使用 <code>-m0</code> 到 <code>-m5</code> 来设置压缩级别，其中0级表示只打包不压缩,这种压缩速度很快,而5表示最大级别的压缩，但压缩速度会很慢,默认为3级
 </p>

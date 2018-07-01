@@ -43,43 +43,43 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge850073">1. 编号为0的信号</a></li>
-<li><a href="#org3a32619">2. 信号的处理</a></li>
-<li><a href="#org89bbae9">3. 不产生core文件的条件</a></li>
-<li><a href="#org8fad4cc">4. 常用信号说明</a></li>
-<li><a href="#orgd748cb2">5. 注册信号处理函数</a>
+<li><a href="#orge9c5157">1. 编号为0的信号</a></li>
+<li><a href="#orgd8deeb2">2. 信号的处理</a></li>
+<li><a href="#org24432c8">3. 不产生core文件的条件</a></li>
+<li><a href="#org29886aa">4. 常用信号说明</a></li>
+<li><a href="#orgc545150">5. 注册信号处理函数</a>
 <ul>
-<li><a href="#org7019e31">5.1. signal</a></li>
+<li><a href="#orgee54525">5.1. signal</a></li>
 </ul>
 </li>
-<li><a href="#org6a1d610">6. 不可靠的信号</a></li>
-<li><a href="#orgaca8dfc">7. 可重入函数与不可重入函数</a></li>
-<li><a href="#org75d5c46">8. 抛出信号</a></li>
-<li><a href="#orge2a73d4">9. alarm设置计时器</a></li>
-<li><a href="#orgd23b1e4">10. pause函数挂起进程</a></li>
-<li><a href="#orgeb3f835">11. 信号集</a></li>
-<li><a href="#orgcb20ccb">12. sigprocmask函数</a></li>
-<li><a href="#org144550e">13. sigpendng函数</a></li>
-<li><a href="#org17e9399">14. sigaction函数</a>
+<li><a href="#orgd09b044">6. 不可靠的信号</a></li>
+<li><a href="#org0bd86bd">7. 可重入函数与不可重入函数</a></li>
+<li><a href="#org18ff1b4">8. 抛出信号</a></li>
+<li><a href="#org0fcbf4d">9. alarm设置计时器</a></li>
+<li><a href="#org2ee525a">10. pause函数挂起进程</a></li>
+<li><a href="#orgb0ccb92">11. 信号集</a></li>
+<li><a href="#orgf79d67b">12. sigprocmask函数</a></li>
+<li><a href="#org2bd6173">13. sigpendng函数</a></li>
+<li><a href="#org62176f7">14. sigaction函数</a>
 <ul>
-<li><a href="#org4010518">14.1. 参数act的说明</a></li>
-<li><a href="#org16b4f82">14.2. 函数sa_sigaction说明</a></li>
+<li><a href="#org36a80dc">14.1. 参数act的说明</a></li>
+<li><a href="#org9889592">14.2. 函数sa_sigaction说明</a></li>
 </ul>
 </li>
-<li><a href="#org08f5326">15. sigsetjmp和siglongjmp函数</a></li>
-<li><a href="#org99b1a01">16. sigsuspend</a></li>
-<li><a href="#orgca959a1">17. abort函数</a></li>
-<li><a href="#org8fb5686">18. 其他特性</a>
+<li><a href="#org69e244b">15. sigsetjmp和siglongjmp函数</a></li>
+<li><a href="#org78fc5d4">16. sigsuspend</a></li>
+<li><a href="#orgf5b9d89">17. abort函数</a></li>
+<li><a href="#orge105875">18. 其他特性</a>
 <ul>
-<li><a href="#org831a4cc">18.1. </a></li>
+<li><a href="#orgca4ddac">18.1. </a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge850073" class="outline-2">
-<h2 id="orge850073"><span class="section-number-2">1</span> 编号为0的信号</h2>
+<div id="outline-container-orge9c5157" class="outline-2">
+<h2 id="orge9c5157"><span class="section-number-2">1</span> 编号为0的信号</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 不存在编号为0的信号,kill函数对编号为0的信号有特殊处理. POSIX.1将这种信号称为空信号
@@ -87,8 +87,8 @@
 </div>
 </div>
 
-<div id="outline-container-org3a32619" class="outline-2">
-<h2 id="org3a32619"><span class="section-number-2">2</span> 信号的处理</h2>
+<div id="outline-container-orgd8deeb2" class="outline-2">
+<h2 id="orgd8deeb2"><span class="section-number-2">2</span> 信号的处理</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 有两种信号是不能忽略的,就是SIGKILL和SIGSTOP,因为进程收到这两个信号后必须终止或停止0运行.
@@ -96,8 +96,8 @@
 </div>
 </div>
 
-<div id="outline-container-org89bbae9" class="outline-2">
-<h2 id="org89bbae9"><span class="section-number-2">3</span> 不产生core文件的条件</h2>
+<div id="outline-container-org24432c8" class="outline-2">
+<h2 id="org24432c8"><span class="section-number-2">3</span> 不产生core文件的条件</h2>
 <div class="outline-text-2" id="text-3">
 <ol class="org-ol">
 <li>进度是设置用户ID的,但当前用户并非程序文件的所有者</li>
@@ -109,8 +109,8 @@
 </div>
 </div>
 
-<div id="outline-container-org8fad4cc" class="outline-2">
-<h2 id="org8fad4cc"><span class="section-number-2">4</span> 常用信号说明</h2>
+<div id="outline-container-org29886aa" class="outline-2">
+<h2 id="org29886aa"><span class="section-number-2">4</span> 常用信号说明</h2>
 <div class="outline-text-2" id="text-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -261,12 +261,12 @@
 </div>
 </div>
 
-<div id="outline-container-orgd748cb2" class="outline-2">
-<h2 id="orgd748cb2"><span class="section-number-2">5</span> 注册信号处理函数</h2>
+<div id="outline-container-orgc545150" class="outline-2">
+<h2 id="orgc545150"><span class="section-number-2">5</span> 注册信号处理函数</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org7019e31" class="outline-3">
-<h3 id="org7019e31"><span class="section-number-3">5.1</span> signal</h3>
+<div id="outline-container-orgee54525" class="outline-3">
+<h3 id="orgee54525"><span class="section-number-3">5.1</span> signal</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
 <pre class="src src-C"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">signal.h</span><span style="color: #4f97d7;">&gt;</span>
@@ -286,8 +286,8 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org6a1d610" class="outline-2">
-<h2 id="org6a1d610"><span class="section-number-2">6</span> 不可靠的信号</h2>
+<div id="outline-container-orgd09b044" class="outline-2">
+<h2 id="orgd09b044"><span class="section-number-2">6</span> 不可靠的信号</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 早期UNIX中的信号是不可靠的,即信号可能会丢失
@@ -298,8 +298,8 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaca8dfc" class="outline-2">
-<h2 id="orgaca8dfc"><span class="section-number-2">7</span> 可重入函数与不可重入函数</h2>
+<div id="outline-container-org0bd86bd" class="outline-2">
+<h2 id="org0bd86bd"><span class="section-number-2">7</span> 可重入函数与不可重入函数</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 进程在捕获到信号后,会中断正在执行的指令序列,转而调用该信号的处理程序,然后再接着执行在捕捉到信号时进程正在执行的正常命令序列.
@@ -327,8 +327,8 @@
 </p>
 </div>
 </div>
-<div id="outline-container-org75d5c46" class="outline-2">
-<h2 id="org75d5c46"><span class="section-number-2">8</span> 抛出信号</h2>
+<div id="outline-container-org18ff1b4" class="outline-2">
+<h2 id="org18ff1b4"><span class="section-number-2">8</span> 抛出信号</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 kill函数将信号发送給进程或进程组. raise函数允许进程向 <b>自身</b> 发送信号
@@ -370,8 +370,8 @@ kill的pid参数有4种不同的情况:
 </p>
 </div>
 </div>
-<div id="outline-container-orge2a73d4" class="outline-2">
-<h2 id="orge2a73d4"><span class="section-number-2">9</span> alarm设置计时器</h2>
+<div id="outline-container-org0fcbf4d" class="outline-2">
+<h2 id="org0fcbf4d"><span class="section-number-2">9</span> alarm设置计时器</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 alarm函数设置一个定时器,当定时器超时后会产生SIGALRM信号. 系统的默认动作是终止调用该alarm函数的进程
@@ -393,8 +393,8 @@ alarm函数设置一个定时器,当定时器超时后会产生SIGALRM信号. �
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd23b1e4" class="outline-2">
-<h2 id="orgd23b1e4"><span class="section-number-2">10</span> pause函数挂起进程</h2>
+<div id="outline-container-org2ee525a" class="outline-2">
+<h2 id="org2ee525a"><span class="section-number-2">10</span> pause函数挂起进程</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 pause函数使调用进程挂起直至捕获到一个信号
@@ -420,8 +420,8 @@ pause函数使调用进程挂起直至捕获到一个信号
 </p>
 </div>
 </div>
-<div id="outline-container-orgeb3f835" class="outline-2">
-<h2 id="orgeb3f835"><span class="section-number-2">11</span> 信号集</h2>
+<div id="outline-container-orgb0ccb92" class="outline-2">
+<h2 id="orgb0ccb92"><span class="section-number-2">11</span> 信号集</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 当我们在调用sigprocmask来告诉内核暂时阻塞哪些信号传递給进程时,需要一种方式来一次传递多个信号的集合. 
@@ -456,8 +456,8 @@ POSIX.1定义了数据类型 <b>sigset_t</b> 来表示信号集,并定义了下�
 </div>
 </div>
 </div>
-<div id="outline-container-orgcb20ccb" class="outline-2">
-<h2 id="orgcb20ccb"><span class="section-number-2">12</span> sigprocmask函数</h2>
+<div id="outline-container-orgf79d67b" class="outline-2">
+<h2 id="orgf79d67b"><span class="section-number-2">12</span> sigprocmask函数</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 sigprocmask函数可以检测或更改进程的信号屏蔽字,该进程屏蔽字告诉内核阻塞哪些信号传递給该进程.
@@ -550,8 +550,8 @@ sigprocmask函数可以检测或更改进程的信号屏蔽字,该进程屏蔽�
 </div>
 </div>
 
-<div id="outline-container-org144550e" class="outline-2">
-<h2 id="org144550e"><span class="section-number-2">13</span> sigpendng函数</h2>
+<div id="outline-container-org2bd6173" class="outline-2">
+<h2 id="org2bd6173"><span class="section-number-2">13</span> sigpendng函数</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 sigpending函数返回当前应该传递給进程但被阻塞的信号集合
@@ -572,8 +572,8 @@ sigpending函数返回当前应该传递給进程但被阻塞的信号集合
 </div>
 </div>
 
-<div id="outline-container-org17e9399" class="outline-2">
-<h2 id="org17e9399"><span class="section-number-2">14</span> sigaction函数</h2>
+<div id="outline-container-org62176f7" class="outline-2">
+<h2 id="org62176f7"><span class="section-number-2">14</span> sigaction函数</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 sigaction函数检查或修改与指定信号相关联的处理动作, 其被取代UNIX早期版本中的signal函数
@@ -583,10 +583,10 @@ sigaction函数检查或修改与指定信号相关联的处理动作, 其被取
 
 <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">sigaction</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">signo</span>,<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sigaction</span>* <span style="color: #7590db;">act</span>,<span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sigaction</span>* <span style="color: #7590db;">old_act</span><span style="color: #4f97d7;">)</span>;
 <span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">sigaction</span><span style="color: #4f97d7;">{</span>
-  <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5;">(</span>*<span style="color: #bc6ec5; font-weight: bold;">sa_handler</span><span style="color: #bc6ec5;">)(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">signo</span><span style="color: #bc6ec5;">)</span>;      <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">signal&#22788;&#29702;&#20989;&#25968;&#30340;&#22320;&#22336;,&#25110;SIG_IGN,SIG_DFL </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+  <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5;">(</span>*sa_handler<span style="color: #bc6ec5;">)(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">signo</span><span style="color: #bc6ec5;">)</span>;      <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">signal&#22788;&#29702;&#20989;&#25968;&#30340;&#22320;&#22336;,&#25110;SIG_IGN,SIG_DFL </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
   <span style="color: #ce537a; font-weight: bold;">sigset_t</span> <span style="color: #7590db;">sa_mask</span>;             <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#35843;&#29992;sa_handler&#26102;&#35201;&#26032;&#38459;&#22622;&#30340;&#20449;&#21495;&#38598; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
   <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">sa_flags</span>;                 <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#20854;&#20182;&#25805;&#20316;&#26631;&#24535; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
-  <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5;">(</span>*<span style="color: #bc6ec5; font-weight: bold;">sa_sigaction</span><span style="color: #bc6ec5;">)(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">signo</span>,<span style="color: #ce537a; font-weight: bold;">siginfo_t</span>* <span style="color: #7590db;">iinfo</span>,<span style="color: #ce537a; font-weight: bold;">void</span>* <span style="color: #7590db;">context</span><span style="color: #bc6ec5;">)</span>;
+  <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5;">(</span>*sa_sigaction<span style="color: #bc6ec5;">)(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">signo</span>,<span style="color: #ce537a; font-weight: bold;">siginfo_t</span>* <span style="color: #7590db;">iinfo</span>,<span style="color: #ce537a; font-weight: bold;">void</span>* <span style="color: #7590db;">context</span><span style="color: #bc6ec5;">)</span>;
 <span style="color: #4f97d7;">}</span>;
 </pre>
 </div>
@@ -596,8 +596,8 @@ sigaction函数检查或修改与指定信号相关联的处理动作, 其被取
 <li>若参数old_act不为NULL,则保存该信号的原处理函数.</li>
 </ul>
 </div>
-<div id="outline-container-org4010518" class="outline-3">
-<h3 id="org4010518"><span class="section-number-3">14.1</span> 参数act的说明</h3>
+<div id="outline-container-org36a80dc" class="outline-3">
+<h3 id="org36a80dc"><span class="section-number-3">14.1</span> 参数act的说明</h3>
 <div class="outline-text-3" id="text-14-1">
 <ul class="org-ul">
 <li>sa_handler为信号处理函数的地址,当收到信号signo时,转到该函数来处理</li>
@@ -664,8 +664,8 @@ sa_flags指定了对信号进行处理的各个选项,各选项可以使用`|'�
 </ul>
 </div>
 </div>
-<div id="outline-container-org16b4f82" class="outline-3">
-<h3 id="org16b4f82"><span class="section-number-3">14.2</span> 函数sa_sigaction说明</h3>
+<div id="outline-container-org9889592" class="outline-3">
+<h3 id="org9889592"><span class="section-number-3">14.2</span> 函数sa_sigaction说明</h3>
 <div class="outline-text-3" id="text-14-2">
 <p>
 当在sigaction结构中使用了SA_SIGINFO标志时,使用sa_sigaction信号处理程序. 该函数接收两个附加参数:
@@ -692,8 +692,8 @@ siginfo结构的指针包含了信号产生的原因相关信息
 </div>
 </div>
 </div>
-<div id="outline-container-org08f5326" class="outline-2">
-<h2 id="org08f5326"><span class="section-number-2">15</span> sigsetjmp和siglongjmp函数</h2>
+<div id="outline-container-org69e244b" class="outline-2">
+<h2 id="org69e244b"><span class="section-number-2">15</span> sigsetjmp和siglongjmp函数</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 在可靠的信号机制中,当进程捕捉到信号,进入信号处理函数时,当前信号会被自动地加到进程的信号屏蔽字中,此时,若信号处理函数中用longjmp跳出信号处理函数,那么 <b>对此进程的信号屏蔽字是否回退是未定义的</b>.
@@ -732,8 +732,8 @@ siginfo结构的指针包含了信号产生的原因相关信息
 </div>
 </div>
 
-<div id="outline-container-org99b1a01" class="outline-2">
-<h2 id="org99b1a01"><span class="section-number-2">16</span> sigsuspend</h2>
+<div id="outline-container-org78fc5d4" class="outline-2">
+<h2 id="org78fc5d4"><span class="section-number-2">16</span> sigsuspend</h2>
 <div class="outline-text-2" id="text-16">
 <p>
 若希望对一个信号接触阻塞,然后通过pause函数休眠以等待被阻塞的信号发生,该如何实现呢?
@@ -766,8 +766,8 @@ sigsuspend函数临时将进程的信号屏蔽字设置为由sigmask指向的值
 </p>
 </div>
 </div>
-<div id="outline-container-orgca959a1" class="outline-2">
-<h2 id="orgca959a1"><span class="section-number-2">17</span> abort函数</h2>
+<div id="outline-container-orgf5b9d89" class="outline-2">
+<h2 id="orgf5b9d89"><span class="section-number-2">17</span> abort函数</h2>
 <div class="outline-text-2" id="text-17">
 <p>
 abort函数发送SIGABRT信号到调用进程,并且 <b>不管信号处理函数如何处理,abort都使进程异常终止.</b>
@@ -783,8 +783,8 @@ abort函数发送SIGABRT信号到调用进程,并且 <b>不管信号处理函数
 </p>
 </div>
 </div>
-<div id="outline-container-org8fb5686" class="outline-2">
-<h2 id="org8fb5686"><span class="section-number-2">18</span> 其他特性</h2>
+<div id="outline-container-orge105875" class="outline-2">
+<h2 id="orge105875"><span class="section-number-2">18</span> 其他特性</h2>
 <div class="outline-text-2" id="text-18">
 <p>
 这些特性依赖于具体的实现
@@ -826,8 +826,8 @@ strsignal函数
 </p></li>
 </ul>
 </div>
-<div id="outline-container-org831a4cc" class="outline-3">
-<h3 id="org831a4cc"><span class="section-number-3">18.1</span> </h3>
+<div id="outline-container-orgca4ddac" class="outline-3">
+<h3 id="orgca4ddac"><span class="section-number-3">18.1</span> </h3>
 </div>
 </div>
 
@@ -838,7 +838,7 @@ strsignal函数
             <span title="post date" class="post-info">2015-05-22</span>
             <span title="last modification date" class="post-info">2016-10-24</span>
             <span title="tags" class="post-info">:N/A:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">DarkSun</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -879,9 +879,9 @@ strsignal函数
         </section>
     <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">DarkSun</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">DarkSun</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

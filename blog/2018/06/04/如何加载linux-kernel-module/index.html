@@ -44,16 +44,16 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org929b7a5">kernel module存放在哪里</a></li>
-<li><a href="#orgd178202">如何加载module</a></li>
-<li><a href="#org4d46e1e">卸载module</a></li>
+<li><a href="#org6334bef">kernel module存放在哪里</a></li>
+<li><a href="#orge82a7e9">如何加载module</a></li>
+<li><a href="#orgb48f183">卸载module</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org929b7a5" class="outline-2">
-<h2 id="org929b7a5">kernel module存放在哪里</h2>
-<div class="outline-text-2" id="text-org929b7a5">
+<div id="outline-container-org6334bef" class="outline-2">
+<h2 id="org6334bef">kernel module存放在哪里</h2>
+<div class="outline-text-2" id="text-org6334bef">
 <p>
 linux自带了很多kernel module文件, 这些文件一般以 <code>.ko</code> 或 <code>.ko.xz</code> 文件结尾,存放在 <code>/lib/module/$(uname -r)</code> 目录中。
 </p>
@@ -65,20 +65,20 @@ linux自带了很多kernel module文件, 这些文件一般以 <code>.ko</code> 
 
 <div class="org-src-container">
 <pre class="src src-org">&#24635;&#29992;&#37327; 5844
-drwxr-xr-x  3 root <span style="color: #000000; background-color: #ff00ff;">root</span>    4096 6&#26376;   1 12:04 build
-lrwxrwxrwx  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>      25 5&#26376;  26 08:26 extramodules -&gt; ../<span style="color: #000000; background-color: #ff00ff;">extramodules</span>-4.16-ARCH
-drwxr-xr-x 12 root <span style="color: #000000; background-color: #ff00ff;">root</span>    4096 6&#26376;   1 12:04 kernel
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span> 1373746 6&#26376;   1 12:05 modules.alias
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span> 1351352 6&#26376;   1 12:05 modules.alias.bin
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>    4820 5&#26376;  26 08:24 modules.builtin
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>    6584 6&#26376;   1 12:05 modules.builtin.bin
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>  708369 6&#26376;   1 12:05 modules.dep
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>  939730 6&#26376;   1 12:05 modules.dep.bin
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>     433 6&#26376;   1 12:05 modules.devname
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>  210735 5&#26376;  26 08:24 modules.order
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>     598 6&#26376;   1 12:05 modules.softdep
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>  610067 6&#26376;   1 12:05 modules.symbols
--rw-r--<span style="color: #000000; background-color: #ff00ff;">r</span>--  1 root <span style="color: #000000; background-color: #ff00ff;">root</span>  746894 6&#26376;   1 12:05 modules.symbols.bin
+drwxr-xr-x  3 root root    4096 6&#26376;   1 12:04 build
+lrwxrwxrwx  1 root root      25 5&#26376;  26 08:26 extramodules -&gt; ../extramodules-4.16-ARCH
+drwxr-xr-x 12 root root    4096 6&#26376;   1 12:04 kernel
+-rw-r--r--  1 root root 1373746 6&#26376;   1 12:05 modules.alias
+-rw-r--r--  1 root root 1351352 6&#26376;   1 12:05 modules.alias.bin
+-rw-r--r--  1 root root    4820 5&#26376;  26 08:24 modules.builtin
+-rw-r--r--  1 root root    6584 6&#26376;   1 12:05 modules.builtin.bin
+-rw-r--r--  1 root root  708369 6&#26376;   1 12:05 modules.dep
+-rw-r--r--  1 root root  939730 6&#26376;   1 12:05 modules.dep.bin
+-rw-r--r--  1 root root     433 6&#26376;   1 12:05 modules.devname
+-rw-r--r--  1 root root  210735 5&#26376;  26 08:24 modules.order
+-rw-r--r--  1 root root     598 6&#26376;   1 12:05 modules.softdep
+-rw-r--r--  1 root root  610067 6&#26376;   1 12:05 modules.symbols
+-rw-r--r--  1 root root  746894 6&#26376;   1 12:05 modules.symbols.bin
 </pre>
 </div>
 
@@ -92,16 +92,16 @@ drwxr-xr-x 12 root <span style="color: #000000; background-color: #ff00ff;">root
 
 <div class="org-src-container">
 <pre class="src src-org">&#24635;&#29992;&#37327; 40
-drwxr-xr-x   3 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 arch
-drwxr-xr-x   3 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 crypto
-drwxr-xr-x 102 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 drivers
-drwxr-xr-x  48 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 fs
-drwxr-xr-x   6 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 lib
-drwxr-xr-x   2 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 mm
-drwxr-xr-x  52 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 net
-drwxr-xr-x   3 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 security
-drwxr-xr-x  14 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 sound
-drwxr-xr-x   3 root <span style="color: #000000; background-color: #ff00ff;">root</span> 4096 6&#26376;   1 12:04 virt
+drwxr-xr-x   3 root root 4096 6&#26376;   1 12:04 arch
+drwxr-xr-x   3 root root 4096 6&#26376;   1 12:04 crypto
+drwxr-xr-x 102 root root 4096 6&#26376;   1 12:04 drivers
+drwxr-xr-x  48 root root 4096 6&#26376;   1 12:04 fs
+drwxr-xr-x   6 root root 4096 6&#26376;   1 12:04 lib
+drwxr-xr-x   2 root root 4096 6&#26376;   1 12:04 mm
+drwxr-xr-x  52 root root 4096 6&#26376;   1 12:04 net
+drwxr-xr-x   3 root root 4096 6&#26376;   1 12:04 security
+drwxr-xr-x  14 root root 4096 6&#26376;   1 12:04 sound
+drwxr-xr-x   3 root root 4096 6&#26376;   1 12:04 virt
 </pre>
 </div>
 
@@ -115,9 +115,9 @@ linux当然不可能将所有的module都加载进kernel，要查看目前加载
 </div>
 </div>
 
-<div id="outline-container-orgd178202" class="outline-2">
-<h2 id="orgd178202">如何加载module</h2>
-<div class="outline-text-2" id="text-orgd178202">
+<div id="outline-container-orge82a7e9" class="outline-2">
+<h2 id="orge82a7e9">如何加载module</h2>
+<div class="outline-text-2" id="text-orge82a7e9">
 <p>
 加载module特别简单，只需要使用 <code>modprobe module名</code> 就行了。
 </p>
@@ -136,9 +136,9 @@ linux当然不可能将所有的module都加载进kernel，要查看目前加载
 </div>
 </div>
 
-<div id="outline-container-org4d46e1e" class="outline-2">
-<h2 id="org4d46e1e">卸载module</h2>
-<div class="outline-text-2" id="text-org4d46e1e">
+<div id="outline-container-orgb48f183" class="outline-2">
+<h2 id="orgb48f183">卸载module</h2>
+<div class="outline-text-2" id="text-orgb48f183">
 <p>
 卸载module也很简单，只需要使用 <code>rmmod module名</code> 就行了。
 </p>

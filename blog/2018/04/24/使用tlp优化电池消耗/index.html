@@ -44,18 +44,18 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8aada0b">安装TLP</a></li>
-<li><a href="#org3508226">启动TLP服务</a></li>
-<li><a href="#orgf4beeb6">使用TLP</a>
+<li><a href="#org82d8661">安装TLP</a></li>
+<li><a href="#org5ecf2e7">启动TLP服务</a></li>
+<li><a href="#orgc1f67ec">使用TLP</a>
 <ul>
-<li><a href="#org60dd710">tlp: 应用笔记本的节能设置。</a></li>
-<li><a href="#org8c09916">tlp-stat: 显示当前的节能设置</a></li>
-<li><a href="#org3a9b30b">wifi: 手动启动/关闭wifi</a></li>
-<li><a href="#org4afb27f">bluetooth: 手动启动/关闭蓝牙</a></li>
-<li><a href="#orgaa63c76">wwan: 手动启动/关闭wwlan(3G/4G)设备</a></li>
+<li><a href="#org1642dde">tlp: 应用笔记本的节能设置。</a></li>
+<li><a href="#orgd30d961">tlp-stat: 显示当前的节能设置</a></li>
+<li><a href="#org179b0af">wifi: 手动启动/关闭wifi</a></li>
+<li><a href="#org1940f3a">bluetooth: 手动启动/关闭蓝牙</a></li>
+<li><a href="#orga4df2d5">wwan: 手动启动/关闭wwan(3G/4G)设备</a></li>
 </ul>
 </li>
-<li><a href="#org837c3e7">配置TLP</a></li>
+<li><a href="#orgc1891b8">配置TLP</a></li>
 </ul>
 </div>
 </div>
@@ -64,9 +64,9 @@ TLP是一款linux上的基于文本界面的高级电源管理工具。TLP默认
 此外TLP也具有很高的可配置性，能够让你充分的配置以满足特殊需求。
 </p>
 
-<div id="outline-container-org8aada0b" class="outline-2">
-<h2 id="org8aada0b">安装TLP</h2>
-<div class="outline-text-2" id="text-org8aada0b">
+<div id="outline-container-org82d8661" class="outline-2">
+<h2 id="org82d8661">安装TLP</h2>
+<div class="outline-text-2" id="text-org82d8661">
 <p>
 在archlinux上通过下面命令来安装：
 </p>
@@ -85,9 +85,9 @@ TLP是一款linux上的基于文本界面的高级电源管理工具。TLP默认
 </div>
 </div>
 
-<div id="outline-container-org3508226" class="outline-2">
-<h2 id="org3508226">启动TLP服务</h2>
-<div class="outline-text-2" id="text-org3508226">
+<div id="outline-container-org5ecf2e7" class="outline-2">
+<h2 id="org5ecf2e7">启动TLP服务</h2>
+<div class="outline-text-2" id="text-org5ecf2e7">
 <p>
 TLP默认会启动 <code>NetworkManager.service</code>,然而我使用的是 <code>netctl</code> 来管理网络，因此还需要修改一下 <code>tlp.service</code>
 </p>
@@ -160,17 +160,17 @@ Power source   = AC
 </div>
 </div>
 
-<div id="outline-container-orgf4beeb6" class="outline-2">
-<h2 id="orgf4beeb6">使用TLP</h2>
-<div class="outline-text-2" id="text-orgf4beeb6">
+<div id="outline-container-orgc1f67ec" class="outline-2">
+<h2 id="orgc1f67ec">使用TLP</h2>
+<div class="outline-text-2" id="text-orgc1f67ec">
 <p>
 TLP中最常用的命令有这么几个：
 </p>
 </div>
 
-<div id="outline-container-org60dd710" class="outline-3">
-<h3 id="org60dd710">tlp: 应用笔记本的节能设置。</h3>
-<div class="outline-text-3" id="text-org60dd710">
+<div id="outline-container-org1642dde" class="outline-3">
+<h3 id="org1642dde">tlp: 应用笔记本的节能设置。</h3>
+<div class="outline-text-3" id="text-org1642dde">
 <dl class="org-dl">
 <dt>sudo tlp start</dt><dd>根据实际情况是使用交流电还是电池，来应用对应的节能设置</dd>
 <dt>sudo tlp ac</dt><dd>强制切换到交流电对应的节能设置</dd>
@@ -178,9 +178,9 @@ TLP中最常用的命令有这么几个：
 </dl>
 </div>
 </div>
-<div id="outline-container-org8c09916" class="outline-3">
-<h3 id="org8c09916">tlp-stat: 显示当前的节能设置</h3>
-<div class="outline-text-3" id="text-org8c09916">
+<div id="outline-container-orgd30d961" class="outline-3">
+<h3 id="orgd30d961">tlp-stat: 显示当前的节能设置</h3>
+<div class="outline-text-3" id="text-orgd30d961">
 <dl class="org-dl">
 <dt>sudo tlp-stat -b</dt><dd>显示电池的相关信息</dd>
 <dt>tlp-stat -c</dt><dd>显示tlp当前的配置信息</dd>
@@ -194,9 +194,9 @@ TLP中最常用的命令有这么几个：
 </dl>
 </div>
 </div>
-<div id="outline-container-org3a9b30b" class="outline-3">
-<h3 id="org3a9b30b">wifi: 手动启动/关闭wifi</h3>
-<div class="outline-text-3" id="text-org3a9b30b">
+<div id="outline-container-org179b0af" class="outline-3">
+<h3 id="org179b0af">wifi: 手动启动/关闭wifi</h3>
+<div class="outline-text-3" id="text-org179b0af">
 <dl class="org-dl">
 <dt>sudo wifi on</dt><dd>手动启动wifi</dd>
 <dt>sudo wifi off</dt><dd>手动关闭wifi</dd>
@@ -204,9 +204,9 @@ TLP中最常用的命令有这么几个：
 </dl>
 </div>
 </div>
-<div id="outline-container-org4afb27f" class="outline-3">
-<h3 id="org4afb27f">bluetooth: 手动启动/关闭蓝牙</h3>
-<div class="outline-text-3" id="text-org4afb27f">
+<div id="outline-container-org1940f3a" class="outline-3">
+<h3 id="org1940f3a">bluetooth: 手动启动/关闭蓝牙</h3>
+<div class="outline-text-3" id="text-org1940f3a">
 <dl class="org-dl">
 <dt>sudo bluetooth on</dt><dd>手动启动蓝牙</dd>
 <dt>sudo bluetooth off</dt><dd>手动关闭蓝牙</dd>
@@ -214,20 +214,20 @@ TLP中最常用的命令有这么几个：
 </dl>
 </div>
 </div>
-<div id="outline-container-orgaa63c76" class="outline-3">
-<h3 id="orgaa63c76">wwan: 手动启动/关闭wwlan(3G/4G)设备</h3>
-<div class="outline-text-3" id="text-orgaa63c76">
+<div id="outline-container-orga4df2d5" class="outline-3">
+<h3 id="orga4df2d5">wwan: 手动启动/关闭wwan(3G/4G)设备</h3>
+<div class="outline-text-3" id="text-orga4df2d5">
 <dl class="org-dl">
 <dt>sudo wwan on</dt><dd>手动启动wwlan设备</dd>
 <dt>sudo wwan off</dt><dd>手动关闭wwlan设备</dd>
-<dt>sudo wwan toggle</dt><dd>手动切换蓝牙wwlan设备状态</dd>
+<dt>sudo wwan toggle</dt><dd>手动切换wwlan设备状态</dd>
 </dl>
 </div>
 </div>
 </div>
-<div id="outline-container-org837c3e7" class="outline-2">
-<h2 id="org837c3e7">配置TLP</h2>
-<div class="outline-text-2" id="text-org837c3e7">
+<div id="outline-container-orgc1891b8" class="outline-2">
+<h2 id="orgc1891b8">配置TLP</h2>
+<div class="outline-text-2" id="text-orgc1891b8">
 <p>
 TLP的配置文件放在 <code>/etc/default/tlp</code> 中，详细的配置方法请参见<a href="http://linrunner.de/en/tlp/docs/tlp-configuration.html">官网上的说明</a>
 </p>
@@ -239,9 +239,9 @@ TLP的配置文件放在 <code>/etc/default/tlp</code> 中，详细的配置方�
 <div>
         <div class="post-meta">
             <span title="post date" class="post-info">2018-04-24</span>
-            <span title="last modification date" class="post-info">2018-04-24</span>
+            <span title="last modification date" class="post-info">2018-04-27</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -282,9 +282,9 @@ TLP的配置文件放在 <code>/etc/default/tlp</code> 中，详细的配置方�
         </section>
     <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

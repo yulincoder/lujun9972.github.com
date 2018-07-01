@@ -44,28 +44,28 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge544476">写在前面的话</a></li>
-<li><a href="#org00b8efb">安装官方的ubuntu server</a></li>
-<li><a href="#org90adb7f">配置wifi</a></li>
-<li><a href="#org2d8d1fc">使用国内源</a></li>
-<li><a href="#orgaa0f304">更改时区</a></li>
-<li><a href="#org6a3b88f">修正无法apt update的问题</a></li>
-<li><a href="#org768c282">升级Ubuntu Server 16.04(虽然可以升级，但是升级后重启貌似就无法登陆了)</a></li>
+<li><a href="#orgfbe5cb6">写在前面的话</a></li>
+<li><a href="#org3eef675">安装官方的ubuntu server</a></li>
+<li><a href="#org48cb6b0">配置wifi</a></li>
+<li><a href="#orgb18b70f">使用国内源</a></li>
+<li><a href="#org7008813">更改时区</a></li>
+<li><a href="#org843daf9">修正无法apt update的问题</a></li>
+<li><a href="#orgf019fec">升级Ubuntu Server 16.04(虽然可以升级，但是升级后重启貌似就无法登陆了)</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge544476" class="outline-2">
-<h2 id="orge544476">写在前面的话</h2>
-<div class="outline-text-2" id="text-orge544476">
+<div id="outline-container-orgfbe5cb6" class="outline-2">
+<h2 id="orgfbe5cb6">写在前面的话</h2>
+<div class="outline-text-2" id="text-orgfbe5cb6">
 <p>
 官方的Ubuntu Server镜像就是个坑货，还是刷 <a href="https://www.armbian.com/">Armbian</a> 省心～～
 </p>
 </div>
 </div>
-<div id="outline-container-org00b8efb" class="outline-2">
-<h2 id="org00b8efb">安装官方的ubuntu server</h2>
-<div class="outline-text-2" id="text-org00b8efb">
+<div id="outline-container-org3eef675" class="outline-2">
+<h2 id="org3eef675">安装官方的ubuntu server</h2>
+<div class="outline-text-2" id="text-org3eef675">
 <p>
 Orange Pi官方有为Orange Pi Lite准备官方的Ubuntu Server镜像，下载下来用 <code>dd</code> 拷贝到TF卡上就行。
 </p>
@@ -138,9 +138,9 @@ Device     Boot  Start      End  Sectors  Size Id Type
 </div>
 </div>
 
-<div id="outline-container-org90adb7f" class="outline-2">
-<h2 id="org90adb7f">配置wifi</h2>
-<div class="outline-text-2" id="text-org90adb7f">
+<div id="outline-container-org48cb6b0" class="outline-2">
+<h2 id="org48cb6b0">配置wifi</h2>
+<div class="outline-text-2" id="text-org48cb6b0">
 <p>
 写入镜像到TF卡后，你会发现TF卡被分成了两个分区，一个是BOOT分区，一个是linux分区。
 </p>
@@ -244,9 +244,9 @@ sudo rm /usr/local/bin/fs_resize_warning
 </div>
 </div>
 
-<div id="outline-container-org2d8d1fc" class="outline-2">
-<h2 id="org2d8d1fc">使用国内源</h2>
-<div class="outline-text-2" id="text-org2d8d1fc">
+<div id="outline-container-orgb18b70f" class="outline-2">
+<h2 id="orgb18b70f">使用国内源</h2>
+<div class="outline-text-2" id="text-orgb18b70f">
 <div class="org-src-container">
 <pre class="src src-shell">sed -i  <span style="color: #2d9574;">'s/ports.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/'</span> /etc/apt/sources.list
 </pre>
@@ -254,9 +254,9 @@ sudo rm /usr/local/bin/fs_resize_warning
 </div>
 </div>
 
-<div id="outline-container-orgaa0f304" class="outline-2">
-<h2 id="orgaa0f304">更改时区</h2>
-<div class="outline-text-2" id="text-orgaa0f304">
+<div id="outline-container-org7008813" class="outline-2">
+<h2 id="org7008813">更改时区</h2>
+<div class="outline-text-2" id="text-org7008813">
 <div class="org-src-container">
 <pre class="src src-shell">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 </pre>
@@ -265,9 +265,9 @@ sudo rm /usr/local/bin/fs_resize_warning
 </div>
 
 
-<div id="outline-container-org6a3b88f" class="outline-2">
-<h2 id="org6a3b88f">修正无法apt update的问题</h2>
-<div class="outline-text-2" id="text-org6a3b88f">
+<div id="outline-container-org843daf9" class="outline-2">
+<h2 id="org843daf9">修正无法apt update的问题</h2>
+<div class="outline-text-2" id="text-org843daf9">
 <p>
 刷完官网上的Ubuntu Server后你会发现无法运行apt update,总是提示
 </p>
@@ -309,9 +309,9 @@ apt-get dist-upgrade
 </div>
 </div>
 
-<div id="outline-container-org768c282" class="outline-2">
-<h2 id="org768c282">升级Ubuntu Server 16.04(虽然可以升级，但是升级后重启貌似就无法登陆了)</h2>
-<div class="outline-text-2" id="text-org768c282">
+<div id="outline-container-orgf019fec" class="outline-2">
+<h2 id="orgf019fec">升级Ubuntu Server 16.04(虽然可以升级，但是升级后重启貌似就无法登陆了)</h2>
+<div class="outline-text-2" id="text-orgf019fec">
 <ol class="org-ol">
 <li><p>
 安装更新管理器核心 <code>update-manager-core</code>
@@ -341,7 +341,7 @@ apt-get dist-upgrade
             <span title="post date" class="post-info">2018-02-21</span>
             <span title="last modification date" class="post-info">2018-03-01</span>
             <span title="tags" class="post-info">:<a href="https://lujun9972.github.io/tags/linux和它的小伙伴">linux和它的小伙伴</a> : <a href="https://lujun9972.github.io/tags/orangepi">orangepi</a> : <a href="https://lujun9972.github.io/tags/ubuntu">ubuntu</a>:</span>
-            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a></span>
+            <span title="author" class="post-info"><a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a></span>
         </div>
     <script src="https://lujun9972.github.io/media/js/jquery-2.1.3.min.js"></script>
         <section>
@@ -382,9 +382,9 @@ apt-get dist-upgrade
         </section>
     <script src="https://lujun9972.github.io/media/js/main.js"></script>
     <div class="footer">
-        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x(<a href="http://orgmode.org">Org mode</a> 9.x)</p>
         <p>
-            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; X61">lujun9972</a>
+            Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:lujun9972 &lt;at&gt; T430S">lujun9972</a>
             &nbsp;&nbsp;-&nbsp;&nbsp;
             Powered by <a href="https://github.com/emacs-china/ego" target="_blank">EGO</a><br/>
             <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" style="border-width:0" alt="Creative Commons License" class="center"></a>

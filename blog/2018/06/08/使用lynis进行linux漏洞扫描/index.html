@@ -44,15 +44,15 @@
 <h2>&#30446;&#24405;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga8601ff">安装lynis</a></li>
-<li><a href="#orgffae319">使用lynis进行主机扫描</a>
+<li><a href="#orgc7af0ce">安装lynis</a></li>
+<li><a href="#orge16c756">使用lynis进行主机扫描</a>
 <ul>
-<li><a href="#org12290f2">查看详细说明</a></li>
-<li><a href="#org2693a06">查看日志文件</a></li>
+<li><a href="#org5d6852c">查看详细说明</a></li>
+<li><a href="#orgd76e113">查看日志文件</a></li>
 </ul>
 </li>
-<li><a href="#org90a963d">检查更新</a></li>
-<li><a href="#org2f44d51">自定义lynis安全审计策略</a></li>
+<li><a href="#orgcf95116">检查更新</a></li>
+<li><a href="#org25542f1">自定义lynis安全审计策略</a></li>
 </ul>
 </div>
 </div>
@@ -60,9 +60,9 @@
 lynis 是一款运行在 Unix/Linux 平台上的基于主机的、开源的安全审计软件。
 </p>
 
-<div id="outline-container-orga8601ff" class="outline-2">
-<h2 id="orga8601ff">安装lynis</h2>
-<div class="outline-text-2" id="text-orga8601ff">
+<div id="outline-container-orgc7af0ce" class="outline-2">
+<h2 id="orgc7af0ce">安装lynis</h2>
+<div class="outline-text-2" id="text-orgc7af0ce">
 <p>
 在 archlinux 上可以直接通过 pacman 来安装
 </p>
@@ -75,30 +75,30 @@ lynis 是一款运行在 Unix/Linux 平台上的基于主机的、开源的安�
 <pre class="src src-org">resolving dependencies...
 looking for conflicting packages...
 
-<span style="color: #000000; background-color: #ff00ff;">Packages</span> (1) lynis-2.6.4-1
+Packages (1) lynis-2.6.4-1
 
 Total Installed Size:  1.35 MiB
 Net Upgrade Size:      0.00 MiB
 
 :: Proceed with installation? [Y/n] 
-(0/1) checking keys in keyring                     [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) checking keys in keyring                     [######################] 100%
-(0/1) checking package integrity                   [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) checking package integrity                   [######################] 100%
-(0/1) loading package files                        [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) loading package files                        [######################] 100%
-(0/1) checking for file conflicts                  [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) checking for file conflicts                  [######################] 100%
-(0/1) checking available disk space                [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) checking available disk space                [######################] 100%
+(0/1) checking keys in keyring                     [----------------------]   0%(1/1) checking keys in keyring                     [######################] 100%
+(0/1) checking package integrity                   [----------------------]   0%(1/1) checking package integrity                   [######################] 100%
+(0/1) loading package files                        [----------------------]   0%(1/1) loading package files                        [######################] 100%
+(0/1) checking for file conflicts                  [----------------------]   0%(1/1) checking for file conflicts                  [######################] 100%
+(0/1) checking available disk space                [----------------------]   0%(1/1) checking available disk space                [######################] 100%
 :: Processing package changes...
-(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) reinstalling lynis                           [----------------------]   0%(1/<span style="color: #000000; background-color: #ff00ff;">1</span>) reinstalling lynis                           [######################] 100%
+(1/1) reinstalling lynis                           [----------------------]   0%(1/1) reinstalling lynis                           [######################] 100%
 :: Running post-transaction hooks...
 (1/2) Reloading system manager configuration...
-(2/<span style="color: #000000; background-color: #ff00ff;">2</span>) Arming ConditionNeedsUpdate...
+(2/2) Arming ConditionNeedsUpdate...
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgffae319" class="outline-2">
-<h2 id="orgffae319">使用lynis进行主机扫描</h2>
-<div class="outline-text-2" id="text-orgffae319">
+<div id="outline-container-orge16c756" class="outline-2">
+<h2 id="orge16c756">使用lynis进行主机扫描</h2>
+<div class="outline-text-2" id="text-orge16c756">
 <p>
 首先让我们不带任何参数运行 lynis, 这会列出 lynis 支持的那些参数
 </p>
@@ -293,8 +293,8 @@ webservers
 
 [+] Plugins (phase 1)
 ------------------------------------
-&#27;[0CNote: plugins have more extensive tests and may take <span style="color: #a52a2a; background-color: #ffffff;">several</span> minutes to complete&#27;[0C
-&#27;[<span style="color: #000000; background-color: #ff00ff;">0C</span> &#27;[0C
+&#27;[0CNote: plugins have more extensive tests and may take several minutes to complete&#27;[0C
+&#27;[0C &#27;[0C
 &#27;[2C- Plugins enabled&#27;[42C [ NONE ]
 
 [+] Shells
@@ -384,9 +384,9 @@ webservers
 </pre>
 </div>
 </div>
-<div id="outline-container-org12290f2" class="outline-3">
-<h3 id="org12290f2">查看详细说明</h3>
-<div class="outline-text-3" id="text-org12290f2">
+<div id="outline-container-org5d6852c" class="outline-3">
+<h3 id="org5d6852c">查看详细说明</h3>
+<div class="outline-text-3" id="text-org5d6852c">
 <p>
 在查看审计结果时,你可以通过 <code>show details</code> 参数来获取关于某条警告/建议的详细说明。其对应的命令形式为:
 </p>
@@ -413,22 +413,22 @@ webservers
 </div>
 
 <div class="org-src-container">
-<pre class="src src-org">2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 Performing test ID NETW-3032 (Checking for ARP monitoring software)
-2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 IsRunning: process 'arpwatch' not found
-2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 IsRunning: process 'arpon' not found
-2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 Suggestion: Consider running ARP monitoring software (arpwatch,arpon) [test:NETW-3032] [details:-] [solution:-]
-2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 Checking permissions of /usr/share/lynis/include/tests_printers_spools
-2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 File permissions are OK
-2018-06-08 18:<span style="color: #000000; background-color: #ff00ff;">18</span>:01 <span style="color: #4f97d7;">===</span>---------------------------------------------------------------<span style="color: #4f97d7;">===</span>
+<pre class="src src-org">2018-06-08 18:18:01 Performing test ID NETW-3032 (Checking for ARP monitoring software)
+2018-06-08 18:18:01 IsRunning: process 'arpwatch' not found
+2018-06-08 18:18:01 IsRunning: process 'arpon' not found
+2018-06-08 18:18:01 Suggestion: Consider running ARP monitoring software (arpwatch,arpon) [test:NETW-3032] [details:-] [solution:-]
+2018-06-08 18:18:01 Checking permissions of /usr/share/lynis/include/tests_printers_spools
+2018-06-08 18:18:01 File permissions are OK
+2018-06-08 18:18:01 <span style="color: #4f97d7;">===</span>---------------------------------------------------------------<span style="color: #4f97d7;">===</span>
 </pre>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org2693a06" class="outline-3">
-<h3 id="org2693a06">查看日志文件</h3>
-<div class="outline-text-3" id="text-org2693a06">
+<div id="outline-container-orgd76e113" class="outline-3">
+<h3 id="orgd76e113">查看日志文件</h3>
+<div class="outline-text-3" id="text-orgd76e113">
 <p>
 lynis在审计完成后会将详细的信息记录在 <code>/var/log/lynis.log</code> 中.
 </p>
@@ -466,9 +466,9 @@ lynis在审计完成后会将详细的信息记录在 <code>/var/log/lynis.log</
 </div>
 </div>
 
-<div id="outline-container-org90a963d" class="outline-2">
-<h2 id="org90a963d">检查更新</h2>
-<div class="outline-text-2" id="text-org90a963d">
+<div id="outline-container-orgcf95116" class="outline-2">
+<h2 id="orgcf95116">检查更新</h2>
+<div class="outline-text-2" id="text-orgcf95116">
 <p>
 审计软件需要随时进行更新从而得到最新的建议和信息，我们可以使用 <code>update info</code> 参数来检查更新:
 </p>
@@ -494,9 +494,9 @@ lynis在审计完成后会将详细的信息记录在 <code>/var/log/lynis.log</
 </div>
 </div>
 
-<div id="outline-container-org2f44d51" class="outline-2">
-<h2 id="org2f44d51">自定义lynis安全审计策略</h2>
-<div class="outline-text-2" id="text-org2f44d51">
+<div id="outline-container-org25542f1" class="outline-2">
+<h2 id="org25542f1">自定义lynis安全审计策略</h2>
+<div class="outline-text-2" id="text-org25542f1">
 <p>
 lynis的配置信息以 <code>.prf</code> 文件的格式保存在 <code>/etc/lynis</code> 目录中。
 其中，默认lynis自带一个名为 <code>default.prf</code> 的默认配置文件。
